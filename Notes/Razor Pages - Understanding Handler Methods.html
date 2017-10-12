@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Handler methods is a particularly nice feature introduced with the new ASP.NET Razor Pages framework . This feature enables you to determine what the user was doing when they requested the page, and to execute logic accordingly without having to resort to a bunch of conditional code.">
+    <link rel="author" href="https://plus.google.com/u/0/100616357343781781699/" />
+    <link rel="alternate" type="application/atom+xml" title="Mike Brind, Web Development and ASP.NET Feed" href="https://www.mikesdotnetting.com/feed" />
+    <link rel="canonical" href="https://www.mikesdotnetting.com/article/308/razor-pages-understanding-handler-methods" />
+    <title>Razor Pages - Understanding Handler Methods</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Open+Sans+Condensed:300|Open+Sans:400,300,300italic,600,700,800|Lato:400,700" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="/Content/css?v=u_gh3nltHQbHaYxyPIBjdIRBRrcJTB-XRwTOscHDZig1" rel="stylesheet"/>
+
+</head>
+<body>
+    <div id="cookie-consent">
+        <div class="container">
+            <span>My site uses cookies to personalise content and adverts, to provide social media features and to analyse traffic.</span>
+            <button class="btn btn-xs btn-green" id="consent">I'm happy with this</button> <button class="btn btn-xs btn-green" id="learn-more">Learn more</button>
+        </div>
+    </div>
+    <nav>
+        <div class="navbar navbar-inverse" role="navigation">
+            <div class="container">
+                <img src="/images/me2.png" alt="Mikesdotnetting" class="mug-shot" />
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a class="navbar-brand" href="/">Mikesdotnetting</a>
+<form action="/Search" class="navbar-form navbar-left" method="post">                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+                                <input type="text" class="searchbox form-control col-lg-8" name="searchTerm" id="searchTerm" placeholder="Search" />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">Search</button>
+                                </span>
+                            </div>
+                        </div>
+</form>                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav"></ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/about" id="aboutLink" title="About Mikesdotnetting">About</a></li>
+                        <li><a href="/contact" id="contactLink" title="Contact Mikesdotnetting">Contact</a></li>
+                        <li><a href="/articletype/1" id="tutorialLink" title="All Tutorial entries">Tutorial</a></li>
+                        <li><a href="/articletype/2" id="snippetlLink" title="All Snippet entries">Snippets</a></li>
+                        <li><a href="/articletype/3" id="faqLink" title="All FAQ entries">FAQ</a></li>
+                        <li><a href="/articletype/5" id="cheatsheetLink" title="All Cheat Sheet entries">Cheat Sheet</a></li>
+                        <li><a href="/articletype/6" id="generalLink" title="All General entries">General</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container body-content">
+        <div class="row">
+            <div class="col-md-8">
+                
+<article itemscope itemtype="http://schema.org/TechArticle">
+        <h1 class="article-headline" itemprop="headline">
+            Razor Pages - Understanding Handler Methods
+        </h1>
+        <div id="article-metadata">
+            <aside class="comments-aside">
+                <span class="glyphicon glyphicon-comment"></span>
+                <span itemprop="commentCount">
+                    2
+                </span> Comments
+            </aside>
+            <time itemprop="datePublished">
+                22 May 2017 20:16
+            </time>
+            <div id="rating" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                <div class="star-rating">
+                    <i class="fa fa-star-o" data-rating="1"></i>
+                    <i class="fa fa-star-o" data-rating="2"></i>
+                    <i class="fa fa-star-o" data-rating="3"></i>
+                    <i class="fa fa-star-o" data-rating="4"></i>
+                    <i class="fa fa-star-o" data-rating="5"></i>
+                    <input type="hidden" id="rating-value" value="5">
+                </div>
+
+                <span id="current-rating">
+                    <span itemprop="ratingValue" class="rating-value">5</span>
+                    <span class="rating-count">
+                        (<span itemprop="ratingCount" id="ratingCount">3</span>
+                        <span class="rating-vote">votes</span>)
+                    </span>
+                </span>
+                <meta itemprop="bestRating" content="5" />
+                <meta itemprop="worstRating" content="1" />
+            </div>
+
+        </div>
+        <div id="categories">
+                <span class="label label-info tags">
+                    <a href="/category/36/asp-net-core" title="More items in the ASP.NET Core category">ASP.NET Core</a>
+                </span>
+                <span class="label label-info tags">
+                    <a href="/category/37/razor-pages" title="More items in the Razor Pages category">Razor Pages</a>
+                </span>
+            
+        </div>
+        <div>
+            <p class="abstract" itemprop="description">
+                Handler methods is a particularly nice feature introduced with the <a href="https://www.mikesdotnetting.com/article/307/razor-pages-getting-started-with-the-preview">new ASP.NET Razor Pages framework</a> . This feature enables you to determine what the user was doing when they requested the page, and to execute logic accordingly without having to resort to a bunch of conditional code.
+            </p>
+
+            <div class="banner">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- Alternating Top Leaderboard -->
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:728px;height:90px"
+                     data-ad-client="ca-pub-8046723421340367"
+                     data-ad-slot="9326110132"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+            <article style="clear:both" itemprop="articleBody">
+                <p>One of the most common tasks in web development is to determine which HTTP verb your visitor has used to request a page. Is this an initial <code>GET</code> request, or has the user <code>POST</code>ed a form? In classic ASP or PHP, you will usually query the Server Variables collection (<code>Request.ServerVariables("REQUEST_METHOD")</code> or <code>$_Server['REQUEST_METHOD']</code>) to determine which verb was used, or you might query the <code>Request.Form</code> collection for the presence or absence of values. The ASP.NET Web Forms and Web Pages frameworks provide convenience methods to differentiate between <code>POST</code> and <code>GET</code> requests via the <code>Page.IsPostBack</code> and <code>Page.IsPost</code> properties respectively. ASP.NET MVC offers a different solution, mapping information from the request - the URL and the HTTP verb - to controller actions using a convention-based approach. </p>
+<p>Handler methods in Razor Pages are also based on naming conventions. The basic methods work by matching HTTP verbs used for the request to the name of the method, and they are prefixed with &quot;On&quot;: <code>OnGet()</code>, <code>OnPost()</code>, <code>OnPut(</code>) etc. They also have asynchronous equivalents: <code>OnPostAsync()</code>, <code>OnGetAsync()</code> etc. The following example illustrates basic usage in a single Razor pages file:</p>
+<pre class="code"><span style="background: yellow; color: black">@page
+</span><span style="color: black"></span><span style="background: yellow; color: black">@{
+</span><span style="color: black">    </span><span style="background: yellow; color: black">@functions{
+</span><span style="color: black">        </span><span style="color: blue">public string </span><span style="color: black">Message { </span><span style="color: blue">get</span><span style="color: black">; </span><span style="color: blue">set</span><span style="color: black">; }
+
+        </span><span style="color: blue">public void </span><span style="color: black">OnGet()
+        {
+            Message = </span><span style="color: #a31515">&quot;Get used&quot;</span><span style="color: black">;
+        }
+
+        </span><span style="color: blue">public void </span><span style="color: black">OnPost()
+        {
+            Message = </span><span style="color: #a31515">&quot;Post used&quot;</span><span style="color: black">;
+        }
+    </span><span style="background: yellow; color: black">}
+}
+
+
+</span><span style="color: blue">&lt;</span><span style="color: maroon">h3</span><span style="color: blue">&gt;</span><span style="background: yellow; color: black">@</span><span style="color: black">Message</span><span style="color: blue">&lt;/</span><span style="color: maroon">h3</span><span style="color: blue">&gt;
+&lt;</span><span style="color: purple">form </span><span style="color: red">method</span><span style="color: blue">=&quot;post&quot;&gt;&lt;</span><span style="color: maroon">button </span><span style="color: red">class</span><span style="color: blue">=&quot;btn btn-default&quot;&gt;</span><span style="color: black">Click to post</span><span style="color: blue">&lt;/</span><span style="color: maroon">button</span><span style="color: blue">&gt;&lt;/</span><span style="color: purple">form</span><span style="color: blue">&gt;
+&lt;</span><span style="color: maroon">p</span><span style="color: blue">&gt;&lt;</span><span style="color: maroon">a </span><span style="color: red">href</span><span style="color: blue">=&quot;/handlerexample&quot; </span><span style="color: red">class</span><span style="color: blue">=&quot;btn btn-default&quot;&gt;</span><span style="color: black">Click to Get</span><span style="color: blue">&lt;/</span><span style="color: maroon">a</span><span style="color: blue">&gt;&lt;/</span><span style="color: maroon">p</span><span style="color: blue">&gt;</span></pre>
+<p>When the page is first navigated to, the &quot;Get used&quot; message is displayed because the HTTP <code>GET</code> verb was used for the request, firing the <code>OnGet()</code> handler. </p>
+<p><img itemprop="image" src="http://www.mikesdotnetting.com/images/19-05-2017-13-56-25.png"  alt="" /></p>
+<p>When the &quot;Click to post&quot; button is pressed, a form is posted and the <code>OnPost()</code> handler fires, resulting in the &quot;Post used&quot; message being displayed. </p>
+<p><img itemprop="image" src="http://www.mikesdotnetting.com/images/19-05-2017-13-57-46.png"  alt="" /></p>
+<p>The button underneath is a hyperlink, which initiates a <code>GET</code> request, resulting in the &quot;Get used&quot; message being displayed once more.</p>
+<h3>Named Handler Methods</h3>
+<p>Imagine that you have a number of forms on the page (perfectly legal everywhere except Web Forms...) - how will you know which one was submitted? Well, I kind of take a bit if an unfair dig at Web Forms, but in fact the solution to the problem is not too disimilar to Web Forms button click event handlers. Razor Pages introduces <em>named handler methods</em>. The following code shows a collection of named handler methods declared in a code block at the top of a Razor page (although they can also be placed in the <code>PageModel</code> class if you are using one):</p>
+<pre class="code"><span style="background: yellow; color: black">@page</span><span style="color: black"> 
+</span><span style="background: yellow; color: black">@{
+</span><span style="color: black">    
+    </span><span style="background: yellow; color: black">@functions{
+</span><span style="color: black">        </span><span style="color: blue">public string </span><span style="color: black">Message { </span><span style="color: blue">get</span><span style="color: black">; </span><span style="color: blue">set</span><span style="color: black">; } = </span><span style="color: #a31515">&quot;Initial Request&quot;</span><span style="color: black">;
+
+        </span><span style="color: blue">public void </span><span style="color: black">OnGet()
+        {
+
+        }
+
+        </span><span style="color: blue">public void </span><span style="color: black">OnPost()
+        {
+            Message = </span><span style="color: #a31515">&quot;Form Posted&quot;</span><span style="color: black">;
+        }
+
+        </span><span style="color: blue">public void </span><span style="color: black">OnPostDelete()
+        {
+            Message = </span><span style="color: #a31515">&quot;Delete handler fired&quot;</span><span style="color: black">;
+        }
+
+        </span><span style="color: blue">public void </span><span style="color: black">OnPostEdit(</span><span style="color: blue">int </span><span style="color: black">id)
+        {
+            Message = </span><span style="color: #a31515">&quot;Edit handler fired&quot;</span><span style="color: black">;
+        }
+
+        </span><span style="color: blue">public void </span><span style="color: black">OnPostView(</span><span style="color: blue">int </span><span style="color: black">id)
+        {
+            Message = </span><span style="color: #a31515">&quot;View handler fired&quot;</span><span style="color: black">;
+        }
+    </span><span style="background: yellow; color: black">}
+}</span></pre>
+<p>The convention (in Preview 1) is that the name of the method is appended to  &quot;OnPost&quot; or &quot;OnGet&quot;. The next step is to associate a specific form action with a named handler. This is achieved by setting the <code>asp-page-handler</code> attribute value for a form taghelper:</p>
+<pre class="code"><span style="color: blue">&lt;</span><span style="color: maroon">div </span><span style="color: red">class</span><span style="color: blue">=&quot;row&quot;&gt;
+    &lt;</span><span style="color: maroon">div </span><span style="color: red">class</span><span style="color: blue">=&quot;col-lg-1&quot;&gt;
+        &lt;</span><span style="color: purple">form asp-page-handler</span><span style="color: blue">=&quot;edit&quot; </span><span style="color: red">method</span><span style="color: blue">=&quot;post&quot;&gt;
+            &lt;</span><span style="color: maroon">button </span><span style="color: red">class</span><span style="color: blue">=&quot;btn btn-default&quot;&gt;</span><span style="color: black">Edit</span><span style="color: blue">&lt;/</span><span style="color: maroon">button</span><span style="color: blue">&gt;
+</span><span style="color: blue">        &lt;/</span><span style="color: purple">form</span><span style="color: blue">&gt;
+    &lt;/</span><span style="color: maroon">div</span><span style="color: blue">&gt;
+    &lt;</span><span style="color: maroon">div </span><span style="color: red">class</span><span style="color: blue">=&quot;col-lg-1&quot;&gt;
+        &lt;</span><span style="color: purple">form asp-page-handler</span><span style="color: blue">=&quot;delete&quot; </span><span style="color: red">method</span><span style="color: blue">=&quot;post&quot;&gt;
+            &lt;</span><span style="color: maroon">button </span><span style="color: red">class</span><span style="color: blue">=&quot;btn btn-default&quot;&gt;</span><span style="color: black">Delete</span><span style="color: blue">&lt;/</span><span style="color: maroon">button</span><span style="color: blue">&gt;
+</span><span style="color: blue">        &lt;/</span><span style="color: purple">form</span><span style="color: blue">&gt;
+    &lt;/</span><span style="color: maroon">div</span><span style="color: blue">&gt;
+    &lt;</span><span style="color: maroon">div </span><span style="color: red">class</span><span style="color: blue">=&quot;col-lg-1&quot;&gt;
+        &lt;</span><span style="color: purple">form asp-page-handler</span><span style="color: blue">=&quot;view&quot; </span><span style="color: red">method</span><span style="color: blue">=&quot;post&quot;&gt;
+            &lt;</span><span style="color: maroon">button </span><span style="color: red">class</span><span style="color: blue">=&quot;btn btn-default&quot;&gt;</span><span style="color: black">View</span><span style="color: blue">&lt;/</span><span style="color: maroon">button</span><span style="color: blue">&gt;</span><span style="color: blue">
+        &lt;/</span><span style="color: purple">form</span><span style="color: blue">&gt;
+    &lt;/</span><span style="color: maroon">div</span><span style="color: blue">&gt;
+&lt;/</span><span style="color: maroon">div</span><span style="color: blue">&gt;
+&lt;</span><span style="color: maroon">h3 </span><span style="color: red">class</span><span style="color: blue">=&quot;clearfix&quot;&gt;</span><span style="background: yellow; color: black">@</span><span style="color: black">Model.Message</span><span style="color: blue">&lt;/</span><span style="color: maroon">h3</span><span style="color: blue">&gt;</span></pre>
+<p>The code above renders as three buttons, each in their own form along with the default value for the <code>Message</code> property:</p>
+<p><img src="http://www.mikesdotnetting.com/images/2017-05-19_22-10-01.png" alt="FormTagHelpers" /></p>
+<p>&nbsp;</p>
+<p>The name of the handler is added to the form's action as a querystring parameter:</p>
+<p><img src="http://www.mikesdotnetting.com/images/2017-05-19_22-22-34.png" alt="Handlers" /></p>
+<p>As you click each button, the code in the handler associated with the querystring value is executed, changing the message each time.</p>
+<p><img src="http://www.mikesdotnetting.com/images/2017-05-19_22-43-02.png" alt="Handlers" /></p>
+<p>&nbsp;</p>
+<p>If you prefer not to have querystring values in the URL, you can use routing and add an optional route value for &quot;handler&quot; as part of the <code>@page</code> directive:</p>
+<pre class="code"><span style="background: yellow; color: black">@page</span><span style="color: black"> &quot;{handler?}&quot;</span></pre>
+<p>The name of the handler is then appended to the URL:</p>
+<p><img itemprop="image" src="http://www.mikesdotnetting.com/images/22-05-2017-08-04-11.png"  alt="Handler Routevalue" /></p>
+<h3>Parameters</h3>
+<p>Handler methods can be designed to accept parameters:</p>
+<pre class="code"><span style="color: blue">public void </span><span style="color: black">OnPostView(</span><span style="color: blue">int </span><span style="color: black">id)
+{
+    Message = </span><span style="color: #a31515">$&quot;View handler fired for </span><span style="color: black">{id}</span><span style="color: #a31515">&quot;</span><span style="color: black">;
+}</span></pre>
+<p>The parameter name must match a form field name for it to be automatically bound to the value:</p>
+<pre class="code"><span style="color: blue">&lt;</span><span style="color: maroon">div </span><span style="color: red">class</span><span style="color: blue">=&quot;col-lg-1&quot;&gt;
+    &lt;</span><span style="color: purple">form asp-page-handler</span><span style="color: blue">=&quot;view&quot; </span><span style="color: red">method</span><span style="color: blue">=&quot;post&quot;&gt;
+        &lt;</span><span style="color: maroon">button </span><span style="color: red">class</span><span style="color: blue">=&quot;btn btn-default&quot;&gt;</span><span style="color: black">View</span><span style="color: blue">&lt;/</span><span style="color: maroon">button</span><span style="color: blue">&gt;
+        &lt;</span><span style="color: maroon">input </span><span style="color: red">type</span><span style="color: blue">=&quot;hidden&quot; </span><span style="background-color:yellow; color: red">name</span><span style="background-color:yellow;color: blue">=&quot;id&quot; </span><span style="color: red">value</span><span style="color: blue">=&quot;3&quot; /&gt;
+    &lt;/</span><span style="color: purple">form</span><span style="color: blue">&gt;
+&lt;/</span><span style="color: maroon">div</span><span style="color: blue">&gt;</span></pre>
+<p><img itemprop="image" src="http://www.mikesdotnetting.com/images/22-05-2017-08-30-22.png"  alt="Handler parameters" /></p>
+<p>Alternatively, you can use the form tag helper's <code>asp-route</code> attribute to pass parameter values  as part of the URL, either as a query string value or as route data:</p>
+<pre class="code"><span style="color: blue">&lt;</span><span style="color: purple">form asp-page-handler</span><span style="color: blue">=&quot;delete&quot; </span><span style="color: purple;background-color:yellow;">asp-route-id</span><span style="color: blue">=&quot;10&quot; </span><span style="color: red">method</span><span style="color: blue">=&quot;post&quot;&gt;
+    &lt;</span><span style="color: maroon">button </span><span style="color: red">class</span><span style="color: blue">=&quot;btn btn-default&quot;&gt;</span><span style="color: black">Delete</span><span style="color: blue">&lt;/</span><span style="color: maroon">button</span><span style="color: blue">&gt;
+&lt;/</span><span style="color: purple">form</span><span style="color: blue">&gt;</span></pre>
+<p>You append the name of the parameter to the <code>asp-route</code> attribute (in this case &quot;id&quot;) and then provide a value. This will result in the parameter being passed as a querystring value:</p>
+<p><img itemprop="image" src="http://www.mikesdotnetting.com/images/22-05-2017-09-17-21.png"  alt="Parameter as Query String" /></p>
+<p>Alternatively, you can extend the route defintion for the page to account for an optional parameter:</p>
+<pre class="code"><span style="background: yellow; color: black">@page</span><span style="color: black"> &quot;{handler?}/{id?}&quot;</span></pre>
+<p>This results in the parameter value being added as a separate segment in the URL:</p>
+<p><img itemprop="image" src="http://www.mikesdotnetting.com/images/22-05-2017-09-21-41.png"  alt="Parameter as route segment" /></p>
+<h3>Summary</h3>
+<p>Razor Pages handler methods facilitate the clear separation of processing code based on user actions on the page without resorting to a confusing pile of conditional code to determine which button was clicked. They follow a clear naming convention and are easy to use. When placed in a code-behind file, they can make the page feel very much like an MVC controller. They can also be seen as analogous to event handlers in a Web Form code behind file.</p>
+            </article>
+        </div>
+        <div id="prev-next">
+
+                <i class="glyphicon glyphicon-backward"></i>
+                <span id="previous-article">
+
+                    <a href="/article/307/razor-pages-getting-started-with-the-preview" title="Razor Pages - Getting Started With The Preview">Razor Pages - Getting Started With The Preview</a>
+                </span> 
+
+                <span id="next-article">
+                    <a href="/article/309/razor-pages-the-elevator-pitch" title="Razor Pages - The Elevator Pitch">Razor Pages - The Elevator Pitch</a>
+                </span>
+                <i class="glyphicon glyphicon-forward"></i>
+        </div>
+    <div style="margin-bottom:40px;">
+        <h4>You might also like...</h4>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Matched Content Leaderboard -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-8046723421340367"
+             data-ad-slot="2688391736"></ins>
+        <script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    <div id="widgets">
+        <div class="banner">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- Alternating Bottom Leaderboard -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-8046723421340367"
+                 data-ad-slot="6233042939"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        <p class="posted">
+            Date Posted:
+            <time itemprop="datePublished">
+                22 May 2017 20:16
+            </time><br />
+            Last Updated:
+            <time itemprop="dateModified">
+                25 May 2017 12:39
+            </time><br />
+            Posted by:
+            <span itemprop="author">
+                Mike Brind
+            </span><br />
+            Total Views to date:
+            2663<br />
+        </p>
+    </div>
+</article>
+
+<div id="comments" itemscope itemtype="http://schema.org/UserComments">
+    <h2>
+        2 Comments
+    </h2>
+
+        <div id="commentId9731" class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><time itemprop="commentTime">23 May 2017 11:41</time> - Satyabrata Mohapatra</h3>
+            </div>
+            <div class="panel-body" itemprop="commentText">
+                Nice and easy !! Great post.
+            </div>
+        </div>
+        <div id="commentId9732" class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><time itemprop="commentTime">26 May 2017 05:44</time> - Cyrus</h3>
+            </div>
+            <div class="panel-body" itemprop="commentText">
+                well done, thank you.
+            </div>
+        </div>
+</div>
+
+<div id="comment-form-wrapper"></div>    
+
+<div id="error" style="display: none" class="alert alert-danger">
+    <p>
+        Unfortunately, something went wrong and your message or comments have not been submitted
+        successfully. I'll try to fix whatever the problem is as soon as I can.
+    </p>
+</div>
+<div id="success" style="display: none" class="alert alert-success">
+    <p>
+        Thanks for your comments. They have been successfully sent to me. I will try to respond
+        if necessary as soon as I can.
+    </p>
+</div>
+
+
+            </div>
+            <div class="col-md-4">
+                <div id="med-rect-ad">
+
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:336px;height:280px"
+                         data-ad-client="ca-pub-8046723421340367"
+                         data-ad-slot="8735003335"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+
+                <div class="addthis_horizontal_follow_toolbox"></div>
+
+                <div id="tags">
+                    <ul class="tag-list">
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/14/ado-net" title="24 items filed under ADO.NET On Mikesdotnetting">ADO.NET</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/5/ajax" title="15 items filed under AJAX On Mikesdotnetting">AJAX</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/4/asp-net-2-0" title="39 items filed under ASP.NET 2.0 On Mikesdotnetting">ASP.NET 2.0</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/19/asp-net-3-5" title="43 items filed under ASP.NET 3.5 On Mikesdotnetting">ASP.NET 3.5</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/33/asp-net-5" title="16 items filed under ASP.NET 5 On Mikesdotnetting">ASP.NET 5</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/36/asp-net-core" title="19 items filed under ASP.NET Core On Mikesdotnetting">ASP.NET Core</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/38/asp-net-identity" title="2 items filed under ASP.NET Identity On Mikesdotnetting">ASP.NET Identity</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/22/asp-net-mvc" title="89 items filed under ASP.NET MVC On Mikesdotnetting">ASP.NET MVC</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/26/asp-net-web-forms" title="31 items filed under ASP.NET Web Forms On Mikesdotnetting">ASP.NET Web Forms</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/27/asp-net-web-pages" title="88 items filed under ASP.NET Web Pages On Mikesdotnetting">ASP.NET Web Pages</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/24/book-review" title="7 items filed under Book Review On Mikesdotnetting">Book Review</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/3/c" title="39 items filed under C# On Mikesdotnetting">C#</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/1/classic-asp" title="13 items filed under Classic ASP On Mikesdotnetting">Classic ASP</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/15/css" title="3 items filed under CSS On Mikesdotnetting">CSS</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/23/entity-framework" title="32 items filed under Entity Framework On Mikesdotnetting">Entity Framework</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/34/epplus" title="4 items filed under EPPlus On Mikesdotnetting">EPPlus</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/25/extension-method" title="6 items filed under Extension Method On Mikesdotnetting">Extension Method</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/18/general" title="12 items filed under General On Mikesdotnetting">General</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/7/html" title="8 items filed under HTML On Mikesdotnetting">HTML</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/30/html5" title="2 items filed under HTML5 On Mikesdotnetting">HTML5</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/20/itextsharp" title="11 items filed under iTextSharp On Mikesdotnetting">iTextSharp</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/6/javascript" title="21 items filed under Javascript On Mikesdotnetting">Javascript</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/21/jquery" title="34 items filed under jQuery On Mikesdotnetting">jQuery</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/17/linq" title="5 items filed under LINQ On Mikesdotnetting">LINQ</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/10/ms-access" title="17 items filed under MS Access On Mikesdotnetting">MS Access</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/29/razor" title="54 items filed under Razor On Mikesdotnetting">Razor</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/37/razor-pages" title="8 items filed under Razor Pages On Mikesdotnetting">Razor Pages</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/35/seo" title="3 items filed under SEO On Mikesdotnetting">SEO</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/8/sql" title="6 items filed under SQL On Mikesdotnetting">SQL</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/9/sql-server-express" title="2 items filed under SQL Server Express On Mikesdotnetting">SQL Server Express</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/16/vb-net" title="29 items filed under VB.Net On Mikesdotnetting">VB.Net</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/2/vbscript" title="11 items filed under VBScript On Mikesdotnetting">VBScript</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/12/visual-studio" title="5 items filed under Visual Studio On Mikesdotnetting">Visual Studio</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/32/web-api" title="1 items filed under Web API On Mikesdotnetting">Web API</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/31/webgrid" title="16 items filed under WebGrid On Mikesdotnetting">WebGrid</a>&nbsp;</li>
+    <li class="tag"><i class="glyphicon glyphicon-tag"></i><a href="/category/28/webmatrix" title="80 items filed under WebMatrix On Mikesdotnetting">WebMatrix</a>&nbsp;</li>
+</ul>
+                </div>
+
+                <div id="recent-comments">
+                    <h3>Recent Comments</h3>
+                        <p><a href="/article/311/sending-email-in-razor-pages#commentId9753" title="Pam commented on Sending Email in Razor Pages">Pam</a>
+    30/08/2017 11:30<br /><em>In response to <span class="responseto">Sending Email in Razor Pages </span></em><br />Mike,
+RazorPages sound like a nice choice for somebody still working in ASP classic who wants to to...</p>
+    <p><a href="/article/310/routing-in-razor-pages#commentId9750" title="Robby Robson commented on Routing in Razor Pages">Robby Robson</a>
+    15/08/2017 00:43<br /><em>In response to <span class="responseto">Routing in Razor Pages </span></em><br />Mike: great stuff. Now that .Core Standard 2.0 is formally out, how soon will you rewrite your book...</p>
+    <p><a href="/article/311/sending-email-in-razor-pages#commentId9749" title="Satyabrata Mohapatra commented on Sending Email in Razor Pages">Satyabrata Mohapatra</a>
+    28/07/2017 08:59<br /><em>In response to <span class="responseto">Sending Email in Razor Pages </span></em><br />Bit off topic, but congratulation sir for your MVP award. You deserve it !!!...</p>
+    <p><a href="/article/309/razor-pages-the-elevator-pitch#commentId9747" title="Satyabrata Mohapatra commented on Razor Pages - The Elevator Pitch">Satyabrata Mohapatra</a>
+    23/07/2017 16:43<br /><em>In response to <span class="responseto">Razor Pages - The Elevator Pitch </span></em><br />@Dale Severin
+You can continue to build apps using asp.net web pages....</p>
+    <p><a href="/article/311/sending-email-in-razor-pages#commentId9746" title="Satyabrata Mohapatra commented on Sending Email in Razor Pages">Satyabrata Mohapatra</a>
+    23/07/2017 16:40<br /><em>In response to <span class="responseto">Sending Email in Razor Pages </span></em><br />Thanks for sharing...learned a lot...</p>
+    <p><a href="/article/311/sending-email-in-razor-pages#commentId9745" title="Gfw commented on Sending Email in Razor Pages">Gfw</a>
+    22/07/2017 11:53<br /><em>In response to <span class="responseto">Sending Email in Razor Pages </span></em><br />Question... Does System.Net.Mail support SSL?...</p>
+    <p><a href="/article/309/razor-pages-the-elevator-pitch#commentId9744" title="Dale Severin commented on Razor Pages - The Elevator Pitch">Dale Severin</a>
+    20/07/2017 03:38<br /><em>In response to <span class="responseto">Razor Pages - The Elevator Pitch </span></em><br />I work with razor web pages extensively. I appreciate the rapid development it permits me to I am as...</p>
+    <p><a href="/article/310/routing-in-razor-pages#commentId9743" title="Obinna Okafor commented on Routing in Razor Pages">Obinna Okafor</a>
+    14/07/2017 01:19<br /><em>In response to <span class="responseto">Routing in Razor Pages </span></em><br />Thank you, Mike. Good post....</p>
+    <p><a href="/article/310/routing-in-razor-pages#commentId9742" title="Satyabrata Mohapatra commented on Routing in Razor Pages">Satyabrata Mohapatra</a>
+    11/07/2017 16:02<br /><em>In response to <span class="responseto">Routing in Razor Pages </span></em><br />Very powerful routing system!!...</p>
+    <p><a href="/article/307/razor-pages-getting-started-with-the-preview#commentId9740" title="Cyrus commented on Razor Pages - Getting Started With The Preview">Cyrus</a>
+    05/07/2017 03:41<br /><em>In response to <span class="responseto">Razor Pages - Getting Started With The Preview </span></em><br />How can I trim packages and services as much as possible to use just razor pages? I don’t want to to...</p>
+
+
+                </div>
+
+                <div id="archives">
+                    <h3>Archives</h3>
+                        <ul class ="archive archive-year">2017
+        <li>
+            <ul class="archive archive-month">
+                    <li><a href="/article/archive/2017/9">September (2)</a></li>
+                    <li><a href="/article/archive/2017/7">July (2)</a></li>
+                    <li><a href="/article/archive/2017/5">May (3)</a></li>
+                    <li><a href="/article/archive/2017/2">February (2)</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class ="archive archive-year">2016
+        <li>
+            <ul class="archive archive-month">
+                    <li><a href="/article/archive/2016/10">October (2)</a></li>
+                    <li><a href="/article/archive/2016/9">September (1)</a></li>
+                    <li><a href="/article/archive/2016/7">July (2)</a></li>
+                    <li><a href="/article/archive/2016/6">June (1)</a></li>
+                    <li><a href="/article/archive/2016/5">May (1)</a></li>
+                    <li><a href="/article/archive/2016/4">April (1)</a></li>
+                    <li><a href="/article/archive/2016/3">March (2)</a></li>
+                    <li><a href="/article/archive/2016/2">February (1)</a></li>
+                    <li><a href="/article/archive/2016/1">January (2)</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class ="archive archive-year">2015
+        <li>
+            <ul class="archive archive-month">
+                    <li><a href="/article/archive/2015/12">December (3)</a></li>
+                    <li><a href="/article/archive/2015/10">October (3)</a></li>
+                    <li><a href="/article/archive/2015/9">September (2)</a></li>
+                    <li><a href="/article/archive/2015/8">August (2)</a></li>
+                    <li><a href="/article/archive/2015/7">July (4)</a></li>
+                    <li><a href="/article/archive/2015/6">June (2)</a></li>
+                    <li><a href="/article/archive/2015/5">May (2)</a></li>
+                    <li><a href="/article/archive/2015/4">April (4)</a></li>
+                    <li><a href="/article/archive/2015/3">March (5)</a></li>
+                    <li><a href="/article/archive/2015/2">February (4)</a></li>
+                    <li><a href="/article/archive/2015/1">January (4)</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class ="archive archive-year">2014
+        <li>
+            <ul class="archive archive-month">
+                    <li><a href="/article/archive/2014/10">October (2)</a></li>
+                    <li><a href="/article/archive/2014/8">August (1)</a></li>
+                    <li><a href="/article/archive/2014/7">July (1)</a></li>
+                    <li><a href="/article/archive/2014/6">June (12)</a></li>
+                    <li><a href="/article/archive/2014/5">May (11)</a></li>
+                    <li><a href="/article/archive/2014/4">April (1)</a></li>
+                    <li><a href="/article/archive/2014/3">March (2)</a></li>
+                    <li><a href="/article/archive/2014/2">February (2)</a></li>
+                    <li><a href="/article/archive/2014/1">January (1)</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class ="archive archive-year">2013
+        <li>
+            <ul class="archive archive-month">
+                    <li><a href="/article/archive/2013/12">December (1)</a></li>
+                    <li><a href="/article/archive/2013/11">November (2)</a></li>
+                    <li><a href="/article/archive/2013/10">October (2)</a></li>
+                    <li><a href="/article/archive/2013/8">August (3)</a></li>
+                    <li><a href="/article/archive/2013/7">July (1)</a></li>
+                    <li><a href="/article/archive/2013/6">June (1)</a></li>
+                    <li><a href="/article/archive/2013/5">May (1)</a></li>
+                    <li><a href="/article/archive/2013/2">February (3)</a></li>
+                    <li><a href="/article/archive/2013/1">January (2)</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class ="archive archive-year">2012
+        <li>
+            <ul class="archive archive-month">
+                    <li><a href="/article/archive/2012/12">December (4)</a></li>
+                    <li><a href="/article/archive/2012/11">November (1)</a></li>
+                    <li><a href="/article/archive/2012/10">October (1)</a></li>
+                    <li><a href="/article/archive/2012/9">September (5)</a></li>
+                    <li><a href="/article/archive/2012/8">August (2)</a></li>
+                    <li><a href="/article/archive/2012/7">July (2)</a></li>
+                    <li><a href="/article/archive/2012/6">June (3)</a></li>
+                    <li><a href="/article/archive/2012/5">May (1)</a></li>
+                    <li><a href="/article/archive/2012/2">February (1)</a></li>
+                    <li><a href="/article/archive/2012/1">January (1)</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class ="archive archive-year">2011
+        <li>
+            <ul class="archive archive-month">
+                    <li><a href="/article/archive/2011/12">December (2)</a></li>
+                    <li><a href="/article/archive/2011/10">October (1)</a></li>
+                    <li><a href="/article/archive/2011/9">September (1)</a></li>
+                    <li><a href="/article/archive/2011/8">August (6)</a></li>
+                    <li><a href="/article/archive/2011/5">May (1)</a></li>
+                    <li><a href="/article/archive/2011/4">April (1)</a></li>
+                    <li><a href="/article/archive/2011/3">March (2)</a></li>
+                    <li><a href="/article/archive/2011/1">January (5)</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class ="archive archive-year">2010
+        <li>
+            <ul class="archive archive-month">
+                    <li><a href="/article/archive/2010/12">December (3)</a></li>
+                    <li><a href="/article/archive/2010/10">October (4)</a></li>
+                    <li><a href="/article/archive/2010/9">September (2)</a></li>
+                    <li><a href="/article/archive/2010/8">August (2)</a></li>
+                    <li><a href="/article/archive/2010/7">July (9)</a></li>
+                    <li><a href="/article/archive/2010/6">June (2)</a></li>
+                    <li><a href="/article/archive/2010/5">May (7)</a></li>
+                    <li><a href="/article/archive/2010/4">April (1)</a></li>
+                    <li><a href="/article/archive/2010/3">March (1)</a></li>
+                    <li><a href="/article/archive/2010/2">February (4)</a></li>
+                    <li><a href="/article/archive/2010/1">January (2)</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class ="archive archive-year">2009
+        <li>
+            <ul class="archive archive-month">
+                    <li><a href="/article/archive/2009/12">December (4)</a></li>
+                    <li><a href="/article/archive/2009/11">November (2)</a></li>
+                    <li><a href="/article/archive/2009/10">October (4)</a></li>
+                    <li><a href="/article/archive/2009/9">September (3)</a></li>
+                    <li><a href="/article/archive/2009/8">August (1)</a></li>
+                    <li><a href="/article/archive/2009/7">July (2)</a></li>
+                    <li><a href="/article/archive/2009/6">June (4)</a></li>
+                    <li><a href="/article/archive/2009/5">May (3)</a></li>
+                    <li><a href="/article/archive/2009/4">April (1)</a></li>
+                    <li><a href="/article/archive/2009/3">March (1)</a></li>
+                    <li><a href="/article/archive/2009/2">February (2)</a></li>
+                    <li><a href="/article/archive/2009/1">January (5)</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class ="archive archive-year">2008
+        <li>
+            <ul class="archive archive-month">
+                    <li><a href="/article/archive/2008/12">December (4)</a></li>
+                    <li><a href="/article/archive/2008/11">November (5)</a></li>
+                    <li><a href="/article/archive/2008/10">October (6)</a></li>
+                    <li><a href="/article/archive/2008/7">July (1)</a></li>
+                    <li><a href="/article/archive/2008/5">May (3)</a></li>
+                    <li><a href="/article/archive/2008/4">April (2)</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class ="archive archive-year">2007
+        <li>
+            <ul class="archive archive-month">
+                    <li><a href="/article/archive/2007/11">November (5)</a></li>
+                    <li><a href="/article/archive/2007/9">September (1)</a></li>
+                    <li><a href="/article/archive/2007/8">August (8)</a></li>
+                    <li><a href="/article/archive/2007/7">July (2)</a></li>
+                    <li><a href="/article/archive/2007/6">June (3)</a></li>
+                    <li><a href="/article/archive/2007/5">May (20)</a></li>
+                    <li><a href="/article/archive/2007/4">April (14)</a></li>
+                    <li><a href="/article/archive/2007/3">March (3)</a></li>
+            </ul>
+        </li>
+    </ul>
+
+                </div>
+            </div>
+        </div>
+        <hr />
+        <footer>
+            <p>&copy; 2006 - 2017  Mike Brind</p>
+        </footer>
+    </div>
+    <script src="/bundles/jquery?v=KWSfGjxFUDQQLdwL1TPz3ZGf-g8hmsz8XCBocpjA3nw1"></script>
+
+    <script src="/bundles/jqueryval?v=JaDQ-YIFymqJHWNyNR66S0OzmgyHL9jhYUHWmzkoQ-k1"></script>
+
+    <script src="/bundles/modernizr?v=wBEWDufH_8Md-Pbioxomt90vm6tJN2Pyy9u9zHtWsPo1"></script>
+
+    
+    <script type="text/javascript"src="/scripts/article.js?v=20160330090800"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({google_ad_client: "ca-pub-8046723421340367", enable_page_level_ads: true});</script>
+
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-542e69893b584761" async></script>
+    <script type="text/javascript" src="/Scripts/site.js"></script>
+</body>
+
+</html>
