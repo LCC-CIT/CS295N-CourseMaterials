@@ -1,7 +1,7 @@
-﻿<Properties StartupConfiguration="{8DD41F01-2C67-480A-B5EC-051C857821D0}|Default">
+﻿<Properties StartupConfiguration="{C8C3A37E-7019-4807-BF1E-F578F558283F}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="PigGame.Console/Program.cs">
     <Files>
-      <File FileName="PIgGame.Library/PigLogic.cs" Line="151" Column="1" />
+      <File FileName="PIgGame.Library/PigLogic.cs" Line="144" Column="1" />
       <File FileName="PigGame.Console/Program.cs" Line="9" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>

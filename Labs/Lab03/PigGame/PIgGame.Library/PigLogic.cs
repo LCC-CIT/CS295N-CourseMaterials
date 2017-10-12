@@ -46,7 +46,7 @@ namespace PigGame
         /*************** public methods ******************/
 
         // Start over without creating a new game object
-        public void resetGame()
+        public void ResetGame()
         {
             player1Score = 0;
             player2Score = 0;
@@ -63,6 +63,10 @@ namespace PigGame
             {
                 turnPoints += roll;
             }
+            else
+            {
+                turnPoints = 0;
+            }
 
             return roll;
         }
@@ -78,7 +82,7 @@ namespace PigGame
 
 
         // toggles the turn number between 1 and 2
-        public int changeTurn()
+        public int ChangeTurn()
         {
             if (turn == 1)
                 player1Score += turnPoints;
@@ -96,7 +100,7 @@ namespace PigGame
         // 2. First player to reach WINNING_SCORE wins
         // 3. If both players have reached WINNING_SCORE 
         //    the one with the higher score wins
-        public String checkForWinner()
+        public String CheckForWinner()
         {
             string name = "";
 

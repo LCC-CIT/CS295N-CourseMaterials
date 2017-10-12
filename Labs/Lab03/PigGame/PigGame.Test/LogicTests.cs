@@ -32,7 +32,7 @@ namespace PigGame.Test
         public void GetCurrentPlayer2Test()
         {
             // Arrange
-            game.changeTurn();
+            game.ChangeTurn();
 
             // Act (execute the method under test)
             string player = game.GetCurrentPlayer();

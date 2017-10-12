@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.0",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.0": {
+      "PigGame.Console/1.0.0": {
+        "dependencies": {
+          "PIgGame.Library": "1.0.0"
+        },
+        "runtime": {
+          "PigGame.Console.dll": {}
+        }
+      },
+      "PIgGame.Library/1.0.0": {
+        "runtime": {
+          "PIgGame.Library.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PigGame.Console/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PIgGame.Library/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

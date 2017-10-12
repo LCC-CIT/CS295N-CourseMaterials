@@ -1,0 +1,13 @@
+/Volumes/DataCard/Repos/CS295N-CourseMaterials/Labs/Lab03/PigGame/PigGame.Console/bin/Debug/netcoreapp2.0/PigGame.Console.deps.json
+/Volumes/DataCard/Repos/CS295N-CourseMaterials/Labs/Lab03/PigGame/PigGame.Console/bin/Debug/netcoreapp2.0/PigGame.Console.runtimeconfig.json
+/Volumes/DataCard/Repos/CS295N-CourseMaterials/Labs/Lab03/PigGame/PigGame.Console/bin/Debug/netcoreapp2.0/PigGame.Console.runtimeconfig.dev.json
+/Volumes/DataCard/Repos/CS295N-CourseMaterials/Labs/Lab03/PigGame/PigGame.Console/bin/Debug/netcoreapp2.0/PigGame.Console.dll
+/Volumes/DataCard/Repos/CS295N-CourseMaterials/Labs/Lab03/PigGame/PigGame.Console/bin/Debug/netcoreapp2.0/PigGame.Console.pdb
+/Volumes/DataCard/Repos/CS295N-CourseMaterials/Labs/Lab03/PigGame/PigGame.Console/bin/Debug/netcoreapp2.0/PIgGame.Library.dll
+/Volumes/DataCard/Repos/CS295N-CourseMaterials/Labs/Lab03/PigGame/PigGame.Console/bin/Debug/netcoreapp2.0/PIgGame.Library.pdb
+/Volumes/DataCard/Repos/CS295N-CourseMaterials/Labs/Lab03/PigGame/PigGame.Console/obj/Debug/netcoreapp2.0/PigGame.Console.csprojResolveAssemblyReference.cache
+/Volumes/DataCard/Repos/CS295N-CourseMaterials/Labs/Lab03/PigGame/PigGame.Console/obj/Debug/netcoreapp2.0/PigGame.Console.csproj.CoreCompileInputs.cache
+/Volumes/DataCard/Repos/CS295N-CourseMaterials/Labs/Lab03/PigGame/PigGame.Console/obj/Debug/netcoreapp2.0/PigGame.Console.AssemblyInfoInputs.cache
+/Volumes/DataCard/Repos/CS295N-CourseMaterials/Labs/Lab03/PigGame/PigGame.Console/obj/Debug/netcoreapp2.0/PigGame.Console.AssemblyInfo.cs
+/Volumes/DataCard/Repos/CS295N-CourseMaterials/Labs/Lab03/PigGame/PigGame.Console/obj/Debug/netcoreapp2.0/PigGame.Console.dll
+/Volumes/DataCard/Repos/CS295N-CourseMaterials/Labs/Lab03/PigGame/PigGame.Console/obj/Debug/netcoreapp2.0/PigGame.Console.pdb

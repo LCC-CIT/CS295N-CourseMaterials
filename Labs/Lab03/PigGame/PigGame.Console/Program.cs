@@ -34,7 +34,7 @@ namespace PigGame
                     go = Console.ReadLine().ToLower();
                 }
 
-                game.changeTurn();
+                game.ChangeTurn();
                 // Machine player's turn
                 Console.WriteLine(game.GetCurrentPlayer() + "'s turn");
                 while (game.AiRoll(out roll))
@@ -49,7 +49,7 @@ namespace PigGame
                 Console.WriteLine(game.Player2Name + "'s score: " + game.Player2Score);
                 Console.WriteLine("----------------------");
 
-                string winner = game.checkForWinner();
+                string winner = game.CheckForWinner();
                 if (winner != "")
                 {
                     Console.WriteLine("The winner is: " + winner);
@@ -57,7 +57,7 @@ namespace PigGame
                 }
                 else
                 {
-                    game.changeTurn();
+                    game.ChangeTurn();
                 }
 
             } while (!done);
