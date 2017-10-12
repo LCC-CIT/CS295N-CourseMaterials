@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{8DD41F01-2C67-480A-B5EC-051C857821D0}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PigGame.Console/Program.cs">
+    <Files>
+      <File FileName="PIgGame.Library/PigLogic.cs" Line="151" Column="1" />
+      <File FileName="PigGame.Console/Program.cs" Line="9" Column="21" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.PigGame.Console PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.PigGame.Web PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
