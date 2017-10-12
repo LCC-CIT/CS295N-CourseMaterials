@@ -13,6 +13,14 @@
             </form>
         </td>
     </tr>
-    <tr></tr>
+    <tr>
+	    <td>@Model.PlayerName's score: @Model.Game.Player1Score </td>
+	    <td>
+			<p>@Model.Roll</p>
+			<form asp-page-handler="roll" method="post">
+				<button type="submit">Roll</button>
+			</form>
+		</td>
+	</tr>
     <tr></tr>
 </table>

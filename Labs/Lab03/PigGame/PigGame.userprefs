@@ -1,8 +1,10 @@
 ﻿<Properties StartupConfiguration="{C8C3A37E-7019-4807-BF1E-F578F558283F}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="PigGame.Console/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PIgGame.Library/PigLogic.cs">
     <Files>
-      <File FileName="PIgGame.Library/PigLogic.cs" Line="144" Column="1" />
       <File FileName="PigGame.Console/Program.cs" Line="9" Column="21" />
+      <File FileName="PigGame.Web/Pages/Index.cshtml" Line="16" Column="60" />
+      <File FileName="PigGame.Web/Pages/Index.cshtml.cs" Line="16" Column="24" />
+      <File FileName="PIgGame.Library/PigLogic.cs" Line="49" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

@@ -1,7 +1,6 @@
 /Volumes/DataCard/Repos/CS295N-CourseMaterials/Labs/Lab03/PigGame/PIgGame.Library/bin/Debug/netcoreapp2.0/PIgGame.Library.deps.json
 /Volumes/DataCard/Repos/CS295N-CourseMaterials/Labs/Lab03/PigGame/PIgGame.Library/bin/Debug/netcoreapp2.0/PIgGame.Library.dll
 /Volumes/DataCard/Repos/CS295N-CourseMaterials/Labs/Lab03/PigGame/PIgGame.Library/bin/Debug/netcoreapp2.0/PIgGame.Library.pdb
-/Volumes/DataCard/Repos/CS295N-CourseMaterials/Labs/Lab03/PigGame/PIgGame.Library/obj/Debug/netcoreapp2.0/PIgGame.Library.csprojResolveAssemblyReference.cache
 /Volumes/DataCard/Repos/CS295N-CourseMaterials/Labs/Lab03/PigGame/PIgGame.Library/obj/Debug/netcoreapp2.0/PIgGame.Library.csproj.CoreCompileInputs.cache
 /Volumes/DataCard/Repos/CS295N-CourseMaterials/Labs/Lab03/PigGame/PIgGame.Library/obj/Debug/netcoreapp2.0/PIgGame.Library.AssemblyInfoInputs.cache
 /Volumes/DataCard/Repos/CS295N-CourseMaterials/Labs/Lab03/PigGame/PIgGame.Library/obj/Debug/netcoreapp2.0/PIgGame.Library.AssemblyInfo.cs
