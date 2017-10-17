@@ -1,4 +1,9 @@
-﻿using System;
+﻿/* Pig game-play logic
+ * Written by Brian Bird
+ * Original 4/25/15, updated 10/10/17
+ */
+
+using System;
 
 namespace PigGame
 {

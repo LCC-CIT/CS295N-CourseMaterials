@@ -1,16 +1,23 @@
 ﻿<Properties StartupConfiguration="{C8C3A37E-7019-4807-BF1E-F578F558283F}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="PigGame.Web/Startup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PIgGame.Library/PigLogic.cs">
     <Files>
-      <File FileName="PigGame.Console/Program.cs" Line="9" Column="21" />
-      <File FileName="PigGame.Web/Pages/Index.cshtml" Line="19" Column="22" />
-      <File FileName="PigGame.Web/Pages/Index.cshtml.cs" Line="36" Column="1" />
+      <File FileName="PigGame.Web/Pages/Index.cshtml" Line="1" Column="30" />
+      <File FileName="PigGame.Web/Pages/Index.cshtml.cs" Line="4" Column="1" />
       <File FileName="PIgGame.Library/PigLogic.cs" Line="49" Column="22" />
-      <File FileName="PigGame.Web/Startup.cs" Line="1" Column="1" />
     </Files>
     <Pads>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+      <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="PigGame" expanded="True" selected="True" />
+          <Node name="PigGame" expanded="True">
+            <Node name="PigGame.Console" expanded="True" />
+            <Node name="PIgGame.Library" expanded="True">
+              <Node name="PigLogic.cs" selected="True" />
+            </Node>
+            <Node name="PigGame.Test" expanded="True" />
+            <Node name="PigGame.Web" expanded="True">
+              <Node name="Pages" expanded="True" />
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>

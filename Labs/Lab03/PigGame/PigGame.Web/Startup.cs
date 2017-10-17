@@ -21,6 +21,9 @@ namespace PigGame.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDistributedMemoryCache();
+            // Add services required for session state
+            services.AddSession();
             services.AddMvc();
         }
 
@@ -37,7 +40,7 @@ namespace PigGame.Web
             }
 
             app.UseStaticFiles();
-
+            app.UseSession();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
