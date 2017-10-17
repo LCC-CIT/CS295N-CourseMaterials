@@ -1,4 +1,9 @@
-﻿using System;
+﻿/* Console version of pig game
+ * Written by Brian Bird
+ * Original 10/9/17, updated 10/17/17
+ */
+
+using System;
 
 namespace PigGame
 {
@@ -24,6 +29,7 @@ namespace PigGame
                 Console.WriteLine(game.GetCurrentPlayer() + "'s turn");
                 string go = "yes";
                 int roll = 0;
+                // loop for human to roll die
                 while (go == "yes" || go == "y")
                 {
                     roll = game.RollDie();
@@ -35,14 +41,16 @@ namespace PigGame
                 }
 
                 game.ChangeTurn();
-                // Machine player's turn
+                // Machine's turn
                 Console.WriteLine(game.GetCurrentPlayer() + "'s turn");
-                while (game.AiRoll(out roll))
+                bool keepRolling = true;
+                do
                 {
+                    keepRolling = game.AiRoll(out roll);
                     Console.WriteLine(" Roll: " + roll + ", Turn: " + game.TurnPoints);
-                    if (roll == PigLogic.BAD_NUMBER)
-                        break;
-                }
+                } while (keepRolling && roll == PigLogic.BAD_NUMBER);
+
+                game.ChangeTurn();
 
                 Console.WriteLine("----------------------");
                 Console.WriteLine(game.Player1Name + "'s score: " + game.Player1Score);
@@ -54,10 +62,6 @@ namespace PigGame
                 {
                     Console.WriteLine("The winner is: " + winner);
                     done = true;
-                }
-                else
-                {
-                    game.ChangeTurn();
                 }
 
             } while (!done);

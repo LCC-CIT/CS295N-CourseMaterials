@@ -1,6 +1,6 @@
 ﻿/* Pig game-play logic
  * Written by Brian Bird
- * Original 4/25/15, updated 10/10/17
+ * Original 4/25/15, updated 10/17/17
  */
 
 using System;
@@ -109,31 +109,28 @@ namespace PigGame
         {
             string name = "";
 
-            if (turn % 2 == 0) // even number of turns
+            if (player1Score >= WINNING_SCORE && player2Score >= WINNING_SCORE)
             {
-                if (player1Score >= WINNING_SCORE && player2Score >= WINNING_SCORE)
+                if (player1Score == player2Score)
                 {
-                    if (player1Score == player2Score)
-                    {
-                        name = "Tie";
-                    }
-                    else if (player1Score > player2Score)
-                    {
-                        name = Player1Name;
-                    }
-                    else
-                    {
-                        name = Player2Name;
-                    }
+                    name = "Tie";
                 }
-                else if (player1Score >= WINNING_SCORE)
+                else if (player1Score > player2Score)
                 {
                     name = Player1Name;
                 }
-                else if (player2Score >= WINNING_SCORE)
+                else
                 {
                     name = Player2Name;
                 }
+            }
+            else if (player1Score >= WINNING_SCORE)
+            {
+                name = Player1Name;
+            }
+            else if (player2Score >= WINNING_SCORE)
+            {
+                name = Player2Name;
             }
 
             return name;
