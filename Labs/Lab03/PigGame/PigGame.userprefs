@@ -3,7 +3,7 @@
     <Files>
       <File FileName="PigGame.Web/Pages/Index.cshtml" Line="1" Column="30" />
       <File FileName="PigGame.Web/Pages/Index.cshtml.cs" Line="4" Column="1" />
-      <File FileName="PIgGame.Library/PigLogic.cs" Line="49" Column="22" />
+      <File FileName="PIgGame.Library/PigLogic.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
