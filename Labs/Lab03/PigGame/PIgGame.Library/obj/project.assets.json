@@ -664,24 +664,33 @@
     ]
   },
   "packageFolders": {
-    "/Users/admin/.nuget/packages/": {}
+    "C:\\Users\\Student\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "/Volumes/DataCard/Repos/CS295N-CourseMaterials/Labs/Lab03/PigGame/PIgGame.Library/PIgGame.Library.csproj",
+      "projectUniqueName": "C:\\Users\\Student\\Documents\\CS295N-CourseMaterials\\Labs\\Lab03\\PigGame\\PIgGame.Library\\PIgGame.Library.csproj",
       "projectName": "PIgGame.Library",
-      "projectPath": "/Volumes/DataCard/Repos/CS295N-CourseMaterials/Labs/Lab03/PigGame/PIgGame.Library/PIgGame.Library.csproj",
-      "packagesPath": "/Users/admin/.nuget/packages/",
-      "outputPath": "/Volumes/DataCard/Repos/CS295N-CourseMaterials/Labs/Lab03/PigGame/PIgGame.Library/obj",
+      "projectPath": "C:\\Users\\Student\\Documents\\CS295N-CourseMaterials\\Labs\\Lab03\\PigGame\\PIgGame.Library\\PIgGame.Library.csproj",
+      "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Student\\Documents\\CS295N-CourseMaterials\\Labs\\Lab03\\PigGame\\PIgGame.Library\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "/Users/admin/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
