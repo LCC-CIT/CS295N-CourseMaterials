@@ -54,7 +54,7 @@ namespace PigGame.Web.Pages
             int player1Score = HttpContext.Session.GetInt32(PLAYER1_SCORE) ?? 0;
             int player2Score = HttpContext.Session.GetInt32(PLAYER2_SCORE) ?? 0;
             int turnScore = HttpContext.Session.GetInt32(TURN_POINTS) ?? 0;
-            int turn = HttpContext.Session.GetInt32(TURN) ?? 0;
+            int turn = HttpContext.Session.GetInt32(TURN) ?? 1;
             game = new PigLogic(player1Score, player2Score, turnScore, turn);
             game.Player1Name = HttpContext.Session.GetString(PLAYER_NAME);
         }
