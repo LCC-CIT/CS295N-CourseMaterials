@@ -48,7 +48,7 @@ namespace PigGame
                 {
                     keepRolling = game.AiRoll(out roll);
                     Console.WriteLine(" Roll: " + roll + ", Turn: " + game.TurnPoints);
-                } while (keepRolling && roll == PigLogic.BAD_NUMBER);
+                } while (keepRolling && roll != PigLogic.BAD_NUMBER);
 
                 game.ChangeTurn();
 
