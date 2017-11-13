@@ -1,1 +1,104 @@
-<!DOCTYPE html><html>  <head>    <meta http-equiv="content-type" content="text/html; charset=UTF-8">    <title>Lesson Plan Template</title>    <style type="text/css">body {  font-family: "Arial", "Helvetica", "sans-serif";}</style> </head>  <body>    <header> <b>CS295N Web Development 1: ASP.NET&nbsp;&nbsp;        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Month, Day 2017<br>      </b>      <div>Brian Bird</div>      <br>      <i><b>Topic: The topic of this lesson </b></i></header>    <section>      <article> <br>        <b>Where we are<br>        </b>        <table style="width: 807px; height: 127px;" border="1">          <tbody>            <tr>              <td>Topic 1</td>              <td>Topic 6</td>            </tr>            <tr>              <td>Topic 2</td>              <td>Topic 7</td>            </tr>            <tr>              <td>Topic 3</td>              <td>Topic 8</td>            </tr>            <tr>              <td>Topic 4</td>              <td>Topic 9 </td>            </tr>            <tr>              <td>Topic 5</td>              <td>Topic 10 </td>            </tr>          </tbody>        </table>        <b><br>          <br>          Introduction</b><br>        <ul>          <li>Announcements<br>          </li>          <li>Review due dates </li>          <li>How is everyone doing on the current assignments?</li>          <li>Do a code review of someone’s lab</li>        </ul>      </article>      <article>        <div><b>Overview</b></div>        <div>          <ul>            <li>Objective 1</li>            <li>Objective 2</li>            <li>Objective 3<b><br>              </b></li>          </ul>        </div>      </article>    </section>    <section>      <article>        <p> <b>Objective 1 </b></p>      </article>      <article>        <p><b>Objective 2 </b></p>      </article>      <article>        <p><b>Objective 3 <br>          </b></p>        <p><b><br>          </b></p>      </article>      <br>      <br>      <b>This week's Lab<br>      </b>      <ul>        <li>Feature 1</li>        <li>Feature 2</li>        <li>Feature 3</li>      </ul>    </section>  </body></html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Lesson Plan Template</title>
+    <style type="text/css">
+body {
+  font-family: "Arial", "Helvetica", "sans-serif";
+}
+
+</style> </head>
+  <body>
+    <header> <b>CS295N Web Development 1: ASP.NET&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Month 1, 2017<br>
+      </b>
+      <div>Brian Bird</div>
+      <br>
+      <i><b>Topic: The topic of this lesson </b></i></header>
+    <section>
+      <article> <br>
+        <b>Where we are<br>
+        </b>
+        <table style="width: 807px; height: 127px;" border="1">
+          <tbody>
+            <tr>
+              <td>Topic 1</td>
+              <td>Topic 6</td>
+            </tr>
+            <tr>
+              <td>Topic 2</td>
+              <td>Topic 7</td>
+            </tr>
+            <tr>
+              <td>Topic 3</td>
+              <td>Topic 8</td>
+            </tr>
+            <tr>
+              <td>Topic 4</td>
+              <td>Topic 9 </td>
+            </tr>
+            <tr>
+              <td>Topic 5</td>
+              <td>Topic 10 </td>
+            </tr>
+          </tbody>
+        </table>
+        <b><br>
+          <br>
+          Introduction</b><br>
+        <ul>
+          <li>Announcements<br>
+          </li>
+          <li>Review due dates </li>
+          <li>How is everyone doing on the current assignments?</li>
+          <li>Do a code review of someone’s lab</li>
+        </ul>
+      </article>
+      <article>
+        <div><b>Overview</b></div>
+        <div>
+          <ul>
+            <b>
+              <li><a href="#topic1">Objective 1</a></li>
+              <li><a href="#topic2">Objective 2</a></li>
+              <li><a href="#topic3">Objective 3</a></li>
+              <li><a href="#topic4">Objective 4</a></li>
+              <br>
+            </b>
+          </ul>
+        </div>
+      </article>
+    </section>
+    <section>
+      <article id="topic1">
+        <p> <b>Objective 1 </b></p>
+        <p>About objective 1</p>
+        Example: <code>&lt;!-- code --&gt;</code> </article>
+      <article id="topic2">
+        <p><b>Objective 2 </b></p>
+        <p>About objective 2</p>
+        Example: <code>&lt;!-- code --&gt;</code> </article>
+      <article id="topic3">
+        <p><b>Objective 3 <br>
+          </b></p>
+        <p>About objective 3</p>
+        Example: <code>&lt;!-- code --&gt;</code> </article>
+      <article id="topic4">
+        <p><b>Objective 4 <br>
+          </b></p>
+        <p>About objective 4</p>
+        Example: <code>&lt;!-- code --&gt;</code> </article>
+      <br>
+      <b>This week's Lab<br>
+      </b>
+      <ul>
+        <li>Feature 1</li>
+        <li>Feature 2</li>
+        <li>Feature 3</li>
+      </ul>
+    </section>
+  </body>
+</html>
