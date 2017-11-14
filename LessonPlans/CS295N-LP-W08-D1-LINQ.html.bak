@@ -4,20 +4,24 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>Week 8, Day 1, LINQ</title>
     <style type="text/css">
-        body {
-            font-family: "Arial", "Helvetica", "sans-serif";
-        }
-        
-        #week08 {
-            background-color: #f8ff2e;
-        }
-        
-        code {
-            font-size: larger;
-            background-color: lightgoldenrodyellow;
-        }
-    </style>
-  </head>
+body {
+  font-family: "Arial", "Helvetica", "sans-serif";
+}
+
+#week08 {
+  background-color: #f8ff2e;
+}
+
+code {
+  font-size: larger;
+  background-color: lightgoldenrodyellow;
+}
+
+.exercise {
+  background-color: #c6ffe2;
+}
+
+</style> </head>
   <body>
     <header> <b>CS295N Web Development 1: ASP.NET&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
@@ -128,7 +132,7 @@
           <li> LINQ Syntax (Query expression syntax, as opposed to fluent
             syntax) (inspired by languages like LISP and Haskell) Looks <u>
               superficially</u> like SQL – but it’s significantly different.</li>
-          <ul>
+          <ul >
             <li> Essential operators: <i>from</i>, <i>select</i>, <i>where</i></li>
             <li>Full list of LINK keywords: <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/query-keywords">Query
                 Keywords</a></li>
@@ -208,17 +212,15 @@
                 &lt; 200 select p.Name).count();<br>
                 <br>
               </code></li>
-            <li> Exercise: Modify the Planet example</li>
+            <li class="exercise"> Exercise 1: Add to the Planet example</li>
             <ul>
-              <li> Modify the query to return the name of planets greater than a
-                certain size.</li>
+              <li> Write a query to find all the planets greater than a certain
+                size. Use a loop to display the name and size of each planet.</li>
+              <li>Write a query to search for "Earth".</li>
               <ul>
-                <li> Return name and size</li>
-              </ul>
-              <li>Modify the query to search for "Earth".</li>
-              <ul>
-                <li>Return the size and distance from the sun</li>
-                <li>Hint: Use .SingleOrDefault() at the end of the query<br>
+                <li>Display the size and distance from the sun</li>
+                <li>Hint: Use .SingleOrDefault() at the end of the query so that
+                  your query returns a Planet object.<br>
                 </li>
               </ul>
             </ul>
@@ -257,9 +259,13 @@
         <p>About objective 3</p>
         Example:<br>
         &nbsp; <code>innerPlanets = planets.Where(p =&gt; p.DistanceToSun &lt;
-          200).Select(p =&gt; p.Name);</code> 
-      Exercise
-      </article>
+          200).Select(p =&gt; p.Name);</code> <br>
+        <br>
+        <p class="exercise">
+
+        Exercise 2: Write queries to get the same results as in the previous
+        exercise, but use lambda expressions.<br>
+        </p>      </article>
       <article id="topic4">
         <p><b><u>RazorPagesMovie Queries with Lambda Expressions </u><br>
           </b></p>
