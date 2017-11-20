@@ -13,8 +13,12 @@ body {
 }
 
 code {
+  display:block;
   font-size: larger;
   background-color: lightgoldenrodyellow;
+  max-height:400px;
+  width:75%;
+  overflow:scroll;
 }
 
 .exercise {
@@ -26,11 +30,11 @@ code {
     <header> <b>CS295N Web Development 1: ASP.NET&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; November 15, 2017<br>
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; November 20, 2017<br>
       </b>
       <div>Brian Bird</div>
       <br>
-      <i><b>Topic: Validation Using Data Annotations<br>
+      <i><b>Topic: Creating a REST Web API<br>
         </b></i></header>
     <section>
       <article> <br>
@@ -72,16 +76,16 @@ code {
           <ul>
             <li>Today</li>
             <ul>
-              <li>Lab 7 production version</li>
+              <li>Lab 8 production version</li>
               <li>Term project proposal</li>
             </ul>
-            <li>Saturday, 11/18</li>
+            <li>Saturday, 11/25</li>
             <ul>
-              <li>Lab 8 Beta version</li>
+              <li>Lab 9 Beta version</li>
             </ul>
-            <li>Monday, 11/20</li>
+            <li>Monday, 11/27</li>
             <ul>
-              <li>Lab 8 code review</li>
+              <li>Lab 9 code review</li>
             </ul>
           </ul>
         </ul>
@@ -101,10 +105,11 @@ code {
         <div>
           <ul>
             <b>
-              <li><a href="#topic1">C# Attributes</a></li>
-              <li><a href="#topic2">Data Annotations<br>
+              <li><a href="#topic1">Web Services</a></li>
+              <li><a href="#topic2">REST Protocol<br>
                 </a></li>
-              <li><a href="#topic3">Validation using Data Annotations</a></li>
+              <li><a href="#topic3">Consuming a REST Service<br>
+                </a></li>
               <br>
             </b>
           </ul>
@@ -113,132 +118,189 @@ code {
     </section>
     <section>
       <article id="topic1">
-        <p> <u><b>C# Attributes</b></u></p>
+        <p> <u><b>Web Services</b></u></p>
         <ul>
           <ul>
             <ul>
             </ul>
           </ul>
-          <li>Programming Guide: <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/attributes/">C#
-              Attributes</a></li>
-          <li>Attributes are a means of associating metadata with code</li>
+        </ul>
+        Think of a web service as a web site that doesn't have a UI, it is meant
+        to be accessed by a computer not a person.
+        <ul>
+          <li>You can also think of it as an API that contains methods that can
+            be called over a network or over the internet.</li>
+          <li>Advantages of using web services:</li>
           <ul>
-            <li>Metadata is additional information about types defined in your
-              program (and remember that classes are types).</li>
-            <li>Attributes are declarative.</li>
-            <li>Attributes can be applied to assemblies (think DLLs), classes,
-              methods, and properties.<br>
-              <code>[BindProperty]<br>
-                public Movie Movie { get; set; }<br>
-                <br>
-              </code> </li>
-            <li>Attributes can accept arguments.<br>
-              <code>[attribute(positional_parameters, name_parameter = value,
-                ...)]</code></li>
+            <li>Allows computing services to be distributed across:</li>
             <ul>
-              <li>Example using positional parameters:<br>
-                <code>[ObsoleteAttribute("This method is deprecated", false)]<br>
-                  public void AnOutdatedMethod()<br>
-                  <br>
-                </code></li>
+              <li>Multiple machines</li>
+              <li>Any distance</li>
             </ul>
+            <li>Provides a service that is:</li>
             <ul>
-              <li>Example using named parameters:<br>
-                <code>[ObsoleteAttribute(Message = "This method is deprecated",
-                  IsError = false)]<br>
-                  public void AnOutdatedMethod()<br>
-                  <br>
-                </code></li>
-              <li>API Reference: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.obsoleteattribute?view=netcore-2.0">ObsoleteAttribute</a></li>
+              <li>OS independent</li>
+              <li>Language independent</li>
             </ul>
+          </ul>
+          <li>Types of Web Services</li>
+          <ul>
+            <li>SOAP - Simple Object Access Protocol</li>
             <ul>
+              <li>An older protocol that is more difficult to implement and
+                consume</li>
             </ul>
+            <li>REST - Representational State Transfer</li>
             <ul>
+              <li>A newer type of web service that is being used for most new
+                web service implementations</li>
             </ul>
+          </ul>
+        </ul>
+        <ul>
+          <ul>
+          </ul>
+          <ul>
           </ul>
         </ul>
         <p></p>
-        <code></code> </article>
-      <article id="topic2">
-        <p><u><b><br>
-            </b></u></p>
-        <p><u><b>Data Annotations </b></u></p>
-        <ul>
-          <li>API Reference: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=netcore-2.0">System.ComponentModel.DataAnnotations
-              Namespace</a></li>
-          <ul>
-            <li>Most of these attributes are for validation</li>
-          </ul>
-        </ul>
-        <a href="https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=netcore-2.0">
-        </a>
-        <ul>
-          <a href="https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=netcore-2.0"></a>
-        </ul>
-        <code></code><br>
       </article>
-      <article id="topic3">
-        <p><b><u>Validation using Data Annotations</u><br>
-          </b></p>
+      <article id="topic2">
+        <p><u><b>REST Architecture </b></u></p>
         <ul>
-          <li>Razor Pages Movie Tutorial: <a href="https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/validation">Adding
-              Validation</a></li>
-          <li>API Reference: see above</li>
-          <li>Validation is specified on the data model and is then enforced in
-            multiple places:</li>
+          <li>Reference: <a href="http://www.drdobbs.com/web-development/restful-web-services-a-tutorial/240169069"
+              target="_blank">RESTful
+              Web Services: A Tutorial - Dr. Dobb's</a></li>
+          <li>Not really a new protocol - just uses HTTP</li>
           <ul>
-            <li>In the database</li>
-            <li>In HTML form elements in the browser using jQuery validate</li>
-            <li>In HTTP Requests processed on the server (in case JavaScript is
-              disabled in the browser)</li>
+            <li>Example: <a href="https://www.wunderground.com/weather/api/d/docs"
+                target="_blank">Weather
+                Underground REST API</a><br>
+              <br>
+              <code>http://api.wunderground.com/api/0e3e69302fba4e56/conditions/q/CA/San_Francisco.json</code>
+            </li>
+            <br>
+          </ul>
+          <li>Representations</li>
+          <ul>
+            <li>Resources - a REST service provides access to resources, which
+              can be any kind of digital object: image, video, text, etc.</li>
+            <li>There is no restriction on the way resources can be represented,
+              but the two most common means are:</li>
             <ul>
-              <li>Add a break-point to a request method to test this</li>
-              <li>Test this again after <a href="https://www.wikihow.com/Disable-JavaScript">disabling
-                  JavaScript</a><br>
-              </li>
+              <li>JSON - JavaScript Object Notation</li>
+              <ul>
+                <li>Example:<br>
+                  <code>{ &nbsp; "response": {<br>
+                    &nbsp; "version": "0.1",<br>
+                    &nbsp; "termsofService":
+                    "http://www.wunderground.com/weather/api/d/terms.html",<br>
+                    &nbsp; "features": {<br>
+                    &nbsp; "conditions": 1<br>
+                    &nbsp; }<br>
+                    &nbsp; },<br>
+                    &nbsp; "current_observation": {<br>
+                    &nbsp; "image": {<br>
+                    &nbsp; "url":
+                    "http://icons-ak.wxug.com/graphics/wu2/logo_130x80.png",<br>
+                    &nbsp; "title": "Weather Underground",<br>
+                    &nbsp; "link": "http://www.wunderground.com"<br>
+                    &nbsp; },<br>
+                    &nbsp; "display_location": {<br>
+                    &nbsp; "full": "San Francisco, CA",<br>
+                    &nbsp; "city": "San Francisco",<br>
+                    &nbsp; "state": "CA",<br>
+                    &nbsp; "state_name": "California",<br>
+                    &nbsp; "country": "US",<br>
+                    &nbsp; "country_iso3166": "US",<br>
+                    &nbsp; "zip": "94101",<br>
+                    &nbsp; "latitude": "37.77500916",<br>
+                    &nbsp; "longitude": "-122.41825867",<br>
+                    &nbsp; "elevation": "47.00000000"<br>
+                    &nbsp; },<br>
+                    &nbsp; "observation_location": {<br>
+                    &nbsp; "full": "SOMA - Near Van Ness, San Francisco,
+                    California",<br>
+                    &nbsp; "city": "SOMA - Near Van Ness, San Francisco",<br>
+                    &nbsp; "state": "California",<br>
+                    &nbsp; "country": "US",<br>
+                    &nbsp; "country_iso3166": "US",<br>
+                    &nbsp; "latitude": "37.773285",<br>
+                    &nbsp; "longitude": "-122.417725",<br>
+                    &nbsp; "elevation": "49 ft"<br>
+                    &nbsp; },<br>
+                    &nbsp; "estimated": {},<br>
+                    &nbsp; "station_id": "KCASANFR58",<br>
+                    &nbsp; "observation_time": "Last Updated on June 27, 5:27 PM
+                    PDT",<br>
+                    &nbsp; "observation_time_rfc822": "Wed, 27 Jun 2012 17:27:13
+                    -0700",<br>
+                    &nbsp; "observation_epoch": "1340843233",<br>
+                    &nbsp; "local_time_rfc822": "Wed, 27 Jun 2012 17:27:14
+                    -0700",<br>
+                    &nbsp; "local_epoch": "1340843234",<br>
+                    &nbsp; "local_tz_short": "PDT",<br>
+                    &nbsp; "local_tz_long": "America/Los_Angeles",<br>
+                    &nbsp; "local_tz_offset": "-0700",<br>
+                    &nbsp; "weather": "Partly Cloudy",<br>
+                    &nbsp; "temperature_string": "66.3 F (19.1 C)",<br>
+                    &nbsp; "temp_f": 66.3,<br>
+                    &nbsp; "temp_c": 19.1,<br>
+                    &nbsp; "relative_humidity": "65%",<br>
+                    &nbsp; "wind_string": "From the NNW at 22.0 MPH Gusting to
+                    28.0 MPH",<br>
+                    &nbsp; "wind_dir": "NNW",<br>
+                    &nbsp; "wind_degrees": 346,<br>
+                    &nbsp; "wind_mph": 22.0,<br>
+                    &nbsp; "wind_gust_mph": "28.0",<br>
+                    &nbsp; "wind_kph": 35.4,<br>
+                    &nbsp; "wind_gust_kph": "45.1",<br>
+                    &nbsp; "pressure_mb": "1013",<br>
+                    &nbsp; "pressure_in": "29.93",<br>
+                    &nbsp; "pressure_trend": "+",<br>
+                    &nbsp; "dewpoint_string": "54 F (12 C)",<br>
+                    &nbsp; "dewpoint_f": 54,<br>
+                    &nbsp; "dewpoint_c": 12,<br>
+                    &nbsp; "heat_index_string": "NA",<br>
+                    &nbsp; "heat_index_f": "NA",<br>
+                    &nbsp; "heat_index_c": "NA",<br>
+                    &nbsp; "windchill_string": "NA",<br>
+                    &nbsp; "windchill_f": "NA",<br>
+                    &nbsp; "windchill_c": "NA",<br>
+                    &nbsp; "feelslike_string": "66.3 F (19.1 C)",<br>
+                    &nbsp; "feelslike_f": "66.3",<br>
+                    &nbsp; "feelslike_c": "19.1",<br>
+                    &nbsp; "visibility_mi": "10.0",<br>
+                    &nbsp; "visibility_km": "16.1",<br>
+                    &nbsp; "solarradiation": "",<br>
+                    &nbsp; "UV": "5",<br>
+                    &nbsp; "precip_1hr_string": "0.00 in ( 0 mm)",<br>
+                    &nbsp; "precip_1hr_in": "0.00",<br>
+                    &nbsp; "precip_1hr_metric": " 0",<br>
+                    &nbsp; "precip_today_string": "0.00 in (0 mm)",<br>
+                    &nbsp; "precip_today_in": "0.00",<br>
+                    &nbsp; "precip_today_metric": "0",<br>
+                    &nbsp; "icon": "partlycloudy",<br>
+                    &nbsp; "icon_url":
+                    "http://icons-ak.wxug.com/i/c/k/partlycloudy.gif",<br>
+                    &nbsp; "forecast_url":
+                    "http://www.wunderground.com/US/CA/San_Francisco.html",<br>
+                    &nbsp; "history_url":
+"http://www.wunderground.com/history/airport/KCASANFR58/2012/6/27/DailyHistory.html",<br>
+                    &nbsp; "ob_url":
+"http://www.wunderground.com/cgi-bin/findweather/getForecast?query=37.773285,-122.417725"<br>
+                    &nbsp; }<br>
+                    }<br>
+                  </code></li>
+              </ul>
+              <br>
+              <li>XML - eXtensible Markup Language</li>
+              <li>Example:</li>
+              <iframe src="san_francisco.xml" height="400" width="75%"> </iframe>
             </ul>
           </ul>
-          <li>Validation Example:<br>
-            <code>[StringLength(60, MinimumLength = 3)]<br>
-              [Required]<br>
-              public string Title { get; set; }<br>
-              <br>
-            </code></li>
-          <li>Checking validation in the web page</li>
-          <ul>
-            <li>The Input Tag Helper, asp-for, generates id and name HTML
-              attributes to the assigned value as well as setting the type
-              attribute based on the model type and data annotations. These are
-              used by jQuery Validate.<br>
-              <code>&lt;input asp-for="Movie.Title" class="form-control" /&gt;</code></li>
-          </ul>
-          <li>Checking validation in the code-behind</li>
-          <ul>
-            <li>Validation is represented by the ModelState object which is an
-              instance of the <a href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.modelbinding.modelstatedictionary?view=aspnetcore-2.0">ModelStateDictionary
-                class</a></li>
-            The IsValid property will be false if there were any validation
-            errors<br>
-            <code> if (!ModelState.IsValid)<br>
-              {<br>
-              &nbsp;&nbsp;&nbsp; return Page();<br>
-              } </code><br>
-          </ul>
         </ul>
       </article>
-      <b>This week's Lab Assignment<br>
-      </b>
-      <ul>
-        <li>Add a search page</li>
-        <ul>
-          <li>Query using a "normal" LINQ expression</li>
-        </ul>
-        <ul>
-          <li>Query using a lambda expression</li>
-        </ul>
-        <li>Add validation to the data model</li>
-        <li>Publish an update to Azure</li>
-      </ul>
     </section>
   </body>
 </html>
