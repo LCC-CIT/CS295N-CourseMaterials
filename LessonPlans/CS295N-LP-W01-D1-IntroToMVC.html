@@ -1,209 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Lesson Plan Template</title>
-    <style type="text/css">
-body {
-  font-family: "Arial", "Helvetica", "sans-serif";
-}
+<!DOCTYPE html><html>  <head>    <meta http-equiv="content-type" content="text/html; charset=UTF-8">    <title>Lesson Plan Template</title>    <style type="text/css">body {  font-family: "Arial", "Helvetica", "sans-serif";}#week01 {  background-color: #f8ff2e;}code {  display:block;  font-size: larger;  background-color: lightgoldenrodyellow;  max-height:400px;  width:95%;  overflow:scroll;}.exercise {  background-color: #c6ffe2;}</style> </head>  <body>    <header> <b>CS295N Web Development 1: ASP.NET&nbsp;&nbsp;        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Month 1, 2017 </b>      <div>Brian Bird</div>      <br>      <i><b>Topic: Intro to Web Development </b></i></header>    <section>      <article> <br>        <b>Where we are </b>        <table style="width: 807px; height: 127px;" border="1">          <tbody>            <tr>              <td id="week01">1. Intro to MVC</td>              <td id="week06">6. Unit Testing</td>            </tr>            <tr>              <td id="week02">2. More on MVC / Satelessness of HTTP</td>              <td id="week07">7. Model Design / Entity Framework (EF)</td>            </tr>            <tr>              <td id="week03">3. C# Review / Advanced C# for MVC</td>              <td id="week08">8. More on EF / LINQ</td>            </tr>            <tr>              <td id="week04">4. Razor Views</td>              <td id="week09">9. Model Binding / Validation</td>            </tr>            <tr>              <td id="week05">5. Web Dev Tools / Midterm</td>              <td id="week10">10. Configuration / URL routing</td>            </tr>          </tbody>        </table>        <b><br>          <br>          Introduction</b><br>        <ul>          <li>Introduce myself</li>          <li>Take roll, ask about degree programs, favorite web sites,            programming experience</li>          <li>Announcements </li>        </ul>      </article>      <article> <b>Overview</b>        <ul>          <b>            <li><a href="#topic1">Intro to Web Development </a></li>            <li><a href="#topic2">Review Syllabus</a></li>            <li><a href="#topic3">Intro to MVC</a></li>            <li><a href="#topic4">Demo</a></li>            <li><a href="#topic5">This Week's Lab</a></li>          </b>        </ul>      </article>    </section>    <br>    <section>      <article id="topic1">        <p> <u><b>Intro to Web Development </b></u></p>        <ul>          <ul>          </ul>          <li>Job market:&nbsp;            <ul>              <li>According to CyberCoders, Cloud Computing is the 2nd highest                job skill employers are looking for when hiring software                developers.&nbsp;</li>              <li>The software development job market is expected to grow 30%                from 2012 to 2020 (Average for all careers is 14%) See Intel                blog post by Wendy Boswell.</li>              <li>Server-side programming jobs in Oregon on Indeed.com&nbsp;                <ul>                  <li>ASP.NET: 186, USA: 17,934</li>                  <li>PHP: 180, USA: 19,106</li>                  <li>Ruby on Rails: 56, USA: 4,927</li>                  <li>Java (JSP): 47, USA: 9,845</li>                </ul>              </li>            </ul>          </li>          <li>Differences between desktop and web development            <ul>              <li>Multiple languages and technologies in one app: HTML, CSS,                JavaScript, C#, SQL</li>              <li>Multiple browsers types and browser compatibility</li>              <li>Multiple concurrent users</li>              <li>No direct access to the client file system</li>              <li>Statelessness of HTTP</li>            </ul>          </li>          <li>Development environments            <ul>              <li>Visual Studio</li>              <li>SQL Server Management Studio</li>              <li>Visual Studio Code</li>              <li>Development server (on your local machine)</li>              <li>Web browsers</li>            </ul>          </li>        </ul>      </article>      <article id="topic2">        <p><u><b>Syllabus </b></u></p>        <ul>          <li>Review Syllabus</li>          <li>Discuss code reviews</li>          <li>Discuss weekly cycle of assignments </li>          <li>Review due dates</li>        </ul>      </article>      <br>      <article id="topic3">        <p><b><u>Intro to MVC </u> </b></p>        <ul>          <ul>          </ul>          <li>MVC            <ul>              <li>Not new, originated in 1978 with the Smalltalk project at                Xerox PARC</li>              <li>Became popular with Ruby on Rails, 2005</li>              <li>Block diagram (arrows show direction of dependencies):<br>                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                M<br>                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                ^&nbsp;&nbsp;&nbsp; ^<br>                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                /&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \<br>                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                V &nbsp;—&gt; C </li>            </ul>            <ul>              <li>Model: data</li>              <li>View: renders HTTP responses</li>              <li>Controller: responds to HTTP request</li>            </ul>          </li>          <li>Facilitates programming best practices            <ul>              <li>Minimize dependencies</li>              <li>Separation of concerns</li>            </ul>            <ul>              <li>Unit tests</li>            </ul>          </li>          <li> MVC Embraces the statelessness of HTTP            <ul>              <li>No false state implementation</li>              <li>No complicated page lifecycle (handling click events)</li>              <li>View gives you full control of HTML</li>            </ul>          </li>        </ul>      </article>      <article id="topic4">        <p><b><u>Demo </u> </b></p>        <ul>          <li>Build the default VS web site            <ul>              <li>Identify the Models, Views, and Controllers</li>              <li>Identify dependencies</li>              <li>Identify HTML, CSS, and JS resource</li>            </ul>          </li>        </ul>      </article>      <article id="topic5"> <b><u>This week's Lab</u> </b>        <ul>          <li>Part 1: Freeman Ch. 2, Your First MVC App</li>          <li>Part 2: Skeletal web site</li>        </ul>        <p>Note: This week's lab is easier than the future labs will be. Don't          be surprised when the next one is more challenging! </p>        <p><br>        </p>      </article>    </section>    <hr>    <footer> <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img          alt="Creative Commons License"          style="border-width:0"          src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a><br>      <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">ASP.NET        Core MVC Lecture Notes</span> by <a xmlns:cc="http://creativecommons.org/ns#"        href="https://birdsbits.blog"        property="cc:attributionName"        rel="cc:attributionURL">Brian        Bird</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative
 
-#week01 {
-  background-color: #f8ff2e;
-}
 
-code {
-  display:block;
-  font-size: larger;
-  background-color: lightgoldenrodyellow;
-  max-height:400px;
-  width:95%;
-  overflow:scroll;
-}
-
-.exercise {
-  background-color: #c6ffe2;
-}
-
-</style> </head>
-  <body>
-    <header> <b>CS295N Web Development 1: ASP.NET&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Month 1, 2017 </b>
-      <div>Brian Bird</div>
-      <br>
-      <i><b>Topic: Intro to Web Development </b></i></header>
-    <section>
-      <article> <br>
-        <b>Where we are </b>
-        <table style="width: 807px; height: 127px;" border="1">
-          <tbody>
-            <tr>
-              <td id="week01">1. Intro to MVC</td>
-              <td id="week06">6. Unit Testing</td>
-            </tr>
-            <tr>
-              <td id="week02">2. More on MVC / Satelessness of HTTP</td>
-              <td id="week07">7. Model Design / Entity Framework (EF)</td>
-            </tr>
-            <tr>
-              <td id="week03">3. C# Review / Advanced C# for MVC</td>
-              <td id="week08">8. More on EF / LINQ</td>
-            </tr>
-            <tr>
-              <td id="week04">4. Razor Views</td>
-              <td id="week09">9. Model Binding / Validation</td>
-            </tr>
-            <tr>
-              <td id="week05">5. Web Dev Tools / Midterm</td>
-              <td id="week10">10. Configuration / URL routing</td>
-            </tr>
-          </tbody>
-        </table>
-        <b><br>
-          <br>
-          Introduction</b><br>
-        <ul>
-          <li>Introduce myself</li>
-          <li>Take roll, ask about degree programs, favorite web sites,
-            programming experience</li>
-          <li>Announcements </li>
-        </ul>
-      </article>
-      <article> <b>Overview</b>
-        <ul>
-          <b>
-            <li><a href="#topic1">Intro to Web Development </a></li>
-            <li><a href="#topic2">Review Syllabus</a></li>
-            <li><a href="#topic3">Intro to MVC</a></li>
-            <li><a href="#topic4">Demo</a></li>
-            <li><a href="#topic5">This Week's Lab</a></li>
-          </b>
-        </ul>
-      </article>
-    </section>
-    <br>
-    <section>
-      <article id="topic1">
-        <p> <u><b>Intro to Web Development </b></u></p>
-        <ul>
-          <ul>
-          </ul>
-          <li>Job market:&nbsp;
-            <ul>
-              <li>According to CyberCoders, Cloud Computing is the 2nd highest
-                job skill employers are looking for when hiring software
-                developers.&nbsp;</li>
-              <li>The software development job market is expected to grow 30%
-                from 2012 to 2020 (Average for all careers is 14%) See Intel
-                blog post by Wendy Boswell.</li>
-              <li>Server-side programming jobs in Oregon on Indeed.com&nbsp;
-                <ul>
-                  <li>ASP.NET: 186, USA: 17,934</li>
-                  <li>PHP: 180, USA: 19,106</li>
-                  <li>Ruby on Rails: 56, USA: 4,927</li>
-                  <li>Java (JSP): 47, USA: 9,845</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>Differences between desktop and web development
-            <ul>
-              <li>Multiple languages and technologies in one app: HTML, CSS,
-                JavaScript, C#, SQL</li>
-              <li>Multiple browsers types and browser compatibility</li>
-              <li>Multiple concurrent users</li>
-              <li>No direct access to the client file system</li>
-              <li>Statelessness of HTTP</li>
-            </ul>
-          </li>
-          <li>Development environments
-            <ul>
-              <li>Visual Studio</li>
-              <li>SQL Server Management Studio</li>
-              <li>Visual Studio Code</li>
-              <li>Development server (on your local machine)</li>
-              <li>Web browsers</li>
-            </ul>
-          </li>
-        </ul>
-      </article>
-      <article id="topic2">
-        <p><u><b>Syllabus </b></u></p>
-        <ul>
-          <li>Review Syllabus</li>
-          <li>Discuss code reviews</li>
-          <li>Discuss weekly cycle of assignments </li>
-          <li>Review due dates</li>
-        </ul>
-      </article>
-      <br>
-      <article id="topic3">
-        <p><b><u>Intro to MVC </u> </b></p>
-        <ul>
-          <ul>
-          </ul>
-          <li>MVC
-            <ul>
-              <li>Not new, originated in 1978 with the Smalltalk project at
-                Xerox PARC</li>
-              <li>Became popular with Ruby on Rails, 2005</li>
-              <li>Block diagram (arrows show direction of dependencies):<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                M<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                ^&nbsp;&nbsp;&nbsp; ^<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                /&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                V &nbsp;—&gt; C </li>
-            </ul>
-            <ul>
-              <li>Model: data</li>
-              <li>View: renders HTTP responses</li>
-              <li>Controller: responds to HTTP request</li>
-            </ul>
-          </li>
-          <li>Facilitates programming best practices
-            <ul>
-              <li>Minimize dependencies</li>
-              <li>Separation of concerns</li>
-            </ul>
-            <ul>
-              <li>Unit tests</li>
-            </ul>
-          </li>
-          <li> MVC Embraces the statelessness of HTTP
-            <ul>
-              <li>No false state implementation</li>
-              <li>No complicated page lifecycle (handling click events)</li>
-              <li>View gives you full control of HTML</li>
-            </ul>
-          </li>
-        </ul>
-      </article>
-      <article id="topic4">
-        <p><b><u>Demo </u> </b></p>
-        <ul>
-          <li>Build the default VS web site
-            <ul>
-              <li>Identify the Models, Views, and Controllers</li>
-              <li>Identify dependencies</li>
-              <li>Identify HTML, CSS, and JS resource</li>
-            </ul>
-          </li>
-        </ul>
-      </article>
-      <article id="topic5"> <b><u>This week's Lab</u> </b>
-        <ul>
-          <li>Part 1: Freeman Ch. 2, Your First MVC App</li>
-          <li>Part 2: Skeletal web site</li>
-        </ul>
-        <p>Note: This week's lab is easier than the future labs will be. Don't
-          be surprised when the next one is more challenging! </p>
-      </article>
-    </section>
-    
-  </body>
-</html>
+        Commons Attribution 4.0 International License</a>. </footer>    <hr>  </body></html>
