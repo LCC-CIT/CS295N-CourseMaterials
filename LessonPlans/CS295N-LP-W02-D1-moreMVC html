@@ -2,13 +2,13 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Wk1 Day1 CS295N</title>
+    <title>Wk2 Day1 CS295N</title>
     <style type="text/css">
 body {
   font-family: "Arial", "Helvetica", "sans-serif";
 }
 
-#week01 {
+#week02 {
   background-color: #f8ff2e;
 }
 
@@ -273,5 +273,6 @@ code {
 
         Commons Attribution 4.0 International License</a>. </footer>
     <hr>
+    
   </body>
 </html>
