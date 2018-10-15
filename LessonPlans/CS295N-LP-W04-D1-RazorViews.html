@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Razor Views</title>
+    <style type="text/css">
+body {
+  font-family: "Arial", "Helvetica", "sans-serif";
+}
+
+#week04 {
+  background-color: #f8ff2e;
+}
+
+code {
+  display:block;
+  font-size: larger;
+  background-color: lightgoldenrodyellow;
+  max-height:400px;
+  width:95%;
+  overflow:scroll;
+}
+
+.exercise {
+  background-color: #c6ffe2;
+}
+
+</style> </head>
+  <body>
+    <header> <b>CS295N Web Development 1: ASP.NET</b>
+      <div>Brian Bird</div>
+    </header>
+    <section>
+      <article> <br>
+        <b>Where we are </b>
+        <table style="width: 807px; height: 127px;" border="1">
+          <tbody>
+            <tr>
+              <td id="week01">1. Intro to MVC</td>
+              <td id="week06">6. Unit Testing</td>
+            </tr>
+            <tr>
+              <td id="week02">2. More on MVC / Satelessness of HTTP</td>
+              <td id="week07">7. Model Design / Entity Framework (EF)</td>
+            </tr>
+            <tr>
+              <td id="week03">3. C# Review / Advanced C# for MVC</td>
+              <td id="week08">8. More on EF / LINQ</td>
+            </tr>
+            <tr>
+              <td id="week04">4. Razor Views</td>
+              <td id="week09">9. Model Binding / Validation</td>
+            </tr>
+            <tr>
+              <td id="week05">5. Web Dev Tools / Midterm</td>
+              <td id="week10">10. Configuration / URL routing</td>
+            </tr>
+          </tbody>
+        </table>
+        <b><br>
+          <br>
+          Introduction </b><br>
+        We've already been using Razor views, so you are already familiar with
+        the basics. Now we will look deeper and how views work and how to use
+        additional features of views.<br>
+        <ul>
+        </ul>
+      </article>
+      <article> <b>Contents</b>
+        <ul>
+          <b>
+            <li><a href="#topic1">Razor Review </a></li>
+            <li><a href="#topic2">Layouts</a></li>
+            <li><a href="#topic3">ViewBag</a></li>
+            <li><a href="#topic4">Tag Helpters</a></li>
+            <li><a href="#topic5">View Imports</a></li>
+            <li><a href="#topic10">Reference</a></li>
+          </b>
+        </ul>
+      </article>
+    </section>
+    <section>
+      <article id="topic1"> <u><b> </b></u><b>Razor Review</b><u><b> </b></u><br>
+        <ul>
+          <li>Razor files are named with the .cshtml extension </li>
+          <li>Razor syntax is essentially HTML with C# mixed in.
+            <ul>
+              <li>Use @ to switch from HTML to C#</li>
+              <li>Use @{ } to mark a block of C#
+                <ul>
+                  <li>Example:<br>
+                    <code>code @{<br>
+                      &nbsp;&nbsp; string someText = "a thing";<br>
+                      &nbsp;&nbsp; someText += Model.Name;<br>
+                      }</code></li>
+                </ul>
+              </li>
+              <li>Use @: to switch from C# to HTML</li>
+            </ul>
+          </li>
+          <li>A <i>model </i>can be declared to create a<i> strongly typed
+              view</i>
+            <ul>
+              <li>In your view, declare the model like this:<br>
+                <code>@model List&lt;Book</code></li>
+            </ul>
+            <ul>
+            </ul>
+          </li>
+        </ul>
+      </article>
+      <article id="topic2"> <b>Layouts </b> <br>
+        You can create a special type of view, called a <i>layout</i>, that can
+        be included in other views and allows you to re-use Razor code. <br>
+        <ul>
+          <li>Naming and declaring layouts
+            <ul>
+              <li>There can be more than one layout.</li>
+              <li>&nbsp;Conventionally, the file names start with an underscore</li>
+              <li>The <i>Views/Shared</i>/ folder is one place where layouts
+                are stored, but each view folder can also contain layouts.</li>
+              <li>The default layout name is defined in _ViewStart.cshtml
+                <ul>
+                  <li>Example:<br>
+                    <code>@Layout = _layout.cshtml</code></li>
+                </ul>
+              </li>
+            </ul>
+            <ul>
+            </ul>
+            <ul>
+            </ul>
+          </li>
+          <li>Defining a layout
+            <ul>
+              <li>Layout are written just like a regular Razor view.</li>
+              <li>The layout will actually contain the view in which it is
+                declared. The view that uses the layout will be rendered in the
+                layout by the <i>RenderBody() </i>method.</li>
+              <li>Example:<br>
+                <code>&lt;!DOCTYPE html&gt;<br>
+                  &lt;html&gt;<br>
+                  &lt;head&gt;<br>
+                  &nbsp;&nbsp;&nbsp; &lt;title&gt;Layout Example&lt;/title&gt;<br>
+                  &lt;/head&gt;<br>
+                  &lt;body&gt;<br>
+                  &nbsp; &lt;h1&gt;This heading is in the layout&lt;/h1&gt;<br>
+                  &nbsp; Any view that uses this layout will be rendered here:<br>
+                  &nbsp;&nbsp;&nbsp; @RenderBody()<br>
+                  &nbsp; &lt;/body&gt;<br>
+                  &lt;/html&gt;</code></li>
+            </ul>
+          </li>
+          <li>Default layouts and <i>_ViewStart.cshtml</i>
+            <ul>
+              <li>A default layout can be placed in <i>Views/Shared/ </i>or in
+                other view folders to create a default for that particular view
+                folder. </li>
+              <li>A view can use a different layout by assigning that layout to
+                the <i>Layout</i> property in that view.
+                <ul>
+                  <li>Example:<br>
+                    <code>@Layout = "_MyLayout";</code></li>
+                </ul>
+              </li>
+              <li>To use the default layout, _Layout, you do not need to declare
+                a layout in the view</li>
+              <li>If there is a default layout in the Views/Shared/ folder, but
+                you don't want to use it in a particular view, set the Layout
+                property in the view to null.
+                <ul>
+                  <li>Examaple:<code>@Layout = null;</code></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </article>
+      <article id="topic3"> <b>ViewBag </b><br>
+        The VeiwBag is an object which can be used to pass data from a
+        controller to a view or from a layout to a view.</article>
+      <article id="topic4">
+        <b>TagHelpers </b>
+        Tag Helpters are properties of the view that can be used in place of HTML attributes.
+      </article>
+      <article id="topic5">
+        <b>_ViewImports file</b>
+        The _ViewImports.cshtml file
+      </article>
+      <article id="topic10">
+        <p> <b>Reference </b></p>
+        <ul>
+          <li> <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/"
+              target="_blank">Microsoft
+              C# Language Reference</a><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/"
+              target="_blank"><span
+                style="color: #0000ee;"></span></a></li>
+          <li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/"
+              target="_blank"><span
+                style="color: #0000ee;">Microsoft
+                C# Programming Guide</span></a></li>
+        </ul>
+      </article>
+    </section>
+    <hr>
+    <footer> <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img
+          alt="Creative Commons License"
+          style="border-width:0"
+          src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a><br>
+      <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">ASP.NET
+        Core MVC Lecture Notes</span> by <a xmlns:cc="http://creativecommons.org/ns#"
+        href="https://birdsbits.blog"
+        property="cc:attributionName"
+        rel="cc:attributionURL">Brian
+        Bird</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative
+
+
+        Commons Attribution 4.0 International License</a>. </footer>
+    <hr>
+  </body>
+</html>
