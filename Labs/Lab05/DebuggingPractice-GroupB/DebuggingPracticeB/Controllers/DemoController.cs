@@ -15,12 +15,12 @@ namespace HttpPractice.Controllers
             return View();
         }
 
-        public IActionResult PageTwo()
+        public IActionResult PageTwo(string mascot)
         {
             return View();
         }
 
-        public IActionResult Quiz()
+        public IActionResult Quiz1()
         {
             Random rand = new Random();
             ViewBag.Number1 = rand.Next(100);
@@ -28,7 +28,7 @@ namespace HttpPractice.Controllers
             return View();
         }
 
-        public IActionResult QuizAnswer(int number1, int number2, int answer)
+        public IActionResult Quiz1Answer(string number1, string number2, string answer)
         {
             string check = "wrong :-(";
             if (number1 + number2 == answer)
@@ -36,6 +36,7 @@ namespace HttpPractice.Controllers
             return Content(check);
         }
 
+        [HttpPost]
         public IActionResult Quiz2()
         {
             Random rand = new Random();
@@ -45,7 +46,7 @@ namespace HttpPractice.Controllers
             return View(numbers);
         }
 
-        [HttpPut]
+        [HttpGet]
         public IActionResult Quiz2(int number1, int number2, int answer)
         {
             string check = "wrong :-(";

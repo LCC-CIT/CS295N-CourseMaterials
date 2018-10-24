@@ -1,11 +1,29 @@
 ﻿<Properties StartupConfiguration="{3251BEBE-9648-44CA-86B6-780BB9F344A9}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="DebuggingPracticeB/Controllers/DemoController.cs">
     <Files>
-      <File FileName="DebuggingPracticeB/Views/Home/Index.cshtml" Line="14" Column="52" />
-      <File FileName="DebuggingPracticeB/Program.cs" Line="17" Column="1" />
-      <File FileName="DebuggingPracticeB/Views/Demo/Index.cshtml" Line="1" Column="1" />
-      <File FileName="DebuggingPracticeB/Controllers/DemoController.cs" Line="1" Column="1" />
+      <File FileName="DebuggingPracticeB/Views/Home/Index.cshtml" Line="61" Column="78" />
+      <File FileName="DebuggingPracticeB/Controllers/HomeController.cs" Line="25" Column="9" />
+      <File FileName="DebuggingPracticeB/Controllers/DemoController.cs" Line="48" Column="9" />
+      <File FileName="DebuggingPracticeB/Views/Demo/Quiz1.cshtml" Line="11" Column="1" />
+      <File FileName="DebuggingPracticeB/Views/Demo/Quiz2.cshtml" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DebuggingPracticeB" expanded="True">
+            <Node name="DebuggingPracticeB" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="DemoController.cs" selected="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="Demo" expanded="True" />
+                <Node name="Home" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

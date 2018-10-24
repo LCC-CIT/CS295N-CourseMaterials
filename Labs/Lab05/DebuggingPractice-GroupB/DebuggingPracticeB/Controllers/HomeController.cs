@@ -11,21 +11,23 @@ namespace HttpPractice.Controllers
         }
 
         [HttpPost]
-        public IActionResult NickName(string name, string nick)
+        public IActionResult HomeTown(string state, string town)
         {
-            return Content("Name: " + name + ", Nickname: " + nick);
+            string content = "State: " + state + ", City: " + town;
+            return Content(content);
         }
 
         [HttpPost]
-        public IActionResult FavFood(string main, string vegetable, string desert)
+        public IActionResult FavoriteMusic(string genre, string author, string book)
         {
-            return Content("Main dish: " + main + ", Veggie: " + vegetable + ", Desert: " + desert);
+            return Content("Genre: " + genre + ", Author: " + book + ", Book: " + author);
         }
 
         [HttpPost]
-        public IActionResult FavoriteMusic(string genre, string artist, string song)
+        public IActionResult Vacation(string location, string activity, string clothing)
         {
-            return Content("Genre: " + genre + ", Artist: " + artist + ", Song: " + song);
+            string content = "Location: " + location + ", Activity: " + activity + ", What to wear: " + clothing;
+            return Content("content");
         }
 
     }
