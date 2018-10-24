@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{83DE2F57-6945-47C0-8E61-988D28EDF01A}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HttpPractice/Controllers/DemoController.cs">
+    <Files>
+      <File FileName="HttpPractice/Views/Home/Index.cshtml" Line="54" Column="102" />
+      <File FileName="HttpPractice/Controllers/HomeController.cs" Line="32" Column="5" />
+      <File FileName="HttpPractice/Controllers/DemoController.cs" Line="7" Column="1" />
+      <File FileName="HttpPractice/Views/Demo/Index.cshtml" Line="6" Column="1" />
+      <File FileName="HttpPractice/Views/Demo/Quiz.cshtml" Line="6" Column="50" />
+      <File FileName="HttpPractice/Program.cs" Line="17" Column="1" />
+      <File FileName="HttpPractice/Views/Demo/Quiz2.cshtml" Line="14" Column="28" />
+      <File FileName="HttpPractice/Views/Shared/_Layout.cshtml" Line="9" Column="23" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.HttpPractice PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

@@ -1,0 +1,9 @@
+﻿<h2>What is the sum of these numbers?</h2>
+@ViewBag.Number1 <br />
+@ViewBag.Number2 <br />
+<form action="QuizAnswer">
+    <input hidden="hidden" name="number1" value="ViewBag.Number1" />
+    <input hidden="hidden" name="number2" value="ViewBag.Number2" />    <label for="answer">Sum</label><br />
+    <input type="number" name="answer" /><br />
+    <input type="submit" />
+</form>

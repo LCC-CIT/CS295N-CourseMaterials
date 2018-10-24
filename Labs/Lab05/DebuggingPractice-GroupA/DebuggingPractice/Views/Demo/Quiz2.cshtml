@@ -1,0 +1,15 @@
+﻿@model List<int>;
+@{
+    ViewBag.Title = "Multiplication";
+}
+
+<h2>What is the product of these numbers?</h2>
+<form method="post">
+    <label for="number1">Number 1</label><br />
+    <input type="number" name="number1" readonly="readonly" value="@Model[0]" /><br />
+    <label for="number2">Number 2</label><br />
+    <input type="number" name="number2" readonly="readonly" value="@Model[1]" /><br />
+    <label for="answer">Product</label><br />
+    <input type="number" name="answer" /><br />
+    <input type="submit" />
+</form>
