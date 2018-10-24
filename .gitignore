@@ -7,6 +7,9 @@
 packages/
 TestResults/
 
+# Visual Studio
+.vs/
+
 # globs
 Makefile.in
 *.DS_Store
@@ -43,3 +46,4 @@ Thumbs.db
 *.cache
 
 *.bak
+Labs/Lab05/DebuggingPractice-GroupB/.vs/DebuggingPracticeB/xs/sqlite3/storage.ide-wal
