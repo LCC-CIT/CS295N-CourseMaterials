@@ -11,5 +11,5 @@ Request issues:
 
 Response issues:
 6. Missing view
-6. View not sending correct Get parameters
-7. View not responding to Post parameters
+7. View not sending correct Get parameters
+8. View not responding to Post parameters

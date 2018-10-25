@@ -1,0 +1,36 @@
+CS295N Grading Rubric, Fall 2018
+
+Lab 2, Group A - Community Web Site
+-----------------------------------
+Excellent work!
+Good design and implementation.
+Domain Model:
+  UML class diagram		12/12
+  C# implementation 	8/8
+Contact Page(s) to Send Messages:
+  View with form		10/10
+  Controller methods	8/8
+Contact Page(s)	to View Messages:
+  View					7/7
+  Controller method(s)	5/5
+  
+Total: 				50/50
+-----------------------------------
+
+
+Lab 2, Group B - Fan Web Site
+-----------------------------------
+Excellent work!
+Good design and implementation.
+Domain Model:
+  UML class diagram		12/12
+  C# implementation 	8/8
+Story Page(s) to Enter Stories:
+  View with form		10/10
+  Controller methods	8/8
+Story Page(s) to View Stories:
+  View(s)				7/7
+  Controller method(s)	5/5
+  
+Total: 				50/50
+-----------------------------------
