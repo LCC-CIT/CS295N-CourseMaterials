@@ -1,267 +1,10 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Week 8, Day 1, Linq +Azure</title>
-    <style type="text/css">
-        body {
-            font-family: "Arial", "Helvetica", "sans-serif";
-        }
-        
-        footer {
-            font-size: smaller;
-            font-variant: small-caps;
-        }
-        
-        #week08 {
-            background-color: #f8ff2e;
-        }
-        
-        code {
-            display: block;
-            font-size: larger;
-            background-color: lightgoldenrodyellow;
-            max-height: 450px;
-            width: 85%;
-            overflow: scroll;
-            margin: 0.5%;
-        }
-        
-        ul {
-            margin: 0.5%;
-        }
-        
-        h2,
-        h3,
-        h4 {
-            display: inline;
-        }
-        
-        .exercise {
-            background-color: #c6ffe2;
-        }
-    </style>
-</head>
-
-<body> <b>CS295N Web Development 1: ASP.NET </b><br>
-    <b> </b>
-    <header>
-        <div>Brian Bird</div>
-        <h1> <i><b>More EF, LINQ and Publishing to Azure </b></i></h1>
-        <b>Where we are </b>
-        <table style="width: 807px; height: 127px;" border="1">
-            <tbody>
-                <tr>
-                    <td id="week01">1. Intro to MVC</td>
-                    <td id="week06">6. Unit Testing and Repositories</td>
-                </tr>
-                <tr>
-                    <td id="week02">2. Domain Modeling</td>
-                    <td id="week07">7. Entity Framework (EF)</td>
-                </tr>
-                <tr>
-                    <td id="week03">3. C# Review / Advanced C# for MVC</td>
-                    <td id="week08">8. More on EF + LINQ + Azure</td>
-                </tr>
-                <tr>
-                    <td id="week04">4. Razor Views and Tag Helpers</td>
-                    <td id="week09">9. Model Binding / Validation</td>
-                </tr>
-                <tr>
-                    <td id="week05">5. Azure, Web Dev Tools and Debugging</td>
-                    <td id="week10">10. Configuration / URL routing</td>
-                </tr>
-            </tbody>
-        </table>
-        <br>
-        <h2><b>Contents</b></h2>
-        <div>
-            <ul>
-                <b>
-            <li><a href="#topic1">Introduction</a></li>
-            <li><a href="#topic2">Review </a></li>
-            <li><a href="#topic3a">Seeding a Database</a></li>
-            <li><span style="color: #0000ee;">Publishing to Azure</span></li>
-            <li><span style=" color: #0000ee;">Using LINQ<br>
-              </span></li>
-          </b><b>
-            <li><a href="#topic5a">Running Unit Tests</a></li>
-            <li><a href="#topic6">Example</a></li>
-            <li><a href="#topic7">Reference</a></li>
-          </b>
-            </ul>
-        </div>
-    </header>
-    <br>
-    <hr><br>
-    <section>
-        <article id="topic1">
-            <h2>Introduction</h2>
-            <ul>
-                <li>Announcements</li>
-            </ul>
-            <ul>
-                <li>Review lab due dates on Moodle</li>
-                <li>Discuss questions about the previous lab</li>
-            </ul>
-        </article>
-        <br>
-        <hr><br>
-        <article id="topic4a">
-            <h2>Seeding a Database</h2>
-            <ul>
-                <li>The method to seed the database should be called from startup. I put mine in a static class named SeedData, but it's not a special name (not part of a convention), nor is the method name I used.<br>
-                    <code>public class SeedData<br>
-              { public static void Seed(IServiceProvider services)<br>
-              <br>
-              &nbsp; {&nbsp; AppDbContext context =
-              services.GetRequiredService&lt;AppDbContext&gt;();<br>
-              &nbsp;&nbsp;&nbsp;&nbsp; context.Database.EnsureCreated();<br>
-              <br>
-              &nbsp;&nbsp;&nbsp;&nbsp; if (!context.Books.Any()) {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Author author = new Author {
-              Name = "Samuel Shellabarger" };<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; context.Authors.Add(author);<br>
-              <br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; User user = new User { Name =
-              "Walter Cronkite" };<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; context.Users.Add(user);<br>
-              <br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Review review = new Review<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ReviewText
-              = "Great book, a must read!",<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reviewer =
-              user<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; };<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; context.Reviews.Add(review);<br>
-              <br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Book book = new Book<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Title = "Prince
-              of Foxes",<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PubDate =
-              DateTime.Parse("1/1/1947")<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; };<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; book.Authors.Add(author);<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; book.Reviews.Add(review);<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; context.Books.Add(book);<br>
-              <br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; context.SaveChanges(); //
-              save all the data<br>
-              &nbsp;&nbsp;&nbsp;&nbsp; }<br>
-              &nbsp; }<br>
-              }</code> </li>
-                <li>The Seed method gets called when you run the CLI command:<span style="font-family:
-              Courier New,Courier,monospace;"> </span>
-                    <p><span style="font-family:
-              Courier New,Courier,monospace;">dotnet ef databa</span><span style="font-family: Courier New,Courier,monospace;">se
-                update</span></p>
-                </li>
-            </ul>
-            <ul>
-            </ul>
-        </article>
-        <hr><br>
-        <article id="topic5a">
-            <h2>Publishing to Azure<br>
-            </h2>
-            Now that you have a database in your app, publishing to Azure will be a little more complicated<br>
-        </article>
-        <br>
-        <hr> <br>
-        <article id="topic5a">
-            <h2>Using LINQ to Query a Database<br>
-            </h2>
-            Language Integrated Query a feature of C# and other .NET languages.<br>
-            <ul style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;">
-                <li>Language Integrated Query – it’s part of C# (and all the .NET languages) and can be used to query almost anything: an array, list, XML file, database, and more.</li>
-                <li>Use this in place of embedding SQL in your C# code or in place of stored procedures.</li>
-                <li>Uses functional language concepts – SQL is also a functional language (mostly)</li>
-                <li>LINQ Syntax (Query expression syntax, as opposed to fluent syntax) (inspired by languages like LISP and Haskell) Looks<span class="Apple-converted-space">&nbsp;</span><u>superficially</u><span class="Apple-converted-space">&nbsp;</span>like
-                    SQL – but it’s significantly different.</li>
-                <ul>
-                    <li>Essential operators: from, select, where<br> (walk through the Planet example in Visual Studio)</li>
-                    <ul>
-                        <li>Assume a List of planet objects. Each planet has a: name, size, and distance from the sun.</li>
-                        <li><code>var names = from p in planets where p.distance &lt;
-                  10000 select p.name;</code></li>
-                        <ul>
-                            <li><i>from</i><span class="Apple-converted-space">&nbsp;</span>declares the range variable (similar to foreach statements). The range variable represents the current element in the collection that is being queried. Its scope is
-                                just this query.<span class="Apple-converted-space">&nbsp;</span></li>
-                            <li><i>select</i><span class="Apple-converted-space">&nbsp;</span>specifies the objects to retrieve.</li>
-                            <li><i>where</i><span class="Apple-converted-space">&nbsp;</span>filters the objects that are retrieved.</li>
-                        </ul>
-                    </ul>
-                    <li>Queries return a collection unless a scalar operator is applied (first, count, etc.)</li>
-                    <li>Exercise: Modify the Planet example</li>
-                    <ul>
-                        <li>Modify the query to return the name of planets greater than a certain size.</li>
-                        <li>Return name and size.</li>
-                    </ul>
-                </ul>
-                <li>Deferred execution: Executed when enumerated, unless a scalar operator is applied or a conversion, like<span class="Apple-converted-space">&nbsp;</span><i>ToList</i>.</li>
-            </ul>
-            <br>
-        </article>
-        <br>
-        <hr> <br>
-        <article id="topic5a">
-            <h2>Running Unit Tests </h2>
-            <br> Adding EF should not have broken any of your unit tests. But it's good practice to run the tests before pushing our code to the central repository (on GitHub).<br>
-        </article>
-        <br>
-        <hr> <br>
-        <article id="topic6">
-            <h2>Example</h2>
-            <br>
-            <a href="https://github.com/LCC-CIT/CS295N-Bookinfo-Core-21/tree/EF" target="_blank">BookInfo,
-          branch EF</a> </article>
-        <br>
-        <hr> <br>
-        <article id="topic8">
-            <h2>References</h2>
-            <ul>
-                <li>Textbook - <span style="font-style: italic;">Pro ASP.NET Core MVC
-              2.0</span>, Adam Freeman, Apress, 2017.<br> Ch. 8 "Sports Store, a Real Application", section titled,<br> "Preparing a Database" (page 208), with sub-sections:
-                    <ul>
-                        <li>Installing the Entity Framework Core Tools Package </li>
-                        <li>Creating the Database Classes </li>
-                        <li>Creating the Repository Class </li>
-                        <li>Defining the Connection String </li>
-                        <li>Configuring the Application
-                            <ul>
-                                <li>&nbsp;"Disabling Scope Verification"</li>
-                            </ul>
-                        </li>
-                        <li>Creating the Database Migration&nbsp;</li>
-                        <li>Creating the Seed Data </li>
-                    </ul>
-                </li>
-                <li>Microsoft Docs: <a href="https://docs.microsoft.com/en-us/ef/core/" target="_blank">Entity
-              Framework Core</a></li>
-                <li>Microsoft Tutorial: <a href="https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/" target="_blank">Get
-              started with ASP.NET Core MVC and Entity Framework Core using
-              Visual Studio</a></li>
-                <li>.NET Core API Reference: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=netcore-2.1" target="_blank">System.ComponentModel.DataAnnotations
-              Namespace</a></li>
-                <li>Microsoft Reference: <a href="https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/dotnet" target="_blank">Entity
-              Framework Core tools reference - .NET CLI</a></li>
-                <li>Microsoft tutorial: <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection" target="_blank">Dependency
-              Injection in ASP.NET Core</a></li>
-            </ul>
-        </article>
-    </section>
-    <br>
-    <footer>
-        <hr style="width: 100%; height: 2px;">
-        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a><br>
-        <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">ASP.NET
-        Core MVC Lecture Notes</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://birdsbits.blog" property="cc:attributionName" rel="cc:attributionURL">Brian
+<!DOCTYPE html><html>  <head>    <meta http-equiv="content-type" content="text/html; charset=UTF-8">    <title>Week 8, Day 1, Linq +Azure</title>    <style type="text/css">body {  font-family: "Arial", "Helvetica", "sans-serif";}footer {	font-size:smaller;	font-variant:small-caps;}#week08 {  background-color: #f8ff2e;}code {  display:block;  font-size: larger;  background-color: lightgoldenrodyellow;  max-height:450px;  width:85%;  overflow:scroll;  margin:0.5%;}      ul {   margin:0.5%;}      h2, h3, h4 {   display:inline;}      .exercise {  background-color: #c6ffe2;}</style> </head>  <body> <b>CS295N Web Development 1: ASP.NET </b><br>    <b> </b>    <header>      <div>Brian Bird</div>      <h1> <i><b>More EF, LINQ and Publishing to Azure </b></i></h1>      <b>Where we are </b>      <table style="width: 807px; height: 127px;" border="1">        <tbody>          <tr>            <td id="week01">1. Intro to MVC</td>            <td id="week06">6. Unit Testing and Repositories</td>          </tr>          <tr>            <td id="week02">2. Domain Modeling</td>            <td id="week07">7. Entity Framework (EF)</td>          </tr>          <tr>            <td id="week03">3. C# Review / Advanced C# for MVC</td>            <td id="week08">8. More on EF + LINQ + Azure</td>          </tr>          <tr>            <td id="week04">4. Razor Views and Tag Helpers</td>            <td id="week09">9. Model Binding / Validation</td>          </tr>          <tr>            <td id="week05">5. Azure, Web Dev Tools and Debugging</td>            <td id="week10">10. Configuration / URL routing</td>          </tr>        </tbody>      </table>      <br>      <h2><b>Contents</b></h2>      <div>        <ul>          <b>            <li><a href="#topic1">Introduction</a></li>            <li><a href="#topic2">Review </a></li>            <li><a href="#topic3a">Seeding a Database</a></li>            <li><span style="color: #0000ee;">Publishing to Azure</span></li>            <li><span style=" color: #0000ee;">Using LINQ<br>              </span></li>          </b><b>            <li><a href="#topic5a">Running Unit Tests</a></li>            <li><a href="#topic6">Example</a></li>            <li><a href="#topic7">Reference</a></li>          </b>        </ul>      </div>    </header>    <br>    <hr><br>    <section>      <article id="topic1">        <h2>Introduction</h2>        <ul>          <li>Announcements</li>        </ul>        <ul>          <li>Review lab due dates on Moodle</li>          <li>Discuss questions about the previous lab</li>        </ul>      </article>      <br>      <hr><br>      <article id="topic4a">        <h2>Seeding a Database</h2>        <ul>          <li>The method to seed the database should be called from startup. I            put mine in a static class named SeedData, but it's not a special            name (not part of a convention), nor is the method name I used.<br>            <code>public class SeedData<br>              { public static void Seed(IServiceProvider services)<br>              <br>              &nbsp; {&nbsp; AppDbContext context =              services.GetRequiredService&lt;AppDbContext&gt;();<br>              &nbsp;&nbsp;&nbsp;&nbsp; context.Database.EnsureCreated();<br>              <br>              &nbsp;&nbsp;&nbsp;&nbsp; if (!context.Books.Any()) {<br>              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Author author = new Author {              Name = "Samuel Shellabarger" };<br>              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; context.Authors.Add(author);<br>              <br>              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; User user = new User { Name =              "Walter Cronkite" };<br>              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; context.Users.Add(user);<br>              <br>              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Review review = new Review<br>              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ReviewText              = "Great book, a must read!",<br>              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reviewer =              user<br>              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; };<br>              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; context.Reviews.Add(review);<br>              <br>              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Book book = new Book<br>              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Title = "Prince              of Foxes",<br>              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PubDate =              DateTime.Parse("1/1/1947")<br>              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; };<br>              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; book.Authors.Add(author);<br>              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; book.Reviews.Add(review);<br>              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; context.Books.Add(book);<br>              <br>              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; context.SaveChanges(); //              save all the data<br>              &nbsp;&nbsp;&nbsp;&nbsp; }<br>              &nbsp; }<br>              }</code> </li>          <li>The Seed method gets called when you run the CLI command:<span style="font-family:              Courier New,Courier,monospace;"> </span>            <p><span style="font-family:              Courier New,Courier,monospace;">dotnet ef databa</span><span style="font-family: Courier New,Courier,monospace;">se
+                update</span></p>          </li>        </ul>        <ul>        </ul>      </article>      <hr><br>      <article id="topic5a">        <h2>Publishing to Azure<br>        </h2>        Now that you have a database in your app, publishing to Azure will be a        little more complicated<br>      </article>      <br>      <hr> <br>      <article id="topic5a">        <h2>Using LINQ to Query a Database<br>        </h2>        Language Integrated Query a feature of C# and other .NET languages.<br>        <ul style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;">          <li>Language Integrated Query – it’s part of C# (and all the .NET            languages) and can be used to query almost anything: an array, list,            XML file, database, and more.</li>          <li>Use this in place of embedding SQL in your C# code or in place of            stored procedures.</li>          <li>Uses functional language concepts – SQL is also a functional            language (mostly)</li>          <li>LINQ Syntax (Query expression syntax, as opposed to fluent syntax)            (inspired by languages like LISP and Haskell) Looks<span class="Apple-converted-space">&nbsp;</span><u>superficially</u><span              class="Apple-converted-space">&nbsp;</span>like            SQL – but it’s significantly different.</li>          <ul>            <li>Essential operators: from, select, where<br>              (walk through the Planet example in Visual Studio)</li>            <ul>              <li>Assume a List of planet objects. Each planet has a: name,                size, and distance from the sun.</li>              <li><code>var names = from p in planets where p.distance &lt;                  10000 select p.name;</code></li>              <ul>                <li><i>from</i><span class="Apple-converted-space">&nbsp;</span>declares                  the range variable (similar to foreach statements). The range                  variable represents the current element in the collection that                  is being queried. Its scope is just this query.<span class="Apple-converted-space">&nbsp;</span></li>                <li><i>select</i><span class="Apple-converted-space">&nbsp;</span>specifies                  the objects to retrieve.</li>                <li><i>where</i><span class="Apple-converted-space">&nbsp;</span>filters                  the objects that are retrieved.</li>              </ul>            </ul>            <li>Queries return a collection unless a scalar operator is applied              (first, count, etc.)</li>            <li>Exercise: Modify the Planet example</li>            <ul>              <li>Modify the query to return the name of planets greater than a                certain size.</li>              <li>Return name and size.</li>            </ul>          </ul>          <li>Deferred execution: Executed when enumerated, unless a scalar            operator is applied or a conversion, like<span class="Apple-converted-space">&nbsp;</span><i>ToList</i>.</li>        </ul>        <br>      </article>      <br>      <hr> <br>      <article id="topic5a">        <h2>Running Unit Tests </h2>        <br>        Adding EF should not have broken any of your unit tests. But it's good        practice to run the tests before pushing our code to the central        repository (on GitHub).<br>      </article>      <br>      <hr> <br>      <article id="topic6">        <h2>Example</h2>        <br>        <a href="https://github.com/LCC-CIT/CS295N-Bookinfo-Core-21/tree/EF" target="_blank">BookInfo,
+          branch EF</a> </article>      <br>      <hr> <br>      <article id="topic8">        <h2>References</h2>        <ul>          <li>Textbook - <span style="font-style: italic;">Pro ASP.NET Core MVC              2.0</span>, Adam Freeman, Apress, 2017.<br>            Ch. 8 "Sports Store, a Real Application", section titled,<br>            "Preparing a Database" (page 208), with sub-sections:            <ul>              <li>Installing the Entity Framework Core Tools Package </li>              <li>Creating the Database Classes </li>              <li>Creating the Repository Class </li>              <li>Defining the Connection String </li>              <li>Configuring the Application                <ul>                  <li>&nbsp;"Disabling Scope Verification"</li>                </ul>              </li>              <li>Creating the Database Migration&nbsp;</li>              <li>Creating the Seed Data </li>            </ul>          </li>          <li>Microsoft Docs: <a href="https://docs.microsoft.com/en-us/ef/core/"              target="_blank">Entity
+              Framework Core</a></li>          <li>Microsoft Tutorial: <a href="https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/"              target="_blank">Get
+              started with ASP.NET Core MVC and Entity Framework Core using              Visual Studio</a></li>          <li>.NET Core API Reference: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=netcore-2.1"              target="_blank">System.ComponentModel.DataAnnotations
+              Namespace</a></li>          <li>Microsoft Reference: <a href="https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/dotnet"              target="_blank">Entity
+              Framework Core tools reference - .NET CLI</a></li>          <li>Microsoft tutorial: <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection"              target="_blank">Dependency
+              Injection in ASP.NET Core</a></li>        </ul>      </article>    </section>    <br>    <footer>      <hr style="width: 100%; height: 2px;"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img          alt="Creative Commons License"          style="border-width:0"          src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a><br>      <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">ASP.NET        Core MVC Lecture Notes</span> by <a xmlns:cc="http://creativecommons.org/ns#"        href="https://birdsbits.blog"        property="cc:attributionName"        rel="cc:attributionURL">Brian
         Bird</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-        Commons Attribution-ShareAlike 4.0 International License</a>. </footer>
-    <hr>
-</body>
-
-</html>
+        Commons Attribution-ShareAlike 4.0 International License</a>. </footer>    <hr>  </body></html>
