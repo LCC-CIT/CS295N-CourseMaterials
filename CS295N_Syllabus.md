@@ -5,7 +5,7 @@
 | Course    | CS295N, CRN 21974     |      | Instructor   | Brian Bird             |
 | --------- | --------------------- | ---- | ------------ | ---------------------- |
 | Credits   | 4                     |      | Email        | birdb@lanecc.edu       |
-| Dates     | 9/24/18 – 12/5/18     |      | Office Hours | M, W, Th; 12:30 – 1:20 |
+| Dates     | 9/30/19 – 12/13/19    |      | Office Hours | M, W, Th; 12:30 – 1:20 |
 | Classroom | Building 19, Room 126 |      | Office       | Building 19, Room 152  |
 | Lab       | Building 19, Room 135 |      | Lab Hours    | Tu 2:00 – 4:00         |
 
@@ -88,8 +88,6 @@ The CIT Main lab (Bldg. 19, room 135) is equipped with computers which are avail
 
 Specific grading criteria will be applied to each of the labs, quizzes, and exams you will be working on in this class. Part of the lab involves a code review. Attendance is not graded.
 
-
-
 | Assessment Activities   | Percentage of grade |
 | ----------------------- | ------------------- |
 | Labs 1-9                | 50%                 |
@@ -146,6 +144,17 @@ LCC has a [no-show drop](https://www.lanecc.edu/esfs/noshow-drops) policy. You m
 If you need support or assistance because of a disability, you may be eligible for academic accommodations through Disability Services. For more information, contact Disability Services at 463-5150 (voice) or 463-3079 (TTY), or stop by building 1, room 218.
 Please be aware that any accessible tables and chairs in this room should remain available for authorized students who find that standard classroom seating is not usable.
 (may be subject to change)
+
+###Academic Calendar for Fall Term 2019
+
+| Event                                  | Date               |
+| -------------------------------------- | ------------------ |
+| Term begins                            | 9/30/19            |
+| Last day to receive refund             | 10/6/19            |
+| Veteran’s Day – college closed         | 11/11/19           |
+| Last day for schedule changes          | 11/22/19           |
+| Thanksgiving Vacation – college closed | 11/28/19 – 12/1/19 |
+| Finals week                            | 12/9/19 – 12/13/19 |
 
 
 
