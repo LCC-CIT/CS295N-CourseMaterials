@@ -83,13 +83,62 @@ HTTP requests are automatically mapped to controller methods. There are a variet
 >
 > What kid of request should POST be used for?
 
+#### Basic controller with string methods
+
+- Add a *Controllers* folder to your project.
+
+- Add a controller named HomeController to the project. Modify it to return a string
+
+```C#
+public class HomeController : Controller
+{
+  /* Change return type to String */
+  public String Index()
+  {
+    /* Return a literal string instead of calling view() */
+    return "Hello World!";
+  }
+}
+```
 
 
 
+> **Your Turn:** 
+>
+> 1. Add another method to the controller that returns a string.
+>    - What URL will you use to invoke this method?
+> 2. Add another controller and modify the Index method to return a string.
+>    - What URL will you use to invoke this method?
 
 
 
 ### Views
 
+- Add a *Views* folder to your project.
 
+- Add a folder named *Home* to the folder.
+
+-  Add a view named *Index*.
+
+  - Modify your controller method to return a view.
+
+    ```C#
+      public IActionResult Index()
+      {
+        /* Return a literal string instead of calling view() */
+        return View();
+      }
+    ```
+
+  - Modify the view to display *Hello World*.
+
+    ```HTML
+    <body>
+        Hello World!
+    </body>
+    ```
+
+    
+
+> What if I wanted to define the content of my page inside the controller method? How would I pass a string to the view?
 
