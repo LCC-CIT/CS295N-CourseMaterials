@@ -24,23 +24,40 @@ To be able to design and program a web site that uses the ASP.NET framework for 
 #### Technologies
 
 - Git
+
 - C# (advanced features)
+
 - Unified Modeling Language (UML)
+
 - ASP.NET Core MVC
+
 - xUnit
+
 - Azure
+
 - SQL Server
+
 - LINQ
+
 - Entity Framework
+
+  
 
 #### Themes and Issues
 
-| Web Standards           | Best Practices for Web Development |
-| ----------------------- | ---------------------------------- |
-| Design Patterns         | User Experience (UX)               |
-| Test Driven Development | Object Oriented Design             |
+- Web Standards
 
-####  
+- Design Patterns
+
+- Test Driven Development
+
+- Best Practices for Web Development
+
+- User Experience (UX)
+
+- Object Oriented Design
+
+  
 
 #### Skills
 
@@ -88,12 +105,12 @@ The CIT Main lab (Bldg. 19, room 135) is equipped with computers which are avail
 
 Specific grading criteria will be applied to each of the labs, quizzes, and exams you will be working on in this class. Part of the lab involves a code review. Attendance is not graded.
 
-| Assessment Activities   | Percentage of grade |
-| ----------------------- | ------------------- |
-| Labs 1-9                | 50%                 |
-| Code Reviews 1-9        | 10%                 |
-| Midterm and Final Exams | 25%                 |
-| Term Project            | 40%                 |
+| Assessment Activities     | Percentage of grade |
+| ------------------------- | ------------------- |
+| Labs and Code Reviews 1-9 | 40%                 |
+| Quizzes 1-9               | 10%                 |
+| Midterm and Final Exams   | 20%                 |
+| Term Project              | 30%                 |
 
 
 Letter grades for the course will be determined by the following percentages:              
@@ -120,12 +137,17 @@ Letter grades for the course will be determined by the following percentages:
 
 Monday
 
-- Do a code review for your lab partner
+- Do a code review of last week's lab work for your lab partner
+
+Tuesday
+
+- Take the weekly quiz
 
 Friday
 
-- Post a beta version of your lab assignment so your lab partner can review it.   
+- Post a beta version of this week's lab assignment so your lab partner can review it.   
 - Submit the release version of last week's lab assignment.
+
 
 ### Academic Honesty
 
