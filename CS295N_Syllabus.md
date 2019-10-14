@@ -105,12 +105,12 @@ The CIT Main lab (Bldg. 19, room 135) is equipped with computers which are avail
 
 Specific grading criteria will be applied to each of the labs, quizzes, and exams you will be working on in this class. Part of the lab involves a code review. Attendance is not graded.
 
-| Assessment Activities     | Percentage of grade |
-| ------------------------- | ------------------- |
-| Labs and Code Reviews 1-9 | 40%                 |
-| Quizzes 1-9               | 10%                 |
-| Midterm and Final Exams   | 20%                 |
-| Term Project              | 30%                 |
+| Assessment Activities   | % each    | % total |
+| ----------------------- | --------- | ------- |
+| Labs 1-9                | 4         | 36      |
+| Code Reviews 1-9        | 1         | 9       |
+| Midterm and Final Exams | 10 and 15 | 25      |
+| Term Project            | 30        | 30      |
 
 
 Letter grades for the course will be determined by the following percentages:              
