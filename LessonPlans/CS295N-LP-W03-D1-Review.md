@@ -114,6 +114,8 @@ public class HomeController : Controller
 
 ### Views
 
+####The simplest view
+
 - Add a *Views* folder to your project.
 
 - Add a folder named *Home* to the folder.
@@ -138,7 +140,41 @@ public class HomeController : Controller
     </body>
     ```
 
-    
+  
+
+  ####A view that gets data from a controller method
 
 > What if I wanted to define the content of my page inside the controller method? How would I pass a string to the view?
+
+Code for the controller:
+
+```C#
+public IActionResult Index()
+        {
+            return View("Index","Hello World!");
+        }
+```
+
+Code for the view:
+
+```HTML
+@model String
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @Model
+</body>
+</html>
+
+```
 
