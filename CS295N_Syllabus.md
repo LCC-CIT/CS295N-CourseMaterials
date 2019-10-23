@@ -24,23 +24,40 @@ To be able to design and program a web site that uses the ASP.NET framework for 
 #### Technologies
 
 - Git
+
 - C# (advanced features)
+
 - Unified Modeling Language (UML)
+
 - ASP.NET Core MVC
+
 - xUnit
+
 - Azure
+
 - SQL Server
+
 - LINQ
+
 - Entity Framework
+
+  
 
 #### Themes and Issues
 
-| Web Standards           | Best Practices for Web Development |
-| ----------------------- | ---------------------------------- |
-| Design Patterns         | User Experience (UX)               |
-| Test Driven Development | Object Oriented Design             |
+- Web Standards
 
-####  
+- Design Patterns
+
+- Test Driven Development
+
+- Best Practices for Web Development
+
+- User Experience (UX)
+
+- Object Oriented Design
+
+  
 
 #### Skills
 
@@ -120,12 +137,17 @@ Letter grades for the course will be determined by the following percentages:
 
 Monday
 
-- Do a code review for your lab partner
+- Do a code review of last week's lab work for your lab partner
+
+Tuesday
+
+- Take the weekly quiz
 
 Friday
 
-- Post a beta version of your lab assignment so your lab partner can review it.   
+- Post a beta version of this week's lab assignment so your lab partner can review it.   
 - Submit the release version of last week's lab assignment.
+
 
 ### Academic Honesty
 
