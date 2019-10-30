@@ -1,20 +1,21 @@
 # Lab 5
 
-##Publishing to an IIS Hosting Service, Controller Tutorial
+##Publishing to an IIS Hosting Service
 
 ### Part 1: Publishing to a server
 
 1. Create a free account on [Smarter ASP.NET](http://www.smarterasp.net/index?r=100953936).
-2. Get a domain name from [Freenom](https://www.freenom.com/en/index.html?lang=en)
 3. Prepare your web app for publishing.
 4. Publish your app to the file system.
 5. Use FTP to transfer the files to the server.
 
-###Part 2: Controller Tutorial
+### Part 2: Registering a Domain Name
 
-Do the tutorial in Freeman Ch. 17. In class, your instructor will point out the parts to do and the the parts to skip.
-
-Take screen shots at the end of each major step.
+1. Register a free domain name using [Freenom](https://www.freenom.com/en/index.html?lang=en).
+   Note: SmarterASP.NET appears to not allows some of the free domain names on the 60 day trial account. However, it has allowed the .gq free domain.
+2. Enter the domain name on SmarterASP.NET.
+   Note the name servers that your web site is using.
+3. On Freenom, enter the nameservers being used for your web site on SmareterASP.NET
 
 ###Submission to Moodle
 
@@ -22,8 +23,9 @@ Take screen shots at the end of each major step.
 
 Upload the following to the Code Review Forum: 
 
-1. Your web site's URL on Smarter ASP.NET
-2. A document containing screen-shots of the web app in the tutoril from part 1 running in your browser. (please use .docx or .pdf format) 
+1. Your web site's URLs on SmarterASP.NET:
+   - The temporary URL.
+   - The domain name you registered.
 
 ####Production Version 
 
@@ -36,5 +38,4 @@ Upload the following to the Code Review Forum:
 
 ****
 
-Written by Brian Bird, Lane Community College, for CS295N, Web Development 1: ASP.NET  
-Original fall 2018, revised fall 2019
+Written by Brian Bird, Lane Community College, for CS295N, Web Development 1: ASP.NET  Original fall 2018, revised fall 2019
