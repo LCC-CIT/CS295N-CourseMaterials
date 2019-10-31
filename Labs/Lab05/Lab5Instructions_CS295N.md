@@ -29,7 +29,7 @@ Upload the following to the Code Review Forum:
 
 ####Production Version 
 
-1. Items 1 and 2 above, but revised as needed. 
+1. Items 1 and 2 above, after making revisions as needed. 
 
    Please use the online text option on Moodle to enter your web site's URL.
 2. The code review of your work (the one done by your lab partner) with the second column (“Production”) completed by you. 
