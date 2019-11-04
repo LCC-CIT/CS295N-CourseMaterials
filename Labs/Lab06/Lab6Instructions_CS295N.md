@@ -1,6 +1,6 @@
 # Lab 5
 
-##Publishing to an IIS Hosting Service, Controller Tutorial
+##Controllers and HTTP
 
 ### Part 1: Publishing to a server
 
@@ -10,11 +10,22 @@
 4. Publish your app to the file system.
 5. Use FTP to transfer the files to the server.
 
-###Part 2: Controller Tutorial
+###Part 1: Controller Tutorial
 
 Do the tutorial in Freeman Ch. 17. In class, your instructor will point out the parts to do and the the parts to skip.
 
 Take screen shots at the end of each major step.
+
+**Part 2: Monitoring HTTP Traffic and Debugging**
+
+- Either Install [Fiddler](https://www.telerik.com/fiddler) or use your browser’s Web Console to monitor network traffic between your development server and the browser. Here are instructions for using the [Firefox Web Console](https://developer.mozilla.org/en-US/docs/Tools/Web_Console).
+- Make a copy of a my web app, [DebuggingPracticeGroupA](https://github.com/LCC-CIT/CS295N-CourseMaterials/tree/master/Labs/Lab05/DebuggingPractice-GroupA).  Note: this app is in my Course Materials repository. You will need to clone the whole repository to get this app. Make your own copy of the solution folder in a new location.
+- Debug the app using all the debugging techniques you know:
+  - Setting breakpoints in Visual Studio
+  - Looking at the URL in the browser address bar
+  - Monitoring HTTP traffic
+  - Using “View Source” in the browser to see how your view was rendered into HTML
+- Fix the app so that all the links and pages work as described on the main page of the app
 
 ###Submission to Moodle
 
