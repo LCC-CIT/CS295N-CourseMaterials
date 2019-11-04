@@ -2,17 +2,19 @@
 
 ##Controllers and HTTP
 
-### Part 1: Publishing to a server
-
-1. Create a free account on [Smarter ASP.NET](http://www.smarterasp.net/index?r=100953936).
-2. Get a domain name from [Freenom](https://www.freenom.com/en/index.html?lang=en)
-3. Prepare your web app for publishing.
-4. Publish your app to the file system.
-5. Use FTP to transfer the files to the server.
-
 ###Part 1: Controller Tutorial
 
-Do the tutorial in Freeman Ch. 17. In class, your instructor will point out the parts to do and the the parts to skip.
+Either copy the code from the text into a Visual Studio project or download the example project for Freeman Ch. 17. 
+
+#### Sections of the exercise for you to do:
+
+- In, Creating Controllers, do <u>Using the Controlelr Base Class</u>, pp. 514--515
+- In, Receiving Context Data, Getting Data from Context Objects, do <u>Using Action Method Parameters</u>, pp. 520--522
+- In, Producing a Response, read Understanding Action Results, do <u>Producing an HTML Response</u>, pp. 526--527
+- Redirect the client  25–30
+- Return content to the client  31–35
+- Return an HTTP status code 36–37
+- Take screen shots at the end of each major step.
 
 Take screen shots at the end of each major step.
 
