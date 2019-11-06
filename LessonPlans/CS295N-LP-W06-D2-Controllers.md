@@ -5,7 +5,7 @@
 | 1. Intro to MVC                        | 6. Debugging / <u>More on Controllers</u> |
 | 2. More on MVC / Statelessness of HTTP | 7. Unit Testing                           |
 | 3. C# Review / Advanced C# for MVC     | 8. Databases EF and LINQ                  |
-| 4. <u>Razor Views</u>                  | 9. Model Binding / Validation             |
+| 4. Razor Views                         | 9. Model Binding / Validation             |
 | 5. Deploy to a server                  | 10. Configuration / URL routing           |
 
 Introduction We've already been using Controllers, so you are already familiar with the basics. Now we will look deeper at how controllers work and how to use additional features.
@@ -62,7 +62,7 @@ Introduction We've already been using Controllers, so you are already familiar w
     - An empty line
     - An optional [message body](https://en.wikipedia.org/wiki/HTTP_message_body)
     
-    > Example: look at an HTTP request in the Firefox Network viewer.
+    > Exercise: look at an HTTP request in the Firefox Network viewer.
 
 - Response messages
 
@@ -74,37 +74,55 @@ Introduction We've already been using Controllers, so you are already familiar w
   
   - An optional [message body](https://en.wikipedia.org/wiki/HTTP_message_body)
   
-    > Example: look at an HTTP request in the Firefox Network viewer.
+    > Exercise: look at an HTTP request in the Firefox Network viewer.
 
 ## Action Method Return Types 
 
 These are some of the types that can be returned by a controller method:
 
 - String 
+
   - No view is associated with a method of this type. The string is just sent directly to the browser.
   - Not used very often
+
 - ViewResult
+
   - A Razor view is associated with this method. Data is sent to view which is then rendered and sent to the browser.
+
   - The View method of the Controller class can be used to generate a view. 
 
     - The view can be specified as an argument or by the naming convention
     - Model data can be passed as an argument
+
+    > Exercise: Look at the API reference to see the inhertitance hirerachy for this and other return types.
+
 - Redirection Action Results
+
   - RedirectResult
+
   - LocalRedirectResult
+
   - RedirectToActionResult
+
   - RedirectToRouteResult
+
+    > Exercise: Look at the BookInfo project or your lab project to see where you mgiht be using one of these.
+
 - Content Action Results
+
   - JsonResult
   - ContentResult
   - ObjectResult
   - OkObjectResult
   - NotFoundObjectResult
+
 - File Action Reslts
+
   - FileContentResult
   - FileStreamResult
   - VirtualFileResult
   - PhysicalFileResult
+
 - Status Codes
 
 
