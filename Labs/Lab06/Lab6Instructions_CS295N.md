@@ -35,8 +35,8 @@ Take screen shots at the end of each major step.
 
 Upload the following to the Code Review Forum: 
 
-1. Your web site's URL on Smarter ASP.NET
-2. A document containing screen-shots of the web app in the tutoril from part 1 running in your browser. (please use .docx or .pdf format) 
+2. A document containing screen-shots of the web app in the exercise from part 1 running in your browser. (please use .docx or .pdf format)
+2. 
 
 ####Production Version 
 
