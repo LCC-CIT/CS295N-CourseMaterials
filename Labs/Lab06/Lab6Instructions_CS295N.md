@@ -1,4 +1,4 @@
-# Lab 5
+# Lab 6
 
 ## Controllers and HTTP
 
@@ -22,6 +22,7 @@ Modify the web site you have been doing for your lab projects (the community sit
 - Three new controller methods--these would be methods that are part of the Controller class and that are called when an action method returns. 
 - Four new return types. These are types that can be returned by the methods above and would hence be the return type for your actioin method.
 
+**Notes**
 What I mean by "new" is that these should be methods and types that you do not currently use in your web site.
 You may add a new controller and/or views in order to implement these new methods and return types.
 
@@ -43,8 +44,10 @@ You can zip each solution folder or put it in a Git repostiory and share a link.
    Please use the online text option on Moodle to enter your web site's URL.
 2. The code review of your work (the one done by your lab partner) with the second column (“Production”) completed by you. 
 
-
 ****
 
-Written by Brian Bird, Lane Community College, for CS295N, Web Development 1: ASP.NET  
-Original fall 2018, revised fall 2019
+[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
+These ASP.NET Core MVC lab instructions, written by [Brian Bird](https://birdsbits.blog), fall 019, are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+
+------
+
