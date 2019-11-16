@@ -29,11 +29,10 @@
 3.  UI sketches for each page
 4.  A list of the properties in the data model
 
-Submit all of the above in one document. Please use a .pdf or an html document (so I can read it in Moodle).
+Submit all of the above in one document. Please use a .pdf or an html document and don't zip it. (so I can read it online in Moodle).
 
 **Notes:**
 
 I.  The term project web app should not be the same as one of your weekly lab assignments and it shouldn't be the same as any of the example web apps used in the course.
 
 II. Good coding practices, such as using unit tests, and separation of UI code and business logic are expected in the term project.
-
