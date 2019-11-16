@@ -16,7 +16,7 @@
 - Fix the app so that all the links and pages work as described on the main page of the app
 
 
-### Part 2: Controller Tutorial
+### Part 2: Controller Exercise
 
 Modify the web site you have been doing for your lab projects (the community site, or the fan site) by changing it to use the following:
 - Three new controller methods--these would be methods that are part of the Controller class and that are called when an action method returns. 
