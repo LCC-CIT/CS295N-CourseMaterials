@@ -8,8 +8,7 @@
 
     -   Users should be able to enter data that will be stored in the database.
         -   Input should be validated.
--   Users should be able to do some kind of searching of the database.
-        An example would be adding items to a to-do list or searching the list for a particular to-do item.
+-   Users should be able to do some kind of searching of the database. An example would be adding items to a to-do list or searching the list for a particular to-do item.
 
 3.  Be moderately complex- not too simple, but not too hard to build. Here are some criteria:
 
@@ -26,15 +25,14 @@
 **Write a proposal for your web site that includes:**
 
 1.  A written description of the web site
-
 2.  A "site map" that shows the navigation links between all the pages in the site.
-
 3.  UI sketches for each page
-
 4.  A list of the properties in the data model
 
-Notes:
+Submit all of the above in one document. Please use a .pdf or an html document and don't zip it. (so I can read it online in Moodle).
 
-I.  The term project web app should not be the same as one of your weekly lab assignments and it shouldn't be the same as the example web apps used in the course.
+**Notes:**
 
-II. Good coding practices, such as using unit tests, and separation of UI code and logic are expected in the term project.
+I.  The term project web app should not be the same as one of your weekly lab assignments and it shouldn't be the same as any of the example web apps used in the course.
+
+II. Good coding practices, such as using unit tests, and separation of UI code and business logic are expected in the term project.
