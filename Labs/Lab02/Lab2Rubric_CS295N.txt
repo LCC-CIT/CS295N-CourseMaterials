@@ -5,15 +5,16 @@ Lab 2, Group A - Community Web Site
 Excellent work!
 Good design and implementation.
 Domain Model:
-  UML class diagram		10/10
-  C# implementation 	7/7
+  UML class diagram		15/15
+  C# implementation 	10/10
 Contact Page(s) to Send Messages:
-  View with form		9/9
-  Controller methods	7/7
+  View with form		5/5
+  Controller methods	5/5
 Contact Page(s)	to View Messages:
-  View					7/7
+  View					5/5
   Controller method(s)	5/5
-Coding best practices	5/5
+Coding best practices	3/3
+Completed code review form 2/2
 
 Total: 				50/50
 -----------------------------------
