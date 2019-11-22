@@ -25,15 +25,15 @@ Lab 2, Group B - Fan Web Site
 Excellent work!
 Good design and implementation.
 Domain Model:
-  UML class diagram		10/10
-  C# implementation 	7/7
+  UML class diagram		15/15
+  C# implementation 	10/10
 Story Page(s) to Enter Stories:
-  View with form		9/9
-  Controller methods	7/7
+  View with form		5/5
+  Controller methods	5/5
 Story Page(s) to View Stories:
-  View(s)				7/7
+  View(s)				5/5
   Controller method(s)	5/5
-Coding best practices	5/5
+Coding best practices	3/3
   
 Total: 				50/50
 -----------------------------------
