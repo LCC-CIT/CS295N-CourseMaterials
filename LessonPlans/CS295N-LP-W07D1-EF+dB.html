@@ -177,6 +177,7 @@ href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/indexers/
 
 
 
+
                     MemoryRepository()</b>.Products);</code></li>
               <li>A <span style="color: #009600;">better way</span>
                 (loosely coupled)<br>
@@ -204,6 +205,7 @@ href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/indexers/
                   &nbsp; public void
                   ConfigureServices(IServiceCollection services) {<br>
                   &nbsp;&nbsp;&nbsp; <b>services.AddTransient&lt;IRepository,
+
 
 
 
@@ -406,6 +408,7 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
 
 
 
+
               =&gt; options.UseSqlServer(</code><code>&nbsp;&nbsp;
               Configuration["Data:GoodBookNook:ConnectionString"]));<appidentitydbcontext></appidentitydbcontext></code>
           </li>
@@ -484,8 +487,10 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
 
 
 
+
               WebHost.CreateDefaultBuilder(args)<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 
 
 
@@ -498,8 +503,10 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
 
 
 
+
               .UseDefaultServiceProvider(options =&gt;<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 
 
 
@@ -534,14 +541,62 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
       <h2>Creating a Database</h2>
       <p>Before you can run your app, you need to create a database on
         the host system. This might be your development machine, or a
-        production server. On your development machine, you can run the
-        CLI command below to create a new database:<br>
+        production server. On your development machine. But, before you
+        can create a database, you need to add a database migration. You
+        can read about that in the Migrations section below. <br>
+      </p>
+      <p>In order to do operations on our database, we will be using CLI
+        (Command Line Interface) commands. You can check to see if you
+        have the CLI tools for Entity Framework installed by entering
+        the command below:<br>
       </p>
       <p><span style="font-family: Courier New,Courier,monospace;">dotnet
 
 
-          ef database update<br>
+
+          ef<br>
         </span></p>
+      You should get this response:<br>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        _/\__</tt><tt><br>
+      </tt><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        ---==/&nbsp;&nbsp;&nbsp; \\</tt><tt><br>
+      </tt><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        ___&nbsp; ___&nbsp;&nbsp; |.&nbsp;&nbsp;&nbsp; \|\</tt><tt><br>
+      </tt><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | __||
+        __|&nbsp; |&nbsp; )&nbsp;&nbsp; \\\</tt><tt><br>
+      </tt><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | _| |
+        _|&nbsp;&nbsp; \_/ |&nbsp; //|\\</tt><tt><br>
+      </tt><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        |___||_|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /&nbsp;&nbsp;
+        \\\/\\</tt><tt><br>
+      </tt><tt><br>
+      </tt><tt>Entity Framework Core .NET Command-line Tools
+        2.2.1-servicing-10028</tt><tt><br>
+      </tt><tt>Usage: dotnet ef [options] [command]</tt><tt><br>
+      </tt><tt>Options:</tt><tt><br>
+      </tt><tt>&nbsp;
+        --version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Show version
+        information</tt><tt><br>
+      </tt><tt>&nbsp;
+        -h|--help&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Show help
+        information</tt><tt><br>
+      </tt><tt>&nbsp; -v|--verbose&nbsp;&nbsp;&nbsp;&nbsp; Show verbose
+        output.</tt><tt><br>
+      </tt><tt>&nbsp; --no-color&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Don't colorize output.</tt><tt><br>
+      </tt><tt>&nbsp; --prefix-output&nbsp; Prefix output with level.</tt><tt><br>
+      </tt><tt>Commands:</tt><tt><br>
+      </tt><tt>&nbsp; database&nbsp;&nbsp;&nbsp; Commands to manage the
+        database.</tt><tt><br>
+      </tt><tt>&nbsp; dbcontext&nbsp;&nbsp; Commands to manage DbContext
+        types.</tt><tt><br>
+      </tt><tt>&nbsp; migrations&nbsp; Commands to manage migrations.</tt><tt><br>
+      </tt><tt>Use "dotnet ef [command] --help" for more information
+        about a command.</tt><br>
+      <br>
+      <br>
       If are using .NET Core 2.X and you get a message like this:<br>
       <font size="+1"><span style="font-family: monospace;"><span
             style="color: rgb(204, 0, 0);">Could not execute because the
@@ -553,7 +608,7 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
           </span><span style="font-family: monospace;">dotnet add
             package Microsoft.EntityFrameworkCore.Design</span></font><br>
         <br>
-        <h2>Creating and Applying a Migration</h2>
+        <h3>Migrations</h3>
         <br>
         <i>Migrations</i> are a means of solving the problem of how to
         update the database when the models change. After changing any
@@ -562,9 +617,10 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
         update the Db schema as well as migrate the data from the old
         schema to the new schema.<br>
         <br>
-        <h3>Creating a Migration</h3>
+        <h4>Creating a Migration</h4>
         <p>Use the CLI command:</p>
         <p> <span style="font-family: Courier New,Courier,monospace;">dotnet
+
 
 
 
@@ -596,8 +652,9 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
           <li>Create new migration file in the Migrations folder</li>
           <li>Update the sanpshot file in the Migrations folder </li>
         </ol>
-        <h3>Applying a Migration</h3>
-        <br>
+        <h4> </h4>
+        <h4>Applying a Migration and creating (or updating) the database<br>
+        </h4>
         <br>
         Use the CLI command:
         <p> <span style="font-family: Courier New,Courier,monospace;">
@@ -627,6 +684,7 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
         <p>Note: if you want to drop the database so you can run update
           again, use this CLI command:</p>
         <p><span style="font-family: Courier New,Courier,monospace;">dotnet
+
 
 
 
@@ -724,6 +782,7 @@ href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injec
           alt="Creative Commons License" style="border-width:0"
           src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a><br>
       <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">ASP.NET
+
 
 
 
