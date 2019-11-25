@@ -171,6 +171,7 @@ href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/indexers/
                   &nbsp;&nbsp; public ViewResult Index() =&gt; View(<b>new
 
 
+
                     MemoryRepository()</b>.Products);</code></li>
               <li>A <span style="color: #009600;">better way</span>
                 (loosely coupled)<br>
@@ -198,6 +199,7 @@ href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/indexers/
                   &nbsp; public void
                   ConfigureServices(IServiceCollection services) {<br>
                   &nbsp;&nbsp;&nbsp; <b>services.AddTransient&lt;IRepository,
+
 
 
                     MemoryRepository&gt;();</b><br>
@@ -394,6 +396,7 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
             <code>services.AddDbContext&lt;ApplicationDbContext&gt;(options
 
 
+
               =&gt; options.UseSqlServer(</code><code>&nbsp;&nbsp;
               Configuration["Data:GoodBookNook:ConnectionString"]));<appidentitydbcontext></appidentitydbcontext></code>
           </li>
@@ -469,16 +472,20 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 
+
               WebHost.CreateDefaultBuilder(args)<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 
 
               .UseStartup&lt;Startup&gt;()<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 
+
               .UseDefaultServiceProvider(options =&gt;<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 
 
               options.ValidateScopes = false);<startup></startup></code></li>
@@ -507,7 +514,27 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
         </ul>
       </article>
       <hr> <br>
-      <article id="topic4">
+      <h2>Creating a Database</h2>
+      <p>Before you can run your app, you need to create a database on
+        the host system. This might be your development machine, or a
+        production server. On your development machine, you can run the
+        CLI command below to create a new database:<br>
+      </p>
+      <p><span style="font-family: Courier New,Courier,monospace;">dotnet
+          ef database update<br>
+        </span></p>
+      If are using .NET Core 2.X and you get a message like this:<br>
+      <font size="+1"><span style="font-family: monospace;"><span
+            style="color: rgb(204, 0, 0);">Could not execute because the
+            specified command or file was not found.</span></span></font><br>
+      <article id="topic4"> It is probably because the CLI tools for EF
+        didn't get installed when you installed Visual Studio. You can
+        install them by executing this command:<br>
+        <font size="+1"><span style="font-family: monospace;"><br>
+          </span><span style="font-family: monospace;">dotnet add
+            package Microsoft.EntityFrameworkCore.Design</span></font><br>
+        <p><br>
+        </p>
         <h2>Creating and Applying a Migration</h2>
         <br>
         <i>Migrations</i> are a means of solving the problem of how to
@@ -520,6 +547,7 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
         <h3>Creating a Migration</h3>
         <p>Use the CLI command:</p>
         <p> <span style="font-family: Courier New,Courier,monospace;">dotnet
+
 
             ef migrations add <i>Initial</i></span> </p>
         <ul>
@@ -579,6 +607,7 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
         <p>Note: if you want to drop the database so you can run update
           again, use this CLI command:</p>
         <p><span style="font-family: Courier New,Courier,monospace;">dotnet
+
 
             ef database drop </span></p>
         <ul>
@@ -673,6 +702,7 @@ href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injec
           alt="Creative Commons License" style="border-width:0"
           src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a><br>
       <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">ASP.NET
+
 
 
         Core MVC Lecture Notes</span> by <a
