@@ -84,6 +84,8 @@ h2, h3, h4 {
                 Framework Core</a></li>
             <li style="margin-left: 40px;"><a href="#topic3">Adding
                 Entity Framework to a Web App</a></li>
+            <li style="margin-left: 40px;"><a href="#topic4">Creating a
+                Database</a></li>
             <li style="margin-left: 40px;"><a href="#topic4">Creating
                 and Applying a Migration</a></li>
           </b><b>
@@ -172,6 +174,8 @@ href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/indexers/
 
 
 
+
+
                     MemoryRepository()</b>.Products);</code></li>
               <li>A <span style="color: #009600;">better way</span>
                 (loosely coupled)<br>
@@ -199,6 +203,8 @@ href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/indexers/
                   &nbsp; public void
                   ConfigureServices(IServiceCollection services) {<br>
                   &nbsp;&nbsp;&nbsp; <b>services.AddTransient&lt;IRepository,
+
+
 
 
 
@@ -397,6 +403,8 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
 
 
 
+
+
               =&gt; options.UseSqlServer(</code><code>&nbsp;&nbsp;
               Configuration["Data:GoodBookNook:ConnectionString"]));<appidentitydbcontext></appidentitydbcontext></code>
           </li>
@@ -473,8 +481,12 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
 
 
 
+
+
               WebHost.CreateDefaultBuilder(args)<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
 
 
 
@@ -483,8 +495,12 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
 
 
 
+
+
               .UseDefaultServiceProvider(options =&gt;<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
 
 
 
@@ -521,6 +537,8 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
         CLI command below to create a new database:<br>
       </p>
       <p><span style="font-family: Courier New,Courier,monospace;">dotnet
+
+
           ef database update<br>
         </span></p>
       If are using .NET Core 2.X and you get a message like this:<br>
@@ -533,8 +551,7 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
         <font size="+1"><span style="font-family: monospace;"><br>
           </span><span style="font-family: monospace;">dotnet add
             package Microsoft.EntityFrameworkCore.Design</span></font><br>
-        <p><br>
-        </p>
+        <br>
         <h2>Creating and Applying a Migration</h2>
         <br>
         <i>Migrations</i> are a means of solving the problem of how to
@@ -547,6 +564,8 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
         <h3>Creating a Migration</h3>
         <p>Use the CLI command:</p>
         <p> <span style="font-family: Courier New,Courier,monospace;">dotnet
+
+
 
 
             ef migrations add <i>Initial</i></span> </p>
@@ -607,6 +626,8 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
         <p>Note: if you want to drop the database so you can run update
           again, use this CLI command:</p>
         <p><span style="font-family: Courier New,Courier,monospace;">dotnet
+
+
 
 
             ef database drop </span></p>
@@ -702,6 +723,8 @@ href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injec
           alt="Creative Commons License" style="border-width:0"
           src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a><br>
       <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">ASP.NET
+
+
 
 
 
