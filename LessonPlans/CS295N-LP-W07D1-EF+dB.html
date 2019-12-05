@@ -112,7 +112,7 @@ h2, h3, h4 {
         </ul>
       </article>
       <br>
-      <hr>
+      <hr> <br>
       <article id="topic2">
         <h2>Review </h2>
         <br>
@@ -175,66 +175,63 @@ href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/indexers/
 
 
 
-
-
-
                     MemoryRepository()</b>.Products);</code></li>
               <li>A <span style="color: #009600;">better way</span>
                 (loosely coupled)<br>
                 The author shows you several DIY ways to do this, but
                 ultimately we'll want to <u>use the built-in ASP.NET
                   Core Dependency Injection</u><br>
-                <code></code><b> </b></li>
-              <b> </b>
-            </ul>
-            <b> </b>
-            <ul>
-            </ul>
-            <b> </b></li>
-          <b> </b>
-          <li><b>ASP.NET Core Dependency Injection </b>
-            <ul>
-              <li>Preparing the controller<br>
-                The author did this the same way I did:<br>
-                <code>public class HomeController : Controller {<br>
-                  &nbsp; private IRepository repository;<br>
-                  &nbsp; public HomeController(IRepository repo) =&gt;
-                  repository = repo;</code> </li>
-              <li>Configuring the Startup class<br>
-                <code>public class Startup {<br>
-                  &nbsp; public void
-                  ConfigureServices(IServiceCollection services) {<br>
-                  &nbsp;&nbsp;&nbsp; <b>services.AddTransient&lt;IRepository,
+              </li>
+              <li><b>ASP.NET Core Dependency Injection </b>
+                <ul>
+                  <li>Preparing the controller<br>
+                    The author did this the same way I did:<br>
+                    <code>public class HomeController : Controller {<br>
+                      &nbsp; private IRepository repository;<br>
+                      &nbsp; public HomeController(IRepository repo)
+                      =&gt; repository = repo;</code> </li>
+                  <li>Configuring the Startup class<br>
+                    <code>public class Startup {<br>
+                      &nbsp; public void
+                      ConfigureServices(IServiceCollection services) {<br>
+                      &nbsp;&nbsp;&nbsp; <b>services.AddTransient&lt;IRepository,
 
 
 
 
 
 
-                    MemoryRepository&gt;();</b><br>
-                  &nbsp;&nbsp;&nbsp; services.AddMvc();</code> </li>
-            </ul>
-          </li>
-          <li><b>Advanced DI techniques that we <span style="color:
-                #bf0000;">aren't using</span>: </b>
-            <ul>
-              <li>Mocking framework<br>
-                In his unit tests, the author uses a mocking framework
-                to create the mock, or "fake", repository. <u>We won't
-                  do it this way</u>. We created our fake repository in
-                our own code. Here is the code the author used to add a
-                mock repository to his unit test:<br>
-                <code>[Fact]<br>
-                  public void ControllerTest() {<br>
-                  &nbsp; // Arrange<br>
-                  &nbsp; var data = new[] { new Product { Name = "Test",
-                  Price = 100 } };<br>
-                  &nbsp; var mock = new Mock&lt;IRepository&gt;();<br>
-                  &nbsp; mock.SetupGet(m =&gt;
-                  m.Products).Returns(data);<br>
-                  &nbsp; HomeController controller = new
-                  HomeController(mock.Object);</code></li>
-              <li>Type Broker </li>
+
+
+
+
+                        MemoryRepository&gt;();</b><br>
+                      &nbsp;&nbsp;&nbsp; services.AddMvc();</code> </li>
+                </ul>
+              </li>
+              <li><b>Advanced DI techniques that we <span style="color:
+                    #bf0000;">aren't using</span>: </b>
+                <ul>
+                  <li>Mocking framework<br>
+                    In his unit tests, the author uses a mocking
+                    framework to create the mock, or "fake", repository.
+                    <u>We won't do it this way</u>. We created our fake
+                    repository in our own code. Here is the code the
+                    author used to add a mock repository to his unit
+                    test:<br>
+                    <code>[Fact]<br>
+                      public void ControllerTest() {<br>
+                      &nbsp; // Arrange<br>
+                      &nbsp; var data = new[] { new Product { Name =
+                      "Test", Price = 100 } };<br>
+                      &nbsp; var mock = new Mock&lt;IRepository&gt;();<br>
+                      &nbsp; mock.SetupGet(m =&gt;
+                      m.Products).Returns(data);<br>
+                      &nbsp; HomeController controller = new
+                      HomeController(mock.Object);</code></li>
+                  <li>Type Broker </li>
+                </ul>
+              </li>
             </ul>
           </li>
         </ul>
@@ -409,9 +406,12 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
 
 
 
+
+
+
+
               =&gt; options.UseSqlServer(</code><code>&nbsp;&nbsp;
-              Configuration["Data:GoodBookNook:ConnectionString"]));<appidentitydbcontext></appidentitydbcontext></code>
-          </li>
+              Configuration["Data:GoodBookNook:ConnectionString"]));</code></li>
         </ul>
         <h3> Your Repositories </h3>
         <br>
@@ -448,6 +448,11 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
               context.SaveChanges();<br>
               &nbsp;&nbsp; }</code></li>
         </ul>
+        <h4>Loading related data</h4>
+        <p>blah</p>
+        MS EF Core Tutorial: <a
+          href="https://docs.microsoft.com/en-us/ef/core/querying/related-data"
+          target="_blank">Loading Related Data</a><br>
         <br>
         <h3>Program Class</h3>
         <br>
@@ -488,8 +493,16 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
 
 
 
+
+
+
+
               WebHost.CreateDefaultBuilder(args)<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
 
 
 
@@ -504,8 +517,16 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
 
 
 
+
+
+
+
               .UseDefaultServiceProvider(options =&gt;<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
 
 
 
@@ -554,13 +575,25 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
 
 
 
+
+
+
+
           ef<br>
         </span></p>
       You should get this response:<br>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
         _/\__</tt><tt><br>
       </tt><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
         ---==/&nbsp;&nbsp;&nbsp; \\</tt><tt><br>
       </tt><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         ___&nbsp; ___&nbsp;&nbsp; |.&nbsp;&nbsp;&nbsp; \|\</tt><tt><br>
@@ -625,6 +658,10 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
 
 
 
+
+
+
+
             ef migrations add <i>Initial</i></span> </p>
         <ul>
           <li>No database will be created</li>
@@ -684,6 +721,10 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
         <p>Note: if you want to drop the database so you can run update
           again, use this CLI command:</p>
         <p><span style="font-family: Courier New,Courier,monospace;">dotnet
+
+
+
+
 
 
 
@@ -782,6 +823,10 @@ href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injec
           alt="Creative Commons License" style="border-width:0"
           src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a><br>
       <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">ASP.NET
+
+
+
+
 
 
 
