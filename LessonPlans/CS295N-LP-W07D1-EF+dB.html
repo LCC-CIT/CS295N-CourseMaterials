@@ -182,6 +182,7 @@ href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/indexers/
 
 
 
+
                     MemoryRepository()</b>.Products);</code></li>
               <li>A <span style="color: #009600;">better way</span>
                 (loosely coupled)<br>
@@ -202,6 +203,7 @@ href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/indexers/
                       &nbsp; public void
                       ConfigureServices(IServiceCollection services) {<br>
                       &nbsp;&nbsp;&nbsp; <b>services.AddTransient&lt;IRepository,
+
 
 
 
@@ -373,7 +375,8 @@ href="https://docs.microsoft.com/en-us/ef/core/modeling/relationships#many-to-ma
               set; }<br>
               }</code></li>
         </ul>
-        <h3>Connection String</h3>
+        <h3>Connection String in appsettings.json<br>
+        </h3>
         <ul>
           <li>A connection string specifies the location and name of the
             database and provides configuration settings.</li>
@@ -416,10 +419,15 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
 
 
 
+
               =&gt; options.UseSqlServer(</code><code>&nbsp;&nbsp;
               Configuration["Data:GoodBookNook:ConnectionString"]));</code></li>
+          <br>
         </ul>
-        <h3> Your Repositories </h3>
+        <hr width="100%" size="2">
+        <h3><br>
+        </h3>
+        <h3>Your Repositories </h3>
         <br>
         You probably already have repositories that store data in memory
         for testing (I call these "fake" real repositories)<br>
@@ -454,45 +462,100 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
               context.SaveChanges();<br>
               &nbsp;&nbsp; }</code></li>
         </ul>
-        <h4><br>
-        </h4>
+        <br>
         <h4>Loading related data</h4>
+        <p>Related data is the data that comes from objects that related
+          to the object that you are getting from the DbContext by
+          aggregation or composition. <br>
+        </p>
+        <p>For example, in the Book class, the two lists are related
+          data because they are lists of objects that are part of the
+          domain model.<br>
+        </p>
+        <p><code> public class Book {<br>
+            &nbsp; <br>
+            &nbsp; // Backing fields for the navigational properties&nbsp;
+            <br>
+            &nbsp; private List<author>&lt;Author&gt; authors = new List<author>();<br>
+                &nbsp; private List&lt;Review&gt;<review> reviews = new
+                  List<review>();<br>
+                    <br>
+                    &nbsp; // Ordinary properties<br>
+                    &nbsp; public int BookID { get; set; }<br>
+                    &nbsp; public string Title { get; set; }<br>
+                    &nbsp; public DateTime PubDate { get; set; }<br>
+                    <br>
+                    &nbsp; // Navigational properties<br>
+                    &nbsp; public <b>List</b><author><b>&lt;Author&gt;
+                        Authors</b> { get { return authors; } }<br>
+                      &nbsp; public <b>List</b><review><b>&lt;Review&gt;
+                          Reviews</b> { get { return reviews; } }<br>
+                        }</review></author></review></review></author></author></code></p>
         <ul>
-          <li>Eager loading means that the related data is loaded from
-            the database as part of the initial query.</li>
-          <li>Use the <i>Include</i> method to include dependent
-            objects. You only need this when you include your own model
-            classes (not for <i>DateTime</i> or other classes that are
-            not part of your domain model.)</li>
-          <li>Use <i>ThenInclude</i> for second-level dependencies.<br>
-            Example code from a repository class:<code>public List<book>
-                Books { get { <br>
-                &nbsp;&nbsp; return context.Books.Include(book =&gt;
-                book.Authors)<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Include(book =&gt;
-                book.Reviews)<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .ThenInclude(review =&gt;
-                review.Reviewer)<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .ToList(); } }</book></code><br>
-          </li>
+        </ul>
+        Note that the <i>navigational properties</i> will cause EF to
+        create foreign key fields for BookID in the Author and Review
+        tables in the database.<br>
+        <br>
+        In this example, the Review class has a Reviewer which is
+        related data because it is an instance of the User class which
+        is part of the domain model.<br>
+        <br>
+        <code>
+          public class Review {<br>
+          &nbsp;&nbsp; public int ReviewID { get; set; }<br>
+          &nbsp;&nbsp; public string ReviewText { get; set; }<br>
+          &nbsp;&nbsp; public <b>User Reviewer</b> { get; set; } <br>
+          }
+        </code>Note that the Reviewer proerty will cause EF to generate
+        a foreign key field, ReviewUserID, in the Review table in the
+        database.<br>
+        <br>
+        <h4>Ways to load related data</h4>
+        <ul>
+          <li><b>Eager loading</b><br>
+            Related data is loaded from the database as part of the
+            initial query.</li>
         </ul>
         <ul>
-          <li>Explicit loading means that the related data is explicitly
-            loaded from the database at a later time.<br>
-            (See the article below for more details.)<br>
-          </li>
-          <li>Lazy loading means that the related data is transparently
-            loaded from the database when the navigation property is
-            accessed.<br>
+          <ul>
+            <li>Use the <i>Include</i> method to include dependent
+              objects. You only need this when you include your own
+              model classes (not for <i>DateTime</i> or other classes
+              that are not part of your domain model.)</li>
+            <li>Use <i>ThenInclude</i> for second-level dependencies.<br>
+              Example code from a repository class:<code>public List<book>
+                  Books { get { <br>
+                  &nbsp;&nbsp; return context.Books.Include(book =&gt;
+                  book.Authors)<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Include(book =&gt;
+                  book.Reviews)<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .ThenInclude(review
+                  =&gt; review.Reviewer)<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .ToList(); } }</book></code><br>
+            </li>
+          </ul>
+        </ul>
+        <ul>
+        </ul>
+        <ul>
+          <li><b>Explicit loading</b><br>
+            Related data is explicitly loaded from the database at a
+            later time.<br>
+            (See the article below for more details.)</li>
+          <li><b>Lazy loading</b><br>
+            Related data is transparently loaded from the database when
+            a navigation property is accessed.<br>
             (See the article below for more details.)</li>
         </ul>
-        <p><br>
-        </p>
-        <blockquote> MS EF Core Tutorial: <a
-            href="https://docs.microsoft.com/en-us/ef/core/querying/related-data"
-            target="_blank">Loading Related Data</a><br>
+        <blockquote>
+          <p><b>Reference</b><br>
+            MS EF Core Tutorial: <a
+              href="https://docs.microsoft.com/en-us/ef/core/querying/related-data"
+              target="_blank">Loading Related Data</a></p>
         </blockquote>
         <br>
+        <hr width="100%" size="2"><br>
         <h3>Program Class</h3>
         <br>
         <br>
@@ -537,8 +600,10 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
 
 
 
+
               WebHost.CreateDefaultBuilder(args)<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 
 
 
@@ -563,8 +628,10 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
 
 
 
+
               .UseDefaultServiceProvider(options =&gt;<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 
 
 
@@ -623,6 +690,7 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
 
 
 
+
           ef<br>
         </span></p>
       You should get this response:<br>
@@ -633,8 +701,10 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
 
 
 
+
         _/\__</tt><tt><br>
       </tt><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 
 
 
@@ -716,6 +786,7 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
 
 
 
+
             ef migrations add <i>Initial</i></span> </p>
         <ul>
           <li>No database will be created</li>
@@ -775,6 +846,7 @@ href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependenc
         <p>Note: if you want to drop the database so you can run update
           again, use this CLI command:</p>
         <p><span style="font-family: Courier New,Courier,monospace;">dotnet
+
 
 
 
@@ -878,6 +950,7 @@ href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injec
           alt="Creative Commons License" style="border-width:0"
           src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a><br>
       <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">ASP.NET
+
 
 
 
