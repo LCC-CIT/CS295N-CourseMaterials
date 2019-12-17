@@ -12,7 +12,7 @@ Introduction We've already been using Controllers, so you are already familiar w
 
 
 
-##Contents
+## Contents
 
 - Controller Review
 - HTTP Basics
@@ -22,7 +22,7 @@ Introduction We've already been using Controllers, so you are already familiar w
 
 
 
-##Controller Review
+## Controller Review
 
 - Create controller classes by inheriting from the AspNetCore.Mvc.Controller class. 
   Note: you can create a controller from scratch (a POCO class) rather than inheriting from the framework Controller class, but it takes more effort.

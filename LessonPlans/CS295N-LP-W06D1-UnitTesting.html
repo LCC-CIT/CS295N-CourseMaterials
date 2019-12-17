@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Week 6, Day 1, Unit Testing + Repos</title>
+    <title>Unit Testing + Repos</title>
     <style type="text/css">
         body {
             font-family: "Arial", "Helvetica", "sans-serif";
@@ -29,15 +29,11 @@
 </head>
 
 <body>
-    <header> <b>CS296N Web Development 2: ASP.NET &nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp; January 23, 2018<br>
-      </b>
+    <header> <b>CS295N Web Development 1: ASP.NET<br>
+        </b>
         <div>Brian Bird</div>
         <h1> <i><b>Repositories and Unit Testing<br>
-          </b></i></h1>
+                </b></i></h1>
         <b>Where we are </b>
         <table style="width: 807px; height: 127px;" border="1">
             <tbody>
@@ -68,15 +64,14 @@
         <div>
             <ul>
                 <b>
-            <li><a href="#topic1">Introduction</a></li>
-            <li><a href="#topic2">Review - Controller Action Methods<br>
-              </a></li>
-            <li><a href="#topic3">Unit Testing Overview</a></li>
-            <li><a href="#topic4">Repositories</a></li>
-            <li><a href="#topic5">Models</a></li>
-            <li><a href="#topic6">Further Reading</a></li>
-            <li><a href="#topic7">Next Class</a></li>
-          </b>
+                    <li><a href="#topic1">Introduction</a></li>
+                    <li><a href="#topic2">Review - Controller Action Methods</a></li>
+                    <li><a href="#topic3">Unit Testing Overview</a></li>
+                    <li><a href="#topic4">Repositories</a></li>
+                    <li><a href="#topic5">Models</a></li>
+                    <li><a href="#topic6">Further Reading</a></li>
+                    <li><a href="#topic7">Next Class</a></li>
+                </b>
             </ul>
         </div>
     </header>
@@ -144,9 +139,9 @@
             </ul>
             <span class="seoSummary" style="margin: 0px; padding: 0px;
           border: 0px; color: rgb(51, 51, 51); font-family: &quot;Open          Sans&quot;, arial, x-locale-body, sans-serif; font-style:          normal; font-variant-caps: normal; font-weight: normal;          letter-spacing: normal; orphans: auto; text-align: start;          text-indent: 0px; text-transform: none; white-space: normal;          widows: auto; word-spacing: 0px; -webkit-text-size-adjust:          auto; -webkit-text-stroke-width: 0px;">We'll
-          cover more details of unit testing later, but here are some basic
-          concepts:<br>
-        </span><span style="color: rgb(51, 51, 51); font-family:
+                cover more details of unit testing later, but here are some basic
+                concepts:<br>
+            </span><span style="color: rgb(51, 51, 51); font-family:
           &quot;Open Sans&quot;, arial, x-locale-body, sans-serif;          font-size: medium; font-style: normal; font-variant-caps:          normal; font-weight: normal; letter-spacing: normal; orphans:          auto; text-align: start; text-indent: 0px; text-transform:          none; white-space: normal; widows: auto; word-spacing: 0px;          -webkit-text-size-adjust: auto; -webkit-text-stroke-width:          0px; background-color: rgb(255, 255, 255); display: inline          !important; float: none;"></span>
             <ul>
                 <li>MVC facilitates unit testing - this is one of the reasons to use MVC
@@ -182,13 +177,14 @@
                     <li>Used by the .NET Core team to test their own code.</li>
                     <li>Test runner integrated in Visual Studio</li>
                     <li>Note: Assert.Equal method uses the Equal method of .NET objects for comparison. Primitive .NET types and many classes in the .NET library have fully implemented this method. You only need to write a Compare class (as shown in the textbook)
-                        if you are using a class that doesn't already have a comparator implemented for the Equals method.</li>
+                        if you are using a class that doesn't already have a comparator implemented for the Equals method.
+                    </li>
                 </ul>
                 <li>Reference</li>
                 <ul>
                     <li>Overview: <a href="https://xunit.github.io">xunit.github.io</a></li>
                     <li>Getting started with xUnit and Visual Studio: <a href="hhttps://xunit.net/docs/getting-started/netfx/visual-studio">Getting
-                Started with xUnit.net</a></li>
+                            Started with xUnit.net</a></li>
                 </ul>
             </ul>
         </article>
@@ -197,12 +193,13 @@
             <ul>
             </ul>
             One way of managing data in our web app is to use the <a href="https://www.c-sharpcorner.com/article/repository-pattern-in-asp-net-core/" target="_blank">Repository
-          Pattern</a>. Rather than accessing data directly through Entity Framework, the data will be accessed through a repository.<br>
+                Pattern</a>. Rather than accessing data directly through Entity Framework, the data will be accessed through a repository.<br>
             <ul>
                 <li>Reasons for using a repository:</li>
                 <ul>
                     <li>It facilitates unit testing since the repository can be replaced by a fake for testing</li>
-                    <li>It can facilitate a simple source of "hard coded" data for integration testing during early development</li>
+                    <li>It can facilitate a simple source of "hard coded" data for integration testing during early development
+                    </li>
                     <li>It provides an additional layer of abstraction for implementing common data operations</li>
                 </ul>
                 <li>Implementation</li>
@@ -210,7 +207,7 @@
                     <li>Real and Fake repositories both inherit from an interface</li>
                     <ul>
                         <li>This supports <a href="http://www.jamesshore.com/Blog/Dependency-Injection-Demystified.html" target="_blank">dependency
-                  injection</a> so that the fake repository can be easily injected when testing.</li>
+                                injection</a> so that the fake repository can be easily injected when testing.</li>
                     </ul>
                 </ul>
                 <li>Fake repositories</li>
@@ -225,8 +222,8 @@
         </article>
         <article id="topic5">
             <h4><span style="color: #0433ff;">Note for next class: Talk about
-            Dependency Injection and the ASP.NET DI service<br>
-            Modify the BookInfo example to use the DI service</span><br>
+                    Dependency Injection and the ASP.NET DI service<br>
+                    Modify the BookInfo example to use the DI service</span><br>
             </h4>
             <h3> </h3>
         </article>
@@ -234,13 +231,13 @@
             <h2>Further Reading</h2>
             <a href="https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/testing">Testing
 
-          Controller Logic in ASP.NET Core</a><span style="color:
+                Controller Logic in ASP.NET Core</a><span style="color:
           #0000ee;"></span><br>
             <a href="https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/testing">
             </a> <br>
             <a href="http://www.jamesshore.com/Blog/Dependency-Injection-Demystified.html">Dependency
 
-          Injection Demystified</a><br>
+                Injection Demystified</a><br>
         </article>
         <article id="topic7">
             <a href="https://www.c-sharpcorner.com/article/repository-pattern-in-asp-net-core/" target="_blank"><br> Repository Pattern in ASP.NET Core</a><br>
@@ -252,15 +249,15 @@
     <hr style="width: 100%; height: 2px;">
     <footer>
         <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">&nbsp;
-ASP.NET
+            ASP.NET
 
-Core
-        MVC Lecture Notes</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://birdsbits.blog" property="cc:attributionName" rel="cc:attributionURL">Brian
-        Bird</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative
-Commons
+            Core
+            MVC Lecture Notes</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://birdsbits.blog" property="cc:attributionName" rel="cc:attributionURL">Brian
+            Bird</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative
+            Commons
 
-Attribution
-        4.0 International License</a>. <br>
+            Attribution
+            4.0 International License</a>. <br>
     </footer>
     <hr>
 </body>
