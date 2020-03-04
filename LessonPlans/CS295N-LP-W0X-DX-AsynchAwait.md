@@ -8,7 +8,12 @@ Each asyc method returns a ***Task*** object. You can start as many Async method
 
 The ***await*** keyword provides a way to pause execution until an async method completes or until it returns a Task object. Using await on a Task rather than a method often improves performance.
 
-Use the ***async*** keyword when declaring an asynchronous method. Any method declared as async, must return a Task object. Every async method must be called from withiin another async method or use the .***Wait()*** method when calling the async method.
+Use the ***async*** keyword when declaring an asynchronous method. 
+
+- Any method declared as async, must return a Task object. This can be done by:
+  - Calling another async method.
+  - Using the static ***Task.FromResult&lt;T&gt;()*** method to return a Task.
+- Every async method must be called from withiin another async method or the async method can be called with the .***Wait()*** method.
 
 ## Examples
 
