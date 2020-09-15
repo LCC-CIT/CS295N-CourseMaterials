@@ -1,13 +1,13 @@
 # Syllabus for Web Development 1: ASP.NET
 
-##   Fall 2019
+##   Fall 2020
 
-| Course    | CS295N, CRN 21974     |      | Instructor   | Brian Bird             |
-| --------- | --------------------- | ---- | ------------ | ---------------------- |
-| Credits   | 4                     |      | Email        | birdb@lanecc.edu       |
-| Dates     | 9/30/19 – 12/13/19    |      | Office Hours | M, W, Th; 12:30 – 1:20 |
-| Classroom | Building 19, Room 126 |      | Office       | Building 19, Room 152  |
-| Lab       | Building 19, Room 135 |      | Lab Hours    | Tu 2:00 – 4:00         |
+| Course    | CS295N, CRN 21833 & 23062 |      | Instructor   | Brian Bird       |
+| --------- | ------------------------- | ---- | ------------ | ---------------- |
+| Credits   | 4                         |      | Email        | birdb@lanecc.edu |
+| Time      | 10:00am – 11:50           |      | Office Hours | TBD              |
+| Classroom | Virtual                   |      | Office       | Virtual          |
+| Lab       | Virtual                   |      |              |                  |
 
 
 
@@ -72,9 +72,12 @@ To be able to design and program a web site that uses the ASP.NET framework for 
 
  
 
-#### Textbook   
+#### Required Textbook   
 
-*Pro ASP.NET Core MVC 2*, 7th Edition, by Adam Freeman, Apress, 2017 ISBN: 978-1-4842-3149-4. You can purchase the textbook from the . The source code for the sample programs in the text is available for download on .
+*Murach’s ASP.NET Core MVC*, 1st Edition, by Mary Delamater and Joel Murach, Murach Books, 2020 ISBN: 978-1-943872-49-7. You can purchase the textbook from the [Titan Store](https://www.bkstr.com/laneccstore/home) or from the publisher, [Murach Books](https://www.murach.com/shop-books/web-development-books/murach-s-asp-net-core-mvc-detail). 
+
+<u>Free downloads</u>
+The The first two chapters  of the book and the source code for the sample programs in the text are also available for free download on the publisher's web site.
 
 #### Supplemental Materials
 
@@ -83,22 +86,30 @@ The Microsoft web site provides the following resources:
 - [ASP.NET Core MVC Tutorials](https://docs.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-2.1)
 - [ASP.NET Core Reference Docs](https://docs.microsoft.com/en-us/dotnet/api/?view=aspnetcore-2.0)
 
-#### Software
+#### Required Software
 
-The hardware and software required for the course are available to all students in the CIT Main Lab on campus.  You paid a fee when you registered for this course that provides you with unlimited access to CIT lab facilities.  
+The class examples and the textbook are based on using the Windows operating system for development, but you may alternatively use Mac OS or Linux. 
 
-[http://e5.onthehub.com/WebStore/Welcome.aspx?vsro=8&ws=EC37AD18-ED9B-E011-969D-0030487D8897](file:///Volumes/DataCard/Repos/CS295N-CourseMaterials/The hardware and software required for the course are available to all students in the CIT Main Lab on campus.  You paid a fee when you registered for this course that provides you with unlimited access to CIT lab facilities.   Visual Studio 2017 will be the development environment provided in class and in the CIT Main Lab.  This software can be obtained free of charge through your LCC Microsoft Imagine account (formerly Microsoft Dream Spark), http://e5.onthehub.com/WebStore/Welcome.aspx?vsro=8&ws=EC37AD18-ED9B-E011-969D-0030487D8897. You can download it or borrow the setup DVD from the CIT computer lab.  You may alternatively use Visual Studio 2017 Community edition which is a free download from Microsoft at www.visualstudio.com/en-us/products/visual-studio-community-vs. )
+We will be using [Visual Studio 2019, Community Edition](https://visualstudio.microsoft.com/vs/community/), which is available as a free download. You may alternatively use the Visual Studio 2019, Enterprise Edition which is free through Azure Dev Tools for Teaching (see below). 
 
-[www.visualstudio.com/en-us/products/visual-studio-community-vs](https://visualstudio.microsoft.com/vs/community/)
+The version of the .NET framework we will be using is [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1). You will need to download the latest version of the SDK for your platform (Windows, Mac, or Linux).
+
+####  Free and Discounted Software for Students
+
+- [Azure Dev Tools for Teaching](https://signup.azure.com/studentverification?offerType=3) (previously known as Microsoft Imagine Premium) is a subscription-based offering, paid for by the LCC CIT department, providing access to professional development and design tools, software, and services from Microsoft. 
+- [Microsoft Office 365](https://help.lanecc.edu/index.php?/Knowledgebase/Article/View/1143) LCC students and staff can get a free subscription to Office 365, which includes Microsoft Word, Excel, PowerPoint, Access, and more.
+- [On The Hub](https://lanecc.onthehub.com/WebStore/ProductsByMajorVersionList.aspx?cmi_mnuMain=f189368a-f0a6-e811-8109-000d3af41938) has partnered with Microsoft, Adobe, IBM, Symantec, VMware and other software publishers to offer discounted and free software for students and faculty.
+
+None of the software provided in these offers is required for this class, but you may want to take advantage of the free software.
 
 #### CIT Computer Lab
 
-The CIT Main lab (Bldg. 19, room 135) is equipped with computers which are available exclusively for students in the CIT department. There are tutors available in the lab to help you with your lab work. There is a schedule is posted on the large white board inside the lab which lists the tutors and the times they will be available.
+The CIT Main lab (Building 19, room 135) is equipped with computers which are available exclusively for students in the CIT department. There are tutors available in the lab to help you with your lab work. There is a schedule is posted on the large white board inside the lab which lists the tutors and the times they will be available.
 
 #### Web Resources
 
 - [http://classes.lanecc.edu](https://visualstudio.microsoft.com/vs/community/) (Moodle) will be used as the Learning Management System for this course.  All course materials and activities will be managed through this site.
-- You will be deploying web apps that you create to the Microsoft Azure cloud. You are entitled to a free Azure account through LCC’s Microsoft Imagine subscription as described here: [https://azure.microsoft.com/en-us/offers/ms-azr-0144p](https://azure.microsoft.com/en-us/offers/ms-azr-0144p/) 
+- You will be deploying web apps that you create to the Microsoft Azure cloud. You are entitled to a free Azure account through Microsoft Azure for Students as described here: [https://azure.microsoft.com/en-us/offers/ms-azr-0144p](https://azure.microsoft.com/en-us/offers/ms-azr-0144p/) 
   
 
 ### Assessment and Grading
@@ -167,16 +178,16 @@ If you need support or assistance because of a disability, you may be eligible f
 Please be aware that any accessible tables and chairs in this room should remain available for authorized students who find that standard classroom seating is not usable.
 (may be subject to change)
 
-###Academic Calendar for Fall Term 2019
+### Academic Calendar for Fall Term 2020
 
-| Event                                  | Date               |
-| -------------------------------------- | ------------------ |
-| Term begins                            | 9/30/19            |
-| Last day to receive refund             | 10/6/19            |
-| Veteran’s Day – college closed         | 11/11/19           |
-| Last day for schedule changes          | 11/22/19           |
-| Thanksgiving Vacation – college closed | 11/28/19 – 12/1/19 |
-| Finals week                            | 12/9/19 – 12/13/19 |
+| Event                                  | Date                |
+| -------------------------------------- | ------------------- |
+| Term begins                            | 9/30/20             |
+| Last day to receive refund             | 10/4/20             |
+| Veteran’s Day – college closed         | 11/11/20            |
+| Last day for schedule changes          | 11/20/20            |
+| Thanksgiving Vacation – college closed | 11/26/20 – 11/29/20 |
+| Finals week                            | 12/7/20 – 12/11/20  |
 
 
 
@@ -188,8 +199,8 @@ Please be aware that any accessible tables and chairs in this room should remain
 | 2    | More on MVC Architectural patternsSeparation of concernsConvention over configurationStatelessness of HTTP Session StateCookiesWeb StorageModel Design Domain ModelsView Models | Freeman Ch. 3 - The MVC Pattern, Projects, and conventions  Online tutorials | Lab 2                                                        |
 | 3    | C# review C# Features used in MVC Lambda expressions         | Freeman Ch. 4 - Essential C# Features                        | Lab 3                                                        |
 | 4    | Razor views View Models Tag Helpers                          | Read: Ch. 5 - Working with Razor Skim: Ch. 23 - Understanding Tag Helpers Ch. 24 - Using the Form Tag Helpers Ch. 35 - Using the Other Built-in Tag Helpers | Lab 4                                                        |
-| 5    | Web Dev with Visual Studio Deploying to Azure Investigating HTTP with the Firefox Developer Console | Skim:  Ch. 6 - Working with Visual Studio                    | Term Project Proposal  Lab 5 Publish to AzureDebugging exercise |
-| 6    | Unit testing xUnitDependency InjectionThe repository pattern | Read:  Ch. 7 - Unit Testing MVC Applications (28 pages) Skim: Ch. 18 - Dependency Injection (32 pages) | Lab 6 Ch. 7 ExerciseAdd to site site                         |
+| 5    | Web Dev with Visual Studio Deploying to Azure Investigating HTTP with the Firefox Developer Console | Skim:  Ch. 6 - Working with Visual Studio                    | Term Project Proposal  Lab 5 Publish to Azure Debugging exercise |
+| 6    | Unit testing xUnit Dependency Injection The repository pattern | Read:  Ch. 7 - Unit Testing MVC Applications (28 pages) Skim: Ch. 18 - Dependency Injection (32 pages) | Lab 6 Ch. 7 Exercise Add to site site                        |
 | 7    | Entity Framework Database MigrationDeploying to Azure        | Online tutorials Ch. 8, Preparing a Database, pages 208 – 217 | Lab 7                                                        |
 | 8    | More on Entity Framework LINQ queriesLazy loadingEntity relationshipsOne to oneOne to manyMany to many | Online tutorials                                             | Lab 8                                                        |
 | 9    | Model Binding Validation                                     | Freeman Ch. 26 - Model Binding Freeman Ch. 27 - Model Validation | Lab 9                                                        |
