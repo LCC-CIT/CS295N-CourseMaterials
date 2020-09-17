@@ -3,4 +3,4 @@ View the course outline and other materials on the course website: https://lcc-c
 
 Example and demo code is not included in this repository. See these repositories for code:
 * https://github.com/ProfBird/CS295-Demos
-* https://github.com/LCC-CIT/CS295N-Bookinfo-Core-21
+* https://github.com/ProfBird/BookInfo-WebApp-Core3
