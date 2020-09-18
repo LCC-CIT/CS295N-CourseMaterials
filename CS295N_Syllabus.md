@@ -1,23 +1,32 @@
 # Syllabus for Web Development 1: ASP.NET
 
-##   Fall 2020
+##   CS295N, Fall 2020
 
-| Course    | CS295N, CRN 21833 & 23062 |      | Instructor   | Brian Bird       |
-| --------- | ------------------------- | ---- | ------------ | ---------------- |
-| Credits   | 4                         |      | Email        | birdb@lanecc.edu |
-| Time      | 10:00am – 11:50           |      | Office Hours | TBD              |
-| Classroom | Virtual                   |      | Office       | Virtual          |
-| Lab       | Virtual                   |      |              |                  |
+| Class      | CRN 21833 (hybrid) & 23062 (online)                  |      | Instructor   | Brian Bird                                          |
+| ---------- | ---------------------------------------------------- | ---- | ------------ | --------------------------------------------------- |
+| Credits    | 4                                                    |      | Email        | birdb@lanecc.edu                                    |
+| Day & Time | M, W, 10:00&ndash;11:50                              |      | Office Hours | M&mdash;Th, 12:00&ndash;12:50                       |
+| Classroom  | [Zoom meeting](https://lanecc.zoom.us/j/93477067232) |      | Office       | [Zoom meeting](https://lanecc.zoom.us/j/8982554800) |
+
+Due to COVID-19, instruction for both sections of this class will be provided remotely through live Zoom class sessions and video recordings.
 
 
 
-### Course Description
+## Course Description
 
-This course provides an introduction to server-side programming in C# using the ASP.NET Core framework. You will learn the concepts, and skills necessary to analyze web development problems in order to develop maintainable and extensible web applications. 
+This course provides an introduction to server-side programming in C# using the ASP.NET Core framework and the MVC design pattern. You will learn the concepts and skills necessary to solve web development problems in order to develop maintainable and extensible web applications. 
+
+### Effort
+
+Since this is a four-credit class, students will need to devote at least 12 hours per week to the class (many students will need to devote more).
+
+- 4 hours for class participation.
+- 2 hours for reading (an average of 35 pages per week).
+- 6 hours for lab assignments.
 
 ### Learning Outcome
 
-To be able to design and program a web site that uses the ASP.NET framework for a moderately complex web application.
+To be able to design and code a web site that uses the ASP.NET Core MVC framework for a moderately complex web application.
 
 ### Course Content
 
@@ -61,12 +70,12 @@ To be able to design and program a web site that uses the ASP.NET framework for 
 
 #### Skills
 
-- Develop ASP.NET Core web apps using server-side C# and MVC.
+- Develop ASP.NET Core web apps using server-side C#, HTML, CSS and JavaScript.
 - Design data models that translate into SQL Server database tables for use by your web app.
 - Write database queries using LINQ.
 - Write Unit Tests for Test Driven Development.
-- Debug web apps and web services.
-- Deploy web apps.
+- Debug web apps.
+- Deploy web apps to a cloud service.
 - Effectively use software development tools like Visual Studio.
 - Use Git to manager your source code.
 
@@ -90,7 +99,7 @@ The Microsoft web site provides the following resources:
 
 The class examples and the textbook are based on using the Windows operating system for development, but you may alternatively use Mac OS or Linux. 
 
-We will be using [Visual Studio 2019, Community Edition](https://visualstudio.microsoft.com/vs/community/), which is available as a free download. You may alternatively use the Visual Studio 2019, Enterprise Edition which is free through Azure Dev Tools for Teaching (see below). 
+We will be using [Visual Studio 2019, Community Edition](https://visualstudio.microsoft.com/vs/community/), which is available as a free download. You may alternatively use the Visual Studio 2019, Enterprise Edition which is available at no cost to students (see below). 
 
 The version of the .NET framework we will be using is [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1). You will need to download the latest version of the SDK for your platform (Windows, Mac, or Linux).
 
@@ -104,12 +113,14 @@ None of the software provided in these offers is required for this class, but yo
 
 #### CIT Computer Lab
 
-The CIT Main lab (Building 19, room 135) is equipped with computers which are available exclusively for students in the CIT department. There are tutors available in the lab to help you with your lab work. There is a schedule is posted on the large white board inside the lab which lists the tutors and the times they will be available.
+The in-person computer lab and tutoring center is temporarily closed due to COVID-19, but tutoring is still available online. You can drop into the [Lane Support Hub Zoom Room](https://lanecc.zoom.us/j/98549544816) and request a CIT tutor, or make an appointment with a CIT tutor via the scheduling page at [lanecc.mywconline.com](https://lanecc.mywconline.com/). More information is available on the [LCC Tutoring Services](https://www.lanecc.edu/tutor) web page.
+
+~~The CIT Main lab (Building 19, room 135) is equipped with computers which are available exclusively for students in the CIT department. There are tutors available in the lab to help you with your lab work. There is a schedule is posted on the large white board inside the lab which lists the tutors and the times they will be available.~~
 
 #### Web Resources
 
-- [http://classes.lanecc.edu](https://visualstudio.microsoft.com/vs/community/) (Moodle) will be used as the Learning Management System for this course.  All course materials and activities will be managed through this site.
-- You will be deploying web apps that you create to the Microsoft Azure cloud. You are entitled to a free Azure account through Microsoft Azure for Students as described here: [https://azure.microsoft.com/en-us/offers/ms-azr-0144p](https://azure.microsoft.com/en-us/offers/ms-azr-0144p/) 
+-  [Moodle](http://classes.lanecc.edu) is the Learning Management System for this course.
+- You will be deploying your web apps to the Microsoft Azure cloud. You can register for a free Azure subscription through [Azure for Students](https://azure.microsoft.com/en-us/free/students/).
   
 
 ### Assessment and Grading
@@ -140,24 +151,21 @@ Letter grades for the course will be determined by the following percentages:
 
 - The grade for assignments submitted after the due date will be reduced by 10%.
   - Late labs 1 – 4 will only be accepted by the end of week 5
-  - Late labs 5 – 9 will only be accepted by the end of week 10
-- Quizzes and exams cannot be taken after the due date. Plan ahead!
-- Exceptions will only be made for severe illness or emergency situations
+  - Late labs 5 – 8 will only be accepted by the end of week 10
+  
+- Quizzes and exams cannot be taken after the due date. Contact your instructor in advance if you know you will have a schedule conflict.
+
+- Exceptions will be made for illness or emergency situations
+
+  
 
 #### Weekly Learning Activities
 
-Monday
-
-- Do a code review of last week's lab work for your lab partner
-
-Tuesday
-
-- Take the weekly quiz
-
-Friday
-
-- Post a beta version of this week's lab assignment so your lab partner can review it.   
-- Submit the release version of last week's lab assignment.
+|                      | Monday                                    | Tuesday          | Wednesday                         | Thursday                  | Friday                 |
+| -------------------- | ----------------------------------------- | ---------------- | --------------------------------- | ------------------------- | ---------------------- |
+| **Reading**          | Take the quiz <u>before class</u>         | Continue reading | Take the quiz <u>before class</u> |                           | Start the next chapter |
+| **This week's  lab** | Start working (schedule at least 6 hours) |                  |                                   | Submit beta               |                        |
+| **Last week's lab**  | Do a code review                          |                  |                                   | Submit production version |                        |
 
 
 ### Academic Honesty
@@ -180,32 +188,36 @@ Please be aware that any accessible tables and chairs in this room should remain
 
 ### Academic Calendar for Fall Term 2020
 
-| Event                                  | Date                |
-| -------------------------------------- | ------------------- |
-| Term begins                            | 9/30/20             |
-| Last day to receive refund             | 10/4/20             |
-| Veteran’s Day – college closed         | 11/11/20            |
-| Last day for schedule changes          | 11/20/20            |
-| Thanksgiving Vacation – college closed | 11/26/20 – 11/29/20 |
-| Finals week                            | 12/7/20 – 12/11/20  |
+
+
+| Week | Event                                  | Date                                           |
+| ---- | -------------------------------------- | ---------------------------------------------- |
+| 1    | Term begins                            | Wednesday, 9/30/20                             |
+|      | Last day to receive refund             | Sunday, 10/4/20                                |
+| 7    | Veteran’s Day – college closed         | Wednesday, 11/11/20                            |
+| 8    | Last day for schedule changes          | Friday, 11/20/20                               |
+| 9    | Thanksgiving Vacation – college closed | Thursday&mdash;Sunday, 11/26/20&ndash;11/29/20 |
+| 11   | Final Exam                             | Monday, 12/7/20                                |
+
+View [academic calendars](https://www.lanecc.edu/calendars/academic-calendar) on the LCC web site.
 
 
 
 ###Tentative Course Schedule
 
-| Week | Topics                                                       | Reading                                                      | Lab Assignment                                               |
-| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 1    | Intro to MVC The MVC patternModelsViewsControllers           | Freeman Ch. 1 - Introducing ASP.NET Core MVC Freeman Ch. 2 - Your first MVC Application | Lab 1                                                        |
-| 2    | More on MVC Architectural patternsSeparation of concernsConvention over configurationStatelessness of HTTP Session StateCookiesWeb StorageModel Design Domain ModelsView Models | Freeman Ch. 3 - The MVC Pattern, Projects, and conventions  Online tutorials | Lab 2                                                        |
-| 3    | C# review C# Features used in MVC Lambda expressions         | Freeman Ch. 4 - Essential C# Features                        | Lab 3                                                        |
-| 4    | Razor views View Models Tag Helpers                          | Read: Ch. 5 - Working with Razor Skim: Ch. 23 - Understanding Tag Helpers Ch. 24 - Using the Form Tag Helpers Ch. 35 - Using the Other Built-in Tag Helpers | Lab 4                                                        |
-| 5    | Web Dev with Visual Studio Deploying to Azure Investigating HTTP with the Firefox Developer Console | Skim:  Ch. 6 - Working with Visual Studio                    | Term Project Proposal  Lab 5 Publish to Azure Debugging exercise |
-| 6    | Unit testing xUnit Dependency Injection The repository pattern | Read:  Ch. 7 - Unit Testing MVC Applications (28 pages) Skim: Ch. 18 - Dependency Injection (32 pages) | Lab 6 Ch. 7 Exercise Add to site site                        |
-| 7    | Entity Framework Database MigrationDeploying to Azure        | Online tutorials Ch. 8, Preparing a Database, pages 208 – 217 | Lab 7                                                        |
-| 8    | More on Entity Framework LINQ queriesLazy loadingEntity relationshipsOne to oneOne to manyMany to many | Online tutorials                                             | Lab 8                                                        |
-| 9    | Model Binding Validation                                     | Freeman Ch. 26 - Model Binding Freeman Ch. 27 - Model Validation | Lab 9                                                        |
-| 10   | Configuration URL routing                                    | Freeman Ch. 14 - Configuring Applications Freeman Ch. 15 - URL Routing | Term project [peer review](file:///Volumes/DataCard/Repos/CS295N-CourseMaterials/TermProject/TermProjectCodeReview.docx) |
-| 11   | Finals week                                                  |                                                              | Submit [Term Project](file:///Volumes/DataCard/Repos/CS295N-CourseMaterials/TermProject/CIS195TermProject.pdf) |
+| Week | Topics                                                       | Reading                            | Lab Assignment                                             |
+| ---- | ------------------------------------------------------------ | ---------------------------------- | ---------------------------------------------------------- |
+| 1    | Intro to Web Dev<br />*Class starts Wednesday*               |                                    |                                                            |
+| 2    | Intro to MVC                                                 | Murach Ch. 1                       | - Murach Ex 1-1<br />- Publish to Azure                    |
+| 3    | MVC Architectural patterns                                   | Murach Ch. 2                       | - Murach Ex 2-1, 2-2<br />- Create your project MVC site   |
+| 4    | Bootstrap                                                    | Murach Ch. 3                       | - Murach Ex 3-1, 3-2<br />- Add Bootstrap to your site     |
+| 5    | Midterm Quiz<br />Unit testing with xUnit                    | Online tutorials                   | Add unit tests to your site                                |
+| 6    | Entity Framework<br />Database Migrations<br />Deploying a DB to Azure | Murach Ch. 4<br />Online tutorials | - Murach Ex 4-1<br />- Add a DB to your site               |
+| 7    | Debugging<br />*Wednesday is Veteran's day*                  | Murach Ch. 5                       | - Murach Ex 5-1<br />- Debugging practice                  |
+| 8    | Controllers                                                  | Murach Ch. 6                       | - Murach Ex 6-1<br />- Add controller methods to your site |
+| 9    | Razor Views<br />*Thursday is Thanksgiving*                  | Murach Ch. 7a                      | - Add tag helpers to your site                             |
+| 10   | Razor Views (continued)                                      | Murach Ch. 7b                      | - Murach Ex 7-1<br />- Add views to your site              |
+| 11   | Final quiz, Project presentations                            |                                    |                                                            |
 
 
 
