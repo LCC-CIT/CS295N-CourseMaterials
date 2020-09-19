@@ -161,11 +161,11 @@ Letter grades for the course will be determined by the following percentages:
 
 #### Weekly Learning Activities
 
-|                      | Monday                                    | Tuesday          | Wednesday                         | Thursday                  | Friday                 |
-| -------------------- | ----------------------------------------- | ---------------- | --------------------------------- | ------------------------- | ---------------------- |
-| **Reading**          | Take the quiz <u>before class</u>         | Continue reading | Take the quiz <u>before class</u> |                           | Start the next chapter |
-| **This week's  lab** | Start working (schedule at least 6 hours) |                  |                                   | Submit beta               |                        |
-| **Last week's lab**  | Do a code review                          |                  |                                   | Submit production version |                        |
+|                      | Monday                                          | Tuesday | Wednesday                    | Thursday                  | Friday                 |
+| -------------------- | ----------------------------------------------- | ------- | ---------------------------- | ------------------------- | ---------------------- |
+| **Reading**          | Take the quiz *before class*                    |         | Take the quiz *before class* |                           | Start the next chapter |
+| **This week's  lab** | Start working <br />*Schedule at least 6 hours* |         |                              | Submit beta               |                        |
+| **Last week's lab**  | Do a code review                                |         |                              | Submit production version |                        |
 
 
 ### Academic Honesty
