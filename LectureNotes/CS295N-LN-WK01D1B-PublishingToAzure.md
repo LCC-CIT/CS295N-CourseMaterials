@@ -2,15 +2,17 @@
 
 # Publishing a Web App to Azure 
 
-| Weekly topics                                   |      |
-| ----------------------------------------------- | ---- |
-| 1. Intro to web dev  \| **Publishing to Azure** | 6.   |
-| 2.                                              | 7.   |
-| 3.                                              | 8.   |
-| 4.                                              | 9.   |
-| 5.                                              | 10.  |
 
- 
+
+| Weekly Topics                                |                                               |
+| -------------------------------------------- | --------------------------------------------- |
+| 1. **Intro to Web Dev** / Deploying to Azure | 6. Entity Framework / Deploying a DB to Azure |
+| 2. Intro to MVC                              | 7. Debugging / *Veteran's Day holiday*        |
+| 3. MVC Architectural patterns                | 8. Controllers                                |
+| 4. Bootstrap                                 | 9. Razor Views / *Thanksgiving holiday*       |
+| 5. Midterm Quiz / Unit testing with xUnit    | 10. Razor Views (continued)                   |
+
+
 
 ## Contents
 [TOC]
