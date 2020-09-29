@@ -6,7 +6,9 @@ CS295N, Web Development 1: ASP.NET
 
 ### Instructions
 
-Follow the instructions in the tutorial shown below to create an ASP.NET Core MVC web site. Instead of naming the project "MVCMovie", name it "YourNameSite", but replace YourName with your actual name.
+Follow the instructions in the tutorial shown below to create an ASP.NET Core MVC web site. But, instead of naming the project "MVCMovie", name it "YourNameSite", but replace YourName with your actual name.
+
+[Getting Started with ASP.NET Core MVC](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-3.1&tabs=visual-studio)
 
 Change the home page to say something of your own choosing.
 
