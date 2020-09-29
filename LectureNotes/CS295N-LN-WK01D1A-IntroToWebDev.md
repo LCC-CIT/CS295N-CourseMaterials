@@ -26,37 +26,19 @@
 
 - Job market
 
-  - \#1 job in the US: Software Developer
-    (According to US News and World Report Survey, of [100 best jobs in America)
+  - [Web Developer](https://money.usnews.com/careers/best-jobs/web-developer) is \#23 in the 2020 US News and World Report Survey, of [100 best jobs in America)
     ](https://money.usnews.com/careers/best-jobs/rankings)
-
-    - 253,400 projected jobs from 2016 to 2026
-    - Median Salary: $100,080
-    - Web development is a big part of what most Software Developers do.
-
-  - Web developer jobs, based on a survey of jobs listed on Dice.com in February, 2018
-
-    - Web development jobs by language and framework (sorted by jobs nationwide)
-
-    | **Language / Framework **       | **Oregon ** | **US ** |
-    | ------------------------------- | ----------- | ------- |
-    | Java / Spring                   | 19          | 3497    |
-    | C# / ASP.NET                    | 26          | 2759    |
-    | Python / Web services           | 40          | 2524    |
-    | Java / J2EE (Apache Jakarta EE) | 10          | 1893    |
-    | JavaScript / Node.js            | 41          | 1385    |
-    | Ruby / Rails                    | 1           | 490     |
-    | Python / Django                 | 3           | 369     |
-    | PHP / Laravel                   | 1           | 134     |
-
+    - 20,900 jobs this year.
+- Median Salary: $69,430
+    
 - Differences between desktop and web development
 
   - Multiple languages and technologies in one app: HTML, CSS, JavaScript, C#, SQL
-  - Multiple browsers types and browser compatibility
+- Multiple browsers types and browser compatibility
   - Multiple concurrent users
   - No direct access to the client file system
   - Statelessness of HTTP
-
+  
 - Development tools you will use in this class
 
   - Visual Studio
@@ -73,15 +55,13 @@
   - Not new, originated in 1978 with the Smalltalk project at Xerox PARC
   - Became popular with Ruby on Rails, 2005
   - Block diagram (arrows show direction of dependencies):
-                 M
-                ^  ^
-               /    \
-               V <— C 
-
+             
+             ![](../MVC.png)
+             
   - Model: data
-  - View: renders HTTP responses
+- View: renders HTTP responses
   - Controller: responds to HTTP request
-
+  
 - Facilitates programming best practices
 
   - Minimize dependencies
@@ -89,18 +69,18 @@
 
   - Unit tests
 
-- MVC Embraces the statelessness of HTTP
+- Server-side rendering
 
-  - No false state implementation
-  - No complicated page lifecycle (handling click events)
-  - View gives you full control of HTML
+  - Used for multi-page web sites, not SPA sites
+  - Good for database intensive apps
+  - Entire page needs to be refreshed unless you use AJAX
 
-## Demo
+## Exercise
 
-- Build the default VS web site
+- Build the default Visual Studio web site
   - Identify the Models, Views, and Controllers
   - Identify dependencies
-  - Identify HTML, CSS, and JS resource
+  - Identify HTML, CSS, and JS resources
 
 ## Class Procedures
 
