@@ -24,16 +24,34 @@
 
 ## Intro to Web Development
 
-- Job market
+### Job Market
 
-  - [Web Developer](https://money.usnews.com/careers/best-jobs/web-developer) is \#23 in the 2020 US News and World Report Survey, of [100 best jobs in America)
-    ](https://money.usnews.com/careers/best-jobs/rankings)
-    - 20,900 jobs this year.
-- Median Salary: $69,430
-    
+- [Web Developer](https://money.usnews.com/careers/best-jobs/web-developer) is \#23 in the 2020 US News and World Report Survey, of [100 best jobs in America](https://money.usnews.com/careers/best-jobs/rankings)
+  - 20,900 new job openings from 2018 to 2028.
+  - Median Salary: $69,430.
+- [Software engineer vs. software developer](https://www.fullstackacademy.com/blog/software-engineer-vs-software-developer) vs. web developer  
+  The terms *software engineer* and *software developer* are often used interchangeably, but many professionals see the following distinctions:
+  - Engineers are the architects who can design complete software systems.
+  - Developers are coders who build what the engineers design (although most engineers are also coders).
+  - Web developers are software developers whose expertise is  focused on web development.
+
+- Web Developer vs. Web Designer
+
+  - Developers focus on functionality.
+  - Designers focus on appearance.
+  - Both are concerned with UX (User eXperience) and fulfilling user's requirements.
+
+- What job can you get with an LCC Computer Programming degree?
+
+  - Any of the above are possible!
+  - You might start as a web developer and through self-study and OJT (On the Job Training) advance your skills to qualify for a higher position.
+
+  ### Distinctives of Web Development
+
 - Differences between desktop and web development
 
   - Multiple languages and technologies in one app: HTML, CSS, JavaScript, C#, SQL
+  
 - Multiple browsers types and browser compatibility
   - Multiple concurrent users
   - No direct access to the client file system
@@ -51,16 +69,14 @@
 ## Overview of MVC
 
 - MVC
-
   - Not new, originated in 1978 with the Smalltalk project at Xerox PARC
   - Became popular with Ruby on Rails, 2005
   - Block diagram (arrows show direction of dependencies):
-             
-             ![](../MVC.png)
-             
-  - Model: data
-- View: renders HTTP responses
-  - Controller: responds to HTTP request
+    ![](../MVC.png)         
+
+    - Model: data
+    - View: renders HTTP responses
+    - Controller: responds to HTTP request
   
 - Facilitates programming best practices
 
@@ -70,17 +86,22 @@
   - Unit tests
 
 - Server-side rendering
+Web pages consisting of HTML, CSS and JavaScript are generated on the server and full web pages are sent to the client's browser.
+  
+  ![](ServerAndClient.png)
+  
+  - Used for multi-page web sites, not SPA sites.
+  - Good for database intensive apps.
+  - Entire page needs to be refreshed unless you use AJAX.
 
-  - Used for multi-page web sites, not SPA sites
-  - Good for database intensive apps
-  - Entire page needs to be refreshed unless you use AJAX
+## Exercise 
 
-## Exercise
+*This is the first part of the lab assignment.*
 
-- Build the default Visual Studio web site
-  - Identify the Models, Views, and Controllers
-  - Identify dependencies
-  - Identify HTML, CSS, and JS resources
+- Build the default Visual Studio web site.
+- Identify the Models, Views, and Controllers.
+- Identify dependencies.
+- Identify HTML, CSS, and JS resources.
 
 ## Class Procedures
 
