@@ -16,7 +16,9 @@ Follow the instructions in the tutorial shown below to create an ASP.NET Core MV
 
 Change the home page so that it has a title and a sentence or two appropriate to the type of site designated by the group you are in.
 
-Create a private Git repository and put the web project into a branch named lab1.
+Create a private repository on [GitHub](https://github.com/) and put the web project into a branch named lab1.
+
+Invite your lab partner and your instructor to be members of the repository.
 
 ### Submission
 
