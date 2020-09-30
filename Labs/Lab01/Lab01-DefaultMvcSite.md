@@ -1,4 +1,4 @@
-# Lab 1, Default  Site
+# Lab 1: The Visual Studio Default Site
 
 CS295N, Web Development 1: ASP.NET
 
@@ -10,19 +10,22 @@ In this lab, you will be creating a web site that you will continue to build on 
 
 ### Instructions
 
-Follow the instructions in the tutorial shown below to create an ASP.NET Core MVC web site. But, instead of naming the project "MVCMovie", name it "YourNameSite", but replace YourName with your actual name.
+1. Create a private repository on [GitHub](https://github.com/)
 
-[Getting Started with ASP.NET Core MVC](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-3.1&tabs=visual-studio)
+   - Add a [.gitignore file](https://www.toptal.com/developers/gitignore/api/aspnetcore) for ASP.NET Core projects and commit it to the main branch.
+   - Make a branch named lab1, which is derived form the main and put your web project into it.
+      
 
-Change the home page so that it has a title and a sentence or two appropriate to the type of site designated by the group you are in.
+   - Invite your lab partner and your instructor to be members of the repository.
 
-Create a private repository on [GitHub](https://github.com/) and put the web project into a branch named lab1.
+2. Follow the instructions in, [Getting Started with ASP.NET Core MVC](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-3.1&tabs=visual-studio) to create a web site in the working directory of your local Git repository.
 
-Invite your lab partner and your instructor to be members of the repository.
+   -  Instead of naming the project "MVCMovie", name it "YourNameSite", but replace YourName with your actual name.
+   - Change the home page so that it has a title and a sentence or two appropriate to the type of site designated by the Moodle group you are in.
 
 ### Submission
 
-This week you will not make a beta version of your web site or do code reviews.
+This week you will not do a beta version of your web site or do code reviews.
 
 1. Take a screen-shot of the home page of your app. 
 
