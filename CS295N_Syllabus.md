@@ -121,12 +121,13 @@ The in-person computer lab and tutoring center is temporarily closed due to COVI
 
 Specific grading criteria will be applied to each of the labs, quizzes, and exams you will be working on in this class. Part of the lab involves a code review. Attendance is not graded.
 
-| Assessment Activities   | % each    | % total |
-| ----------------------- | --------- | ------- |
-| Labs 1-9                | 4         | 36      |
-| Code Reviews 1-9        | 1         | 9       |
-| Midterm and Final Exams | 10 and 15 | 25      |
-| Term Project            | 30        | 30      |
+| Assessment Activities   | % each | % total |
+| ----------------------- | ------ | ------- |
+| Quizzes 1 - 8           | 1      | 8       |
+| Labs 1-8                | 4      | 32      |
+| Code Reviews 1-8        | 1      | 8       |
+| Midterm and Final Exams | 10     | 20      |
+| Term Project            | 32     | 32      |
 
 
 Letter grades for the course will be determined by the following percentages:              
@@ -155,11 +156,11 @@ Letter grades for the course will be determined by the following percentages:
 
 #### Weekly Learning Activities
 
-|                      | Monday                                          | Tuesday | Wednesday                    | Thursday                  | Friday                 |
-| -------------------- | ----------------------------------------------- | ------- | ---------------------------- | ------------------------- | ---------------------- |
-| **Reading**          | Take the quiz *before class*                    |         | Take the quiz *before class* |                           | Start the next chapter |
-| **This week's  lab** | Start working <br />*Schedule at least 6 hours* |         |                              | Submit beta               |                        |
-| **Last week's lab**  | Do a code review                                |         |                              | Submit production version |                        |
+|                      | Monday                                          | Tuesday | Wednesday | Thursday                  | Friday |
+| -------------------- | ----------------------------------------------- | ------- | --------- | ------------------------- | ------ |
+| **Reading**          | Take the quiz *before class*                    |         |           | Start the next chapter    |        |
+| **This week's  lab** | Start working <br />*Schedule at least 6 hours* |         |           | Submit beta               |        |
+| **Last week's lab**  | Do a code review                                |         |           | Submit production version |        |
 
 
 ### Academic Honesty
