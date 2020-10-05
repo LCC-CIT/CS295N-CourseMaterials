@@ -6,7 +6,7 @@
 | ---------- | ---------------------------------------------------- | ---- | ------------ | --------------------------------------------------- |
 | Credits    | 4                                                    |      | Email        | birdb@lanecc.edu                                    |
 | Day & Time | M, W, 10:00&ndash;11:50                              |      | Office Hours | M&mdash;Th, 12:00&ndash;12:50                       |
-| Classroom  | [Zoom meeting](https://lanecc.zoom.us/j/93477067232) |      | Office       | [Zoom meeting](https://lanecc.zoom.us/j/8982554800) |
+| Classroom  | [Zoom meeting](https://lanecc.zoom.us/j/98237817504) |      | Office       | [Zoom meeting](https://lanecc.zoom.us/j/8982554800) |
 
 Due to COVID-19, instruction for both sections of this class will be provided remotely through live Zoom class sessions and video recordings.
 
