@@ -90,7 +90,7 @@ No models are needed yet. You will add those in a future lab.
 
    On Moodle, in the "online text" field of the Code Review assignment, enter the URL of the pull request with the code review <u>you gave</u>.
 
-### Production Version
+### Final Submission to Moodle
 
 1.  Upload a screen-shot of the textbook exercise.
 2.  Publish your web site from part 2 to Azure.
