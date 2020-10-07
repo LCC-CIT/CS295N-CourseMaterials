@@ -9,6 +9,8 @@
 
 Complete Exercises 1-1 in *Murach's ASP.NET Core MVC*
 
+
+
 ## Part 2: Skeletal Web Site
 
 Add to the web site you crated in lab 1 by creating a "skeleton" (a set of empty pages) for your site. A site map is shown below for each group's web site. The site map is shown in the form of an un-ordered list. The main bullet points represent top-level web pages, and sub-point bullets represent pages linked from the top-level pages. 
@@ -45,8 +47,6 @@ These pages will all be place-holders. The only content will be a heading,  a se
   - Links to online media
 - *Your choice - you can make this be whatever you want it to be*
 
-
-
 #### Group C
 
 **Informational Site**
@@ -76,12 +76,24 @@ It should have links to any sub-pages.
 
 No models are needed yet. You will add those in a future lab.
 
-## Submission to Moodle
 
-### Beta Version
 
-TBD
+## Review and Submission
+
+### PRs and Code Reviews
+
+1. Send a PR (Pull Request) to your lab partner asking them to review your code. 
+
+   After you have gotten a code review and revised your code as needed, you can merge it into the master branch, but keep the lab branch, don't delete it.
+
+2. You should receive a PR from your lab partner and review their code using this [Code Review Guide](../CodeReviewGuide.html).
+
+   On Moodle, in the "online text" field of the Code Review assignment, enter the URL of the pull request with the code review <u>you gave</u>.
 
 ### Production Version
 
-TBD
+1.  Upload a screen-shot of the textbook exercise.
+2.  Publish your web site from part 2 to Azure.
+3.  In the "online text" for the Moodle assignment:
+    - Paste a link to the branch of your GitHub repository for this lab.
+    - Paste a link to your web site running on Azure.

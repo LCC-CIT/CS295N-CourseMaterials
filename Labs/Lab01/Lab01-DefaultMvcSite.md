@@ -36,3 +36,12 @@ This week you will not do a beta version of your web site or do code reviews.
 3. Enter the URL of the lab1 branch of your Git repository in the Moodle online text.
 
 Completing this assignment will satisfy the "no-show / drop" requirement of completing an assignment in the first week for any students who did not participate in the live Zoom class session.
+
+
+
+### References
+
+[.gitignore](https://www.atlassian.com/git/tutorials/saving-changes/gitignore) - Atlassian BitBucket tutorial
+
+[Git Branch](https://www.atlassian.com/git/tutorials/using-branches) - Atlassian BitBucket tutorial
+
