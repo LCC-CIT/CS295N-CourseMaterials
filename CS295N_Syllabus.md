@@ -159,7 +159,7 @@ Letter grades for the course will be determined by the following percentages:
 |                      | Monday                                          | Tuesday | Wednesday | Thursday                  | Friday |
 | -------------------- | ----------------------------------------------- | ------- | --------- | ------------------------- | ------ |
 | **Reading**          | Take the quiz *before class*                    |         |           | Start the next chapter    |        |
-| **This week's  lab** | Start working <br />*Schedule at least 6 hours* |         |           | Submit beta               |        |
+| **This week's  lab** | Start working <br />*Schedule at least 6 hours* |         |           | Finish beta, do a PR      |        |
 | **Last week's lab**  | Do a code review                                |         |           | Submit production version |        |
 
 
