@@ -7,7 +7,7 @@
 
 ## Part 1: Textbook Tutorial Exercise
 
-Complete Exercises 1-1 in *Murach's ASP.NET Core MVC*
+Complete Exercise 1-1 in *Murach's ASP.NET Core MVC*
 
 
 
@@ -32,7 +32,7 @@ These pages will all be place-holders. The only content will be a heading,  a se
 -   Info -- Highlights of the community
 
     -   Important locations and links
--   Significant people and links if available
+    -   Significant people (and links if available)
 -   *Your choice - you can make this be whatever you want it to be*
 
 #### Group B
@@ -84,7 +84,7 @@ No models are needed yet. You will add those in a future lab.
 
 1. Send a PR (Pull Request) to your lab partner asking them to review your code. 
 
-   After you have gotten a code review and revised your code as needed, you can merge it into the master branch, but keep the lab branch, don't delete it.
+   After you have gotten a code review and revised your code as needed, you can merge it into the main branch, but keep the lab branch, don't delete it.
 
 2. You should receive a PR from your lab partner and review their code using this [Code Review Guide](../CodeReviewGuide.html).
 
@@ -93,7 +93,7 @@ No models are needed yet. You will add those in a future lab.
 ### Final Submission to Moodle
 
 1.  Upload a screen-shot of the textbook exercise.
-2.  Publish your web site from part 2 to Azure.
+2.  ~~Publish your web site from part 2 to Azure.~~
 3.  In the "online text" for the Moodle assignment:
     - Paste a link to the branch of your GitHub repository for this lab.
-    - Paste a link to your web site running on Azure.
+    - ~~Paste a link to your web site running on Azure.~~
