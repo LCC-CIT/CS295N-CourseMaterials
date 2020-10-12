@@ -2,14 +2,14 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>Lab2Instructions_CS295N</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+<title>Lab2Instructions_CS295N</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
 #write.first-line-indent p { text-indent: 2em; }
 #write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
 #write.first-line-indent li { margin-left: 2em; }
@@ -17,7 +17,7 @@ a:active, a:hover { outline: 0px; }
 body.typora-export { padding-left: 30px; padding-right: 30px; }
 .typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
 .typora-export .task-list-item input { pointer-events: none; }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) { 
   body.typora-export { padding-left: 0px; padding-right: 0px; }
   #write { padding-left: 20px; padding-right: 20px; }
   .CodeMirror-sizer { margin-left: 0px !important; }
@@ -26,7 +26,7 @@ body.typora-export { padding-left: 30px; padding-right: 30px; }
 #write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
 img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
-button, input, select, textarea { color: inherit; font: inherit; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
 input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
 *, ::after, ::before { box-sizing: border-box; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
@@ -44,7 +44,7 @@ h6 { font-size: 1rem; }
 .hidden { display: none; }
 .md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
 a { cursor: pointer; }
-sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
 sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
 #write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
 figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
@@ -53,8 +53,8 @@ tr { break-inside: avoid; break-after: auto; }
 thead { display: table-header-group; }
 table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
 table.md-table td { min-width: 32px; }
-.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
-.CodeMirror-linenumber { user-select: none; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
 .CodeMirror { text-align: left; }
 .CodeMirror-placeholder { opacity: 0.3; }
 .CodeMirror pre { padding: 0px 4px; }
@@ -64,7 +64,7 @@ div.hr:focus { cursor: none; }
 #write.fences-no-line-wrapping pre { white-space: pre; }
 #write pre.ty-contain-cm { white-space: normal; }
 .CodeMirror-gutters { margin-right: 4px; }
-.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
 .md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
 #write .md-fences.mock-cm { white-space: pre-wrap; }
 .md-fences.md-fences-with-lineno { padding-left: 0px; }
@@ -73,7 +73,7 @@ div.hr:focus { cursor: none; }
 .CodeMirror-line, twitterwidget { break-inside: avoid; }
 .footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
 .footnotes + .footnotes { margin-top: 0px; }
-.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
 li div { padding-top: 0px; }
 blockquote { margin: 1rem 0px; }
 li .mathjax-block, li p { margin: 0.5rem 0px; }
@@ -82,7 +82,7 @@ blockquote > :last-child { margin-bottom: 0px; }
 blockquote > :first-child, li > :first-child { margin-top: 0px; }
 .footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
 #write .footnote-line { white-space: pre-wrap; }
-@media print {
+@media print { 
   body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
   #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
   .typora-export * { -webkit-print-color-adjust: exact; }
@@ -93,7 +93,7 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
-pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
 p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
 #write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
 p > .md-image:only-child { display: inline-block; width: 100%; }
@@ -105,7 +105,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
 .md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
 .math { font-size: 1rem; }
-.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
 .md-toc-content { position: relative; margin-left: 0px; }
 .md-toc-content::after, .md-toc::after { display: none; }
 .md-toc-item { display: block; color: rgb(65, 131, 196); }
@@ -118,7 +118,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 .md-toc-h4 .md-toc-inner { margin-left: 6em; }
 .md-toc-h5 .md-toc-inner { margin-left: 8em; }
 .md-toc-h6 .md-toc-inner { margin-left: 10em; }
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 48em) { 
   .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
   .md-toc-h4 .md-toc-inner { margin-left: 5em; }
   .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
@@ -129,32 +129,32 @@ a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; 
 .md-attr { display: none; }
 .md-fn-count::after { content: "."; }
 code, pre, samp, tt { font-family: var(--monospace); }
-kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
 .md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
-code { text-align: left; vertical-align: initial; }
-a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
 .md-inline-math .MathJax_SVG .noError { display: none !important; }
 .html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
 .md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
 .MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
 .MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
 .MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
-.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
-.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
 .MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
 .md-diagram-panel > svg { max-width: 100%; }
 [lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
 [lang="mermaid"] .node text { font-size: 1rem; }
-table tr th { border-bottom: 0px; }
+table tr th { border-bottom-width: 0px; }
 video { max-width: 100%; display: block; margin: 0px auto; }
 iframe { max-width: 100%; width: 100%; border: none; }
 .highlight td, .highlight tr { border: 0px; }
 svg[id^="mermaidChart"] { line-height: 1em; }
-mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
 mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
-@media print {
+@media print { 
   .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
 }
 
@@ -539,11 +539,11 @@ header, .context-menu, .megamenu-content, footer{
     background: #999;
 }
 
-
+ .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
 </style>
 </head>
-<body class='typora-export os-windows'>
-<div id='write'  class=''><h1><a name="lab-1----creating-web-site-structure" class="md-header-anchor"></a><span>Lab 1 – Creating Web Site Structure</span></h1><p><span> CS295N, Web Development 1: ASP.NET</span></p><p><strong><span>Contents</span></strong></p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#lab-1----creating-web-site-structure">Lab 1 – Creating Web Site Structure</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n5"><a class="md-toc-inner" href="#part-1-textbook-tutorial-exercise">Part 1: Textbook Tutorial Exercise</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n8"><a class="md-toc-inner" href="#part-2-skeletal-web-site">Part 2: Skeletal Web Site</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n11"><a class="md-toc-inner" href="#site-maps">Site Maps</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n12"><a class="md-toc-inner" href="#group-a">Group A</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n31"><a class="md-toc-inner" href="#group-b">Group B</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n50"><a class="md-toc-inner" href="#group-c">Group C</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n70"><a class="md-toc-inner" href="#implementation-instructions">Implementation Instructions</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n71"><a class="md-toc-inner" href="#controllers">Controllers</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n73"><a class="md-toc-inner" href="#views">Views</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n75"><a class="md-toc-inner" href="#models">Models</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n78"><a class="md-toc-inner" href="#review-and-submission">Review and Submission</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n79"><a class="md-toc-inner" href="#prs-and-code-reviews">PRs and Code Reviews</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n87"><a class="md-toc-inner" href="#final-submission-to-moodle">Final Submission to Moodle</a></span></p></div><h2><a name="part-1-textbook-tutorial-exercise" class="md-header-anchor"></a><span>Part 1: Textbook Tutorial Exercise</span></h2><p><span>Complete Exercise 1-1 in </span><em><span>Murach&#39;s ASP.NET Core MVC</span></em></p><p>&nbsp;</p><h2><a name="part-2-skeletal-web-site" class="md-header-anchor"></a><span>Part 2: Skeletal Web Site</span></h2><p><span>Add to the web site you crated in lab 1 by creating a &quot;skeleton&quot; (a set of empty pages) for your site. A site map is shown below for each group&#39;s web site. The site map is shown in the form of an un-ordered list. The main bullet points represent top-level web pages, and sub-point bullets represent pages linked from the top-level pages. </span></p><p><span>These pages will all be place-holders. The only content will be a heading,  a sentence saying what the page is for, and one or more links to other pages.</span></p><h3><a name="site-maps" class="md-header-anchor"></a><span>Site Maps</span></h3><h4><a name="group-a" class="md-header-anchor"></a><span>Group A</span></h4><p><strong><span>Community Web Site</span></strong></p><ul><li><p><span>Home -- General information about the community and the purpose of the site</span></p><ul><li><span>History -- A brief history of the community </span></li><li><span>Contact -- a page with a form where users can send messages to the other users</span></li></ul></li><li><p><span>Info -- Highlights of the community</span></p><ul><li><span>Important locations and links</span></li><li><span>Significant people (and links if available)</span></li></ul></li><li><p><em><span>Your choice - you can make this be whatever you want it to be</span></em></p></li></ul><h4><a name="group-b" class="md-header-anchor"></a><span>Group B</span></h4><p><strong><span>Fan Site</span></strong></p><ul><li><p><span>Home – General information about the person (or group, or thing) and the purpose of the site</span></p><ul><li><span>History – A brief history of the person</span></li><li><span>Stories – a page with a form where users can enter stories</span></li></ul></li><li><p><span>Sources – Where to find out about the person</span></p><ul><li><span>Books and print media</span></li><li><span>Links to online media</span></li></ul></li><li><p><em><span>Your choice - you can make this be whatever you want it to be</span></em></p></li></ul><h4><a name="group-c" class="md-header-anchor"></a><span>Group C</span></h4><p><strong><span>Informational Site</span></strong></p><ul><li><p><span>Home – General information about the topic and the purpose of the site</span></p><ul><li><span>Overview – A brief description of the topic</span></li><li><span>forum – a page with a form where users can post comments</span></li></ul></li><li><p><span>References – Where to find out about the topic</span></p><ul><li><span>Books and print media</span></li><li><span>Links to online media</span></li></ul></li><li><p><em><span>Your choice - you can make this be whatever you want it to be</span></em></p></li></ul><p>&nbsp;</p><h3><a name="implementation-instructions" class="md-header-anchor"></a><span>Implementation Instructions</span></h3><h4><a name="controllers" class="md-header-anchor"></a><span>Controllers</span></h4><p><span>Write a controller class for each top-level page of the site. Write a method in the controller for each sub-page. Remember that the Home controller should have an index method, index methods are optional in other controllers.</span></p><h4><a name="views" class="md-header-anchor"></a><span>Views</span></h4><p><span>Each view can just be a place-holder for the information described above.</span>
+<body class='typora-export'>
+<div id='write'  class=''><h1><a name="lab-2----creating-web-site-structure" class="md-header-anchor"></a><span>Lab 2 – Creating Web Site Structure</span></h1><p><span> CS295N, Web Development 1: ASP.NET</span></p><p><strong><span>Contents</span></strong></p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n453"><a class="md-toc-inner" style="" href="#lab-2----creating-web-site-structure">Lab 2 – Creating Web Site Structure</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n458"><a class="md-toc-inner" style="" href="#part-1-textbook-tutorial-exercise">Part 1: Textbook Tutorial Exercise</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n461"><a class="md-toc-inner" style="" href="#part-2-skeletal-web-site">Part 2: Skeletal Web Site</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n464"><a class="md-toc-inner" style="" href="#site-maps">Site Maps</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n465"><a class="md-toc-inner" style="" href="#group-a">Group A</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n484"><a class="md-toc-inner" style="" href="#group-b">Group B</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n503"><a class="md-toc-inner" style="" href="#group-c">Group C</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n523"><a class="md-toc-inner" style="" href="#implementation-instructions">Implementation Instructions</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n524"><a class="md-toc-inner" style="" href="#controllers">Controllers</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n526"><a class="md-toc-inner" style="" href="#views">Views</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n528"><a class="md-toc-inner" style="" href="#models">Models</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n531"><a class="md-toc-inner" style="" href="#review-and-submission">Review and Submission</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n532"><a class="md-toc-inner" style="" href="#prs-and-code-reviews">PRs and Code Reviews</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n540"><a class="md-toc-inner" style="" href="#final-submission-to-moodle">Final Submission to Moodle</a></span></p></div><h2><a name="part-1-textbook-tutorial-exercise" class="md-header-anchor"></a><span>Part 1: Textbook Tutorial Exercise</span></h2><p><span>Complete Exercise 1-1 in </span><em><span>Murach&#39;s ASP.NET Core MVC</span></em></p><p>&nbsp;</p><h2><a name="part-2-skeletal-web-site" class="md-header-anchor"></a><span>Part 2: Skeletal Web Site</span></h2><p><span>Add to the web site you crated in lab 1 by creating a &quot;skeleton&quot; (a set of empty pages) for your site. A site map is shown below for each group&#39;s web site. The site map is shown in the form of an un-ordered list. The main bullet points represent top-level web pages, and sub-point bullets represent pages linked from the top-level pages. </span></p><p><span>These pages will all be place-holders. The only content will be a heading,  a sentence saying what the page is for, and one or more links to other pages.</span></p><h3><a name="site-maps" class="md-header-anchor"></a><span>Site Maps</span></h3><h4><a name="group-a" class="md-header-anchor"></a><span>Group A</span></h4><p><strong><span>Community Web Site</span></strong></p><ul><li><p><span>Home -- General information about the community and the purpose of the site</span></p><ul><li><span>History -- A brief history of the community </span></li><li><span>Contact -- a page with a form where users can send messages to the other users</span></li></ul></li><li><p><span>Info -- Highlights of the community</span></p><ul><li><span>Important locations and links</span></li><li><span>Significant people (and links if available)</span></li></ul></li><li><p><em><span>Your choice - you can make this be whatever you want it to be</span></em></p></li></ul><h4><a name="group-b" class="md-header-anchor"></a><span>Group B</span></h4><p><strong><span>Fan Site</span></strong></p><ul><li><p><span>Home – General information about the person (or group, or thing) and the purpose of the site</span></p><ul><li><span>History – A brief history of the person</span></li><li><span>Stories – a page with a form where users can enter stories</span></li></ul></li><li><p><span>Sources – Where to find out about the person</span></p><ul><li><span>Books and print media</span></li><li><span>Links to online media</span></li></ul></li><li><p><em><span>Your choice - you can make this be whatever you want it to be</span></em></p></li></ul><h4><a name="group-c" class="md-header-anchor"></a><span>Group C</span></h4><p><strong><span>Informational Site</span></strong></p><ul><li><p><span>Home – General information about the topic and the purpose of the site</span></p><ul><li><span>Overview – A brief description of the topic</span></li><li><span>forum – a page with a form where users can post comments</span></li></ul></li><li><p><span>References – Where to find out about the topic</span></p><ul><li><span>Books and print media</span></li><li><span>Links to online media</span></li></ul></li><li><p><em><span>Your choice - you can make this be whatever you want it to be</span></em></p></li></ul><p>&nbsp;</p><h3><a name="implementation-instructions" class="md-header-anchor"></a><span>Implementation Instructions</span></h3><h4><a name="controllers" class="md-header-anchor"></a><span>Controllers</span></h4><p><span>Write a controller class for each top-level page of the site. Write a method in the controller for each sub-page. Remember that the Home controller should have an index method, index methods are optional in other controllers.</span></p><h4><a name="views" class="md-header-anchor"></a><span>Views</span></h4><p><span>Each view can just be a place-holder for the information described above.</span>
 <span>It should have links to any sub-pages.</span></p><h4><a name="models" class="md-header-anchor"></a><span>Models</span></h4><p><span>No models are needed yet. You will add those in a future lab.</span></p><p>&nbsp;</p><h2><a name="review-and-submission" class="md-header-anchor"></a><span>Review and Submission</span></h2><h3><a name="prs-and-code-reviews" class="md-header-anchor"></a><span>PRs and Code Reviews</span></h3><ol start='' ><li><p><span>Send a PR (Pull Request) to your lab partner asking them to review your code. </span></p><p><span>After you have gotten a code review and revised your code as needed, you can merge it into the main branch, but keep the lab branch, don&#39;t delete it.</span></p></li><li><p><span>You should receive a PR from your lab partner and review their code using this </span><a href='../CodeReviewGuide.html'><span>Code Review Guide</span></a><span>.</span></p><p><span>On Moodle, in the &quot;online text&quot; field of the Code Review assignment, enter the URL of the pull request with the code review </span><u><span>you gave</span></u><span>.</span></p></li></ol><h3><a name="final-submission-to-moodle" class="md-header-anchor"></a><span>Final Submission to Moodle</span></h3><ol start='' ><li><p><span>Upload a screen-shot of the textbook exercise.</span></p></li><li><p><del><span>Publish your web site from part 2 to Azure.</span></del></p></li><li><p><span>In the &quot;online text&quot; for the Moodle assignment:</span></p><ul><li><span>Paste a link to the branch of your GitHub repository for this lab.</span></li><li><del><span>Paste a link to your web site running on Azure.</span></del></li></ul></li></ol></div>
 </body>
 </html>

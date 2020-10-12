@@ -1,17 +1,19 @@
-# Lab 2 – Creating Web Site Structure
+# Lab 3 – Working with Data
  CS295N, Web Development 1: ASP.NET
 
 **Contents**
 
 [TOC]
 
-## Part 1: Textbook Tutorial Exercise
+## Part A: Textbook Tutorial Exercises
 
-Complete Exercise 1-1 in *Murach's ASP.NET Core MVC*
+In *Murach's ASP.NET Core MVC*, complete exercise 2-2, "Build the Future Value app using the Empty template". 
+
+You do not need to do exercise 2-1. 
 
 
 
-## Part 2: Skeletal Web Site
+## Part B: Skeletal Web Site
 
 Add to the web site you crated in lab 1 by creating a "skeleton" (a set of empty pages) for your site. A site map is shown below for each group's web site. The site map is shown in the form of an un-ordered list. The main bullet points represent top-level web pages, and sub-point bullets represent pages linked from the top-level pages. 
 
