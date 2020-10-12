@@ -13,11 +13,9 @@ You do not need to do exercise 2-1.
 
 
 
-## Part B: Skeletal Web Site
+## Part B: Adding data
 
-Add to the web site you crated in lab 1 by creating a "skeleton" (a set of empty pages) for your site. A site map is shown below for each group's web site. The site map is shown in the form of an un-ordered list. The main bullet points represent top-level web pages, and sub-point bullets represent pages linked from the top-level pages. 
 
-These pages will all be place-holders. The only content will be a heading,  a sentence saying what the page is for, and one or more links to other pages.
 
 ### Site Maps
 
@@ -25,58 +23,73 @@ These pages will all be place-holders. The only content will be a heading,  a se
 
 **Community Web Site**
 
--   Home -- General information about the community and the purpose of the site
+Modify the Home/Contact page so that users can send messages to the other users.
 
-    -   History -- A brief history of the community 
+Messages will contain:
 
-    -   Contact -- a page with a form where users can send messages to the other users
+- Name of sender
+- Name of recipient
+- Subject
+- Body of the message
+- Date sent
 
--   Info -- Highlights of the community
+For now, all users will see all messages, even those addressed to someone else.
 
-    -   Important locations and links
-    -   Significant people (and links if available)
--   *Your choice - you can make this be whatever you want it to be*
+
 
 #### Group B
 
 **Fan Site**
 
-- Home – General information about the person (or group, or thing) and the purpose of the site
-  - History – A brief history of the person
-  - Stories – a page with a form where users can enter stories
-- Sources – Where to find out about the person
-  - Books and print media
-  - Links to online media
-- *Your choice - you can make this be whatever you want it to be*
+Modify the Home/Stories page so users can enter stories.
+
+Stories will contain:
+
+- Title of the story
+- Topic
+- Text of the story
+- Name of the submitter
+- Date submitted
+
+
 
 #### Group C
 
 **Informational Site**
 
-- Home – General information about the topic and the purpose of the site
-  - Overview – A brief description of the topic
-  - forum – a page with a form where users can post comments
-- References – Where to find out about the topic
-  - Books and print media
-  - Links to online media
-- *Your choice - you can make this be whatever you want it to be*
+Modify the Home / Forum so users can post comments.
 
+Forum posts will contain:
 
+- Page being commented on
+- Rating of the page
+- Text of the post
+- Name of person posting
+- Date posted
+
+For now, all users will see all messages, even those addressed to someone else.
 
 ### Implementation Instructions
 
+#### Models
+
+- Decide what two models you will need.
+- Decide the relationship between the models.
+- Code the models.
+
 #### Controllers
 
-Write a controller class for each top-level page of the site. Write a method in the controller for each sub-page. Remember that the Home controller should have an index method, index methods are optional in other controllers.
+You should already have an existing HTTP GET method that displays the view that will contain the data entry form.
+
+- Write an HTTP POST method that gets the information from the form, then displays a page containing all the messages, stories, or posts.
+- Write an HTTP GET method to display a view with all the messages, stories, or posts.
 
 #### Views
 
-Each view can just be a place-holder for the information described above.
-It should have links to any sub-pages.
+- Add a data entry form to the message, story, or post view. Make the view strongly typed.
+- Add a view that shows all the messages, stories, or posts. Make the view strongly typed.
 
-#### Models
 
-No models are needed yet. You will add those in a future lab.
 
 
 
@@ -94,8 +107,8 @@ No models are needed yet. You will add those in a future lab.
 
 ### Final Submission to Moodle
 
-1.  Upload a screen-shot of the textbook exercise.
-2.  ~~Publish your web site from part 2 to Azure.~~
+1.  Upload a screen-shot of the web page from textbook exercise. Take of picture of it running in a browser with data entered and a calculations shown.
+2.  Publish your web site from part B to Azure.
 3.  In the "online text" for the Moodle assignment:
     - Paste a link to the branch of your GitHub repository for this lab.
-    - ~~Paste a link to your web site running on Azure.~~
+    - Paste a link to your web site running on Azure.
