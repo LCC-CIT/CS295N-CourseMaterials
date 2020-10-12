@@ -76,17 +76,20 @@ For now, all users will see all messages, even those addressed to someone else.
 - Decide what two models you will need.
 - Decide the relationship between the models.
 - Code the models.
+- Add input validation.
 
 #### Controllers
 
 You should already have an existing HTTP GET method that displays the view that will contain the data entry form.
 
 - Write an HTTP POST method that gets the information from the form, then displays a page containing all the message, story, or post just entered.
+- Check the model for valid data.
 
 #### Views
 
 - Add a data entry form to the message, story, or post view. Make the view strongly typed.
 - Add a view that shows one message story, or post. Make the view strongly typed.
+- Display error messages if the user enters invalid data.
 
 
 

@@ -32,17 +32,26 @@ This week you will learn to work with data in all three parts of your MVC web si
 
 ## Defining a model
 
-### Identifying model classes and properties
-
 #### OOP Relationships
 
 - Inheritance
 - Association
 - Composition
 
-## Writing Controller methods
+### Identifying classes, fields, and methods
+
+- Nouns are classes or fields
+- Verbs are methods
+
+- In models, we just use properties rather than create fields (instance variables) .
+
+## Writing controller methods
 
 - HTTP GET methods
+  - May optionally include a query for data.
+  - Used for displaying a view with or without data.
+  - Controller methods are GET methods by default.
+  - Passing a model to the view is optional.
 - HTTP POST methods
 
 ## Writing views
