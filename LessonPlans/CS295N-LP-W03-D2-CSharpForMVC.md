@@ -10,6 +10,10 @@
 | 4. Razor Views                        | 9. Model Binding / Validation           |
 | 5. Web Dev Tools / Midterm            | 10. Configuration / URL routing         |
 
+**Contents**
+
+[TOC]
+
 ##Introduction
 
 Your textbook (Freeman 2017), describes quite a few C# features with which you may or may not be familiar. These notes cover some of the features that I think are either trickier to understand or that are likely to be unfamiliar.
@@ -100,10 +104,11 @@ This C# feature allows you to add methods to a class for which you cannot modify
 
 - **Lambda syntax** 
   
+
 This syntax gives us an alternative way to define methods. 
-  
+
   Example: 
-  
+
   ```C#
   // A normal method definition
   float Sum(int a, int b){     return a + b;}
@@ -111,15 +116,16 @@ This syntax gives us an alternative way to define methods.
   // A lambda method definition
   float Product(int a, int b) => a * b; `
   ```
-  
+
   [Lambda Expressions](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions) - MS C# Programming Guide
+
   
-  
-  
+
 - **Anonymous methods and Delegates** 
   
+
 One of the advantages of lambda expressions is that they make it easy to define anonymous methods. One way anonymous methods are used is when assigning a method to a delegate.
-  
+
   ```C#
   // Declaration of a delegate type
   public delegate int Calculate (int n1, int n2);  
@@ -139,28 +145,29 @@ One of the advantages of lambda expressions is that they make it easy to define 
     Console.WriteLine(mathDel(5, 7));
   }
   ```
-  
+
   [Experiment with this on DotNet Fiddle](https://dotnetfiddle.net/1AXWid)
+
   
-  
-  
+
 - The List Sort method has a function parameter which expects a delegate:
   
   `List.Sort(Comparison<T>)`
   
+
  Here's an example of using a lambda expression to define a delegate and using it in the Sort method:
-  
+
   ```C#
   var names = new List() {"Fili", "Kili", "Oin", "Gloin", "Bombur", "Boffer"};
   // Sort using a custuom Comparison delegate - sort on last letter of name
   names.Sort((name1,name2) =>  name1.Substring(name1.Length - 1).CompareTo(name2.Substring(name2.Length - 1)));
   foreach(string s in names) {  Console.WriteLine(s)`
   ```
+
   
+
   
-  
-  
-  
+
 - [Experiment with this on DotNet Fiddle](https://dotnetfiddle.net/CK1pwt)
 
 - [MS Docs: List Sort method
