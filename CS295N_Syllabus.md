@@ -2,11 +2,11 @@
 
 ##   CS295N, Fall 2020
 
-| Class      | CRN 21833 (hybrid) & 23062 (online)                  |      | Instructor   | Brian Bird                                          |
-| ---------- | ---------------------------------------------------- | ---- | ------------ | --------------------------------------------------- |
-| Credits    | 4                                                    |      | Email        | birdb@lanecc.edu                                    |
-| Day & Time | M, W, 10:00&ndash;11:50                              |      | Office Hours | M&mdash;Th, 12:00&ndash;12:50                       |
-| Classroom  | [Zoom meeting](https://lanecc.zoom.us/j/98237817504) |      | Office       | [Zoom meeting](https://lanecc.zoom.us/j/8982554800) |
+| Class      | CRN 21833 (hybrid) & 23062 (online)                  |      | Instructor   | Brian Bird                                         |
+| ---------- | ---------------------------------------------------- | ---- | ------------ | -------------------------------------------------- |
+| Credits    | 4                                                    |      | Email        | birdb@lanecc.edu                                   |
+| Day & Time | M, W, 10:00&ndash;11:50                              |      | Office Hours | M&mdash;Th, 12:00&ndash;12:50                      |
+| Classroom  | [Zoom meeting](https://lanecc.zoom.us/j/98237817504) |      | Office       | [Zoom meeting](https://lanecc.zoom.us/j/965222036) |
 
 Due to COVID-19, instruction for both sections of this class will be provided remotely through live Zoom class sessions and video recordings.
 
