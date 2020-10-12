@@ -81,15 +81,12 @@ For now, all users will see all messages, even those addressed to someone else.
 
 You should already have an existing HTTP GET method that displays the view that will contain the data entry form.
 
-- Write an HTTP POST method that gets the information from the form, then displays a page containing all the messages, stories, or posts.
-- Write an HTTP GET method to display a view with all the messages, stories, or posts.
+- Write an HTTP POST method that gets the information from the form, then displays a page containing all the message, story, or post just entered.
 
 #### Views
 
 - Add a data entry form to the message, story, or post view. Make the view strongly typed.
-- Add a view that shows all the messages, stories, or posts. Make the view strongly typed.
-
-
+- Add a view that shows one message story, or post. Make the view strongly typed.
 
 
 
