@@ -198,21 +198,21 @@ View [academic calendars](https://www.lanecc.edu/calendars/academic-calendar) on
 
 
 
-###Tentative Course Schedule
+### Tentative Course Schedule
 
-| Week | Topics                                                       | Reading                            | Lab Assignment                                             |
-| ---- | ------------------------------------------------------------ | ---------------------------------- | ---------------------------------------------------------- |
-| 1    | Intro to Web Dev<br />*Class starts Wednesday*               |                                    |                                                            |
-| 2    | Intro to MVC                                                 | Murach Ch. 1                       | - Murach Ex 1-1<br />- Publish to Azure                    |
-| 3    | MVC Architectural patterns                                   | Murach Ch. 2                       | - Murach Ex 2-1, 2-2<br />- Create your project MVC site   |
-| 4    | Bootstrap                                                    | Murach Ch. 3                       | - Murach Ex 3-1, 3-2<br />- Add Bootstrap to your site     |
-| 5    | Midterm Quiz<br />Unit testing with xUnit                    | Online tutorials                   | Add unit tests to your site                                |
-| 6    | Entity Framework<br />Database Migrations<br />Deploying a DB to Azure | Murach Ch. 4<br />Online tutorials | - Murach Ex 4-1<br />- Add a DB to your site               |
-| 7    | Debugging<br />*Wednesday is Veteran's day*                  | Murach Ch. 5                       | - Murach Ex 5-1<br />- Debugging practice                  |
-| 8    | Controllers                                                  | Murach Ch. 6                       | - Murach Ex 6-1<br />- Add controller methods to your site |
-| 9    | Razor Views<br />*Thursday is Thanksgiving*                  | Murach Ch. 7a                      | - Add tag helpers to your site                             |
-| 10   | Razor Views (continued)                                      | Murach Ch. 7b                      | - Murach Ex 7-1<br />- Add views to your site              |
-| 11   | Final quiz, Project presentations                            |                                    |                                                            |
+| Week | Topics                                                       | Reading                            | Lab Assignment                                               |
+| ---- | ------------------------------------------------------------ | ---------------------------------- | ------------------------------------------------------------ |
+| 1    | Intro to Web Dev<br />*Class starts Wednesday*               |                                    | - Create your project MVC site                               |
+| 2    | Intro to MVC                                                 | Murach Ch. 1                       | - Murach Ex 1-1<br />- Add pages and links to a site         |
+| 3    | Working with Data                                            | Murach Ch. 2                       | - Murach Ex 2-1<br />- Add models and data entry<br />- Publish to Azure |
+| 4    | Bootstrap                                                    | Murach Ch. 3                       | - Murach Ex 3-1, 3-2<br />- Add Bootstrap to your site       |
+| 5    | Midterm Quiz<br />Unit testing with xUnit                    | Online tutorials                   | Add unit tests to your site                                  |
+| 6    | Entity Framework<br />Database Migrations<br />Deploying a DB to Azure | Murach Ch. 4<br />Online tutorials | - Murach Ex 4-1<br />- Add a DB to your site                 |
+| 7    | Debugging<br />*Wednesday is Veteran's day*                  | Murach Ch. 5                       | - Murach Ex 5-1<br />- Debugging practice                    |
+| 8    | Controllers                                                  | Murach Ch. 6                       | - Murach Ex 6-1<br />- Add controller methods to your site   |
+| 9    | Razor Views<br />*Thursday is Thanksgiving*                  | Murach Ch. 7a                      | - Add tag helpers to your site                               |
+| 10   | Razor Views (continued)                                      | Murach Ch. 7b                      | - Murach Ex 7-1<br />- Add views to your site                |
+| 11   | Final quiz, Project presentations                            |                                    |                                                              |
 
 
 
