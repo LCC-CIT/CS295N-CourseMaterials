@@ -52,7 +52,18 @@ This week you will learn to work with data in all three parts of your MVC web si
   - Used for displaying a view with or without data.
   - Controller methods are GET methods by default.
   - Passing a model to the view is optional.
+  
 - HTTP POST methods
+
+  - Will receive data from a view (usually a view containing an HTML form) passed to the method in one of two ways:
+
+    - In a model object
+
+      ```
+      
+      ```
+
+      
 
 ## Writing views
 
@@ -63,7 +74,9 @@ This week you will learn to work with data in all three parts of your MVC web si
 
 
 
+## Reference
 
+[Add a Model to an ASP.NET Core MVC App](https://lanecc.zoom.us/rec/share/eysvpQj6XMaobYbus6qz_0cvLLxkrHTkPfg3OBoM7G-EwiIhkyYCZiCBKpg3Dvkr.oqyMt8bs2AEArLPq)&mdash;Microsoft Tutorial
 
 
 
