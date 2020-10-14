@@ -76,20 +76,22 @@ For now, all users will see all messages, even those addressed to someone else.
 - Decide what two models you will need.
 - Decide the relationship between the models.
 - Code the models.
-- Add input validation.
+- ~~Add input validation.~~
 
 #### Controllers
 
 You should already have an existing HTTP GET method that displays the view that will contain the data entry form.
 
 - Write an HTTP POST method that gets the information from the form, then displays a page containing all the message, story, or post just entered.
-- Check the model for valid data.
+- ~~Check the model for valid data.~~
 
 #### Views
 
 - Add a data entry form to the message, story, or post view. Make the view strongly typed.
-- Add a view that shows one message story, or post. Make the view strongly typed.
-- Display error messages if the user enters invalid data.
+- ~~Add a view that shows one message story, or post. Make the view strongly typed.~~
+
+  Echo the information from the view with the form back to the bottom of the same view.
+- ~~Display error messages if the user enters invalid data.~~
 
 
 
@@ -108,7 +110,7 @@ You should already have an existing HTTP GET method that displays the view that 
 ### Final Submission to Moodle
 
 1.  Upload a screen-shot of the web page from textbook exercise. Take of picture of it running in a browser with data entered and a calculations shown.
-2.  Publish your web site from part B to Azure.
+2.  ~~Publish your web site from part B to Azure.~~
 3.  In the "online text" for the Moodle assignment:
     - Paste a link to the branch of your GitHub repository for this lab.
-    - Paste a link to your web site running on Azure.
+    - ~~Paste a link to your web site running on Azure.~~
