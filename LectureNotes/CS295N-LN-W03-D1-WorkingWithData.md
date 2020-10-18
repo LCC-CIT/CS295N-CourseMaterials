@@ -42,43 +42,125 @@ This week you will learn to work with data in all three parts of your MVC web si
 
 - Nouns are classes or fields
 - Verbs are methods
+- In models, we just use properties rather than create fields (instance variables).
 
-- In models, we just use properties rather than create fields (instance variables) .
+Example:
+
+```C#
+public class Review
+{
+    public string BookTitle { get; set; }
+    public string AuthorName { get; set; }
+    public User Reviewer { get; set; }
+    public string ReviewText { get; set; }
+    public DateTime ReviewDate { get; set; }
+}
+```
+
+
 
 ## Writing controller methods
 
-- HTTP GET methods
-  - May optionally include a query for data.
-  - Used for displaying a view with or without data.
-  - Controller methods are GET methods by default.
-  - Passing a model to the view is optional.
+###HTTP GET methods
+
+```c#
+        public IActionResult Index()
+        {
+            return View();
+        }
+```
+
+- May optionally include a query for data.
+
+- Used for displaying a view with or without sending it data.
+
+- Controller methods are GET methods by default.
+
+- Passing a model to the view is optional.
+
+  ```C#
+  public IActionResult Review()
+          {
+              Review model = new Review();
+              User reviewer = new User();
+              model.Reviewer = reviewer;
+              return View(model);
+          }
+  ```
+
   
-- HTTP POST methods
 
-  - Will receive data from a view (usually a view containing an HTML form) passed to the method in one of two ways:
+### HTTP POST methods
 
-    - In a model object
+- Will receive data from a view (usually a view containing an HTML form) passed to the method in one of two ways:
 
-      ```
-      
-      ```
+  - In a model object:
 
-      
+    ```c#
+    [HttpPost]
+    public IActionResult Review(Review model)
+    {
+        model.ReviewDate = DateTime.Now;
+        return View(model);
+    }
+    ```
+
+  - In parameters that match the HTML form field names:
+
+    ```
+    [HttpPost]
+    public IActionResult Review(string bookTitle, string authorName,
+            string reviewerName, string reviewText, string reviewDate)
+    {
+    		Review model = new Review(){BookTitle = bookTitle, 
+    		     AuthorName = authorName, ReviewText = reviewText,
+    		     Reviewer = new User(){Name = reviewerName},
+    		     ReviewDate = DateTime.Now }
+        return View(model);
+    }
+    ```
+
+    
 
 ## Writing views
 
 - Form views
+
+  - This view would be invoked by an HttpGet method in the controller.
+  - This view will send data to a HttpPost method in the controller.
+
+  ```c#
+  @model Review
+  @{
+      ViewData["Title"] = "Books";
+  }
+  
+  <form method="post">
+      <label asp-for="BookTitle">Title</label>
+      <input asp-for="BookTitle" /><br />
+  
+      <label asp-for="AuthorName">Author</label>
+      <input asp-for="AuthorName" /><br />
+  
+      <label asp-for="Reviewer.Name">Reviewer</label>
+      <input asp-for="Reviewer.Name" /><br />
+  
+      <label asp-for="ReviewText">Review</label>
+      <textarea asp-for="ReviewText"></textarea><br />
+  
+      <button type="submit">Submit</button>
+  </form>
+  ```
+
+  
+
 - Views with data models
-
-
 
 
 
 ## Reference
 
 [Add a Model to an ASP.NET Core MVC App](https://lanecc.zoom.us/rec/share/eysvpQj6XMaobYbus6qz_0cvLLxkrHTkPfg3OBoM7G-EwiIhkyYCZiCBKpg3Dvkr.oqyMt8bs2AEArLPq)&mdash;Microsoft Tutorial
-
-
 
 
 
