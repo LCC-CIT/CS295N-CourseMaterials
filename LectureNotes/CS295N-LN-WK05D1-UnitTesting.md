@@ -5,14 +5,17 @@ Brian Bird
 
 # Unit Testing
 
-**Where we are** 
+Weekly Topics:
 
-| 1. Intro to MVC                    | 6. More on controllers           |
-| ---------------------------------- | -------------------------------- |
-| 2. Domain Modeling                 | 7. Unit Testing and Repositories |
-| 3. C# Review / Advanced C# for MVC | 8. Entity Framework (EF)         |
-| 4. Razor Views and Tag Helpers     | 9. More on EF / LINQ             |
-| 5. Deploying to a server           | 10. Model Binding / Validation   |
+
+
+| Weekly Topics                                 |                                               |
+| --------------------------------------------- | --------------------------------------------- |
+| 1. Intro to Web Dev                           | 6. Entity Framework / Deploying a DB to Azure |
+| 2. Intro to MVC / Deploying to Azure          | 7. Debugging / *Veteran's Day holiday*        |
+| 3. MVC Architectural patterns                 | 8. Controllers                                |
+| 4. Bootstrap                                  | 9. Razor Views / *Thanksgiving holiday*       |
+| 5. Midterm Quiz / **Unit testing with xUnit** | 10. Razor Views (continued)                   |
 
 
 
