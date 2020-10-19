@@ -24,14 +24,22 @@ C. I didn't do the exercise.
 All three lab groups will use Bootstrap classes listed below on your web page that uses a form:
 
 - container
+
 - row
+
 - column
+
 - jumbotron
+
 - form-horizontal
+
 - margin (mt, mr, mb, ml, or m)
+
 - padding (pt, pr, pb, pl, or p)
+
 - button (btn, btn-primary, etc.)
-- 
+
+  
 
 ## Part C: Publish Your Site to Azure
 

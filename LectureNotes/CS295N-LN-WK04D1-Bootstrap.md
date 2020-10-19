@@ -74,7 +74,23 @@ CS296N Web Development 2: ASP.NET
 - Grid system
 
   - Bootstrap’s grid system uses a series of containers, rows, and columns to position and align content. In version 4, the grid system is built with the CSS3 Flexbox, and in version 3 it was built using CSS floats. Both versions are fully responsive.
+    
     - [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox): A one-dimensional layout model that is part of CSS3. It provides a way to distribute space between items and align them. ("One dimensional" means flexbox deals with layout in one dimension at a time — either a row or a column.)
+    
+  - Columns
+
+    - Rows can contain up to 12 columns.
+    - The col class specifies the number of columns an element will span.
+
+    | Class     | Screen Width | Name        |
+    | --------- | ------------ | ----------- |
+    | `col-`    | &lt;576px    | Extra small |
+    | `col-sm-` | &gt;=576px   | Small       |
+    | `col-md-` | &gt;=768px   | Medium      |
+    | `col-lg-` | &gt;=992px   | Large       |
+    | `col-xl-` | &gt;=1200px  | eXtra Large |
+
+    
 
 - Improvements on basic HTML and CSS
 
@@ -88,30 +104,8 @@ CS296N Web Development 2: ASP.NET
   - Inputs
   - Tooltip
 
-- Features not in HTML or CSS
+  
 
-  - Jumbotron - large grey box that calls attention to it's content. It is responsive
-  - Alerts - Messages with colored backgrounds and an x to dismiss them
-  - Button Groups - horizontal or vertical row of buttons with the same colored background
-  - Badges - used to add additional information to a line
-  - Progress bars - turn a container element into a progress bar
-  - Pagination
-  - List Groups
-  - Cards
-  - Navs
-  - Navbar
-  - Carousel
-  - Modal
-  - Popover
-  - Scrollspy
-  - Utilities
-    - Border
-    - Radius
-    - Align
-    - Float
-    - Width, Height
-    - Spacing
-    - Position
 
 
 ------
