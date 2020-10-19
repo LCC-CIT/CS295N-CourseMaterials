@@ -159,13 +159,27 @@ Static web content primarily consists of HTML, CSS and JavaScript files (but can
 
 ------
 
-## Book Info Web App Example
+
+
+## Example
 
 [GitHub Repository: 
 CS296N-BookInfo-Core-2
 AddBootstrap branch](https://github.com/LCC-CIT/CS296N-BookInfo-Core-2/tree/AddBootstrap)
 
+
+
 ## Reference
+
+### Textbook
+
+Ch. 3, "How to make a web app responsive with Bootstrap",
+
+*Murach’s ASP.NET Core MVC*, 1st Edition, by Mary Delamater and Joel Murach, Murach Books, 2020.
+
+**Note:** the textbook example uses the Bootstrap class `form-horizontal` [which is not part of Bootstrap 4](https://getbootstrap.com/docs/4.5/migration/#forms-1).
+
+### Online
 
 [Use LibMan with ASP.NET Core in Visual Studio](https://docs.microsoft.com/en-us/aspnet/core/client-side/libman/libman-vs?view=aspnetcore-3.1)&mdash;Microsoft Tutorial by Scott Addie
 

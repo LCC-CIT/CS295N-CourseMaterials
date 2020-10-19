@@ -31,8 +31,6 @@ All three lab groups will use Bootstrap classes listed below on your web page th
 
 - jumbotron
 
-- form-horizontal
-
 - margin (mt, mr, mb, ml, or m)
 
 - padding (pt, pr, pb, pl, or p)
