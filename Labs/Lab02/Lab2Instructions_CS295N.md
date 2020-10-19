@@ -13,7 +13,7 @@ Complete Exercise 1-1 in *Murach's ASP.NET Core MVC*
 
 ## Part 2: Skeletal Web Site
 
-Add to the web site you crated in lab 1 by creating a "skeleton" (a set of empty pages) for your site. A site map is shown below for each group's web site. The site map is shown in the form of an un-ordered list. The main bullet points represent top-level web pages, and sub-point bullets represent pages linked from the top-level pages. 
+Add to the web site you crated in lab 1 by creating a "skeleton" (a set of empty pages) for your site. A site map is shown below for each group's web site. The site map is shown in the form of an outline. The main bullet points represent top-level web pages, and sub-point bullets represent pages linked from the top-level pages. 
 
 These pages will all be place-holders. The only content will be a heading,  a sentence saying what the page is for, and one or more links to other pages.
 
@@ -42,7 +42,7 @@ These pages will all be place-holders. The only content will be a heading,  a se
 - Home – General information about the person (or group, or thing) and the purpose of the site
   - History – A brief history of the person
   - Stories – a page with a form where users can enter stories
-- Sources – Where to find out about the person
+- Sources – Where to find the source and background of the stories
   - Books and print media
   - Links to online media
 - *Your choice - you can make this be whatever you want it to be*
