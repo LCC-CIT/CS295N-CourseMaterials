@@ -82,7 +82,7 @@ CS296N Web Development 2: ASP.NET
   - Colors - contextual classes that provide "meaning through colors"
   - Tables - adds light padding and horizontal dividers
   - Images - provides multiple image shapes and makes images responsive
-  - Buttons - special classes that make <a>, <input>, or <button> elements look like nicely styled buttons
+  - Buttons - special classes that make `<a>`, `<input>`, or `<button>` elements look like nicely styled buttons
   - Drop-downs
   - Forms
   - Inputs
@@ -113,10 +113,6 @@ CS296N Web Development 2: ASP.NET
     - Spacing
     - Position
 
-- 
-
-- 
-- 
 
 ------
 
@@ -177,10 +173,13 @@ AddBootstrap branch](https://github.com/LCC-CIT/CS296N-BookInfo-Core-2/tree/AddB
 
 ## Reference
 
-[Use LibMan with ASP.NET Core in Visual Studio](https://docs.microsoft.com/en-us/aspnet/core/client-side/libman/libman-vs?view=aspnetcore-3.1)
+[Use LibMan with ASP.NET Core in Visual Studio](https://docs.microsoft.com/en-us/aspnet/core/client-side/libman/libman-vs?view=aspnetcore-3.1)&mdash;Microsoft Tutorial by Scott Addie
+
+[Bootstrap 4 Tutorial](https://www.w3schools.com/bootstrap4/default.asp)&mdash;W3Schools
 
 ------
 
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) ASP.NET Core MVC Lecture Notes by [Brian Bird](https://birdsbits.blog) is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
 
 ------
+
