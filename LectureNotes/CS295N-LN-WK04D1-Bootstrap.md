@@ -143,6 +143,10 @@ Static web content primarily consists of HTML, CSS and JavaScript files (but can
 - See page 153 in the textbook for more details
 - Static pages must be enabled your web app (the section on Bower)
 
+### LibMan
+
+> Library Manager (LibMan) is a lightweight, client-side library  acquisition tool. LibMan downloads popular libraries and frameworks from the file system or from a [content delivery network (CDN)](https://wikipedia.org/wiki/Content_delivery_network). The supported CDNs include [CDNJS](https://cdnjs.com/), [jsDelivr](https://www.jsdelivr.com/), and [unpkg](https://unpkg.com/#/). The selected library files are fetched and placed in the appropriate location within the ASP.NET Core project.&mdash;Scott Addie in [Client-side library acquisition in aSP.NET Core with LibMan](https://docs.microsoft.com/en-us/aspnet/core/client-side/libman/?view=aspnetcore-3.1)
+
 ### Bundling and Minification
 
 - Facilitate fast file loading for client browsers
@@ -171,7 +175,9 @@ Static web content primarily consists of HTML, CSS and JavaScript files (but can
 CS296N-BookInfo-Core-2
 AddBootstrap branch](https://github.com/LCC-CIT/CS296N-BookInfo-Core-2/tree/AddBootstrap)
 
+## Reference
 
+[Use LibMan with ASP.NET Core in Visual Studio](https://docs.microsoft.com/en-us/aspnet/core/client-side/libman/libman-vs?view=aspnetcore-3.1)
 
 ------
 
