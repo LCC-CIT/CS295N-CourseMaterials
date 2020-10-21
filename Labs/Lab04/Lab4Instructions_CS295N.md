@@ -7,7 +7,7 @@
 
 ## Part A: Textbook Tutorial Exercises
 
-In *Murach's ASP.NET Core MVC*, complete exercise 3-2, "Work with the Bootstrap classes in the Movie List app". 
+In *Murach's ASP.NET Core MVC*, complete exercise 3-1, "Work with the Bootstrap classes in the Future Value app". 
 
 You will take a screen-shot of the app running in your web browser at the end of the exercise and on the document containing the screen-shot you will also report one of the following:
 
