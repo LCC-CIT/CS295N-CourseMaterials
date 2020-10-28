@@ -180,8 +180,8 @@ Static web content primarily consists of HTML, CSS and JavaScript files (but can
 - In ASP.NET projects, CSS and JavaScript and typically are stored in:
   - wwwroot/js
   - wwwroot/css
-- See page 153 in the textbook for more details
-- Static pages must be enabled your web app (the section on Bower)
+- Static pages must be enabled your web app. 
+  - They are enabled by default when you use the Visual Studio MVC App project template to create your app.
 
 ### LibMan
 
@@ -225,7 +225,7 @@ AddBootstrap branch](https://github.com/LCC-CIT/CS296N-BookInfo-Core-2/tree/AddB
 
 Ch. 3, "How to make a web app responsive with Bootstrap", *Murach’s ASP.NET Core MVC*, 1st Edition, by Mary Delamater and Joel Murach, Murach Books, 2020.
 
-**Note:** the textbook example uses the Bootstrap class `form-horizontal` [which is not part of Bootstrap 4](https://getbootstrap.com/docs/4.5/migration/#forms-1).
+**Note:** the textbook example uses the Bootstrap class `form-horizontal` [which has been deprecated in Bootstrap 4](https://getbootstrap.com/docs/4.5/migration/#forms-1).
 
 ### Online
 

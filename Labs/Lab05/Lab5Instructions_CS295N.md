@@ -1,41 +1,59 @@
-# Lab 5
+# Lab 5: Unit Testing with xUnit 
+ CS295N, Web Development 1: ASP.NET
 
-##Publishing to an IIS Hosting Service
+**Contents**
 
-### Part 1: Publishing to a server
+[TOC]
 
-1. Create a free account on [Smarter ASP.NET](http://www.smarterasp.net/index?r=100953936).
-3. Prepare your web app for publishing.
-4. Publish your app to the file system.
-5. Use FTP to transfer the files to the server.
+## Unit Testing a Quiz Page
 
-### Part 2: Registering a Domain Name
+You will add a quiz page to your web site using *test driven development*.
 
-1. Register a free domain name using [Freenom](https://www.freenom.com/en/index.html?lang=en).
-   Note: SmarterASP.NET appears to not allows some of the free domain names on the 60 day trial account. However, it has allowed the .gq free domain.
-2. Enter the domain name on SmarterASP.NET.
-   Note the name servers that your web site is using.
-3. On Freenom, enter the nameservers being used for your web site on SmareterASP.NET
+Below, are the steps to add a quiz to your site.
 
-###Submission to Moodle
+### View Model
 
-####Beta Version 
+Create a *view model* class that contains:
 
-Upload the following to the Code Review Forum: 
+- Properties for:
+  - User's answers for each question.
+  - Whether each answer was right or wrong.
+- A stub for a method to check whether answers are right or wrong.
 
-1. Your web site's URLs on SmarterASP.NET:
-   - The temporary URL.
-   - The domain name you registered.
+### Unit Tests
 
-####Production Version 
+1. Create two unit tests for the check method above:
+  - A test that verifies that wrong answers are identified.
+  - A test that verifies that right answers are identified.
 
-1. Items 1 and 2 above, after making revisions as needed. 
+2. Write the body of the check method in the model, using the unit tests to verify it as you add code.
 
-   Please use the online text option on Moodle to enter your web site's URL.
-2. The code review of your work (the one done by your lab partner) with the second column (“Production”) completed by you. 
+### Controller methods
+
+Write HTTP Get and HTTP Post controller methods for your quiz.
+
+## View
+
+Write a view for the quiz and test it by hand.
 
 
 
-****
+## Review and Submission
 
-Written by Brian Bird, Lane Community College, for CS295N, Web Development 1: ASP.NET  Original fall 2018, revised fall 2019
+### PRs and Code Reviews
+
+1. Send a PR (Pull Request) to your lab partner asking them to review your code. 
+
+   After you have gotten a code review and revised your code as needed, you can merge it into the main branch, but keep the lab branch, don't delete it.
+
+2. You should receive a PR from your lab partner and review their code using this [Code Review Guide](../CodeReviewGuide.html).
+
+   On Moodle, in the "online text" field of the Code Review assignment, enter the URL of the pull request with the code review <u>you gave</u>.
+
+### Final Submission to Moodle
+
+1.  Upload a screen-shot of the web page from textbook exercise. Take of picture of it running in a browser with data entered and a calculations shown.
+2.  Publish your web site to Azure.
+3.  In the "online text" for the Moodle assignment:
+    - Paste a link to the branch of your GitHub repository for this lab.
+    - Paste a link to your web site running on Azure.
