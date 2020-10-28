@@ -18,7 +18,7 @@ Create a *view model* class that contains:
 - Properties for:
   - User's answers for each question.
   - Whether each answer was right or wrong.
-- A stub for a method to check whether answers are right or wrong.
+- A *stub* for a method to check whether answers are right or wrong.
 
 ### Unit Tests
 
@@ -52,7 +52,6 @@ Write a view for the quiz and test it by hand.
 
 ### Final Submission to Moodle
 
-1.  Upload a screen-shot of the web page from textbook exercise. Take of picture of it running in a browser with data entered and a calculations shown.
 2.  Publish your web site to Azure.
 3.  In the "online text" for the Moodle assignment:
     - Paste a link to the branch of your GitHub repository for this lab.
