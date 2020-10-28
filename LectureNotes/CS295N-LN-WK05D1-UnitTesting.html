@@ -2,14 +2,14 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>CS295N-LN-WK05D1-UnitTesting</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; }
+<title>CS295N-LN-WK05D1-UnitTesting</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
 #write.first-line-indent p { text-indent: 2em; }
 #write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
 #write.first-line-indent li { margin-left: 2em; }
@@ -17,7 +17,7 @@ a:active, a:hover { outline: 0px; }
 body.typora-export { padding-left: 30px; padding-right: 30px; }
 .typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
 .typora-export .task-list-item input { pointer-events: none; }
-@media screen and (max-width: 500px) { 
+@media screen and (max-width: 500px) {
   body.typora-export { padding-left: 0px; padding-right: 0px; }
   #write { padding-left: 20px; padding-right: 20px; }
   .CodeMirror-sizer { margin-left: 0px !important; }
@@ -26,7 +26,7 @@ body.typora-export { padding-left: 30px; padding-right: 30px; }
 #write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
 img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
-button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+button, input, select, textarea { color: inherit; font: inherit; }
 input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
 *, ::after, ::before { box-sizing: border-box; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
@@ -44,7 +44,7 @@ h6 { font-size: 1rem; }
 .hidden { display: none; }
 .md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
 a { cursor: pointer; }
-sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
 sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
 #write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
 figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
@@ -53,8 +53,8 @@ tr { break-inside: avoid; break-after: auto; }
 thead { display: table-header-group; }
 table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
 table.md-table td { min-width: 32px; }
-.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
-.CodeMirror-linenumber { }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
 .CodeMirror { text-align: left; }
 .CodeMirror-placeholder { opacity: 0.3; }
 .CodeMirror pre { padding: 0px 4px; }
@@ -64,7 +64,7 @@ div.hr:focus { cursor: none; }
 #write.fences-no-line-wrapping pre { white-space: pre; }
 #write pre.ty-contain-cm { white-space: normal; }
 .CodeMirror-gutters { margin-right: 4px; }
-.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
 .md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
 #write .md-fences.mock-cm { white-space: pre-wrap; }
 .md-fences.md-fences-with-lineno { padding-left: 0px; }
@@ -73,7 +73,7 @@ div.hr:focus { cursor: none; }
 .CodeMirror-line, twitterwidget { break-inside: avoid; }
 .footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
 .footnotes + .footnotes { margin-top: 0px; }
-.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
 li div { padding-top: 0px; }
 blockquote { margin: 1rem 0px; }
 li .mathjax-block, li p { margin: 0.5rem 0px; }
@@ -82,7 +82,7 @@ blockquote > :last-child { margin-bottom: 0px; }
 blockquote > :first-child, li > :first-child { margin-top: 0px; }
 .footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
 #write .footnote-line { white-space: pre-wrap; }
-@media print { 
+@media print {
   body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
   #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
   .typora-export * { -webkit-print-color-adjust: exact; }
@@ -93,7 +93,7 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
-pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
 p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
 #write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
 p > .md-image:only-child { display: inline-block; width: 100%; }
@@ -105,7 +105,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
 .md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
 .math { font-size: 1rem; }
-.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
 .md-toc-content { position: relative; margin-left: 0px; }
 .md-toc-content::after, .md-toc::after { display: none; }
 .md-toc-item { display: block; color: rgb(65, 131, 196); }
@@ -118,7 +118,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 .md-toc-h4 .md-toc-inner { margin-left: 6em; }
 .md-toc-h5 .md-toc-inner { margin-left: 8em; }
 .md-toc-h6 .md-toc-inner { margin-left: 10em; }
-@media screen and (max-width: 48em) { 
+@media screen and (max-width: 48em) {
   .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
   .md-toc-h4 .md-toc-inner { margin-left: 5em; }
   .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
@@ -129,32 +129,32 @@ a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; 
 .md-attr { display: none; }
 .md-fn-count::after { content: "."; }
 code, pre, samp, tt { font-family: var(--monospace); }
-kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
 .md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
-code { text-align: left; }
-a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
 .md-inline-math .MathJax_SVG .noError { display: none !important; }
 .html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
 .md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
 .MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
 .MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
 .MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
-.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
-.MathJax_SVG * { transition: none; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
 .MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
 .md-diagram-panel > svg { max-width: 100%; }
 [lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
 [lang="mermaid"] .node text { font-size: 1rem; }
-table tr th { border-bottom-width: 0px; }
+table tr th { border-bottom: 0px; }
 video { max-width: 100%; display: block; margin: 0px auto; }
 iframe { max-width: 100%; width: 100%; border: none; }
 .highlight td, .highlight tr { border: 0px; }
 svg[id^="mermaidChart"] { line-height: 1em; }
-mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
 mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
-@media print { 
+@media print {
   .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
 }
 
@@ -539,11 +539,11 @@ header, .context-menu, .megamenu-content, footer{
     background: #999;
 }
 
- .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+
 </style>
 </head>
-<body class='typora-export'>
+<body class='typora-export os-windows'>
 <div id='write'  class=''><p><strong><span>CS295N Web Development 1: ASP.NET</span>
-</strong></p><p><span>Brian Bird</span></p><h1><a name="unit-testing" class="md-header-anchor"></a><span>Unit Testing</span></h1><p><span>Weekly Topics:</span></p><p>&nbsp;</p><figure><table><thead><tr><th><span>Weekly Topics</span></th><th>&nbsp;</th></tr></thead><tbody><tr><td><span>1. Intro to Web Dev</span></td><td><span>6. Entity Framework / Deploying a DB to Azure</span></td></tr><tr><td><span>2. Intro to MVC / Deploying to Azure</span></td><td><span>7. Debugging / </span><em><span>Veteran&#39;s Day holiday</span></em></td></tr><tr><td><span>3. MVC Architectural patterns</span></td><td><span>8. Controllers</span></td></tr><tr><td><span>4. Bootstrap</span></td><td><span>9. Razor Views / </span><em><span>Thanksgiving holiday</span></em></td></tr><tr><td><span>5. Midterm Quiz / </span><strong><span>Unit testing with xUnit</span></strong></td><td><span>10. Razor Views (continued)</span></td></tr></tbody></table></figure><p>&nbsp;</p><h2><a name="contents" class="md-header-anchor"></a><strong><span>Contents</span></strong></h2><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n4"><a class="md-toc-inner" style="" href="#unit-testing">Unit Testing</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n23"><a class="md-toc-inner" style="" href="#contents"><strong>Contents</strong></a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n25"><a class="md-toc-inner" style="" href="#introduction">Introduction</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n31"><a class="md-toc-inner" style="" href="#main-focus-today">Main focus today</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n39"><a class="md-toc-inner" style="" href="#review---controller-action-methods">Review - Controller Action Methods</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n72"><a class="md-toc-inner" style="" href="#unit-testing-overview">Unit Testing Overview </a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n156"><a class="md-toc-inner" style="" href="#"></a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n158"><a class="md-toc-inner" style="" href="#further-reading">Further Reading</a></span></p></div><h2><a name="introduction" class="md-header-anchor"></a><span>Introduction</span></h2><ul><li><span>Review due dates on Moodle</span></li><li><span>Answer questions about lab 5</span></li></ul><h3><a name="main-focus-today" class="md-header-anchor"></a><span>Main focus today</span></h3><ul><li><span>Writing Unit Tests using xUnit</span></li><li><span>Creating fake repositories for unit testing</span></li></ul><ul><ul></ul></ul><h2><a name="review---controller-action-methods" class="md-header-anchor"></a><span>Review - Controller Action Methods</span></h2><ul><ul><ul></ul></ul></ul><ul><li><p><span>Action Method return types we have seen so far:</span></p></li><ul><li><span>String</span></li><li><span>ViewResult</span></li></ul><li><p><span>Data gets passed to an action method:</span></p></li><ul><li><p><span>Via the method parameters</span></p></li><ul><li><span>Method parameters get arguments from HTTP requests (both Get and Post)</span></li></ul></ul><li><p><span>Data gets sent to views</span></p></li><ul><li><span>Via a model of the type that the view has as it&#39;s model property</span></li><li><span>Via the ViewBag</span></li></ul></ul><p>&nbsp;</p><ul><ul></ul><ul></ul></ul><p>&nbsp;</p><h2><a name="unit-testing-overview" class="md-header-anchor"></a><span>Unit Testing Overview </span></h2><p><span>We&#39;ll cover more details of unit testing later, but here are some basic concepts:</span></p><ul><li><p><span>MVC facilitates unit testing - this is one of the reasons to use MVC</span></p></li><ul></ul><ul></ul><li><p><span>What to test?</span></p></li><ul><li><p><span>Business logic (in models, or in separate classes)</span></p></li><ul><li><span>If Models just contain simple C# properties, they don&#39;t really need tests</span></li></ul><li><p><span>Controller methods</span></p></li><ul><li><span>This is what usually makes the most sense to test</span></li></ul></ul><li><p><span>Test using data from a real database? No!</span></p></li><ul><li><p><span>Why?</span></p></li><ul><li><span>The database may not contain optimal data for doing certain tests. </span></li><li><span>It’s not advisable to put test data into a production database</span></li><li><span>The data can change over time and cause tests to fail.</span></li><li><span>The tests could cause unwanted changes to the real data.</span></li></ul><li><p><span>Solution - test against a &quot;fake&quot; repository</span></p></li></ul><li><p><span>xUnit</span></p></li><ul><li><span>Used by the .NET Core team to test their own code.</span></li><li><span>Test runner integrated in Visual Studio</span></li><li><span>Note: Assert.Equal method uses the Equal method of .NET objects for comparison. Primitive .NET types and many classes in the .NET library have fully implemented this method. You only need to write a Compare class (as shown in the textbook) if you are using a class that doesn&#39;t already have a comparator implemented for the Equals method.</span></li></ul><li><p><span>Reference</span></p></li><ul><li><span>Overview: </span><a href='https://xunit.github.io'><span>xunit.github.io</span></a></li><li><span>Getting started with xUnit and Visual Studio: </span><a href='hhttps://xunit.net/docs/getting-started/netfx/visual-studio'><span>Getting Started with xUnit.net</span></a></li></ul></ul><h4><a name="" class="md-header-anchor"></a></h4><h2><a name="further-reading" class="md-header-anchor"></a><span>Further Reading</span></h2><p><a href='https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/testing'><span>Testing Controller Logic in ASP.NET Core</span></a></p><p>&nbsp;</p><hr /><p><a href='http://creativecommons.org/licenses/by/4.0/'><img src="https://i.creativecommons.org/l/by/4.0/80x15.png" referrerpolicy="no-referrer" alt="Creative Commons License"></a><span> ASP.NET Core MVC Lecture Notes by </span><a href='https://birdsbits.blog'><span>Brian Bird</span></a><span> is licensed under a </span><a href='http://creativecommons.org/licenses/by/4.0/'><span>Creative Commons Attribution 4.0 International License</span></a><span>. </span></p><hr /></div>
+</strong></p><p><span>Brian Bird</span></p><h1><a name="unit-testing" class="md-header-anchor"></a><span>Unit Testing</span></h1><p><span>Weekly Topics:</span></p><p>&nbsp;</p><figure><table><thead><tr><th><span>Weekly Topics</span></th><th>&nbsp;</th></tr></thead><tbody><tr><td><span>1. Intro to Web Dev</span></td><td><span>6. Entity Framework / Deploying a DB to Azure</span></td></tr><tr><td><span>2. Intro to MVC / Deploying to Azure</span></td><td><span>7. Debugging / </span><em><span>Veteran&#39;s Day holiday</span></em></td></tr><tr><td><span>3. MVC Architectural patterns</span></td><td><span>8. Controllers</span></td></tr><tr><td><span>4. Bootstrap</span></td><td><span>9. Razor Views / </span><em><span>Thanksgiving holiday</span></em></td></tr><tr><td><span>5. Midterm Quiz / </span><strong><span>Unit testing with xUnit</span></strong></td><td><span>10. Razor Views (continued)</span></td></tr></tbody></table></figure><p>&nbsp;</p><h2><a name="contents" class="md-header-anchor"></a><strong><span>Contents</span></strong></h2><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n503"><a class="md-toc-inner" href="#unit-testing">Unit Testing</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n526"><a class="md-toc-inner" href="#contents"><strong>Contents</strong></a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n528"><a class="md-toc-inner" href="#introduction">Introduction</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n537"><a class="md-toc-inner" href="#unit-testing-overview">Unit Testing Overview </a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n577"><a class="md-toc-inner" href="#wrap-up">Wrap-up</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n579"><a class="md-toc-inner" href="#reference">Reference</a></span></p></div><h2><a name="introduction" class="md-header-anchor"></a><span>Introduction</span></h2><ul><li><span>Answer questions about the midterm.</span></li><li><span>Answer questions about lab 4 and publishing to Azure.</span></li><li><span>Describe where we&#39;re going: databases, unit testing with databases.</span></li></ul><p>&nbsp;</p><h2><a name="unit-testing-overview" class="md-header-anchor"></a><span>Unit Testing Overview </span></h2><p><span>We&#39;ll cover more details of unit testing later, but here are some basic concepts:</span></p><ul><li><p><span>MVC facilitates unit testing - this is one of the reasons to use MVC</span></p></li><li><p><span>What to test?</span></p><ul><li><p><span>Business logic (in models, or in separate classes)</span></p><ul><li><span>If Models just contain simple C# properties, they don&#39;t really need tests</span></li></ul></li><li><p><span>Controller methods</span></p><ul><li><span>This is what usually makes the most sense to test</span></li></ul></li></ul></li><li><p><span>Test using data from a real database? No!</span></p><ul><li><p><span>Why?</span></p><ul><li><span>The database may not contain optimal data for doing certain tests. </span></li><li><span>It’s not advisable to put test data into a production database</span></li><li><span>The data can change over time and cause tests to fail.</span></li><li><span>The tests could cause unwanted changes to the real data.</span></li></ul></li><li><p><span>Solution - test against a &quot;fake&quot; repository</span></p></li></ul></li><li><p><span>xUnit</span></p><p><span>Used by the .NET Core team to test their own code.</span></p><p><span>Test runner integrated in Visual Studio</span></p><p><span>Note: Assert.Equal method uses the Equal method of .NET objects for comparison. Primitive .NET types and many classes in the .NET library have fully implemented this method. You only need to write a Compare class (as shown in the textbook) if you are using a class that doesn&#39;t already have a comparator implemented for the Equals method.</span></p><p>&nbsp;</p></li></ul><h2><a name="wrap-up" class="md-header-anchor"></a><span>Wrap-up</span></h2><ul><li><span>Look at the lab assignment</span></li><li><span>Look at the term project requirements</span></li><li><span>Look at due dates on Moodle</span></li></ul><p>&nbsp;</p><h2><a name="reference" class="md-header-anchor"></a><span>Reference</span></h2><ul><li><span>Overview: </span><a href='https://xunit.github.io'><span>xunit.github.io</span></a></li><li><span>Getting started with xUnit and Visual Studio: </span><a href='https://xunit.net/docs/getting-started/netfx/visual-studio'><span>Getting Started with xUnit.net</span></a></li><li><a href='https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/testing'><span>Testing Controller Logic in ASP.NET Core</span></a></li></ul><hr /><p><a href='http://creativecommons.org/licenses/by/4.0/'><img src="https://i.creativecommons.org/l/by/4.0/80x15.png" referrerpolicy="no-referrer" alt="Creative Commons License"></a><span> ASP.NET Core MVC Lecture Notes by </span><a href='https://birdsbits.blog'><span>Brian Bird</span></a><span> is licensed under a </span><a href='http://creativecommons.org/licenses/by/4.0/'><span>Creative Commons Attribution 4.0 International License</span></a><span>. </span></p><p>&nbsp;</p></div>
 </body>
 </html>

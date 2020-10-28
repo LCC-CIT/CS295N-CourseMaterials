@@ -25,37 +25,9 @@ Weekly Topics:
 
 ## Introduction
 
-- Review due dates on Moodle
-- Answer questions about lab 5
-
-### Main focus today
-
-- Writing Unit Tests using xUnit
-- Creating fake repositories for unit testing
-
-
-## Review - Controller Action Methods
-
-
-- Action Method return types we have seen so far:
-
-- - String
-  - ViewResult
-
-- Data gets passed to an action method:
-
-- - Via the method parameters
-
-  - - Method parameters get arguments from HTTP requests (both Get and Post)
-
-- Data gets sent to views
-
-- - Via a model of the type that the view has as it's model property
-  - Via the ViewBag
-
-
-
-- 
+- Answer questions about the midterm.
+- Answer questions about lab 4 and publishing to Azure.
+- Describe where we're going: databases, unit testing with databases.
 
 
 
@@ -65,23 +37,19 @@ We'll cover more details of unit testing later, but here are some basic concepts
 
 - MVC facilitates unit testing - this is one of the reasons to use MVC
 
-- 
-- 
 - What to test?
 
-- - Business logic (in models, or in separate classes)
-
-  - - If Models just contain simple C# properties, they don't really need tests
+  - Business logic (in models, or in separate classes)
+    - If Models just contain simple C# properties, they don't really need tests
 
   - Controller methods
 
-  - - This is what usually makes the most sense to test
+    - This is what usually makes the most sense to test
 
 - Test using data from a real database? No!
 
-- - Why?
-
-  - - The database may not contain optimal data for doing certain tests. 
+  - Why?
+    - The database may not contain optimal data for doing certain tests. 
     - It’s not advisable to put test data into a production database
     - The data can change over time and cause tests to fail.
     - The tests could cause unwanted changes to the real data.
@@ -90,25 +58,29 @@ We'll cover more details of unit testing later, but here are some basic concepts
 
 - xUnit
 
-- - Used by the .NET Core team to test their own code.
-  - Test runner integrated in Visual Studio
-  - Note: Assert.Equal method uses the Equal method of .NET objects for comparison. Primitive .NET types and many classes in the .NET library have fully implemented this method. You only need to write a Compare class (as shown in the textbook) if you are using a class that doesn't already have a comparator implemented for the Equals method.
+  Used by the .NET Core team to test their own code.
 
-- Reference
+  Test runner integrated in Visual Studio
 
-- - Overview: [xunit.github.io](https://xunit.github.io)
-  - Getting started with xUnit and Visual Studio: [Getting Started with xUnit.net](hhttps://xunit.net/docs/getting-started/netfx/visual-studio)
+  Note: Assert.Equal method uses the Equal method of .NET objects for comparison. Primitive .NET types and many classes in the .NET library have fully implemented this method. You only need to write a Compare class (as shown in the textbook) if you are using a class that doesn't already have a comparator implemented for the Equals method.
 
-#### 
+  
+  
+## Wrap-up
 
-## Further Reading
+- Look at the lab assignment
+- Look at the term project requirements
+- Look at due dates on Moodle
 
-[Testing Controller Logic in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/testing)
 
 
+## Reference
+
+- Overview: [xunit.github.io](https://xunit.github.io)
+- Getting started with xUnit and Visual Studio: [Getting Started with xUnit.net](https://xunit.net/docs/getting-started/netfx/visual-studio)
+- [Testing Controller Logic in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/testing)
 
 ------
 
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) ASP.NET Core MVC Lecture Notes by [Brian Bird](https://birdsbits.blog) is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
 
-------
