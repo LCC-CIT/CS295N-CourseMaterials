@@ -1,53 +1,77 @@
-# Lab 6
+# Lab 6: Database and Entity Framework
+ CS295N, Web Development 1: ASP.NET
 
-## Controllers and HTTP
+**Contents**
 
-**Part 1: Monitoring HTTP Traffic and Debugging**
+[TOC]
 
-- Either Install [Fiddler](https://www.telerik.com/fiddler) or use your browser’s Web Console to monitor network traffic between your development server and the browser. Here are instructions for using the [Firefox Web Console](https://developer.mozilla.org/en-US/docs/Tools/Web_Console).
-- Make a copy of a my web app, [DebuggingPracticeGroupA](https://github.com/LCC-CIT/CS295N-CourseMaterials/tree/master/Labs/Lab05/DebuggingPractice-GroupA), or , [DebuggingPracticeGroupB](https://github.com/LCC-CIT/CS295N-CourseMaterials/tree/master/Labs/Lab05/DebuggingPractice-GroupB), depending on which lab group you are in.  
+## Part A: Textbook Tutorial Exercise
 
-  Note: this app is in my Course Materials repository. You will need to download or lone the whole repository to get this app, then make your own copy of the solution folder in a new location.
-- Debug the app using all the debugging techniques you know:
-  - Setting breakpoints in Visual Studio
-  - Looking at the URL in the browser address bar
-  - Monitoring HTTP traffic
-  - Using “View Source” in the browser to see how your view was rendered into HTML
-- Fix the app so that all the links and pages work as described on the main page of the app
+In *Murach's ASP.NET Core MVC*, complete exercise 4-1, "Create the Movie List app". 
+
+You will take a screen-shot of the app running in your web browser at the end of the exercise and on the document containing the screen-shot you will also report one of the following:
+
+A. I Followed all the steps shown in the book and successfully compiled and ran the program.
+
+B. I Loaded the completed solution, experimented with the code, and ran the program.
+
+C. I didn't do the exercise.
 
 
-### Part 2: Controller Exercise
 
-Modify the web site you have been doing for your lab projects (the community site, or the fan site) by changing it to use the following:
-- Three new controller methods--these would be methods that are part of the Controller class and that are called when an action method returns. 
-- Four new return types. These are types that can be returned by the methods above and would hence be the return type for your actioin method.
+## Part B: Saving Data to a Database
 
-**Notes**
-What I mean by "new" is that these should be methods and types that you do not currently use in your web site.
-You may add a new controller and/or views in order to implement these new methods and return types.
 
-###Submission to Moodle
 
-####Beta Version 
+### Add a Database to your project
 
-Upload the following to the Code Review Forum: 
+#### Group A
 
-2. The Visual Studio solution for your debugging project. 
-2. The Visual Studio solution for your community or fan web site.
-3. A document describing the places where you made the modifications for part 2.
-You can zip each solution folder or put it in a Git repostiory and share a link.
+**Community Web Site**
 
-####Production Version 
+Refactor your code so that the messages entered on the Home/Contact page are saved in a database.
 
-1. Items 1--3 above, but revised as needed. 
+#### Group B
 
-   Please use the online text option on Moodle to enter your web site's URL.
-2. The code review of your work (the one done by your lab partner) with the second column (“Production”) completed by you. 
+**Fan Site**
 
-****
+Refactor your code so that the stories entered on the Home/Stories page are saved in a database.
 
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
-These ASP.NET Core MVC lab instructions, written by [Brian Bird](https://birdsbits.blog), fall 019, are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+#### Group C
 
-------
+**Informational Site**
 
+Refactor your code so that the comments entered on the Home/Forum page are saved in a database.
+
+
+
+#### For all groups
+
+- Modify your data entry view so that:
+  - The entry is shown on a different view.
+  -  All messages, stories, or comments are displayed on that view.
+- Use SQL Server as the database type.
+- Store a user object as related data with the message, story, or comment object.
+- Add migrations.
+- Publish the site to Azure.
+
+
+
+## Review and Submission
+
+### PRs and Code Reviews
+
+1. Send a PR (Pull Request) to your lab partner asking them to review your code. 
+
+   After you have gotten a code review and revised your code as needed, you can merge it into the main branch, but keep the lab branch, don't delete it.
+
+2. You should receive a PR from your lab partner and review their code using this [Code Review Guide](../CodeReviewGuide.html).
+
+   On Moodle, in the "online text" field of the Code Review assignment, enter the URL of the pull request with the code review <u>you gave</u>.
+
+### Final Submission to Moodle
+
+2.  Publish your web site to Azure.
+3.  In the "online text" for the Moodle assignment:
+    - Paste a link to the branch of your GitHub repository for this lab.
+    - Paste a link to your web site running on Azure.
