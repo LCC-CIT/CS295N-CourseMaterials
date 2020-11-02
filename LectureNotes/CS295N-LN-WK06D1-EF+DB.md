@@ -239,7 +239,7 @@ You should get this response:
         | _| | _|   \_/ |  //|\\
         |___||_|       /   \\\/\\
 
-Entity Framework Core .NET Command-line Tools 2.2.1-servicing-10028
+Entity Framework Core .NET Command-line Tools 3.1
 Usage: dotnet ef [options] [command]
 Options:
   --version        Show version information
