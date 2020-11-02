@@ -54,19 +54,28 @@ Entity Framework Core has [database providers](https://docs.microsoft.com/en-us/
 - Db2
 - And more
 
-------
-
 
 
 ## Adding Entity Framework to a Web App
 
-- There are two major approaches to software development with EF:
+There are two major approaches to software development with EF:
+- Code first (Model first) -- we are using this approach
 
-- - Code first (Model first) -- we are using this approach
+- Database first 
 
-- - Database first 
+In order to use Entity Framework in your web app, you need to modify your code in the ways shown below.
 
-- In order to use Entity Framework in your web app, you need to add to, or modify, your code in the ways shown below.
+
+
+### NuGet Packages
+
+Use the NuGet Package Manager in Visual Studio to add the following packages to your project:
+
+- Microsoft.EntityFrameworkCore
+
+- Microsoft.EntityFrameworkCore.SqlServer
+
+  
 
 ### Models
 
@@ -84,7 +93,12 @@ Ideally, we would like our models to be designed solely with object oriented des
     Ask yourself, would this provide a unique key?
 
     ````c#
-    public class Book{  [key]  public string Title { get; set; }
+    public class Book
+    {
+      [key]
+      public string Title { get; set; }
+      // Additional properties not shown
+    }
     ````
 
   - Add an ID property:
@@ -92,14 +106,19 @@ Ideally, we would like our models to be designed solely with object oriented des
     This is guaranteed to be a unique key
 
     ```c#
-    public class Book{  public int BookID { get; set; }  public string Title { get; set; }
+    public class Book
+    {
+      public int BookID { get; set; }
+      public string Title { get; set; }
+      // Additional properties not shown
+    }
     ```
-
-    
 
 - Avoid many-to-many relationships
 
   The current LTS version of EF, version 3.1, [doesn't support many-to-many relationships](https://docs.microsoft.com/en-us/ef/core/modeling/relationships#many-to-many)
+  
+  
 
 ### DbContext Class
 
@@ -119,8 +138,6 @@ Ideally, we would like our models to be designed solely with object oriented des
   ```
 
 
-
-  
 
 ### Connection String in appsettings.json 
 
