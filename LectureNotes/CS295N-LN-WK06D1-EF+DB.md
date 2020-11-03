@@ -160,9 +160,9 @@ Ideally, we would like our models to be designed solely with object oriented des
 
 In the *ConfigureServices* method, add a service for DbContext. 
 
-- [AddDbContext](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.entityframeworkservicecollectionextensions.adddbcontext?view=efcore-2.1) will read the connection string and configure your DbContext to connect to your database. 
+- [AddDbContext](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.entityframeworkservicecollectionextensions.adddbcontext?view=efcore-2.1) will read the connection string and configure your DbContext object to connect to your database. 
 
-- This service also performs *dependency injection* to inject your DbContext object into any of your classes that the framework instantiates that have your DbContext class as a parameter in the constructor.
+- This service also performs *dependency injection* to inject your DbContext object into any of your classes (like your controller classes) that the framework instantiates and where you have your DbContext class as a parameter in the constructor.
 
 - The options argument specifies that this is a Microsoft SQL Server database, but you could also use another database, like SQLite.
 
@@ -176,7 +176,7 @@ In the *ConfigureServices* method, add a service for DbContext.
 
 #### Loading related data
 
-Related data is  data that comes from objects that are related to the object that you are getting from  DbContext by aggregation or composition. 
+Related data is data that comes from objects that are related to the object that you are getting from  DbContext by aggregation or composition. 
 
 For example, in the Book model below, the two lists are related data (also called *navigational properties*) because they are lists of domain model objects that are related to Book objects both conceptually and by object composition.
 
@@ -195,8 +195,6 @@ public class Book
   public List<Review> Reviews** { get { return reviews; } }
 }
 ```
-
-
 
 Note that the *navigational properties* will cause EF to create foreign key fields for BookID in the Author and Review tables in the database.
 
@@ -242,9 +240,7 @@ Note that the *navigational properties* will cause EF to create foreign key fiel
 
 Before you can run your app, you need to create a database on the host system. This might be your development machine, or a production server. On your development machine. But, before you can create a database, you need to add a database migration. You can read about that in the Migrations section below. 
 
-In order to do operations on our database, we will be using CLI (Command Line Interface) commands. You can check to see if you have the CLI tools for Entity Framework installed by entering the command below:
-
-dotnet ef
+In order to do operations on our database, we will be using CLI (Command Line Interface) commands. You can check to see if you have the CLI tools for Entity Framework installed by entering the command: `dotnet ef`
 
 You should get this response:
 
@@ -256,7 +252,7 @@ You should get this response:
         | _| | _|   \_/ |  //|\\
         |___||_|       /   \\\/\\
 
-Entity Framework Core .NET Command-line Tools 3.1
+Entity Framework Core .NET Command-line Tools 3.1.2
 Usage: dotnet ef [options] [command]
 Options:
   --version        Show version information
@@ -271,8 +267,8 @@ Commands:
 Use "dotnet ef [command] --help" for more information about a command.
 ```
 
-If are using .NET Core 1.X and you get a message like this:
-Could not execute because the specified command or file was not found, it is probably because the CLI tools for EF didn't get installed when you installed Visual Studio. You can install them by executing this command:
+If you get a message like this:
+"Could not execute because the specified command or file was not found", it is probably because the CLI tools for EF haven't been installed. You can install them by executing this command:
 
 `dotnet tool install --global dotnet-ef --version 3.1`
 
@@ -289,9 +285,7 @@ Note that this will install the tools globally, if you only want to install them
 
 #### Creating a Migration
 
-Use the CLI command:
-
-dotnet ef migrations add *Initial*
+Use the CLI command: `dotnet ef migrations add Initial`
 
 - No database will be created
 - A file will be added to the Migrations folder
@@ -316,30 +310,20 @@ Running this command will cause the following to take place:
 #### Applying a Migration and creating (or updating) the database 
 
 
-Use the CLI command:
-
-dotnet ef database update
-
-
+Use the CLI command: `dotnet ef database update`
 
 - If the database hasn't previously been created, this command will also create the database.
 - Running this command will cause the same operations as the first eight above to take place, plus: 
 
-- - Create a database if one does not exist 
+  - Create a database if one does not exist 
 
-- - Execute SQL statements to apply the migrations if they are not already applied
+  - Execute SQL statements to apply the migrations if they are not already applied
 
 - Reference: [EF Core .NET Command-line Tools](https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/dotnet)
 
 Note: if you want to drop the database so you can run update again, use this CLI command:
 
 dotnet ef database drop 
-
-
-
-
-
-------
 
 
 
@@ -359,18 +343,10 @@ After EF has created a database, you can use SQL Server Object Explorer in Visua
 
 
 
-------
-
-
-
 ## Running Unit Tests 
 
 
 Adding EF should not have broken any of your unit tests. But it's good practice to run the tests before pushing our code to the central repository (on GitHub). 
-
-
-
-------
 
 
 
@@ -385,20 +361,17 @@ Adding EF should not have broken any of your unit tests. But it's good practice 
 
 ## References
 
-- *Pro ASP.NET Core MVC 2.0*, Adam Freeman, Apress, 2017.
+### Print Books
 
-  Ch. 8 "Sports Store, a Real Application", section titled,
+- Ch. 4, "How to develop a data-driven MVC web app", 
 
-  "Preparing a Database" (page 208), with sub-sections:
+  *Murach’s ASP.NET Core MVC*, 1st Edition, by Mary Delamater and Joel Murach, Murach Books, 2020.
 
-  - Installing the Entity Framework Core Tools Package 
-  - Creating the Database Classes 
-  - Creating the Repository Class 
-  - Defining the Connection String 
-  - Configuring the Application
-    -  "Disabling Scope Verification"
-  - Creating the Database Migration 
-  - Creating the Seed Data 
+- Ch. 8 "Sports Store, a Real Application", section titled, "Preparing a Database",
+
+  *Pro ASP.NET Core MVC 2*, Adam Freeman, Apress, 2017.
+
+### Online
 
 - Microsoft Docs: [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/)
 

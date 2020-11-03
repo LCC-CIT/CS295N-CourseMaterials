@@ -152,13 +152,17 @@ public class Review
   </form>
   ```
 
-  
-
 - Views with data models
 
 
 
 ## Reference
+
+### Textbook
+
+Ch. 2, "How to a single-page MVC web app", *Murach’s ASP.NET Core MVC*, 1st Edition, by Mary Delamater and Joel Murach, Murach Books, 2020.
+
+### Online
 
 [Add a Model to an ASP.NET Core MVC App](https://lanecc.zoom.us/rec/share/eysvpQj6XMaobYbus6qz_0cvLLxkrHTkPfg3OBoM7G-EwiIhkyYCZiCBKpg3Dvkr.oqyMt8bs2AEArLPq)&mdash;Microsoft Tutorial
 
