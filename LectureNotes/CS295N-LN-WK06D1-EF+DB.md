@@ -75,6 +75,8 @@ Use the NuGet Package Manager in Visual Studio to add the following packages to 
 
 - Microsoft.EntityFrameworkCore.SqlServer
 
+- Microsoft.EntityFrameworkCore.Design
+
   
 
 ### Models
@@ -240,7 +242,8 @@ Note that the *navigational properties* will cause EF to create foreign key fiel
 
 Before you can run your app, you need to create a database on the host system. This might be your development machine, or a production server. On your development machine. But, before you can create a database, you need to add a database migration. You can read about that in the Migrations section below. 
 
-In order to do operations on our database, we will be using CLI (Command Line Interface) commands. You can check to see if you have the CLI tools for Entity Framework installed by entering the command: `dotnet ef`
+In order to do operations on our database, we will be using CLI (Command Line Interface) commands. (Not the commands for the Package Manager Console) You can check to see if you have the CLI tools for Entity Framework installed by entering the command:
+ `dotnet ef`
 
 You should get this response:
 
@@ -270,7 +273,8 @@ Use "dotnet ef [command] --help" for more information about a command.
 If you get a message like this:
 "Could not execute because the specified command or file was not found", it is probably because the CLI tools for EF haven't been installed. You can install them by executing this command:
 
-`dotnet tool install --global dotnet-ef --version 3.1`
+`dotnet tool install --global dotnet-ef --version 3.1.x`
+Where x is the patch level that matches the version of EF Core you are using.
 
 Note that this will install the tools globally, if you only want to install them for the current project, then leave off the --global switch. And, if you are using a version of ASP.NET Core other than 3.1 (which we are using this term in class), then change the version number. If you omit the --version switch, it will install the latest version.
 
@@ -285,7 +289,8 @@ Note that this will install the tools globally, if you only want to install them
 
 #### Creating a Migration
 
-Use the CLI command: `dotnet ef migrations add Initial`
+Use the CLI command: 
+`dotnet ef migrations add Initial`
 
 - No database will be created
 - A file will be added to the Migrations folder
@@ -305,12 +310,12 @@ Running this command will cause the following to take place:
 9. Create new migration file in the Migrations folder
 10. Update the sanpshot file in the Migrations folder 
 
-#### 
+
 
 #### Applying a Migration and creating (or updating) the database 
 
-
-Use the CLI command: `dotnet ef database update`
+Use the CLI command:
+ `dotnet ef database update`
 
 - If the database hasn't previously been created, this command will also create the database.
 - Running this command will cause the same operations as the first eight above to take place, plus: 
@@ -323,14 +328,14 @@ Use the CLI command: `dotnet ef database update`
 
 Note: if you want to drop the database so you can run update again, use this CLI command:
 
-dotnet ef database drop 
+`dotnet ef database drop`
 
 
 
 ## Viewing Your Database
 
 
-After EF has created a database, you can use SQL Server Object Explorer in Visual Studio to view it.
+After EF has created a database, you can use *SQL Server Object Explorer* in Visual Studio to view it.
 
 - The server name will be: *(localdb)\MSSQLLocalDB*
 - Connection should be through Windows Authentication with a user name that looks like: *DESKTOP-SGC2610\Brian*
