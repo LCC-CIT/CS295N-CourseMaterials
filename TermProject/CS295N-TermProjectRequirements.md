@@ -25,11 +25,13 @@
 **Write a proposal for your web site that includes:**
 
 1.  A written description of the site.
-2.  A "site map", in the form of an outline, that shows the navigation links between the pages.
-3.  UI sketches for each page. You can use pencil and paper, then take a photo of it, or use [Lucid Chart](https://www.lucidchart.com), or [Balsamiq](https://balsamiq.com), or some other computer drawing program.
-4.  A list of the properties in the data model.
+2.  A list of all the properties in the domain model.
+3.  A "site map", in the form of an outline, that shows the navigation links between the pages.
+4.  UI sketches for each page. Here are some alternatives for making the sketches:
+    - Use pencil and paper, then scan the sketches, or take photos&mdash;but please make them neat, sharp, and clear.
+    - Use a drawing program like: Paint, [Google Drawings](https://docs.google.com/drawings), [Lucid Chart](https://www.lucidchart.com), [Balsamiq](https://balsamiq.com) or some other computer drawing program.
 
-Submit all of the above in one document. Please use a .pdf or an docx document and don't zip it. (so I can read it online in Moodle).
+Submit all of the above in one document. Please use a pdf or docx document and don't zip it. (so I can read it online in Moodle).
 
 **Notes:**
 
