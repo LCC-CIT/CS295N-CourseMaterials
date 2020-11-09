@@ -1,19 +1,22 @@
 **CS295N Web Development 1: ASP.NET** 
 
-# ***More EF, LINQ and Publishing to Azure*** 
+# More EF, LINQ and Publishing to Azure 
 
 **Where we are** 
 
-| 1. Intro to MVC                    | 6. More on Controllers                |
-| ---------------------------------- | ------------------------------------- |
-| 2. Domain Modeling                 | 7. Unit Testing and Repositories      |
-| 3. C# Review / Advanced C# for MVC | 8. Entity Framework (EF) and Database |
-| 4. Razor Views and Tag Helpers     | 9. More on EF + LINQ + Azure          |
-| 5. Deploying to a server           | 10. Model Binding / Validation        |
+
+
+| Weekly Topics                             |                                                     |
+| ----------------------------------------- | --------------------------------------------------- |
+| 1. Intro to Web Dev                       | 6. **Database & Entity Framework**                  |
+| 2. Intro to MVC & Deploying to Azure      | 7. Unit Testing with a DB / *Veteran's Day holiday* |
+| 3. MVC Architectural patterns             | 8. Controllers & Debugging                          |
+| 4. Bootstrap                              | 9. Razor Views / *Thanksgiving holiday*             |
+| 5. Midterm Quiz & Unit testing with xUnit | 10. Razor Views (continued)                         |
 
 
 
-## **Contents**
+ **Contents**
 
 [TOC]
 
@@ -24,7 +27,62 @@
 - Review lab due dates on Moodle
 - Discuss questions about the previous lab
 
-We will finish up last week's topic of adding a database to your web app by looking at how to add seed data to a database.
+We will finish up last week's topic of adding a database to your web app by looking at how to add seed data to a database and publish it to Azure.
+
+## Review
+
+Last week we added Entity Framework to our project and used it to create a database.
+
+I created a new branch, Lab06-Mac, for the students doing development on a Mac. The only difference is that this version uses SQLite instead of SQL Server as a database engine.
+
+
+
+## Deploying a Web Site with a Database to Azure
+
+These instructions assume you have already set up a [free student Azure account](https://azure.microsoft.com/en-us/free/students/) and have already deployed a version of your web app that doesn't have a database to Azure.
+
+### Create a database via the Azure Web Portal 
+
+- Log into the [Azure portal](https://portal.azure.com)
+
+- Select SQL databases from the menu of services
+
+- Click on +Add, then fill in the required fields
+
+  - Create a resource group if you don't already have one
+
+  - Create a server if you don't already have one
+
+    - You are only allowed to have one free database per region. You select the region when you set up your server.
+
+  - Select a pricing tier
+
+    - If you are using a free student subscription, select the Free, 32 MB pricing tier.
+
+- Copy the ADO.NET connection string for your database. You will need to add it to the publish profile in Visual Studio.
+
+- Example connection string:
+
+  `Server=tcp: practiceserver.database.windows.net,1433; Initial Catalog=Movie; Persist Security Info=False; User ID={your_username}; Password={your_password}; MultipleActiveResultSets=False; Encrypt=True; TrustServerCertificate=False; Connection Timeout=30;`
+
+
+
+### Publish from Visual Studio 
+
+
+- In Visual Studio, run the publish wizard by right-clicking on the project and selecting publish.
+
+- Click on configure to change the settings in your publish profile
+
+- Select the Settings page
+
+- - In the *Databases* section, check the checkbox for your SQL Server connection string and paste the connection string for your Azure SQL Database.
+
+  - - Be sure to put the user name and password for your Azure SQL Database in place of your_username and your_password and delete the curly braces.
+
+  - In the *Entity Framework Migrations* section, check the check box for AppDbContext and add the connection string again.
+
+- Now you can re-publish your web app.
 
 
 
@@ -77,51 +135,6 @@ We will finish up last week's topic of adding a database to your web app by look
   `dotnet ef database update`
 
 
-
-## Deploying a Web Site with a Database to Azure
-
-These instructions assume you have already set up a [free student Azure account](https://azure.microsoft.com/en-us/free/students/) and have already deployed a version of your web app that doesn't have a database to Azure.
-
-### Create a database via the Azure Web Portal 
-
-- Log into the [Azure portal](https://portal.azure.com)
-
-- Select SQL databases from the menu of services
-
-- Click on +Add, then fill in the required fields
-
-- - Create a resource group if you don't already have one
-
-  - Create a server if you don't already have one
-
-  - - You are only allowed to have one free database per region. You select the region when you set up your server.
-
-  - Select a pricing tier
-
-  - - If you are using a free student subscription, select the Free, 32 MB pricing tier.
-
-- Copy the ADO.NET connection string for your database. You will need to add it to the publish profile in Visual Studio.
-  Example connection string:
-  `Server=tcp: practiceserver.database.windows.net,1433; Initial Catalog=Movie; Persist Security Info=False; User ID={your_username}; Password={your_password}; MultipleActiveResultSets=False; Encrypt=True; TrustServerCertificate=False; Connection Timeout=30;`
-
-
-
-### Publish from Visual Studio 
-
-
-- In Visual Studio, run the publish wizard by right-clicking on the project and selecting publish.
-
-- Click on configure to change the settings in your publish profile
-
-- Select the Settings page
-
-- - In the *Databases* section, check the checkbox for your SQL Server connection string and paste the connection string for your Azure SQL Database.
-
-  - - Be sure to put the user name and password for your Azure SQL Database in place of your_username and your_password and delete the curly braces.
-
-  - In the *Entity Framework Migrations* section, check the check box for AppDbContext and add the connection string again.
-
-- Now you can re-publish your web app.
 
 
 
