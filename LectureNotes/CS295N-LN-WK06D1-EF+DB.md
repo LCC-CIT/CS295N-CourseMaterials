@@ -19,7 +19,7 @@ Weekly Topics:
 
 
 
-## **Contents**
+## Contents
 
 [TOC]
 
