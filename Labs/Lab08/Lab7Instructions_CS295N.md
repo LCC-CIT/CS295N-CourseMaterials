@@ -1,4 +1,4 @@
-# Lab 5: Unit Testing with Repositories
+# Lab 7: Unit Testing with Repositories
  CS295N, Web Development 1: ASP.NET
 
 **Contents**
