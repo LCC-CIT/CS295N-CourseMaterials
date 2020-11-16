@@ -1,0 +1,3 @@
+Textbook exercise: 10/10
+Bootstrap code: 30/30
+Publish to Azure: 10/10

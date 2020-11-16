@@ -5,10 +5,6 @@ Brian Bird
 
 # Entity Framework
 
-Weekly Topics:
-
-
-
 | Weekly Topics                             |                                                     |
 | ----------------------------------------- | --------------------------------------------------- |
 | 1. Intro to Web Dev                       | 6. **Database & Entity Framework**                  |
