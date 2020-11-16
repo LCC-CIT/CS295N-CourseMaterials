@@ -5,13 +5,15 @@
 
 [TOC]
 
-## Part A
+## Part A: Textbook Exercise
 
 Do exercise 14-1 in the Textbook, "Add dependency Injection and some unit tests"
 
-## Part B
+## Part B: Repositories and Unit tests
 
-Add repositories and unit tests to your web site
+The instructions are the same for groups A, B, and C.
+
+Add repositories and unit tests to your web site.
 
 1. Create a repository interface for each of your DbSet classes.
 2. Create a "real" repository for each DbSet
