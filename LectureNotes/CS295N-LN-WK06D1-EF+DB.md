@@ -15,7 +15,7 @@ Brian Bird
 
 
 
-## **Contents**
+## Contents
 
 [TOC]
 
