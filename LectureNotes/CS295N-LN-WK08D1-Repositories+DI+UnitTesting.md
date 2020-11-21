@@ -284,11 +284,17 @@ public class BookTest
 
 ## Further Reading
 
-[xUnit Documentation](https://xunit.github.io)
-[Dependency Injection Demystified](http://www.jamesshore.com/Blog/Dependency-Injection-Demystified.html)
-[Repository Pattern in ASP.NET Core](https://www.c-sharpcorner.com/article/repository-pattern-in-asp-net-core/)
+- [xUnit Documentation](https://xunit.github.io)
 
+- [Dependency Injection Demystified](http://www.jamesshore.com/Blog/Dependency-Injection-Demystified.html)
 
+- [Repository Pattern in ASP.NET Core](https://www.c-sharpcorner.com/article/repository-pattern-in-asp-net-core/)
+
+- *Pro ASP.NET Core MVC 2*,
+  7th Edition, Adam Freeman
+  Apress, 2017
+  - Ch. 7 – Unit Testing MVC Applications
+  - Ch. 18 - Dependency Injection
 
 ------
 
