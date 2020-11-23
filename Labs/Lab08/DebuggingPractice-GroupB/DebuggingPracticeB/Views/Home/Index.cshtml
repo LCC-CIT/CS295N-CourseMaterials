@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Debugging Practice for Group B</h1>
+
+<ol>
+    <!--Bug #1-->
+    <li>This link should open a <a href="Demo/Index">new page</a> named Index in the Views/Demo folder</li>
+
+    <!--Bug #2-->
+    <li>This link sends the key-value pair "mascot, Ducks" to the <a href="Demo/PageTwo?mascot=Ducks">linked page</a> which will display "We are the Ducks!"</li>
+
+    <!--Bug #3-->
+    <li>
+        <p> After you submit this form, a page will be shown containing the field names and values you entered.</p>
+           <form action="Home/HomeTown" method="post">
+            <h3>Your Hometown</h3>
+            <label>State</label><br />
+            <input name="state" /><br />
+            <label>City</label><br />
+            <input name="city" /><br />
+            <input type="submit" />
+        </form>
+    </li>
+
+    <!--Bug #4 -->
+    <li>
+        <p> Another form like the one above, after submitting, a page will be shown containing the field names and values you entered.</p>
+        <form action="Home/Vacation" method="post">
+            <h3>Favorite Vacation</h3>
+            <label>Location</label><br />
+            <input name="location" /><br />
+            <label>Activity</label><br />
+            <input name="activity" /><br />
+            <label>What to wear</label><br />
+            <input name="clothing" /><br />
+            <input type="submit" />
+        </form>
+    </li>
+
+    <!-- Bug # 5 -->
+    <li>
+        <form action="Home/Reading" method="post">
+            <p> Another form like the one above, after submitting, a page will be shown containing the field names and values you entered.</p>
+            <h3>Favorite Reading</h3>
+            <label>Genre</label><br />
+            <input name="genre" /><br />
+            <label>Author</label><br />
+            <input name="author" /><br />
+            <label>Book </label><br />
+            <input name="book" /><br />
+            <input type="submit" />
+        </form>
+    </li>
+
+    <!-- Bug #6 -->
+    <li>This link should open a <a href="Demo/PageThree">new page</a> named PageThree in the Views/Demo folder</li>
+
+    <!-- Bug #7 -->
+    <li>This link should open a <a href="Demo/Quiz1">new page</a> named Quiz1 in the Views/Demo folder containing a form. When you submit the form it should check your answer, and show a new page with "right" or "wrong"</li>
+
+    <!-- Bug #8 -->
+    <li>This link should open a <a href="Demo/Quiz2">new page</a> named Quiz2 in the Views/Demo folder containing a form. When you submit the form it should check your answer, and show a new page with "right" or "wrong"</li>
+  </ol>

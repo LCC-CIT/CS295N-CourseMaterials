@@ -1,0 +1,10 @@
+﻿<h2>What is the sum of these numbers?</h2>
+@ViewData["Number1"] <br />
+@ViewData["Number2"] <br />
+<form action="Quiz1Answer">
+    <input hidden="hidden" name="number1" value="@ViewData["Number1"]" />
+    <input hidden="hidden" name="number2" value="@ViewData["Number2"]" />    
+    <label for="answer">Sum</label><br />
+    <input type="number" name="answer" /><br />
+    <input type="submit" />
+</form>

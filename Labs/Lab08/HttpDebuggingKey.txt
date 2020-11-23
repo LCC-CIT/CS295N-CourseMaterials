@@ -1,0 +1,15 @@
+HTTP Debugging Practice
+
+Problems to debug:
+
+Request issues:
+1. Link with invalid href
+2. Get request with misspelled key name
+3. Post request with invalid field name
+4. Post request, for uses id instead of name
+5 Post request with fields swapped (wrong values)
+
+Response issues:
+6. Missing view
+7. View not sending correct Get parameters
+8. View not responding to Post parameters
