@@ -21,8 +21,6 @@ C. I didn't do the exercise.
 
 ## Part B: Saving Data to a Database
 
-
-
 ### Add a Database to your project
 
 #### Group A
