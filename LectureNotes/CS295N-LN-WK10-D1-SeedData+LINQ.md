@@ -1,8 +1,6 @@
 **CS295N Web Development 1: ASP.NET** 
 
-# More EF, LINQ and Publishing to Azure 
-
-**Where we are** 
+# Seed Data and LINQ
 
 
 
