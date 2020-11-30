@@ -15,11 +15,13 @@ The instructions are the same for groups A, B, and C.
 
 Add repositories and unit tests to your web site.
 
-1. Create a repository interface for each of your DbSet classes.
-2. Create a "real" repository for each DbSet
-3. Replace the code in your controller methods that uses your DB context with code that uses the repositories. This will require adding dependency injection for your repositories.
+1. Create a repository interface for the DbSet class that is based on your "top level" model.
+
+   (For example, if I have a User class that is part of my Review class, then, for this lab assignment, I just need to create IReviewRepository.)
+2. Create a "real" repository based on the interface above.
+3. Replace the code in your controller methods that uses your DB context with code that uses the repository. This will require adding dependency injection for your repository.
 4. In your test project, write a fake repository
-5. Add unit tests to test your controller methods.
+5. Add unit tests to tests for at least two of your controller methods.
 
 
 
