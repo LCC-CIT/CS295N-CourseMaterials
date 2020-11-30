@@ -169,7 +169,7 @@ While students are encouraged to discuss labs and to use each other as resources
 
 ### Attendance
 
-Attendance is not graded but will be essential for successful completion of the class. Students who miss a class are responsible for obtaining the course content provided in class and mastering it. 
+Attendance is not graded but will be essential for successful completion of the class. Students who miss a class are responsible for obtaining the course content provided in class and mastering it. For students in an online class, watching the video recordings is equivalent to attending the class sessions.
 
 #### No-Show Drop
 
