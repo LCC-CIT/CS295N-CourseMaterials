@@ -1,8 +1,6 @@
 # Lab 8
 
-##  Debugging
-
-**Monitoring HTTP Traffic and Debugging**
+## Debugging
 
 - Use your browser’s Web Console to monitor network traffic between your development server and the browser. Here are instructions for using the [Firefox Web Console](https://developer.mozilla.org/en-US/docs/Tools/Web_Console).
 - Make a copy of a my web app [DebuggingPracticeGroupB](https://github.com/LCC-CIT/CS295N-CourseMaterials/tree/master/Labs/Lab05/DebuggingPractice-GroupB).
