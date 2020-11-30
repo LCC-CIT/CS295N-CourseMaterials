@@ -30,7 +30,7 @@
 
 - Is code that does computation or logical operations separated into its own class instead of being added to the code-behind?
 
-- Are all instance variables private?
+- Are all instance variables (aka fields) private?
 
 - Are local variables used instead of instance variables wherever possible?
 
