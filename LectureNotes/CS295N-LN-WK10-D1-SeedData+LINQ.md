@@ -27,52 +27,52 @@
 
 ## Seeding Your Database
 
-- The method to seed the database will be called from *Startup*. I put mine in a static class named *SeedData*, but it's not a special name (not part of a convention), nor is the method name I used. 
+One way to do this is to write a class with a static method that will add entities to the database. The method to seed the database will be called from *Startup*. I put mine in a static class named *SeedData*, but it's not a special name (not part of a convention).
 
-  ````c#
-  public class SeedData
-  {
-    public static void Seed(IApplicationBuilder app)
-    {
-      AppDbContext context = app.ApplicationServices.GetRequiredService<AppDbContext>();
-      context.Database.EnsureCreated();
-      if (!context.Reviews.Any())
+### Seed Data class and method
+
+````c#
+public class SeedData
+{
+   public static void Seed(BookReviewContext context)
+   {
+      if (!context.Reviews.Any())  // this is to prevent adding duplicate data
       {
-        Review review = new Review
-        {
-          BookTitle = "Prince of Foxes"
-          AuthorName = "Samuel Shellabarger"
-          ReviewText = "Great book, a must read!",
-          Reviewer = new User { Name = "Emma Watson" },
-          ReviewDate = DateTime.Parse("11/1/2020")
-        }
-        context.Reviews.Add(review);
-        
-        review = new Review
-        {
-          BookTitle = "Virgil Wander"
-          AuthorName = "Lief Enger"
-          ReviewText = "Wonderful book, written by a distant cousin of mine.",
-          Reviewer = new User { Name = "Brian Bird" },
-          ReviewDate = DateTime.Parse("11/30/2020")
-        }
-        context.Reviews.Add(review);
-        context.SaveChanges(); // save all the data
-      }
+          Review review = new Review
+          {
+              BookTitle = "Prince of Foxes",
+              AuthorName = "Samuel Shellabarger",
+              ReviewText = "Great book, a must read!",
+              Reviewer = new User { Name = "Emma Watson" },
+              ReviewDate = DateTime.Parse("11/1/2020")
+          };
+          context.Reviews.Add(review);  // queues up a review to be added to the DB
+
+          review = new Review
+          {
+              BookTitle = "Virgil Wander",
+              AuthorName = "Lief Enger",
+              ReviewText = "Wonderful book, written by a distant cousin of mine.",
+              Reviewer = new User { Name = "Brian Bird" },
+              ReviewDate = DateTime.Parse("11/30/2020")
+          };
+          context.Reviews.Add(review);  
+
+          context.SaveChanges(); // stores all the reviews in the DB
+       }
     }
   }
-  ````
+}
+````
 
-  
+### Call the Seed method from the Startup class
 
+- Add your DbContext class as an additional parameter on the Configure method:
+`public void Configure(IApplicationBuilder app, IWebHostEnvironment env, BookReviewContext context)`
 - Add a call to the *Seed* method at the end of the *Configure* method in the *Startup* class.
+`SeedData.Seed(context);`
 
-  ````C#
-  SeedData.Seed(app);
-  ````
-
-- The Seed method gets called when you run the CLI command to update the database, <u>or</u> when you run your web app.
-
+The Seed method will get called when you update the database, <u>or</u> when you run your web app.
 
 
 
