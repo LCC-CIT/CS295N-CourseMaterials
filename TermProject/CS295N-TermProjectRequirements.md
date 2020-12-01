@@ -7,7 +7,7 @@
 2.  Be data-driven. This means that the content of one or more of your web pages contains content derived from information stored in a database. In addition:
 
     -   Users should be able to enter data that will be stored in the database.
-    -   Input should be validated.
+    -   ~~Input should be validated.~~
     -   Users should be able to do some kind of searching of the database. An example would be a to-do list app where a user could search for a particular to-do item.
 3.  Be moderately complex&mdash;not too simple, but not too hard to build. Here are some criteria:
 
@@ -38,3 +38,5 @@ Submit all of the above in one document. Please use a pdf or docx document and d
 I.  The term project web app should not be the same as one of your weekly lab assignments and it shouldn't be the same as any of the example web apps used in the course.
 
 II. Good coding practices, such as using unit tests, and separation of UI code and business logic are expected in the term project.
+
+III. Don't use features of ASP.NET Core or technologies that weren't covered in the class. If you try to use things like scaffolding, Identity, or other things we haven't covered, your project may become too difficult to complete.
