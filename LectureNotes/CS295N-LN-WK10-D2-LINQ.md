@@ -108,7 +108,7 @@
 2. Write a query to search for "Earth".
 
 - Display the size and distance from the sun
-- Hint: Use `.SingleOrDefault()` at the end of the query so that your query returns a Planet object.
+- Hint: Use `.SingleOrDefault()` at the end of the query so that your query returns a single `Planet` object or `null`.
 
 
 

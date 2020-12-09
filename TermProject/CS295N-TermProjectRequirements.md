@@ -14,7 +14,7 @@
     -   The database should have 1 or 2 tables
 
     -   The number of properties in the domain model should be between 7 and 12.
-        (The total number of properties from all domain model classes.)
+        (The total number of properties from all domain model classes not counting keys.)
 
     -   There should be between 4 and 7 web pages.
 
