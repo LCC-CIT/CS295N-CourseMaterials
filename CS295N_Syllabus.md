@@ -85,7 +85,7 @@ To be able to design and code a web site that uses the ASP.NET Core MVC framewor
 
 *Murach’s ASP.NET Core MVC*, 1st Edition, by Mary Delamater and Joel Murach, Murach Books, 2020. ISBN 978-1-943872-49-7. You can purchase the textbook from the [Titan Store](https://www.bkstr.com/laneccstore/home) or from the publisher, [Murach Books](https://www.murach.com/shop-books/web-development-books/murach-s-asp-net-core-mvc-detail). 
 
-<u>Free chapters and code</u>
+[Free chapters and code](https://www.murach.com/shop-books/web-development-books/murach-s-asp-net-core-mvc-detail)
 
 The first two chapters of the book and the source code for the sample programs and exercises in the text are also available for download on the [publisher's web site](https://www.murach.com/shop-books/web-development-books/murach-s-asp-net-core-mvc-detail), under the tab "Free Downloads".
 
