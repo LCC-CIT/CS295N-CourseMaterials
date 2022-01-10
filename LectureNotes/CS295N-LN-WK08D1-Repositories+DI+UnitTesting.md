@@ -33,35 +33,29 @@ One way of managing data in our web app is to use the [Repository Pattern](https
     - For implementing common data operations.
     - To facilitate refactoring&mdash;for example, changing the ORM.
 - Implementation
--   Real and Fake repositories both inherit from an interface
-  -   This supports [dependency injection](http://www.jamesshore.com/Blog/Dependency-Injection-Demystified.html) so that the fake repository can be easily injected when testing.
+  - Real and Fake repositories both inherit from an interface
+    - This supports [dependency injection](http://www.jamesshore.com/Blog/Dependency-Injection-Demystified.html) so that the fake repository can be easily injected when testing.
 
 - Fake repositories:
   - Are Just used for unit testing.
   - Can contain hard-coded test data.
   - Different test data can be supplied for different tests.
 
-### Using IQueryable
-
-The IQueryable<T> interface is useful because it allows a collection of objects of this type to be queried efficiently. Using the IQueryable<T> interface allows you to ask the database for just the objects that you require using standard LINQ statements and without needing to know what kind of database stores the data or how it processes the query. Without the IQueryable<T> interface, you would have to retrieve all of the objects from a data set and then discard the ones you don’t want. ***This is why the IQueryable<T>   interface is typically used for collection classes instead of IEnumerable<T> .***
-
-However, care must be taken with the IQueryable<T> interface because each time the collection of objects is enumerated, the query will be evaluated again, which means that a new query will be sent to the database. This can undermine the efficiency gains of using IQueryable<T>. In such situations, you can convert IQueryable<T> to a concrete form using the ToList() or ToArray() method.
-
-\- paraphrased from Freeman, 2017, page 201
-
 ### Example
 
-This example code is from [BookInof-WebApp-Core3](https://github.com/ProfBird/BookInfo-WebApp-Core3)
+This example code is from [BookInof-WebApp-Core3](https://github.com/ProfBird/BookInfo-WebApp-Core3) on GitHub.
+
+
 
 #### The interface
 
 ```C#
 public interface IBookRepository
 {
-    IQueryable<Book> Books { get; }
-    void AddBook(Book book);
-    void AddReview(Book book, Review review);
-    Book GetBookByTitle(string title);
+    IQueryable<Book> Books { get; }  // property that can contain a collection of books
+    void AddBook(Book book);											// method to add a book to the DB
+    void AddReview(Book book, Review review);			// method to add a review to the DB
+    Book GetBookByTitle(string title);			// method to retrieve a book from the DB
 }
 ```
 
@@ -144,6 +138,20 @@ public IActionResult Index()
 }
 ```
 
+
+
+### Using IQueryable
+
+You don't need to use IQueryable to implement repositories, but it's a good idea to use it whenever you are doing operations that pull data from a database.
+
+The IQueryable<T> interface is useful because it allows a collection of objects of this type to be queried efficiently. Using the IQueryable<T> interface allows you to ask the database for just the objects that you require using standard LINQ statements and without needing to know what kind of database stores the data or how it processes the query. Without the IQueryable<T> interface, you would have to retrieve all of the objects from a data set and then discard the ones you don’t want. ***This is why the IQueryable<T>   interface is typically used for collection classes instead of IEnumerable<T> .***
+
+However, care must be taken with the IQueryable<T> interface because each time the collection of objects is enumerated, the query will be evaluated again, which means that a new query will be sent to the database. This can undermine the efficiency gains of using IQueryable<T>. In such situations, you can convert IQueryable<T> to a concrete form using the ToList() or ToArray() method.
+
+\- paraphrased from Freeman, 2017, page 201
+
+
+
 ## Unit Testing with a Fake Repository
 
 ### Example, in the Test Project
@@ -158,7 +166,7 @@ public class FakeBookRepository : IBookRepository
 
     public void AddBook(Book book)
     {
-        // This simulates EF adding an ID based on the automatically created primary key.
+        // This simulates EF adding an automatically generated ID
         book.BookID = books.Count;  
         books.Add(book);
     }
@@ -298,7 +306,7 @@ public class BookTest
 
 ------
 
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) ASP.NET Core MVC Lecture Notes by [Brian Bird](https://birdsbits.blog) is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev) is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
 
 ------
 
