@@ -45,8 +45,6 @@ One way of managing data in our web app is to use the [Repository Pattern](https
 
 This example code is from [BookInof-WebApp-Core3](https://github.com/ProfBird/BookInfo-WebApp-Core3) on GitHub.
 
-
-
 #### The interface
 
 ```C#
@@ -66,35 +64,38 @@ public  class BookRepository : IBookRepository
 {
     private AppDbContext context;
     // Get all books + associated data by using the EF Include method.
-    public IQueryable<Book> Books { get { return context.Books.Include(book => book.Authors)
-            .Include(book => book.Reviews).ThenInclude(review => 
-                 review.Reviewer).ToList(); } }
-
-        public BookRepository(AppDbContext appDbContext)
-        {
-            context = appDbContext;
-        }
-
-        public  void AddBook(Book book)
-        {
-            context.Books.Add(book);
-            context.SaveChanges();
-        }
-
-        public void AddReview(Book book, Review review)
-        {
-            book.Reviews.Add(review);
-            context.Books.Update(book);
-            context.SaveChanges();
-        }
-
-        public  Book GetBookByTitle(string title)
-        {
-            Book book;
-            book = context.Books.First(b => b.Title == title);
-            return book;
-        }
+    public IQueryable<Book> Books 
+    { get 
+       { return context.Books.Include(book => book.Authors).Include(book =>
+            book.Reviews).ThenInclude(review => review.Reviewer); 
+       } 
     }
+
+    public BookRepository(AppDbContext appDbContext)
+    {
+      context = appDbContext;
+    }
+
+    public  void AddBook(Book book)
+    {
+      context.Books.Add(book);
+      context.SaveChanges();
+    }
+
+    public void AddReview(Book book, Review review)
+    {
+      book.Reviews.Add(review);
+      context.Books.Update(book);
+      context.SaveChanges();
+    }
+
+    public  Book GetBookByTitle(string title)
+    {
+      Book book;
+      book = context.Books.First(b => b.Title == title);
+      return book;
+    }
+}
 ```
 
 
@@ -133,7 +134,7 @@ public BookController(IBookRepository r)
 public IActionResult Index()
 {
     var books = repo.Books.ToList();
-    books.Sort((b1, b2) => string.Compare(b1.Title, b2.Title, StringComparison.Ordinal));
+    books.Sort((b1, b2) => string.Compare(b1.Title,b2.Title,StringComparison.Ordinal));
     return View(books);
 }
 ```
