@@ -51,19 +51,20 @@ Microsoft offers a free Azure subscription for students and gives you $100 in cr
 
 ## Managing Your Free Account
 
-If you aren't careful, you may accidentally use services for which you are charged. The charge will be deducted from your $100 credit and if you use up all of your credit, your account will be terminated. So, it's important to be sure you are using free services. To see which services are free, refer to the Azure for Students FAQ in the [references](#References) section.
+If you aren't careful, you may accidentally use services for which you are charged. The charge will be deducted from your $100 credit. If you use up all of your credit, <u>your account will be terminated</u>. So, it's important to be sure you are only using free services. To see which services are free, refer to the Azure for Students FAQ in the [references](#References) section.
 
 ### Free services and pricing plans
 
 All of the services we will use in this class are free and will not reduce your $100 credit. The services and pricing plans you will use are:
 
 - Azure App Service on the "F1:Free" pricing plan
+  - You may have up to 10 free app services.
 
 - SQL Server&mdash;no pricing plan required
-
 - SQL Database on the "Standard S0: 10 DTUs" pricing plan
+  - You may only have <u>one free database</u>.
+  - Note that currently (Fall 2020), a billing rate is shown when you select this pricing plan, but that billing rate does not apply to Azure for Students accounts. the Standard plan is actually free.
 
-  Note that currently (Fall 2020), a billing rate is shown when you select this pricing plan, but that billing rate does not apply to Azure for Students accounts. the Standard plan is actually free.
 
 ### Monitoring your charges
 
@@ -99,7 +100,7 @@ If you are having problems with your web app on Azure there are a couple things 
 
 ------
 
-[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), 2020, are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
+[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), 2020, revised 2022, are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
 
 ------
 
