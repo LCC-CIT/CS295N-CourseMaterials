@@ -30,6 +30,7 @@ Messages will contain:
 - Name of sender
 - Name of recipient
 - Subject
+- Message priority (an integer)
 - Body of the message
 - Date sent
 
@@ -47,6 +48,7 @@ Stories will contain:
 
 - Title of the story
 - Topic
+- Year the story took place (an integer)
 - Text of the story
 - Name of the submitter
 - Date submitted
@@ -62,7 +64,8 @@ Modify the Home / Forum so users can post comments.
 Forum posts will contain:
 
 - Page being commented on
-- Rating of the page
+- Subject
+- Rating of the page (an integer)
 - Text of the post
 - Name of person posting
 - Date posted
