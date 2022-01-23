@@ -155,6 +155,10 @@ However, care must be taken with the IQueryable<T> interface because each time t
 
 ## Unit Testing with a Fake Repository
 
+### What to test
+
+Before writing any unit tests, you need to know what methods to test. We want to test any computation or processing done by our app. We primarily test controller methods and sometimes helper methods on models (if there are any). There may also be some additional classes we've added that have functionality that should be tested (like a quiz or game).
+
 ### Example, in the Test Project
 
 #### A fake repository class
@@ -190,25 +194,11 @@ public class FakeBookRepository : IBookRepository
 
 #### Unit tests using the fake repository
 
+Instructor todo: Add better examples of testing functionality!
+
 ```c#
 public class BookTest
 {
-    // Verify that the AddBook HttpPost method puts a new book in the book repository
-    [Fact]
-    public void AddBookTest()
-    {
-        // Arrange
-        var repo = new FakeBookRepository();
-        var bookController = new BookController(repo);
-
-        // Act
-        bookController.AddBook(new Book() {Title = "A Tale of Two Cities",
-                                           PubDate = DateTime.Parse("1/1/1859") });
-        // Assert
-        Assert.Equal("A Tale of Two Cities",
-                     repo.Books[repo.Books.Count - 1].Title);
-    }
-
     // Verify that the Index HttpGet method returns a sorted list of books.
     [Fact]
     public void IndexTest()
