@@ -9,7 +9,7 @@
 
 Do exercise 14-1 in the Textbook, "Add dependency Injection and some unit tests"
 
-## Part B: Repositories and Unit tests
+## Part B: Repositories and Unit Tests
 
 The instructions are the same for groups A, B, and C.
 
@@ -19,9 +19,9 @@ Add repositories and unit tests to your web site.
 
    (For example, if I have a User class that is part of my Review class, then, for this lab assignment, I just need to create IReviewRepository.)
 2. Create a "real" repository based on the interface above.
-3. Replace the code in your controller methods that uses your DB context with code that uses the repository. This will require adding dependency injection for your repository.
-4. In your test project, write a fake repository
-5. Add unit tests to tests for at least two of your controller methods.
+3. Replace the code in your controller methods that uses your DB context with code that uses the repository. This will require adding dependency injection for your repository to the Startup class.
+4. In your test project, write a fake repository. (Alternatively, this could go in the web app project.)
+5. Add unit tests for at least three of your controller methods.
 
 
 
