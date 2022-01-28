@@ -9,7 +9,7 @@
 
 Do exercise 14-1 in the Textbook, "Add dependency Injection and some unit tests"
 
-## Part B: Repositories and Unit tests
+## Part B: Repositories and Unit Tests
 
 The instructions are the same for groups A, B, and C.
 
