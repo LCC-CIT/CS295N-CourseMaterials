@@ -27,7 +27,7 @@ One way of managing data in our web app is to use the [Repository Pattern](https
 
 - Reasons for using a repository:
 
-  - It facilitates unit testing since the repository can be replaced by a "fake" for testing.
+  - The main reason is that it facilitates unit testing since the repository can be replaced by a "fake" for testing.
   - It can facilitate a simple source of "hard coded" data for integration testing during early development.
   - It provides an additional layer of abstraction:
     - For implementing common data operations.
@@ -278,6 +278,14 @@ public class BookTest
     }
 }
 ```
+
+
+
+## Unit of Work
+
+Why some people use the Unit of Work pattern:
+
+> The goal of the unit of work pattern is to simplify DML (Data Manipulation Language) in your code and only commit changes to the database/objects when it's truly time to commit. &mdash;https://github.com/Coding-With-The-Force/Salesforce-Separation-Of-Concerns-And-The-Apex-Common-Library/wiki/05)-The-Unit-of-Work-Pattern
 
 
 

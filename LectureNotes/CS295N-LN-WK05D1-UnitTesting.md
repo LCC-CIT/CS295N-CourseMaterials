@@ -64,8 +64,17 @@ We'll cover more details of unit testing later, but here are some basic concepts
 
   Note: Assert.Equal method uses the Equal method of .NET objects for comparison. Primitive .NET types and many classes in the .NET library have fully implemented this method. You only need to write a Compare class (as shown in the textbook) if you are using a class that doesn't already have a comparator implemented for the Equals method.
 
-  
-  
+
+
+## Test Driven Development
+
+- Test first. Writing unit tests before writing the methods they test gives you a clear idea of what the method should do and speeds up development by letting you test easily and often.
+- Test after bug fixes.
+- Test after adding new features.
+- Regression testing.
+
+
+
 ## Wrap-up
 
 - Look at the lab assignment
