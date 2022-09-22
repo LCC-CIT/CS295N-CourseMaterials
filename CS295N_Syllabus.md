@@ -1,16 +1,18 @@
-# Syllabus for Web Development 1: ASP.NET
+<h1>Syllabus for Web Development 1: ASP.NET</h1>
 
-##   CS295N, Fall 2020
+<h2>CS295N, Fall 2022</h2>
 
-| Class      | CRN 21833 (hybrid) & 23062 (online)                  |      | Instructor   | Brian Bird                                         |
-| ---------- | ---------------------------------------------------- | ---- | ------------ | -------------------------------------------------- |
-| Credits    | 4                                                    |      | Email        | birdb@lanecc.edu                                   |
-| Day & Time | M, W, 10:00&ndash;11:50                              |      | Office Hours | M&mdash;Th, 12:00&ndash;12:50                      |
-| Classroom  | [Zoom meeting](https://lanecc.zoom.us/j/98237817504) |      | Office       | [Zoom meeting](https://lanecc.zoom.us/j/965222036) |
+|            | Class Info                                                   |      |              | Instructor Info                                              |
+| ---------- | ------------------------------------------------------------ | ---- | ------------ | ------------------------------------------------------------ |
+| Class      | CRN 21833 (hybrid) & 23062 (online)                          |      | Instructor   | Brian Bird                                                   |
+| Credits    | 4                                                            |      | Email        | birdb@lanecc.edu                                             |
+| Day & Time | M, W, 10:00&ndash;11:50                                      |      | Office Hours | M&mdash;Th, 12:00&ndash;12:50<br />in the CIT Computer Lab   |
+| Classroom  | Building 19, Room 126<br />[Zoom meeting](https://lanecc.zoom.us/j/96615057074) |      | Office       | Building 19, Room 152<br />[Zoom meeting](https://lanecc.zoom.us/j/94159665543) |
 
-Due to COVID-19, instruction for both sections of this class will be provided remotely through live Zoom class sessions and video recordings.
 
+<h2>Table of Contents</h2>
 
+[TOC]
 
 ## Course Description
 
@@ -93,14 +95,16 @@ The first two chapters of the book and the source code for the sample programs a
 
 The class examples and the textbook are based on using the Windows operating system for development, but you may alternatively use Mac OS or Linux. 
 
-We will be using [Visual Studio 2019, Community Edition](https://visualstudio.microsoft.com/vs/community/), which is available as a free download. You may alternatively use the Visual Studio 2019, Enterprise Edition which is available at no cost to students (see below). 
+We will be using [Visual Studio 2022, Community Edition](https://visualstudio.microsoft.com/vs/community/), which is available as a free download. You may alternatively use the Visual Studio 2022, Enterprise Edition which is available at no cost to students (see below). 
 
-The version of the .NET framework we will be using is [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1). You will need to download the latest version of the SDK for your platform (Windows, Mac, or Linux).
+The version of the .NET framework we will be using is [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1). You will need to download the latest release of this version of the .NET framework SDK for your platform (Windows, Mac, or Linux).
 
 ####  Free and Discounted Software for Students
 
 - [Azure Dev Tools for Teaching](https://signup.azure.com/studentverification?offerType=3) (previously known as Microsoft Imagine Premium) is a subscription-based offering, paid for by the LCC CIT department, providing access to professional development and design tools, software, and services from Microsoft. 
-- [Microsoft Office 365](https://help.lanecc.edu/index.php?/Knowledgebase/Article/View/1143) LCC students and staff can get a free subscription to Office 365, which includes Microsoft Word, Excel, PowerPoint, Access, and more.
+
+  **Note:** You need to have a [Microsoft account](https://account.microsoft.com/?refd=login.live.com) to access this page and sign up for this free program. Microsoft has two kinds of accounts: *personal* and *work/school*. For this, sign-up use a <u>personal</u> account.
+- [Microsoft Office 365](https://lanecc.helpjuice.com/student-faqs/microsoft-office-365-for-lcc-students-staff) LCC students and staff can get a free subscription to Office 365, which includes Microsoft Word, Excel, PowerPoint, Access, and more.
 - [On The Hub](https://lanecc.onthehub.com/WebStore/ProductsByMajorVersionList.aspx?cmi_mnuMain=f189368a-f0a6-e811-8109-000d3af41938) has partnered with Microsoft, Adobe, IBM, Symantec, VMware and other software publishers to offer discounted and free software for students and faculty.
 
 None of the software provided in these offers is required for this class, but you may want to take advantage of the free software.
