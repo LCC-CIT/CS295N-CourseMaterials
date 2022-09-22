@@ -8,6 +8,14 @@ This is so that students can use many-to-many relationships for things like tags
 
 [Migrate for ASP.NET Core 5.0 to 60](https://docs.microsoft.com/en-us/aspnet/core/migration/50-to-60?view=aspnetcore-6.0&tabs=visual-studio)
 
+
+
+## Site Hosting
+
+[The New Developer's Guide to the Cloud](https://mybuild.microsoft.com/en-US/sessions/04b837c9-3cab-4d80-9908-d72c145512b0?source=sessions)&mdash;Microsoft Azure intro
+
+
+
 ## Ideas for web dev lab projects
 
 - Ride share service (like uber)
