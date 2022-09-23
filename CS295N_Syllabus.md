@@ -56,17 +56,17 @@ To be able to design and code a web site that uses the ASP.NET Core MVC framewor
 
 #### Themes and Issues
 
-- Web Standards
+- Web standards
 
-- Design Patterns
+- Design patterns
 
 - Test Driven Development
-
-- Best Practices for Web Development
 
 - User Experience (UX)
 
 - Object Oriented Design
+
+- Ethics and privacy
 
   
 
@@ -201,20 +201,22 @@ Please be aware that any accessible tables and chairs in this room should remain
 
 ## Academic Calendar for Fall Term 2022
 
-| Event                                  | Date          |
-| -------------------------------------- | ------------- |
-| Fall term classes begin                | 9/27          |
-| Last day to receive refund             | 10/3          |
-| Veteran’s Day – college closed         | 11/11         |
-| Last day for schedule changes          | 11/18         |
-| Thanksgiving Vacation – college closed | 11/24 – 11/27 |
-| Finals week                            | 12/5 – 12/9   |
+| Event                                              | Date          |
+| -------------------------------------------------- | ------------- |
+| Fall term classes begin                            | 9/27          |
+| Last day to receive refund                         | 10/3          |
+| Veteran’s Day – college closed on Friday           | 11/11         |
+| Last day for schedule changes                      | 11/18         |
+| Thanksgiving Vacation – college closed on Thursday | 11/24 – 11/27 |
+| Finals week                                        | 12/5 – 12/9   |
 
 View [academic calendars](https://www.lanecc.edu/calendars/academic-calendar) on the LCC web site.
 
 
 
 ## Tentative Course Schedule
+
+(May be subject to change)
 
 | Week | Topics                                                       | Reading                            | Lab Assignment                                               |
 | ---- | ------------------------------------------------------------ | ---------------------------------- | ------------------------------------------------------------ |
@@ -231,3 +233,5 @@ View [academic calendars](https://www.lanecc.edu/calendars/academic-calendar) on
 | 11   | Final quiz, Project presentations                            |                                    |                                                              |
 
 
+
+[Go back to the top](#course-description)
