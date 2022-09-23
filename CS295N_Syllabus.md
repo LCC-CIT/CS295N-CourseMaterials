@@ -2,12 +2,12 @@
 
 <h2>CS295N, Fall 2022</h2>
 
-|            | Class Info                                                   |      |              | Instructor Info                                              |
-| ---------- | ------------------------------------------------------------ | ---- | ------------ | ------------------------------------------------------------ |
-| Class      | CRN 21833 (hybrid) & 23062 (online)                          |      | Instructor   | Brian Bird                                                   |
-| Credits    | 4                                                            |      | Email        | birdb@lanecc.edu                                             |
-| Day & Time | M, W, 10:00&ndash;11:50                                      |      | Office Hours | M&mdash;Th, 12:00&ndash;12:50<br />in the CIT Computer Lab   |
-| Classroom  | Building 19, Room 126<br />[Zoom meeting](https://lanecc.zoom.us/j/96615057074) |      | Office       | Building 19, Room 152<br />[Zoom meeting](https://lanecc.zoom.us/j/94159665543) |
+|           | Class Info                                                   |      |              | Instructor Info                                              |
+| --------- | ------------------------------------------------------------ | ---- | ------------ | ------------------------------------------------------------ |
+| Class     | HyFlex, CRN 20646                                            |      | Instructor   | Brian Bird                                                   |
+| Credits   | 4                                                            |      | Email        | birdb@lanecc.edu                                             |
+| Day, Time | M, W, 10:00&ndash;11:50                                      |      | Office       | Building 19, Room 152                                        |
+| Classroom | Building 19, Room 126<br />[Zoom meeting](https://lanecc.zoom.us/j/96615057074) |      | Office Hours | M&mdash;Th, 12:00&ndash;12:50<br />CIT Computer Lab, rm 135<br />[Zoom meeting](https://lanecc.zoom.us/j/94159665543) |
 
 
 <h2>Table of Contents</h2>
@@ -73,17 +73,26 @@ To be able to design and code a web site that uses the ASP.NET Core MVC framewor
 #### Skills
 
 - Develop ASP.NET Core web apps using server-side C#, HTML, CSS and JavaScript.
+
 - Design data models that translate into SQL Server database tables for use by your web app.
+
 - Write database queries using LINQ.
+
 - Write Unit Tests for Test Driven Development.
+
 - Debug web apps.
+
 - Deploy web apps to a cloud service.
+
 - Effectively use software development tools like Visual Studio.
+
 - Use Git to manager your source code.
 
- 
+  
 
-#### Required Textbook   
+## Course Resources
+
+### Required Textbook   
 
 *Murach’s ASP.NET Core MVC*, 1st Edition, by Mary Delamater and Joel Murach, Murach Books, 2020. ISBN 978-1-943872-49-7. You can purchase the textbook from the [Titan Store](https://www.bkstr.com/laneccstore/home) or from the publisher, [Murach Books](https://www.murach.com/shop-books/web-development-books/murach-s-asp-net-core-mvc-detail). 
 
@@ -91,7 +100,7 @@ To be able to design and code a web site that uses the ASP.NET Core MVC framewor
 
 The first two chapters of the book and the source code for the sample programs and exercises in the text are also available for download on the [publisher's web site](https://www.murach.com/shop-books/web-development-books/murach-s-asp-net-core-mvc-detail), under the tab "Free Downloads".
 
-#### Required Software
+### Required Software
 
 The class examples and the textbook are based on using the Windows operating system for development, but you may alternatively use Mac OS or Linux. 
 
@@ -99,7 +108,7 @@ We will be using [Visual Studio 2022, Community Edition](https://visualstudio.mi
 
 The version of the .NET framework we will be using is [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1). You will need to download the latest release of this version of the .NET framework SDK for your platform (Windows, Mac, or Linux).
 
-####  Free and Discounted Software for Students
+###  Free and Discounted Software for Students
 
 - [Azure Dev Tools for Teaching](https://signup.azure.com/studentverification?offerType=3) (previously known as Microsoft Imagine Premium) is a subscription-based offering, paid for by the LCC CIT department, providing access to professional development and design tools, software, and services from Microsoft. 
 
@@ -109,19 +118,23 @@ The version of the .NET framework we will be using is [.NET Core 3.1](https://do
 
 None of the software provided in these offers is required for this class, but you may want to take advantage of the free software.
 
-#### CIT Computer Lab
+### CIT Computer Lab and in-Person Tutoring
+
+The CIT computerlab (Building 19, room 135) is equipped with computers and software for students taking classes in the CIT department. There are tutors available in the lab to help you with your lab work. There is a schedule posted on the large white board inside the lab which lists the tutors and the times they will be available.
+
+### Online Tutoring
 
 The in-person computer lab and tutoring center is temporarily closed due to COVID-19, but tutoring is still available online. You can drop into the [Lane Support Hub Zoom Room](https://lanecc.zoom.us/j/98549544816) and request a CIT tutor, or make an appointment with a CIT tutor via the scheduling page at [lanecc.mywconline.com](https://lanecc.mywconline.com/). More information is available on the [LCC Tutoring Services](https://www.lanecc.edu/tutor) web page.
 
-~~The CIT Main lab (Building 19, room 135) is equipped with computers which are available exclusively for students in the CIT department. There are tutors available in the lab to help you with your lab work. There is a schedule is posted on the large white board inside the lab which lists the tutors and the times they will be available.~~
+### Web Resources
 
-#### Web Resources
+- [Moodle](http://classes.lanecc.edu) is the Learning Management System for this course.
 
--  [Moodle](http://classes.lanecc.edu) is the Learning Management System for this course.
 - You will be deploying your web apps to the Microsoft Azure cloud. You can register for a free Azure subscription through [Azure for Students](https://azure.microsoft.com/en-us/free/students/).
+
   
 
-### Assessment and Grading
+## Assessment and Grading
 
 Specific grading criteria will be applied to each of the labs, quizzes, and exams you will be working on in this class. Part of the lab involves a code review. Attendance is not graded.
 
@@ -144,9 +157,7 @@ Letter grades for the course will be determined by the following percentages:
 | D    | 60 - 61  | 62 - 67 | 68 - 69 |
 | F    | Below 60 |         |         |
 
-
-
-#### Late Work
+### Late Work
 
 - The grade for assignments submitted after the due date will be reduced by 10%.
   - Late labs 1 – 4 will only be accepted by the end of week 5
@@ -156,9 +167,8 @@ Letter grades for the course will be determined by the following percentages:
 
 - Exceptions will be made for illness or emergency situations
 
-  
 
-#### Weekly Learning Activities
+### Weekly Learning Activities
 
 |                      | Monday                                          | Tuesday | Wednesday | Thursday                  | Friday |
 | -------------------- | ----------------------------------------------- | ------- | --------- | ------------------------- | ------ |
@@ -179,30 +189,32 @@ Attendance is not graded but will be essential for successful completion of the 
 
 LCC has a [no-show drop](https://www.lanecc.edu/esfs/noshow-drops) policy. You must come to class at least once during the first week or be automatically dropped.
 
-### Accessibility and Accommodations
+
+
+## Accessibility and Accommodations
 
 If you need support or assistance because of a disability, you may be eligible for academic accommodations through Disability Services. For more information, contact Disability Services at 463-5150 (voice) or 463-3079 (TTY), or stop by building 1, room 218.
 Please be aware that any accessible tables and chairs in this room should remain available for authorized students who find that standard classroom seating is not usable.
 (may be subject to change)
 
-### Academic Calendar for Fall Term 2020
 
 
+## Academic Calendar for Fall Term 2022
 
-| Week | Event                                  | Date                                           |
-| ---- | -------------------------------------- | ---------------------------------------------- |
-| 1    | Term begins                            | Wednesday, 9/30/20                             |
-|      | Last day to receive refund             | Sunday, 10/4/20                                |
-| 7    | Veteran’s Day – college closed         | Wednesday, 11/11/20                            |
-| 8    | Last day for schedule changes          | Friday, 11/20/20                               |
-| 9    | Thanksgiving Vacation – college closed | Thursday&mdash;Sunday, 11/26/20&ndash;11/29/20 |
-| 11   | Final Exam                             | Monday, 12/7/20                                |
+| Event                                  | Date          |
+| -------------------------------------- | ------------- |
+| Fall term classes begin                | 9/27          |
+| Last day to receive refund             | 10/3          |
+| Veteran’s Day – college closed         | 11/11         |
+| Last day for schedule changes          | 11/18         |
+| Thanksgiving Vacation – college closed | 11/24 – 11/27 |
+| Finals week                            | 12/5 – 12/9   |
 
 View [academic calendars](https://www.lanecc.edu/calendars/academic-calendar) on the LCC web site.
 
 
 
-### Tentative Course Schedule
+## Tentative Course Schedule
 
 | Week | Topics                                                       | Reading                            | Lab Assignment                                               |
 | ---- | ------------------------------------------------------------ | ---------------------------------- | ------------------------------------------------------------ |
@@ -212,12 +224,10 @@ View [academic calendars](https://www.lanecc.edu/calendars/academic-calendar) on
 | 4    | Bootstrap                                                    | Murach Ch. 3                       | - Murach Ex 3-1, 3-2<br />- Add Bootstrap to your site       |
 | 5    | Midterm Quiz<br />Unit testing with xUnit                    | Online tutorials                   | Add unit tests to your site                                  |
 | 6    | Entity Framework<br />Database Migrations<br />Deploying a DB to Azure | Murach Ch. 4<br />Online tutorials | - Murach Ex 4-1<br />- Add a DB to your site                 |
-| 7    | Debugging<br />*Wednesday is Veteran's day*                  | Murach Ch. 5                       | - Murach Ex 5-1<br />- Debugging practice                    |
+| 7    | Debugging<br />                                              | Murach Ch. 5                       | - Murach Ex 5-1<br />- Debugging practice                    |
 | 8    | Controllers                                                  | Murach Ch. 6                       | - Murach Ex 6-1<br />- Add controller methods to your site   |
-| 9    | Razor Views<br />*Thursday is Thanksgiving*                  | Murach Ch. 7a                      | - Add tag helpers to your site                               |
+| 9    | Razor Views<br />                                            | Murach Ch. 7a                      | - Add tag helpers to your site                               |
 | 10   | Razor Views (continued)                                      | Murach Ch. 7b                      | - Murach Ex 7-1<br />- Add views to your site                |
 | 11   | Final quiz, Project presentations                            |                                    |                                                              |
 
 
-
-### 
