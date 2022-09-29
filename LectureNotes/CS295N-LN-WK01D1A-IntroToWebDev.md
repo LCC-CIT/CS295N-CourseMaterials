@@ -26,7 +26,7 @@
 
 ### Job Prospects for Developers
 
-- U.S. News [Best Job Rankings](https://money.usnews.com/careers/best-jobs/rankings) for 2022
+U.S. News [Best Job Rankings](https://money.usnews.com/careers/best-jobs/rankings) for 2022
 
 - [Software Developer](https://money.usnews.com/careers/best-jobs/software-developer)
 
