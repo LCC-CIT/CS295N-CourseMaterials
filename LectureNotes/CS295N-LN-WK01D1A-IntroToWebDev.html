@@ -2,14 +2,21 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>CS295N-LN-WK01D1A-IntroToWebDev</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+<meta name="title" content="${title}">
+<meta name="description" content="${description}">
+<meta name="keywords" content="${keywords}">
+<meta name="material" content="${material}">
+<meta name="author" content="${author}">
+<meta name="generator" content="${generator}">
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit; background-repeat: inherit; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
 #write.first-line-indent p { text-indent: 2em; }
 #write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
 #write.first-line-indent li { margin-left: 2em; }
@@ -17,16 +24,14 @@ a:active, a:hover { outline: 0px; }
 body.typora-export { padding-left: 30px; padding-right: 30px; }
 .typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
 .typora-export .task-list-item input { pointer-events: none; }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) { 
   body.typora-export { padding-left: 0px; padding-right: 0px; }
   #write { padding-left: 20px; padding-right: 20px; }
-  .CodeMirror-sizer { margin-left: 0px !important; }
-  .CodeMirror-gutters { display: none !important; }
 }
 #write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
 img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
-button, input, select, textarea { color: inherit; font: inherit; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
 input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
 *, ::after, ::before { box-sizing: border-box; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
@@ -44,17 +49,17 @@ h6 { font-size: 1rem; }
 .hidden { display: none; }
 .md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
 a { cursor: pointer; }
-sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
 sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
 #write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
 figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
 figure > table { margin: 0px; }
-tr { break-inside: avoid; break-after: auto; }
+thead, tr { break-inside: avoid; break-after: auto; }
 thead { display: table-header-group; }
 table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
 table.md-table td { min-width: 32px; }
-.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
-.CodeMirror-linenumber { user-select: none; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
 .CodeMirror { text-align: left; }
 .CodeMirror-placeholder { opacity: 0.3; }
 .CodeMirror pre { padding: 0px 4px; }
@@ -64,48 +69,51 @@ div.hr:focus { cursor: none; }
 #write.fences-no-line-wrapping pre { white-space: pre; }
 #write pre.ty-contain-cm { white-space: normal; }
 .CodeMirror-gutters { margin-right: 4px; }
-.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
-.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit; background-repeat: inherit; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
 #write .md-fences.mock-cm { white-space: pre-wrap; }
 .md-fences.md-fences-with-lineno { padding-left: 0px; }
 #write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
 .md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
 .CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
 .footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
 .footnotes + .footnotes { margin-top: 0px; }
-.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; }
 li div { padding-top: 0px; }
 blockquote { margin: 1rem 0px; }
 li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
 li { margin: 0px; position: relative; }
 blockquote > :last-child { margin-bottom: 0px; }
 blockquote > :first-child, li > :first-child { margin-top: 0px; }
 .footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
 #write .footnote-line { white-space: pre-wrap; }
-@media print {
+@media print { 
   body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
-  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; padding-bottom: 0px !important; }
   .typora-export * { -webkit-print-color-adjust: exact; }
-  html.blink-to-pdf { font-size: 13px; }
   .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
   .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
-pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; }
 p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
 #write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
 p > .md-image:only-child { display: inline-block; width: 100%; }
 #write .MathJax_Display { margin: 0.8em 0px 0px; }
 .md-math-block { width: 100%; }
 .md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
 [contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
 .md-task-list-item { position: relative; list-style-type: none; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
 .md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
 .math { font-size: 1rem; }
-.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
 .md-toc-content { position: relative; margin-left: 0px; }
 .md-toc-content::after, .md-toc::after { display: none; }
 .md-toc-item { display: block; color: rgb(65, 131, 196); }
@@ -118,7 +126,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 .md-toc-h4 .md-toc-inner { margin-left: 6em; }
 .md-toc-h5 .md-toc-inner { margin-left: 8em; }
 .md-toc-h6 .md-toc-inner { margin-left: 10em; }
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 48em) { 
   .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
   .md-toc-h4 .md-toc-inner { margin-left: 5em; }
   .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
@@ -126,37 +134,76 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 }
 a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
 .footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
 .md-attr { display: none; }
 .md-fn-count::after { content: "."; }
 code, pre, samp, tt { font-family: var(--monospace); }
-kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
-.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
-code { text-align: left; vertical-align: initial; }
-a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
-.md-inline-math .MathJax_SVG .noError { display: none !important; }
-.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
-.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
-.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
-.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
-.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
-.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
-.MathJax_SVG * { transition: none 0s ease 0s; }
-.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
 .md-diagram-panel > svg { max-width: 100%; }
 [lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
 [lang="mermaid"] .node text { font-size: 1rem; }
-table tr th { border-bottom: 0px; }
+table tr th { border-bottom-width: 0px; }
 video { max-width: 100%; display: block; margin: 0px auto; }
 iframe { max-width: 100%; width: 100%; border: none; }
 .highlight td, .highlight tr { border: 0px; }
-svg[id^="mermaidChart"] { line-height: 1em; }
-mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
-mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
-@media print {
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print { 
   .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
 }
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) { 
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) { 
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ''; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ''; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ''; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: '−'; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
 
 
 :root {
@@ -172,10 +219,11 @@ mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
     /* open-sans-700italic - latin-ext_latin */
   html {
     font-size: 16px;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
-    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
     color: rgb(51, 51, 51);
     line-height: 1.6;
 }
@@ -344,7 +392,7 @@ table {
     word-break: initial;
 }
 table tr {
-    border-top: 1px solid #dfe2e5;
+    border: 1px solid #dfe2e5;
     margin: 0;
     padding: 0;
 }
@@ -352,24 +400,24 @@ table tr:nth-child(2n),
 thead {
     background-color: #f8f8f8;
 }
-table tr th {
+table th {
     font-weight: bold;
     border: 1px solid #dfe2e5;
     border-bottom: 0;
     margin: 0;
     padding: 6px 13px;
 }
-table tr td {
+table td {
     border: 1px solid #dfe2e5;
     margin: 0;
     padding: 6px 13px;
 }
-table tr th:first-child,
-table tr td:first-child {
+table th:first-child,
+table td:first-child {
     margin-top: 0;
 }
-table tr th:last-child,
-table tr td:last-child {
+table th:last-child,
+table td:last-child {
     margin-bottom: 0;
 }
 
@@ -414,11 +462,8 @@ code {
     html {
         font-size: 13px;
     }
-    table,
     pre {
         page-break-inside: avoid;
-    }
-    pre {
         word-wrap: break-word;
     }
 }
@@ -518,9 +563,9 @@ header, .context-menu, .megamenu-content, footer{
     color: #b4654d;
 }
 
-.html-for-mac .context-menu {
+/*.html-for-mac {
     --item-hover-bg-color: #E6F0FE;
-}
+}*/
 
 #md-notification .btn {
     border: 0;
@@ -528,6 +573,7 @@ header, .context-menu, .megamenu-content, footer{
 
 .dropdown-menu .divider {
     border-color: #e5e5e5;
+    opacity: 0.4;
 }
 
 .ty-preferences .window-content {
@@ -539,13 +585,19 @@ header, .context-menu, .megamenu-content, footer{
     background: #999;
 }
 
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
 
-</style>
+
+ @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}} .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style><title>CS295N-LN-WK01D1A-IntroToWebDev</title>
 </head>
-<body class='typora-export os-windows'>
-<div id='write'  class=''><p><strong><a href='http://lcc-cit.github.io/CS295N-CourseMaterials/'><span>CS295N Web Development 1: ASP.NET</span></a></strong></p><h1><a name="intro-to-web-dev" class="md-header-anchor"></a><span>Intro to Web Dev</span></h1><figure><table><thead><tr><th><span>Weekly Topics</span></th><th>&nbsp;</th></tr></thead><tbody><tr><td><span>1. </span><strong><span>Intro to Web Dev</span></strong></td><td><span>6. Entity Framework / Deploying a DB to Azure</span></td></tr><tr><td><span>2. Intro to MVC / Deploying to Azure</span></td><td><span>7. Debugging / </span><em><span>Veteran&#39;s Day holiday</span></em></td></tr><tr><td><span>3. MVC Architectural patterns</span></td><td><span>8. Controllers</span></td></tr><tr><td><span>4. Bootstrap</span></td><td><span>9. Razor Views / </span><em><span>Thanksgiving holiday</span></em></td></tr><tr><td><span>5. Midterm Quiz / Unit testing with xUnit</span></td><td><span>10. Razor Views (continued)</span></td></tr></tbody></table></figure><h2><a name="contents" class="md-header-anchor"></a><span>Contents</span></h2><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n607"><a class="md-toc-inner" href="#intro-to-web-dev">Intro to Web Dev</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n627"><a class="md-toc-inner" href="#contents">Contents</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n629"><a class="md-toc-inner" href="#introduction-to-the-course">Introduction to the course</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n638"><a class="md-toc-inner" href="#intro-to-web-development">Intro to Web Development</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n639"><a class="md-toc-inner" href="#job-market">Job Market</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n700"><a class="md-toc-inner" href="#overview-of-mvc">Overview of MVC</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n735"><a class="md-toc-inner" href="#exercise">Exercise </a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n746"><a class="md-toc-inner" href="#class-procedures">Class Procedures</a></span></p></div><h2><a name="introduction-to-the-course" class="md-header-anchor"></a><span>Introduction to the course</span></h2><ul><li><span>Introduce myself</span></li><li><span>Take roll, ask about degree programs, favorite web sites, programming experience</span></li><li><span>Announcements </span></li></ul><p>&nbsp;</p><h2><a name="intro-to-web-development" class="md-header-anchor"></a><span>Intro to Web Development</span></h2><h3><a name="job-market" class="md-header-anchor"></a><span>Job Market</span></h3><ul><li><p><a href='https://money.usnews.com/careers/best-jobs/web-developer'><span>Web Developer</span></a><span> is </span><span>#</span><span>23 in the 2020 US News and World Report Survey, of </span><a href='https://money.usnews.com/careers/best-jobs/rankings'><span>100 best jobs in America</span></a></p><ul><li><span>20,900 new job openings from 2018 to 2028.</span></li><li><span>Median Salary: $69,430.</span></li></ul></li><li><p><a href='https://www.fullstackacademy.com/blog/software-engineer-vs-software-developer'><span>Software engineer vs. software developer</span></a><span> vs. web developer</span><br/><span>The terms </span><em><span>software engineer</span></em><span> and </span><em><span>software developer</span></em><span> are often used interchangeably, but many professionals see the following distinctions:</span></p><ul><li><span>Engineers are the architects who can design complete software systems.</span></li><li><span>Developers are coders who build what the engineers design (although most engineers are also coders).</span></li><li><span>Web developers are software developers whose expertise is  focused on web development.</span></li></ul></li><li><p><span>Web Developer vs. Web Designer</span></p><ul><li><span>Developers focus on functionality.</span></li><li><span>Designers focus on appearance.</span></li><li><span>Both are concerned with UX (User eXperience) and fulfilling user&#39;s requirements.</span></li></ul></li><li><p><span>What job can you get with an LCC Computer Programming degree?</span></p><ul><li><span>Any of the above are possible!</span></li><li><span>You might start as a web developer and through self-study and OJT (On the Job Training) advance your skills to qualify for a higher position.</span></li></ul><h3><a name="distinctives-of-web-development" class="md-header-anchor"></a><span>Distinctives of Web Development</span></h3></li><li><p><span>Differences between desktop and web development</span></p><ul><li><span>Multiple languages and technologies in one app: HTML, CSS, JavaScript, C#, SQL</span></li></ul></li><li><p><span>Multiple browsers types and browser compatibility</span></p><ul><li><span>Multiple concurrent users</span></li><li><span>No direct access to the client file system</span></li><li><span>Statelessness of HTTP</span></li></ul></li><li><p><span>Development tools you will use in this class</span></p><ul><li><span>Visual Studio</span></li><li><span>Visual Studio Code</span></li><li><span>Development server (on your local machine)</span></li><li><span>Web browsers</span></li></ul></li></ul><p>&nbsp;</p><h2><a name="overview-of-mvc" class="md-header-anchor"></a><span>Overview of MVC</span></h2><ul><li><p><span>MVC</span></p><ul><li><p><span>Not new, originated in 1978 with the Smalltalk project at Xerox PARC</span></p></li><li><p><span>Became popular with Ruby on Rails, 2005</span></p></li><li><p><span>Block diagram (arrows show direction of dependencies):</span>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><p><strong><a href='http://lcc-cit.github.io/CS295N-CourseMaterials/'><span>CS295N Web Development 1: ASP.NET</span></a></strong></p><h1 id='intro-to-web-dev'><span>Intro to Web Dev</span></h1><figure><table><thead><tr><th><span>Weekly Topics</span></th><th>&nbsp;</th></tr></thead><tbody><tr><td><span>1. </span><strong><span>Intro to Web Dev</span></strong></td><td><span>6. Entity Framework / Deploying a DB to Azure</span></td></tr><tr><td><span>2. Intro to MVC / Deploying to Azure</span></td><td><span>7. Debugging / </span><em><span>Veteran&#39;s Day holiday</span></em></td></tr><tr><td><span>3. MVC Architectural patterns</span></td><td><span>8. Controllers</span></td></tr><tr><td><span>4. Bootstrap</span></td><td><span>9. Razor Views / </span><em><span>Thanksgiving holiday</span></em></td></tr><tr><td><span>5. Midterm Quiz / Unit testing with xUnit</span></td><td><span>10. Razor Views (continued)</span></td></tr></tbody></table></figure><h2 id='contents'><span>Contents</span></h2><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n158"><a class="md-toc-inner" style="" href="#intro-to-web-dev">Intro to Web Dev</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n178"><a class="md-toc-inner" style="" href="#contents">Contents</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n180"><a class="md-toc-inner" style="" href="#introduction-to-the-course">Introduction to the course</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n189"><a class="md-toc-inner" style="" href="#intro-to-web-development">Intro to Web Development</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n190"><a class="md-toc-inner" style="" href="#job-prospects-for-developers">Job Prospects for Developers</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n370"><a class="md-toc-inner" style="" href="#meaning-of-different-job-titles">Meaning of Different Job Titles</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n224"><a class="md-toc-inner" style="" href="#distinctives-of-web-development">Distinctives of Web Development</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n252"><a class="md-toc-inner" style="" href="#overview-of-mvc">Overview of MVC</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n289"><a class="md-toc-inner" style="" href="#exercise">Exercise </a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n300"><a class="md-toc-inner" style="" href="#class-procedures">Class Procedures</a></span></p></div><h2 id='introduction-to-the-course'><span>Introduction to the course</span></h2><ul><li><span>Introduce myself</span></li><li><span>Take roll, ask about degree programs, favorite web sites, programming experience</span></li><li><span>Announcements </span></li></ul><p>&nbsp;</p><h2 id='intro-to-web-development'><span>Intro to Web Development</span></h2><h3 id='job-prospects-for-developers'><span>Job Prospects for Developers</span></h3><ul><li><p><span>U.S. News </span><a href='https://money.usnews.com/careers/best-jobs/rankings'><span>Best Job Rankings</span></a><span> for 2022</span></p></li><li><p><a href='https://money.usnews.com/careers/best-jobs/software-developer'><span>Software Developer</span></a></p><blockquote><p><span>A software developer is a professional who is responsible for designing and building computer programs. Some may build underlying operating systems, while others may focus only on developing new mobile and desktop applications. They also develop computer games and other digital architecture.</span>&mdash;<span>Indeed.com</span></p></blockquote><ul><li>&#35;<span>2 in Best Technology Jobs</span></li><li>&#35;<span>5 in 100 Best Jobs</span></li><li><span>$110,140</span></li></ul></li><li><p><a href='https://money.usnews.com/careers/best-jobs/web-developer'><span>Web Developer</span></a></p><blockquote><p><span>Web developers create and maintain websites and web applications, and they use web-facing technology to build software. </span>&mdash;<span>U.S. News and World Report</span></p></blockquote><ul><li>&#35;<span>6 in Best Technology Jobs</span></li><li>&#35;<span>32 in 100 Best Jobs</span></li><li><span>Median Salary: $77,200.</span></li></ul></li></ul><h3 id='meaning-of-different-job-titles'><span>Meaning of Different Job Titles</span></h3><ul><li><p><a href='https://www.fullstackacademy.com/blog/software-engineer-vs-software-developer'><span>Software engineer vs. software developer</span></a><span> vs. web developer</span><br/><span>The terms </span><em><span>software engineer</span></em><span> and </span><em><span>software developer</span></em><span> are often used interchangeably, but many professionals see the following distinctions:</span></p><ul><li><span>Engineers are the architects who can design complete software systems.</span></li><li><span>Developers are coders who build what the engineers design (although most engineers are also coders).</span></li><li><span>Web developers are software developers whose expertise is  focused on web development.</span></li></ul></li><li><p><span>Web Developer vs. Web Designer</span></p><ul><li><span>Developers focus on functionality.</span></li><li><span>Designers focus on appearance.</span></li><li><span>Both are concerned with UX (User eXperience) and fulfilling user&#39;s requirements.</span></li></ul></li><li><p><span>What job can you get with an LCC Computer Programming degree?</span></p><ul><li><span>Any of the above are possible!</span></li><li><span>You might start as a web developer and through self-study and OJT (On the Job Training) advance your skills to qualify for a higher position.</span></li></ul></li></ul><h3 id='distinctives-of-web-development'><span>Distinctives of Web Development</span></h3><ul><li><p><span>Differences between desktop and web development</span></p><ul><li><span>Multiple languages and technologies in one app: HTML, CSS, JavaScript, C#, SQL</span></li></ul></li><li><p><span>Multiple browsers types and browser compatibility</span></p><ul><li><span>Multiple concurrent users</span></li><li><span>No direct access to the client file system</span></li><li><span>Statelessness of HTTP</span></li></ul></li><li><p><span>Development tools you will use in this class</span></p><ul><li><span>Visual Studio</span></li><li><span>Visual Studio Code</span></li><li><span>Development server (on your local machine)</span></li><li><span>Web browsers</span></li></ul></li></ul><p>&nbsp;</p><h2 id='overview-of-mvc'><span>Overview of MVC</span></h2><ul><li><p><span>MVC</span></p><ul><li><p><span>Not new, originated in 1978 with the Smalltalk project at Xerox PARC</span></p></li><li><p><span>Became popular with Ruby on Rails, 2005</span></p></li><li><p><span>Block diagram (arrows show direction of dependencies):</span>
 <img src="../MVC.png" referrerpolicy="no-referrer"><span>         </span></p><ul><li><span>Model: data</span></li><li><span>View: renders HTTP responses</span></li><li><span>Controller: responds to HTTP request</span></li></ul></li></ul></li><li><p><span>Facilitates programming best practices</span></p><ul><li><span>Minimize dependencies</span></li><li><span>Separation of concerns</span></li><li><span>Unit tests</span></li></ul></li><li><p><span>Server-side rendering</span>
-<span>Web pages consisting of HTML, CSS and JavaScript are generated on the server and full web pages are sent to the client&#39;s browser.</span></p><p><img src="ServerAndClient.png" referrerpolicy="no-referrer"></p><ul><li><span>Used for multi-page web sites, not SPA sites.</span></li><li><span>Good for database intensive apps.</span></li><li><span>Entire page needs to be refreshed unless you use AJAX.</span></li></ul></li></ul><h2><a name="exercise" class="md-header-anchor"></a><span>Exercise </span></h2><p><em><span>This is the first part of the lab assignment.</span></em></p><ul><li><span>Build the default Visual Studio web site.</span></li><li><span>Identify the Models, Views, and Controllers.</span></li><li><span>Identify dependencies.</span></li><li><span>Identify HTML, CSS, and JS resources.</span></li></ul><h2><a name="class-procedures" class="md-header-anchor"></a><span>Class Procedures</span></h2><ul><li><span>Discuss code reviews</span></li><li><span>Discuss weekly cycle of assignments </span></li><li><span>Review due dates</span></li></ul><hr /><p><a href='http://creativecommons.org/licenses/by/4.0/'><img src="https://i.creativecommons.org/l/by/4.0/88x31.png" referrerpolicy="no-referrer" alt="Creative Commons License"></a>
-<span>ASP.NET Core MVC Lecture Notes by </span><a href='https://profbird.dev'><span>Brian Bird</span></a><span> is licensed under a </span><a href='http://creativecommons.org/licenses/by/4.0/'><span>Creative Commons Attribution 4.0 International License</span></a><span>. </span></p><hr /><p>&nbsp;</p></div>
-</body>
+<span>Web pages consisting of HTML, CSS and JavaScript are generated on the server and full web pages are sent to the client&#39;s browser.</span></p><p><img src="ServerAndClient.png" referrerpolicy="no-referrer"></p><ul><li><span>Used for multi-page web sites, not SPA sites.</span></li><li><span>Good for database intensive apps.</span></li><li><span>Entire page needs to be refreshed unless you use AJAX.</span></li></ul></li></ul><h2 id='exercise'><span>Exercise </span></h2><p><em><span>This is the first part of the lab assignment.</span></em></p><ul><li><span>Build the default Visual Studio web site.</span></li><li><span>Identify the Models, Views, and Controllers.</span></li><li><span>Identify dependencies.</span></li><li><span>Identify HTML, CSS, and JS resources.</span></li></ul><h2 id='class-procedures'><span>Class Procedures</span></h2><ul><li><span>Discuss code reviews</span></li><li><span>Discuss weekly cycle of assignments </span></li><li><span>Review due dates</span></li></ul><hr /><p><a href='http://creativecommons.org/licenses/by/4.0/'><img src="https://i.creativecommons.org/l/by/4.0/88x31.png" referrerpolicy="no-referrer" alt="Creative Commons License"></a>
+<span>ASP.NET Core MVC Lecture Notes by </span><a href='https://profbird.dev'><span>Brian Bird</span></a><span> is licensed under a </span><a href='http://creativecommons.org/licenses/by/4.0/'><span>Creative Commons Attribution 4.0 International License</span></a><span>. </span></p><hr /><p>&nbsp;</p></div></div>
+<base target="_blank"></body>
 </html>
