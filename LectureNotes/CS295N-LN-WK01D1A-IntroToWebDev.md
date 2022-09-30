@@ -24,29 +24,44 @@
 
 ## Intro to Web Development
 
-### Job Market
+### Job Prospects for Developers
 
-- [Web Developer](https://money.usnews.com/careers/best-jobs/web-developer) is \#23 in the 2020 US News and World Report Survey, of [100 best jobs in America](https://money.usnews.com/careers/best-jobs/rankings)
-  - 20,900 new job openings from 2018 to 2028.
-  - Median Salary: $69,430.
+U.S. News [Best Job Rankings](https://money.usnews.com/careers/best-jobs/rankings) for 2022
+
+- [Software Developer](https://money.usnews.com/careers/best-jobs/software-developer)
+
+  > A software developer is a professional who is responsible for designing and building computer programs. Some may build underlying operating systems, while others may focus only on developing new mobile and desktop applications. They also develop computer games and other digital architecture.&mdash;Indeed.com
+
+  - &#35;2 in Best Technology Jobs
+  - &#35;5 in 100 Best Jobs
+  - $110,140
+
+- [Web Developer](https://money.usnews.com/careers/best-jobs/web-developer)
+
+  > Web developers create and maintain websites and web applications, and they use web-facing technology to build software. &mdash;U.S. News and World Report
+
+  - &#35;6 in Best Technology Jobs
+  - &#35;32 in 100 Best Jobs
+  - Median Salary: $77,200.
+
+### Meaning of Different Job Titles
+
 - [Software engineer vs. software developer](https://www.fullstackacademy.com/blog/software-engineer-vs-software-developer) vs. web developer  
   The terms *software engineer* and *software developer* are often used interchangeably, but many professionals see the following distinctions:
   - Engineers are the architects who can design complete software systems.
   - Developers are coders who build what the engineers design (although most engineers are also coders).
   - Web developers are software developers whose expertise is  focused on web development.
-
 - Web Developer vs. Web Designer
 
   - Developers focus on functionality.
   - Designers focus on appearance.
   - Both are concerned with UX (User eXperience) and fulfilling user's requirements.
-
 - What job can you get with an LCC Computer Programming degree?
 
   - Any of the above are possible!
   - You might start as a web developer and through self-study and OJT (On the Job Training) advance your skills to qualify for a higher position.
 
-  ### Distinctives of Web Development
+### Distinctives of Web Development
 
 - Differences between desktop and web development
 
@@ -86,7 +101,7 @@
   - Unit tests
 
 - Server-side rendering
-Web pages consisting of HTML, CSS and JavaScript are generated on the server and full web pages are sent to the client's browser.
+  Web pages consisting of HTML, CSS and JavaScript are generated on the server and full web pages are sent to the client's browser.
   
   ![](ServerAndClient.png)
   
