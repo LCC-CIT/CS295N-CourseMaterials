@@ -1,5 +1,11 @@
 <h1>Creating a Git Repo for a VS Solution</h1>
 
+<h2>CS295N, ASP.NET Core Web Development</h2>
+
+
+
+<h3>Contents</h3>
+
 [TOC]
 
 ## Overview
@@ -84,4 +90,13 @@ Here are some useful commands for working with branches:
 5. Push the new files you just committed to the origin (GitHub) by typing: `git push`
 
 That's it. You can now see your new Visual Studio solution in your repo on GitHub.
+
+
+
+------
+
+[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
+ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), 2022, is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+
+------
 
