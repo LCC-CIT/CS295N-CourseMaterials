@@ -75,7 +75,7 @@ On your local machine, use the command line for each step below.
 1. Change directories to the new repo you created by typing: `cd ` followed by the directory name.
 
 2. Create a new branch by typing: `git checkout -b` *followed by the new branch name*.
-   This will create a new branch and copy the files, including the .gitignore file, from the main branch.
+   This will create a new branch and copy the files, including the .gitignore file, from the main branch into the new branch.
 
    For example: `git checkout -b lab1` .
 
@@ -91,15 +91,19 @@ Here are some useful commands for working with branches:
 ### Add a Visual Studio Solution
 
 1. Confirm that you are using the branch you want in the local repository.
+
 2. Create or add a solution folder to the repo.
    - If you already have a VS Solution folder, just copy it into the local repository folder.
    - If you are creating a new solution, then in Visual Studio, create a *New Project* and specify the repository as the directory to use.
      Note: Name the project (aka solution) with a name descriptive of your web site. For example: *BookReviewSite*.
+
 3. Add the new files to the repo index by typing; `git add .`
+
 4. Commit the files to the repo by typing `git commit -m` folllowed by a commit message in quotes.
+
 5. Push the new files you just committed to the origin (GitHub) by typing: `git push`
 
-
+   
 
 That's it. You can now see your new Visual Studio solution in your repo on GitHub!
 
