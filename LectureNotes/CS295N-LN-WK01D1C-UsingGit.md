@@ -42,7 +42,12 @@ For your lab assignments in CS295N, you will be creating a single web app. Each 
 
 - Open the GitHub web page and log in.
 - Create a new repository. Name it in a way that identifies it as a repo for your CS295N lab assignments for this term. For example: *CS295N-F22-BrianBird*.
+  
   Note: you will use one repository for all your lab assignments.
+
+- Add a *gitignore* file for Visual Studio.
+
+  Note that the gitignore file must be committed to the repository <u>before any other commits</u> in order for it to be effective!
 
 ## Cloning a Repo
 
@@ -68,15 +73,20 @@ That's it. You've cloned the repository
 On your local machine, use the command line for each step below.
 
 1. Change directories to the new repo you created by typing: `cd ` followed by the directory name.
-2. Create a new branch by typing: `git branch` followed by the new branch name.
-   For example: `git branch lab1`
+
+2. Create a new branch by typing: `git checkout -b` *followed by the new branch name*.
+   This will create a new branch and copy the files, including the .gitignore file, from the main branch.
+
+   For example: `git checkout -b lab1` .
 
 Here are some useful commands for working with branches:
 
 - `git branch` shows all branches in the local clone of the repository.
 - `git branch -r` shows all remote branches at the origin  (on GitHub).
-- `git checkout` followed by a branch name switches the local branch. 
-  If you enter the name of a remote branch, it will be pulled from the origin.
+- `git branch` *followed by a branch name* creates a new local branch.
+- `git checkout` *followed by an existing branch name* switches the local branch. 
+  If you enter the name of a remote branch, that branch will be pulled from the origin.
+- `git checkout -b` *followed by a new branch name* created a new branch <u>and</u> copies the files from the current branch into it.
 
 ### Add a Visual Studio Solution
 
@@ -89,7 +99,17 @@ Here are some useful commands for working with branches:
 4. Commit the files to the repo by typing `git commit -m` folllowed by a commit message in quotes.
 5. Push the new files you just committed to the origin (GitHub) by typing: `git push`
 
-That's it. You can now see your new Visual Studio solution in your repo on GitHub.
+
+
+That's it. You can now see your new Visual Studio solution in your repo on GitHub!
+
+
+
+## Reference
+
+[W3 Schools Git Tutorial](https://www.w3schools.com/git/default.asp?remote=github)
+
+Chacon, Scott and Straub, Ben. *[Pro Git book](https://git-scm.com/book/en/v2)*. 2nd Edition. Apress, 2014.
 
 
 
