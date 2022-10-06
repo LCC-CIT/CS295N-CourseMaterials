@@ -93,7 +93,7 @@ No models are needed yet. You will add those in a future lab.
 ### Final Submission to Moodle
 
 1.  Upload a screen-shot of the textbook exercise.
-2.  ~~Publish your web site from part 2 to Azure.~~
+2.  Publish your web site from part 2 to Azure.
 3.  In the "online text" for the Moodle assignment:
     - Paste a link to the branch of your GitHub repository for this lab.
-    - ~~Paste a link to your web site running on Azure.~~
+    - Paste a link to your web site running on Azure.
