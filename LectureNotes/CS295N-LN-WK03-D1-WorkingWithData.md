@@ -75,7 +75,7 @@ The AppUser model will get more added to it next term when we add authentication
 
 #### OOP Relationships
 
-- Inheritance: "is-a:
+- Inheritance: "is-a"
 - Association (similar to aggregation): "uses-a" (or "has-a")
 - Composition: "is-a-part-of"
 
@@ -95,7 +95,7 @@ What is the relationship between these two models?
 public class Review
 {
     public Book Book { get; set; }
-    public User Reviewer { get; set; }
+    public AppUser Reviewer { get; set; }
     public string ReviewText { get; set; }
     public DateTime ReviewDate { get; set; }
 }
