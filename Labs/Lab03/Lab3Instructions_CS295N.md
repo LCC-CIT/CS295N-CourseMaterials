@@ -34,6 +34,8 @@ Messages will contain:
 - Body of the message
 - Date sent
 
+Are there any other properties you think you might need or want? (Don't add more than one or two.)
+
 For now, all users will see all messages, even those addressed to someone else.
 
 
@@ -53,30 +55,36 @@ Stories will contain:
 - Name of the submitter
 - Date submitted
 
+Are there any other properties you think you might need or want? (Don't add more than one or two.)
+
 
 
 #### Group C
 
 **Informational Site**
 
-Modify the Home / Forum so users can post comments.
+Modify the Home / Forum so users can post comments about informational pages in the site.
 
 Forum posts will contain:
 
-- Page being commented on
+- URL of the Page being commented on
 - Subject
 - Rating of the page (an integer)
 - Text of the post
 - Name of person posting
 - Date posted
 
-For now, all users will see all messages, even those addressed to someone else.
+Are there any other properties you think you might need or want? (Don't add more than one or two.)
+
+Do you want the posts to be identified as either comments or additional information?
+
+
 
 ### Implementation Instructions
 
 #### Models
 
-- Decide what two models you will need.
+- Decide what two or three models you will need.
 - Decide the relationship between the models.
 - Code the models.
 

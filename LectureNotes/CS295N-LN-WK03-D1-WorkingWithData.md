@@ -1,22 +1,24 @@
 **CS295N Web Development 1: ASP.NET**
 
-| Weekly Topics                                  |                                               |
-| ---------------------------------------------- | --------------------------------------------- |
-| 1. Intro to Web Dev                            | 6. Entity Framework / Deploying a DB to Azure |
-| 2. Intro to MVC / Code reviews via Git PR      | 7. Debugging / *Veteran's Day holiday*        |
-| 3. **Working with data**  / Deploying to Azure | 8. Controllers                                |
-| 4. Bootstrap                                   | 9. Razor Views / *Thanksgiving holiday*       |
-| 5. Midterm Quiz / Unit testing with xUnit      | 10. Razor Views (continued)                   |
+| Weekly Topics                             |                                               |
+| ----------------------------------------- | --------------------------------------------- |
+| 1. Intro to Web Dev                       | 6. Entity Framework / Deploying a DB to Azure |
+| 2. Intro to MVC / Deploying to Azure      | 7. Debugging / *Veteran's Day holiday*        |
+| 3. **Working with data**                  | 8. Controllers                                |
+| 4. Bootstrap                              | 9. Razor Views / *Thanksgiving holiday*       |
+| 5. Midterm Quiz / Unit testing with xUnit | 10. Validation                                |
 
 **Contents**
 
 [TOC]
 
-## Introduction
+## Q and A
 
 - Any questions about lab 2?
-- Review the ch. 2 quiz.
-- This week, on Thursday, we will publish to Azure.
+- Any questions about PRs and code reviews?
+- Any questions from the reading or the Ch. 2 quiz?
+
+
 
 ## Overview
 
@@ -25,18 +27,20 @@ This week you will learn to work with data in all three parts of your MVC web si
 - Model: holds data being sent between a controller and a view.
 - Controller: responds to HTTP requests and moves data between views using a model:
   - HTTP GET: a controller method will receive a request either with or without a query for data:
-    - without a query&mdash;just a view will be returned.
-    - with a query&mdash;a model with the requested data will be sent to the view and the view will be returned.
+    - without a query on the URL&mdash;just a view will be returned.
+    - with a query on the URL&mdash;a model with the requested data will be sent to the view and the view will be returned.
   - HTTP POST: a controller method will receive a request that contains data to be put into a model (and later it will also be put into a database).
 - View: gets or displays data.
 
-## Defining a model
 
-#### OOP Relationships
 
-- Inheritance
-- Association
-- Composition
+## Defining a Domain Model
+
+The concept of "domain"&mdash;the world of your solution
+
+A domain model contains multiple model classes that will get mapped to tables in a relational database (later this term).
+
+A model is a C# class that primarily just contains properties.
 
 ### Identifying classes, fields, and methods
 
@@ -51,11 +55,66 @@ public class Review
 {
     public string BookTitle { get; set; }
     public string AuthorName { get; set; }
+    public AppUser Reviewer { get; set; }
+    public string ReviewText { get; set; }
+    public DateTime ReviewDate { get; set; }
+}
+```
+
+
+
+```C#
+public class AppUser
+{
+    public string UserName { get; set; }
+    public DateTime signUpDate {get; set;}
+}
+```
+
+The AppUser model will get more added to it next term when we add authentication and authorization to our web sites.
+
+#### OOP Relationships
+
+- Inheritance: "is-a:
+- Association (similar to aggregation): "uses-a" (or "has-a")
+- Composition: "is-a-part-of"
+
+#### Model Relationships
+
+Let's refactor the Review model into two models: `Review` and `Book`.
+
+What is the relationship between these two models?
+
+- Can a Review exist without the Book?
+
+- Can a Book exist without a Review?
+
+  
+
+```C#
+public class Review
+{
+    public Book Book { get; set; }
     public User Reviewer { get; set; }
     public string ReviewText { get; set; }
     public DateTime ReviewDate { get; set; }
 }
 ```
+
+
+
+```C#
+public class Book
+{
+    public string BookTitle { get; set; }
+    public string AuthorName { get; set; }
+    public int Isbn {get; set;}
+    public string Publisher {get; set;}
+    public DateTime PubDate { get; set; }
+}
+```
+
+Draw a UML diagram that shows the relationships between all three models.
 
 
 
@@ -70,13 +129,13 @@ public class Review
         }
 ```
 
-- May optionally include a query for data.
+- May optionally include a query for data (as a parameter in the Index method.)
 
-- Used for displaying a view with or without sending it data.
+- Used for displaying a view with or without sending it data (as an argument in the View method).
+
+- Passing a model to the view is optional. (This would be another way of sending it data.)
 
 - Controller methods are GET methods by default.
-
-- Passing a model to the view is optional.
 
   ```C#
   public IActionResult Review()
@@ -160,7 +219,7 @@ public class Review
 
 ### Textbook
 
-Ch. 2, "How to a single-page MVC web app", *Murach’s ASP.NET Core MVC*, 1st Edition, by Mary Delamater and Joel Murach, Murach Books, 2020.
+Ch. 2, "How to code a single-page MVC web app", *Murach’s ASP.NET Core MVC*, 1st Edition, by Mary Delamater and Joel Murach, Murach Books, 2020.
 
 ### Online
 
@@ -172,6 +231,6 @@ Ch. 2, "How to a single-page MVC web app", *Murach’s ASP.NET Core MVC*, 1st Ed
 ------
 
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
-ASP.NET Core MVC Lecture Notes by [Brian Bird](https://birdsbits.blog/) is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev) is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
 
 ------
