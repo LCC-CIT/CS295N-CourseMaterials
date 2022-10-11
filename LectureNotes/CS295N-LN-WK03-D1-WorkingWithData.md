@@ -42,11 +42,21 @@ A domain model contains multiple model classes that will get mapped to tables in
 
 A model is a C# class that primarily just contains properties.
 
-### Identifying classes, fields, and methods
+### Identifying classes, fields, properties and methods
 
-- Nouns are classes or fields
-- Verbs are methods
-- In models, we just use properties rather than create fields (instance variables).
+#### For OOP design in general
+
+When designing OOP classes for C# or any language,  one approach is to write a written prose description of what the software will do, then identify:
+
+- Nouns: these are potential classes or fields, or properties.
+- Verbs: these are potential methods.
+
+#### For model classes
+
+- We just use properties rather than create fields (aka instance variables) unless they are backing fields for properties.
+- We normally don't include methods.
+  - If methods are included they should be small and just for doing some kind of unit or format conversion of the data.
+  - The methods should have no dependencies, since model classes should have no dependencies.
 
 Example:
 
@@ -67,29 +77,28 @@ public class Review
 public class AppUser
 {
     public string UserName { get; set; }
-    public DateTime signUpDate {get; set;}
+    public DateTime SignUpDate {get; set;}
 }
 ```
 
-The AppUser model will get more added to it next term when we add authentication and authorization to our web sites.
+FYI, the AppUser model will get more added to it next term when we add authentication and authorization to our web sites.
 
 #### OOP Relationships
 
 - Inheritance: "is-a"
 - Association (similar to aggregation): "uses-a" (or "has-a")
-- Composition: "is-a-part-of"
+- Composition: "part-of" &larr; *model classes will almost always have this relationship to each other.*
 
 #### Model Relationships
 
-Let's refactor the Review model into two models: `Review` and `Book`.
+Let's refactor the `Review` model into two models: `Review` and `Book`.
 
 What is the relationship between these two models?
 
 - Can a Review exist without the Book?
-
 - Can a Book exist without a Review?
 
-  
+Example: refactored Review model class and a new Book model class
 
 ```C#
 public class Review
@@ -195,11 +204,11 @@ Draw a UML diagram that shows the relationships between all three models.
   }
   
   <form method="post">
-      <label asp-for="BookTitle">Title</label>
-      <input asp-for="BookTitle" /><br />
+      <label asp-for="Book.BookTitle">Title</label>
+      <input asp-for="Book.BookTitle" /><br />
   
-      <label asp-for="AuthorName">Author</label>
-      <input asp-for="AuthorName" /><br />
+      <label asp-for="Book.AuthorName">Author</label>
+      <input asp-for="Book.AuthorName" /><br />
   
       <label asp-for="Reviewer.Name">Reviewer</label>
       <input asp-for="Reviewer.Name" /><br />

@@ -15,7 +15,15 @@ Complete Exercise 1-1 in *Murach's ASP.NET Core MVC*
 
 Add to the web site you crated in lab 1 by creating a "skeleton" (a set of empty pages) for your site. A site map is shown below for each group's web site. The site map is shown in the form of an outline. The main bullet points represent top-level web pages, and sub-point bullets represent pages linked from the top-level pages. 
 
-These pages will all be place-holders. The only content will be a heading,  a sentence saying what the page is for, and one or more links to other pages.
+These pages will all be place-holders. The only content will be:
+
+- A title (shows up in the browser tab). 
+- A heading.
+- A sentence saying what the page is for.
+- One or more links to other pages.
+  - The home page will have links to the three top-level pages.
+  - The other prescribed top-level page will have links to the two sub-pages.
+  - Sub-pages will have links back to the home page.
 
 ### Site Maps
 
@@ -23,40 +31,63 @@ These pages will all be place-holders. The only content will be a heading,  a se
 
 **Community Web Site**
 
--   Home -- General information about the community and the purpose of the site
+- 
+    **Home**: General information about the community and the purpose of the site.
 
-    -   History -- A brief history of the community 
+    Has links to *Info* and *Your choice* top-level pages and to the sub-pages below.
 
-    -   Contact -- a page with a form where users can send messages to the other users
+    -   **History**: a brief history of the community.
 
--   Info -- Highlights of the community
+    -   **Contact**:  a page with a form where users can send messages to the other users.
 
-    -   Important locations and links
-    -   Significant people (and links if available)
--   *Your choice - you can make this be whatever you want it to be*
+- 
+    **Info**:  Highlights of the community. 
+
+    Has links to the sub-pages below.
+
+    -   **Locations**: important locations and links to external sites.
+    -   **People**: significant people (and links if available)
+- ***Your choice**:  you can make this be whatever you want it to be*
 
 #### Group B
 
 **Fan Site**
 
-- Home – General information about the person (or group, or thing) and the purpose of the site
-  - History – A brief history of the person
-  - Stories – a page with a form where users can enter stories
-- Sources – Where to find the source and background of the stories
-  - Books and print media
-  - Links to online media
-- *Your choice - you can make this be whatever you want it to be*
+- 
+  **Home**: General information about the person (or group, or thing) and the purpose of the site. 
+  
+  Has links to *Sources* and *Your choice* top-level pages and to the sub-pages below.
+  
+  - **History**: A brief history of the person.
+  - **Stories**: a page with a form where users can enter stories.
+  
+- **Sources**: Where to find sources for stories and more info.
+  
+  Has links to the sub-pages below.
+  
+  - **FanSites**: links to official and un-official fan sites.
+  - **News**: links to news sites, blogs, etch.
+  
+- ***Your choice** - you can make this be whatever you want it to be*.
 
 #### Group C
 
 **Informational Site**
 
-- Home – General information about the topic and the purpose of the site
-  - Overview – A brief description of the topic
-  - forum – a page with a form where users can post comments
-- References – Where to find out about the topic
-  - Books and print media
-  - Links to online media
+- **Home**: General information about the topic and the purpose of the site.
+  
+  Has links to *References* and *Your choice* top-level pages and to the sub-pages below.
+  
+  - **Overview**: a brief description of the topic.
+  - **forum** – a page with a form where users can post comments.
+  
+- **References**: where to find out about the topic.
+  
+  Has links to the sub-pages below.
+  
+  - **Print**: list of books and print media.
+  - **Online**: links to online media.
+  
 - *Your choice - you can make this be whatever you want it to be*
 
 
