@@ -97,3 +97,11 @@ No models are needed yet. You will add those in a future lab.
 3.  In the "online text" for the Moodle assignment:
     - Paste a link to the branch of your GitHub repository for this lab.
     - Paste a link to your web site running on Azure.
+
+
+
+## Grading Criteria
+
+This is the rubric I will use to grade your lab assignment:
+
+[Lab2Rubric_CS295N](Lab2Rubric_CS295N.htm)
