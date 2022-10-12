@@ -1,4 +1,4 @@
-#Handling Nulls in C#
+<h1>C# Features for MVC: Part 1</h1>
 
 ****
 
@@ -6,7 +6,17 @@
 
 [TOC]
 
-## Declaring an object to be nullable using `?`
+## C# Attributes
+
+Attributes are used for adding *metadata*[^1] to C# code elements such as: classes, methods, and properties. We can write our own attributes or use pre-written attributes. 
+
+Read more about attributes here: [Use Attributes in C#](https://learn.microsoft.com/en-US/dotnet/csharp/tutorials/attributes)
+
+
+
+## Handling Nulls in C#
+
+### Declaring an object to be nullable using `?`
 
 Example:  
 
@@ -26,7 +36,7 @@ int? numberOfElfRings = null;
 
 
 
-## Null Coalescing operator: `??`
+### Null Coalescing operator: `??`
 
 This operator is used to test for a null value and return a specified value instead of null.
 
@@ -51,7 +61,7 @@ for(int i = 0; i < rings.Length; i++)
 
 
 
-## Null Conditional operator: `?` 
+### Null Conditional operator: `?` 
 
 Used to test an object for null before accessing an element or field. It short-circuits the operation and returns null.
 
@@ -76,10 +86,13 @@ for(int i = 0; i < rings.Length; i++)
 
 - [Microsoft C# Language Reference](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/)
 - [Microsoft C# Programming Guide](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/)
+- [Use Attributes in C#](https://learn.microsoft.com/en-US/dotnet/csharp/tutorials/attributes)&mdash;Microsoft Tutorial
+
+
+
+[^1]: *Metadata* is general computer science term for structured information (data) that might be added to some software element.
 
 ------
 
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
-ASP.NET Core MVC Lecture Notes by [Brian Bird](https://birdsbits.blog/) is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
-
-------
+ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev/) is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
