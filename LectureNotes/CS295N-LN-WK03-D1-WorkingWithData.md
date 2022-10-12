@@ -34,31 +34,57 @@ This week you will learn to work with data in all three parts of your MVC web si
 
 
 
-## Defining a Domain Model
+## Designing a Domain Model
+
+Before we can start writing our model classes, we need to decide which model classes we need and what properties should go in them. In other words, we need to design a *domain model*.
+
+#### Defining a Domain Model
 
 The concept of "domain"&mdash;the world of your solution
 
-A domain model contains multiple model classes that will get mapped to tables in a relational database (later this term).
+A domain model contains <u>multiple model classes</u> that will get mapped to tables in a relational database (later this term).
 
 A model is a C# class that primarily just contains properties.
 
-### Identifying classes, fields, properties and methods
+#### Identifying classes, fields, properties and methods
 
-#### For OOP design in general
+One of the first steps in designing object oriented software is to decide what classes you need and what goes in them.
 
-When designing OOP classes for C# or any language,  one approach is to write a written prose description of what the software will do, then identify:
+- For OOP design in general
+  When designing OOP classes for C# or any language, one approach is to write a written prose description of what the software will do, then identify:
 
-- Nouns: these are potential classes or fields, or properties.
-- Verbs: these are potential methods.
+  - Nouns: these are potential classes or fields, or properties.
 
-#### For model classes
+  - Verbs: these are potential methods.
 
-- We just use properties rather than create fields (aka instance variables) unless they are backing fields for properties.
-- We normally don't include methods.
-  - If methods are included they should be small and just for doing some kind of unit or format conversion of the data.
-  - The methods should have no dependencies, since model classes should have no dependencies.
 
-Example:
+- For model classes
+
+  - We just use properties rather than create fields (aka instance variables) unless they are backing fields for properties.
+
+  - We normally don't include methods.
+    - If methods are included they should be small and just for doing some kind of unit or format conversion of the data.
+    - The methods should have no dependencies, since model classes should have no dependencies.
+
+###  Relationships Between Model Classes
+- Some general OOP relationships:
+
+  - Inheritance: "is-a"
+
+  - Association (similar to aggregation): "uses-a" (or "has-a")
+
+  - Composition: "part-of" &larr; *model classes will almost always have this relationship to each other.*
+
+- Model Relationships
+    - Any of the three above are possible.
+    - Inheritance doesn't translate to database schema well, so we will use it sparingly.
+
+
+## Writing Model Classes
+
+Once we have designed our domain model, we can write our individual model classes.
+
+For example:
 
 ```C#
 public class Review
@@ -71,8 +97,6 @@ public class Review
 }
 ```
 
-
-
 ```C#
 public class AppUser
 {
@@ -81,22 +105,18 @@ public class AppUser
 }
 ```
 
-FYI, the AppUser model will get more added to it next term when we add authentication and authorization to our web sites.
+FYI, the AppUser model will get more added to it next term when we add *authentication* and *authorization* to our web sites.
 
-#### OOP Relationships
+ #### Identifying Relationships
 
-- Inheritance: "is-a"
-- Association (similar to aggregation): "uses-a" (or "has-a")
-- Composition: "part-of" &larr; *model classes will almost always have this relationship to each other.*
+  What is the relationship between our two models?
 
-#### Model Relationships
+  - Can a Review exist without the AppUser?
+  - Can a AppUser exist without a Review?
 
-Let's refactor the `Review` model into two models: `Review` and `Book`.
+### Refactoring Model Classes
 
-What is the relationship between these two models?
-
-- Can a Review exist without the Book?
-- Can a Book exist without a Review?
+We might decide that we want a separate Book model. (Or even separate Book and Author models.) Lets refactor our domain model so that we have separate Review and Book models.
 
 Example: refactored Review model class and a new Book model class
 
@@ -110,8 +130,6 @@ public class Review
 }
 ```
 
-
-
 ```C#
 public class Book
 {
@@ -123,13 +141,20 @@ public class Book
 }
 ```
 
+#### Identifying relationships
+
+What is the relationship between our three models?
+
+  - Can a Review exist without the Book?
+  - Can a Book exist without a Review?
+
 Draw a UML diagram that shows the relationships between all three models.
 
 
 
-## Writing controller methods
+## Writing Controller Methods
 
-###HTTP GET methods
+### HTTP GET methods
 
 ```c#
         public IActionResult Index()
@@ -156,7 +181,6 @@ Draw a UML diagram that shows the relationships between all three models.
           }
   ```
 
-  
 
 ### HTTP POST methods
 
@@ -188,53 +212,74 @@ Draw a UML diagram that shows the relationships between all three models.
     }
     ```
 
-    
 
-## Writing views
+## Writing Views
 
-- Form views
+Views are written using *Razor* syntax. This is a mixture of HTML and C# which is why the file extension is `.cshtml`. Razor views can also contain CSS and JavaScript. They are pretty much like an HTML page with C# mixed in. Whenever we add C# to a view, we prefix it with the `@` symbol.
 
-  - This view would be invoked by an HttpGet method in the controller.
-  - This view will send data to a HttpPost method in the controller.
+Remember that the C# doesn't actually end up running in the browser. It only runs on the server at the time the view is being rendered into an HTML page prior to being sent to the browser.
 
-  ```c#
-  @model Review
-  @{
-      ViewData["Title"] = "Books";
-  }
-  
-  <form method="post">
-      <label asp-for="Book.BookTitle">Title</label>
-      <input asp-for="Book.BookTitle" /><br />
-  
-      <label asp-for="Book.AuthorName">Author</label>
-      <input asp-for="Book.AuthorName" /><br />
-  
-      <label asp-for="Reviewer.Name">Reviewer</label>
-      <input asp-for="Reviewer.Name" /><br />
-  
-      <label asp-for="ReviewText">Review</label>
-      <textarea asp-for="ReviewText"></textarea><br />
-  
-      <button type="submit">Submit</button>
-  </form>
-  ```
+### Simple Views
 
-- Views with data models
+The simplest view just has HTML in it. For example:
+
+```html
+<h1>Simple Razor View</h1>
+Hello world!
+```
+
+We could add some C# like this:
+
+```html
+<h1>Simple Razor View</h1>
+Hello world, the time is @DateTime.Now.ShortTimeString()
+```
+
+### Strongly Typed Views
+
+If a controller method is going to send data to a view using a model object, then the view needs to have that model type declared in the view. This makes the view into a *strongly typed* view. For example, if a controller method is going to put the time and day of the week into a model object from a class named `DayAndTime` and then send it to a view, the view would look like this:
+
+```html
+@model DayAndTime
+<h1>Simple Razor View</h1>
+Hello world, it's @Model.Day and the time is @Model.Time
+```
+
+### Form Views
+
+- This view would be invoked by an HttpGet method in the controller.
+- This view will send data to a HttpPost method in the controller.
+
+```c#
+@model Review
+@{
+    ViewData["Title"] = "Books";
+}
+
+<form method="post">
+    <label asp-for="Book.BookTitle">Title</label>
+    <input asp-for="Book.BookTitle" /><br />
+
+    <label asp-for="Book.AuthorName">Author</label>
+    <input asp-for="Book.AuthorName" /><br />
+
+    <label asp-for="Reviewer.Name">Reviewer</label>
+    <input asp-for="Reviewer.Name" /><br />
+
+    <label asp-for="ReviewText">Review</label>
+    <textarea asp-for="ReviewText"></textarea><br />
+
+    <button type="submit">Submit</button>
+</form>
+```
 
 
 
 ## Reference
 
-### Textbook
-
 Ch. 2, "How to code a single-page MVC web app", *Murach’s ASP.NET Core MVC*, 1st Edition, by Mary Delamater and Joel Murach, Murach Books, 2020.
 
-### Online
-
-[Add a Model to an ASP.NET Core MVC App](https://lanecc.zoom.us/rec/share/eysvpQj6XMaobYbus6qz_0cvLLxkrHTkPfg3OBoM7G-EwiIhkyYCZiCBKpg3Dvkr.oqyMt8bs2AEArLPq)&mdash;Microsoft Tutorial
-
-
+[Overview of ASP.NET Core MVC](https://learn.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-3.1), Microsoft Tutorial, 2022
 
 
 ------
