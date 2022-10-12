@@ -12,6 +12,25 @@ Attributes are used for adding *metadata*[^1] to C# code elements such as: class
 
 Read more about attributes here: [Use Attributes in C#](https://learn.microsoft.com/en-US/dotnet/csharp/tutorials/attributes)
 
+### Attributes used in ASP.NET
+
+
+`[HttpGet]`
+
+Identifies a controller method that handles HTTP GET requests. The ASP.NET middle-ware will route incoming GET requests, with a matching URL, to a method with this attribute. This is the default for controller methods, so methods without any attribute will still get GET requests.
+
+`[HttpPost]`
+
+This does the same thing as `[HttpGet]` except for POST requests.
+
+`        [Required]`
+
+This attribute is a validation constraint that can be placed on a model property that will enable you to write code to generate an error message if a user doesn't enter anything when filling out a form that uses a model with this property.
+
+`[StringLength(500, MinimumLength = 10)]`
+
+This is also a validation constraint that can be used on a model property. This one constrains a string to a minimum length of 10 and maximum length of 500.
+
 
 
 ## Handling Nulls in C#
