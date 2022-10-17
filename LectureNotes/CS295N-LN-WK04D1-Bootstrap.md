@@ -82,6 +82,7 @@ Bootstrap’s grid system uses a series of *containers*, *rows*, and *columns* t
   - A column class must be inside an HTML element that uses a row class.
   - The col class specifies the number of columns an element will span for a particular screen size.
     Example: `class="col-md-4"`
+  - The content of the page goes inside the elements with the col classes.
 
 
 | Class     | Screen Width | Name        |
