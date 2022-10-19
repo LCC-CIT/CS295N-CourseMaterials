@@ -45,7 +45,7 @@ The checklist is a markdown document. It won't open in your browser, but you can
 
 ## Reference
 
-[How to Do a Code Review](HowToDoPR-CodeReview.pdf)
+[How to Use Pull Requests (PRs) to Do Code Reviews](HowToDoPR-CodeReview.pdf)
 
 
 
