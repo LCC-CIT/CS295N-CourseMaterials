@@ -1,6 +1,6 @@
 # Code Review Guide
 
-Use this guide when responding to your lab partner's PR. You can do the review "free form" by writing a review that address all of the areas listed below, or you can use the [Code Review Checklist](CodeReviewCehcklist.md) I've written. 
+Use this guide when responding to your lab partner's PR. You can do the review "free form" by writing a review that address all of the areas listed below, or you can use my [Code Review Checklist](CodeReviewChecklist.md). 
 
 The checklist is a markdown document. It won't open in your browser, but you can download it and then paste the checklist section of the document into the comment section of your lab partner's PR and answer all the questions in the checklist. 
 
@@ -43,6 +43,10 @@ The checklist is a markdown document. It won't open in your browser, but you can
 
 - Are classes “loosely coupled” and “highly coherent”?
 
+## Reference
+
+[How to Do a Code Review](HowToDoPR-CodeReview.pdf)
+
 
 
 ------
@@ -50,3 +54,4 @@ The checklist is a markdown document. It won't open in your browser, but you can
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
 ASP.NET Core MVC course materials by [Brian Bird](https://profbird.dev), written 2017, revised 2022, are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
 
+-------
