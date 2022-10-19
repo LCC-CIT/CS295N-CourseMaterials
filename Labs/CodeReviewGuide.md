@@ -1,5 +1,9 @@
 # Code Review Guide
 
+Use this guide when responding to your lab partner's PR. You can do the review "free form" by writing a review that address all of the areas listed below, or you can use the [Code Review Checklist](CodeReviewCehcklist.md) I've written. 
+
+The checklist is a markdown document. It won't open in your browser, but you can download it and then paste the checklist section of the document into the comment section of your lab partner's PR and answer all the questions in the checklist. 
+
 ## Functionality
 
 - Does it compile without errors?
