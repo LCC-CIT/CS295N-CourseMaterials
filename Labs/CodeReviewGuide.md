@@ -5,6 +5,7 @@
 - Does it compile without errors?
 - Does it run without throwing exceptions or crashing?
 - Does it meet all the requirements for this lab assignment?
+- Is the code written using correct style and best coding practices?
 
 ## Aspects of coding style to check
 
@@ -37,3 +38,11 @@
 - Does each method do just one thing (no “Swiss Armey” methods)?
 
 - Are classes “loosely coupled” and “highly coherent”?
+
+
+
+------
+
+[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
+ASP.NET Core MVC course materials by [Brian Bird](https://profbird.dev), written 2017, revised 2022, are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+
