@@ -14,6 +14,8 @@ Complete Exercise 1-1 in *Murach's ASP.NET Core MVC*
 
 Add to the web site you crated in lab 1 by creating a "skeleton" (a set of empty pages) for your site. A site map is shown below for each group's web site. The site map is shown in the form of an outline. The main bullet points represent top-level web pages, and sub-point bullets represent pages linked from the top-level pages. 
 
+Each top level page requires it's own controller. Each sub-page will have a method in the controller.
+
 These pages will all be place-holders. The only content will be:
 
 - A title (shows up in the browser tab). 
@@ -78,7 +80,7 @@ These pages will all be place-holders. The only content will be:
   Has links to *References* and *Your choice* top-level pages and to the sub-pages below.
   
   - **Overview**: a brief description of the topic.
-  - **forum** – a page with a form where users can post comments.
+  - **Forum** – a page with a form where users can post comments.
   
 - **References**: where to find out about the topic.
   
