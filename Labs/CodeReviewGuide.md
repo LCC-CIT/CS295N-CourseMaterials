@@ -15,9 +15,10 @@ The checklist is a markdown document. It won't open in your browser, but you can
 
 - Is proper indentation used?
 
-- Are the HTML elements and variables named descriptively?
+- Are things named descriptively? 
+  (Names of classes, variables, methods, HTML elements, etc.)
 
-- Have any unnecessary lines of code or files been removed?
+- Have any unnecessary ("dead") lines of code or files been removed?
 
 - Are there explanatory comments in the code?
 
@@ -33,7 +34,7 @@ The checklist is a markdown document. It won't open in your browser, but you can
 
 - Are named constants used instead of repeated literal constants?
 
-- Is code that does computation or logical operations separated into its own class instead of being added to the code-behind?
+- Is code that does computation or logical operations separated into its own class instead of being added to model, view, or controller?
 
 - Are all instance variables (aka fields) private?
 

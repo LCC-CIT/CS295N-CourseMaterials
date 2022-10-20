@@ -8,8 +8,7 @@
 ## Part 1: Textbook Tutorial Exercise
 
 Complete Exercise 1-1 in *Murach's ASP.NET Core MVC*
-
-
+(Use Visual Studio to run the Guitar Shop app.)
 
 ## Part 2: Skeletal Web Site
 
