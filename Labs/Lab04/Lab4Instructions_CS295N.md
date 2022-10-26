@@ -5,23 +5,25 @@
 
 [TOC]
 
-## Part A: Textbook Tutorial Exercises
+## Part A: Textbook Tutorial Exercise
 
 In *Murach's ASP.NET Core MVC*, complete exercise 3-1, "Work with the Bootstrap classes in the Future Value app". 
 
-You will take a screen-shot of the app running in your web browser at the end of the exercise and on the document containing the screen-shot you will also report one of the following:
+You will take a screen-shot of the app running in your web browser at the end of the exercise. On the document containing the screen-shot you will also report one of the following:
 
 A. I Followed all the steps shown in the book and successfully compiled and ran the program.
 
 B. I Loaded the completed solution, experimented with the code, and ran the program.
 
-C. I didn't do the exercise.
+C. I ran the completed solution, but didn't do any experimenting.
+
+D. I didn't do the exercise.
 
 
 
 ## Part B: Make Your Web Site Responsive
 
-All three lab groups will use Bootstrap classes listed below on your web page that uses a form:
+All three lab groups will use the Bootstrap classes listed below on a web page in your site that uses a form. The web page should be responsive for two screen sizes: laptop or desktop screen size and mobile phone screen size.
 
 - container
 
@@ -37,17 +39,12 @@ All three lab groups will use Bootstrap classes listed below on your web page th
 
 - button (btn, btn-primary, etc.)
 
-  
-
-## Part C: Publish Your Site to Azure
-
-Follow the instruction given in class to publish your web site to Azure.
 
 
 
-## Review and Submission
+## Beta and Production Versions
 
-### PRs and Code Reviews
+### Beta Version: Send PRs and Do Code Reviews 
 
 1. Send a PR (Pull Request) to your lab partner asking them to review your code. 
 
@@ -57,7 +54,7 @@ Follow the instruction given in class to publish your web site to Azure.
 
    On Moodle, in the "online text" field of the Code Review assignment, enter the URL of the pull request with the code review <u>you gave</u>.
 
-### Final Submission to Moodle
+### Production Version: Submit to Moodle and Publish to Azure
 
 1.  Upload a screen-shot of the web page from textbook exercise. Take of picture of it running in a browser with data entered and a calculations shown.
 2.  Publish your web site from part B to Azure.

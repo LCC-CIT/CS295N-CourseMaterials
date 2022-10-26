@@ -64,65 +64,72 @@ CS296N Web Development 2: ASP.NET
 
 This is not a comprehensive list of Bootstraps features and concepts. See one of the tutorials or the official Bootstrap site in the [Reference]() section for more.
 
-- Containers - fixed width and fluid
+#### Grid System
 
-- Grid system
-The grid system is fundamental to the way Bootstrap facilitates responsive web sites.
-  
-  - Bootstrap’s grid system uses a series of containers, rows, and columns to position and align content. In version 4, the grid system is built with the CSS3 Flexbox, and in version 3 it was built using CSS floats. Both versions are fully responsive.
-    
-    - [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox): A one-dimensional layout model that is part of CSS3. It provides a way to distribute space between items and align them. ("One dimensional" means flexbox deals with layout in one dimension at a time — either a row or a column.)
-    
-  - Columns
-    
-      - Rows can contain up to 12 columns.
-    - The col class specifies the number of columns an element will span.
-    
-    | Class     | Screen Width | Name        |
-    | --------- | ------------ | ----------- |
-    | `col-`    | &lt;576px    | Extra small |
-    | `col-sm-` | &gt;=576px   | Small       |
-    | `col-md-` | &gt;=768px   | Medium      |
-    | `col-lg-` | &gt;=992px   | Large       |
-    | `col-xl-` | &gt;=1200px  | eXtra Large |
-  
-- Margins and Padding
-  ([From W3Schools](https://www.w3schools.com/bootstrap4/bootstrap_utilities.asp))
+The grid system is fundamental to the way Bootstrap facilitates responsive web sites. In version 4, the grid system is built with the CSS3 Flexbox, and in version 3 it was built using CSS floats. Both versions are fully responsive.
 
-  The classes are used in the format: `{property}{sides}-{size}` for `xs` and `{property}{sides}-{breakpoint}-{size}` for `sm`, `md`, `lg`, and `xl`.
-  
-  Where *property* is one of:
-  
-  - `m` - sets `margin`
-  - `p` - sets `padding`
-  
-  Where *sides* is one of:
-  
-  - `t` - sets `margin-top` or `padding-top`
-  - `b` - sets `margin-bottom` or `padding-bottom`
-  - `l` - sets `margin-left` or `padding-left`
-  - `r` - sets `margin-right` or `padding-right`
-  - `x` - sets both `padding-left` and `padding-right` or `margin-left` and `margin-right`
-  - `y` - sets both `padding-top` and `padding-bottom` or `margin-top` and `margin-bottom`
-  - blank - sets a `margin` or `padding` on all 4 sides of the element
-  
-  Where *size* is one of:
-  
-  - `0` - sets `margin` or `padding` to `0`
-  - `1` - sets `margin` or `padding` to `.25rem` (4px if font-size is 16px)
-  - `2` - sets `margin` or `padding` to `.5rem` (8px if font-size is 16px)
-  - `3` - sets `margin` or `padding` to `1rem` (16px if font-size is 16px)
-  - `4` - sets `margin` or `padding` to `1.5rem` (24px if font-size is 16px)
-  - `5` - sets `margin` or `padding` to `3rem` (48px if font-size is 16px)
-  - `auto` - sets `margin` to auto
-  
-  **Note:** margins can also be negative, by adding an "n" in front of *size*:
-  
-  - `n1` - sets `margin` to `-.25rem` (-4px if font-size is 16px)
-  - `n2` - sets `margin` to `-.5rem` (-8px if font-size is 16px)
-  - `n3` - sets `margin` to `-1rem` (-16px if font-size is 16px)
-  - `n4` - sets `margin` to `-1.5rem` (-24px if font-size is 16px)
-  - `n5` - sets `margin` to `-3rem` (-48px if font-size is 16px)
+> [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox): A one-dimensional layout model that is part of CSS3. It provides a way to distribute space between items and align them. ("One dimensional" means flexbox deals with layout in one dimension at a time — either a row or a column.)
+
+Bootstrap’s grid system uses a series of *containers*, *rows*, and *columns* to position and align content. 
+
+- Containers: contain one or more rows.
+  - The `container` class creates a container that is centered in the `<body>` of the page. It's width can be set as a percentage of the viewport size.
+  - The `container-fluid` class is similar to the container class, but the width is always 100% of the viewport.
+- Rows: can span up to 12 columns.
+  - The `row` class must be used inside an HTML element that uses a container class.
+
+- Columns: every row can have one or more elements with col classes.
+  - A column class must be inside an HTML element that uses a row class.
+  - The col class specifies the number of columns an element will span for a particular screen size.
+    Example: `class="col-md-4"`
+  - The content of the page goes inside the elements with the col classes.
+
+
+| Class     | Screen Width | Name        |
+| --------- | ------------ | ----------- |
+| `col-`    | &lt;576px    | Extra small |
+| `col-sm-` | &gt;=576px   | Small       |
+| `col-md-` | &gt;=768px   | Medium      |
+| `col-lg-` | &gt;=992px   | Large       |
+| `col-xl-` | &gt;=1200px  | eXtra Large |
+
+#### Margins and Padding
+([From W3Schools](https://www.w3schools.com/bootstrap4/bootstrap_utilities.asp))
+
+The classes are used in the format: `{property}{sides}-{size}` for `xs` and `{property}{sides}-{breakpoint}-{size}` for `sm`, `md`, `lg`, and `xl`.
+
+Where *property* is one of:
+
+- `m` - sets `margin`
+- `p` - sets `padding`
+
+Where *sides* is one of:
+
+- `t` - sets `margin-top` or `padding-top`
+- `b` - sets `margin-bottom` or `padding-bottom`
+- `l` - sets `margin-left` or `padding-left`
+- `r` - sets `margin-right` or `padding-right`
+- `x` - sets both `padding-left` and `padding-right` or `margin-left` and `margin-right`
+- `y` - sets both `padding-top` and `padding-bottom` or `margin-top` and `margin-bottom`
+- blank - sets a `margin` or `padding` on all 4 sides of the element
+
+Where *size* is one of:
+
+- `0` - sets `margin` or `padding` to `0`
+- `1` - sets `margin` or `padding` to `.25rem` (4px if font-size is 16px)
+- `2` - sets `margin` or `padding` to `.5rem` (8px if font-size is 16px)
+- `3` - sets `margin` or `padding` to `1rem` (16px if font-size is 16px)
+- `4` - sets `margin` or `padding` to `1.5rem` (24px if font-size is 16px)
+- `5` - sets `margin` or `padding` to `3rem` (48px if font-size is 16px)
+- `auto` - sets `margin` to auto
+
+**Note:** margins can also be negative, by adding an "n" in front of *size*:
+
+- `n1` - sets `margin` to `-.25rem` (-4px if font-size is 16px)
+- `n2` - sets `margin` to `-.5rem` (-8px if font-size is 16px)
+- `n3` - sets `margin` to `-1rem` (-16px if font-size is 16px)
+- `n4` - sets `margin` to `-1.5rem` (-24px if font-size is 16px)
+- `n5` - sets `margin` to `-3rem` (-48px if font-size is 16px)
 
 
 - Jumbotron
@@ -138,7 +145,11 @@ The grid system is fundamental to the way Bootstrap facilitates responsive web s
 
     - [See W3Schools](https://www.w3schools.com/bootstrap4/bootstrap_forms.asp)
 
-### Using Bootstrap with ASP.NET Core
+## Using Bootstrap with ASP.NET Core
+
+- Add Bootstrap to wwwroot
+
+  - 
 
 - Enable static pages in startup.cs
 
@@ -162,12 +173,14 @@ The grid system is fundamental to the way Bootstrap facilitates responsive web s
 
 ## Other Popular Front-End Libraries and Frameworks
 
+These are libraries and frameworks that you could use with ASP.NET MVC
+
 - [jQuery](http://jquery.com)
   jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript. - from the jQuery web site
 - [AngularJS](https://angularjs.org)
   *HTML is great for declaring static documents, but it falters when we try to use it for declaring dynamic views in web-applications. AngularJS lets you extend HTML vocabulary for your application. The resulting environment is extraordinarily expressive, readable, and quick to develop.* - from the AngularJS web site.
 - [React](https://reactjs.org/docs/try-react.html)
-  *React is a declarative, efficient, and flexible JavaScript library for building user interfaces.* - from the React web site
+  *React is a declarative, efficient, and flexible JavaScript library for building user interfaces.* - from the React web site. You would only use this with an ASP.NET web service (web API).
 - [Font Awesome](https://fontawesome.com)
   *Gives you scalable vector icons that can instantly be customized — size, color, drop shadow, and anything that can be done with the power of CSS*. - from the FontAwesome web site
 
@@ -186,6 +199,46 @@ Static web content primarily consists of HTML, CSS and JavaScript files (but can
 ### LibMan
 
 > Library Manager (LibMan) is a lightweight, client-side library  acquisition tool. LibMan downloads popular libraries and frameworks from the file system or from a [content delivery network (CDN)](https://wikipedia.org/wiki/Content_delivery_network). The supported CDNs include [CDNJS](https://cdnjs.com/), [jsDelivr](https://www.jsdelivr.com/), and [unpkg](https://unpkg.com/#/). The selected library files are fetched and placed in the appropriate location within the ASP.NET Core project.&mdash;Scott Addie in [Client-side library acquisition in aSP.NET Core with LibMan](https://docs.microsoft.com/en-us/aspnet/core/client-side/libman/?view=aspnetcore-3.1)
+
+Default libman.json for VS 2022, v. 17.3.6
+Note: the bootstrap.js bundle includes popper.js
+
+```json
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": []
+}
+```
+
+libman.json modified to reflect the default versions of libraries included in the project:
+
+```
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "twitter-bootstrap@4.3.1",
+      "destination": "wwwroot/lib/bootstrap/"
+    },
+    {
+      "library": "jquery@3.5.1",
+      "destination": "wwwroot/lib/jquery/"
+    },
+    {
+      "library": "jquery-validate@1.17.0",
+      "destination": "wwwroot/lib/jquery-validate/"
+    },
+    {
+      "library": "jquery-validation-unobtrusive@3.2.11",
+      "destination": "wwwroot/lib/jquery-validation-unobtrusive/"
+    }
+  ]
+}
+```
+
+
 
 ### Bundling and Minification
 

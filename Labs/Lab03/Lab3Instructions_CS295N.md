@@ -88,19 +88,18 @@ Do you want the posts to be identified as either comments or additional informat
 - Decide the relationship between the models.
 - Code the models.
 
-#### Controllers
-
-You should already have an existing HTTP GET method that displays the view that will contain the data entry form.
-
-- Write an HTTP POST method that gets the information from the form, then displays a page containing all the message, story, or post just entered.
-
 #### Views
 
-- Add a data entry form to the message, story, or post view. Make the view strongly typed.
+- Add a new view containing a HTML form for entering a message, story, or forum post. Make the view strongly typed. This will be a child view of an existing Contact, Stories or Forum view.
 
-- Add a view that shows one message story, or post. Make the view strongly typed.
+- Modify the existing Contact, Stories, or Forum view so that it can display data echoed back when the user submits information they entered in the form described above.
 
-  Echo the information from the view with the form back to the bottom of the same view.
+#### Controllers
+
+- Write an HTTP GET method for the new HTML form view described in *Views* above.
+- Write an HTTP POST method that receives the information from the new HTML form. This method should use the Redirect method to send the information back to the Contact, Stories, or Forum view (back to the controller method for that view.)
+
+Note: You should already have an existing HTTP GET method in your HomeController that renders a Contact, Stories, or Forum view and sends it to the browser.
 
 
 
