@@ -217,19 +217,19 @@ View [academic calendars](https://www.lanecc.edu/calendars/academic-calendar) on
 
 (May be subject to change)
 
-| Week | Topics                                                       | Reading                            | Lab Assignment                                               |
-| ---- | ------------------------------------------------------------ | ---------------------------------- | ------------------------------------------------------------ |
-| 1    | Intro to Web Dev<br />*Class starts Wednesday*               |                                    | - Create your project MVC site                               |
-| 2    | Intro to MVC                                                 | Murach Ch. 1                       | - Murach Ex 1-1<br />- Add pages and links to a site         |
-| 3    | Working with Data                                            | Murach Ch. 2                       | - Murach Ex 2-1<br />- Add models and data entry<br />- Publish to Azure |
-| 4    | Bootstrap                                                    | Murach Ch. 3                       | - Murach Ex 3-1, 3-2<br />- Add Bootstrap to your site       |
-| 5    | Midterm Quiz<br />Unit testing with xUnit                    | Online tutorials                   | Add unit tests to your site                                  |
-| 6    | Entity Framework<br />Database Migrations<br />Deploying a DB to Azure | Murach Ch. 4<br />Online tutorials | - Murach Ex 4-1<br />- Add a DB to your site                 |
-| 7    | Debugging<br />                                              | Murach Ch. 5                       | - Murach Ex 5-1<br />- Debugging practice                    |
-| 8    | Controllers                                                  | Murach Ch. 6                       | - Murach Ex 6-1<br />- Add controller methods to your site   |
-| 9    | Razor Views<br />                                            | Murach Ch. 7a                      | - Add tag helpers to your site                               |
-| 10   | Razor Views (continued)                                      | Murach Ch. 7b                      | - Murach Ex 7-1<br />- Add views to your site                |
-| 11   | Final quiz, Project presentations                            |                                    |                                                              |
+| Week | Topics                                                       | Reading                                                      | Lab Assignment                                               |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 1    | Intro to Web Dev<br />*Class starts Wednesday*               |                                                              | Lab 1<br />Create an empty MVC site                          |
+| 2    | Intro to MVC                                                 | Murach Ch. 1                                                 | Lab 2<br />- Murach Ex 1-1<br />- Add pages and links to a site |
+| 3    | Working with Data                                            | Murach Ch. 2                                                 | Lab 3<br />- Murach Ex 2-1<br />- Add models and data entry<br />- Publish to Azure |
+| 4    | Bootstrap                                                    | Murach Ch. 3                                                 | Lab 4<br />- Murach Ex 3-1, 3-2<br />- Add Bootstrap to your site |
+| 5    | Midterm quiz                                                 |                                                              | Term project proposal                                        |
+| 6    | Unit testing with xUnit                                      | Murach Ch. 14<br />Pg. 570-577                               | Lab 5<br />Add a quiz and <br />unit tests to your site.     |
+| 7    | Entity Framework<br />Database Migrations<br />Deploying a DB to Azure<br /><br /> | Murach Ch. 4<br />Online tutorial<br />                      | Lab 6<br />- Murach Ex 4-1<br />- Add a DB to your site<br /> |
+| 8    | Repository Pattern<br />More Unit Testing                    | Murach Ch. 14                                                | Lab 7                                                        |
+| 9    | Linq and Seed Data                                           | Ch. 4: A Data driven web app<br/> 138–139: Seeding initial data<br/> 144–145: Working with data<br />Ch. 12: How to Use EF Core<br/>  472–475: How to query data | Lab 8                                                        |
+| 10   | Debugging<br />Final quiz                                    | Murach Ch. 5                                                 | Lab 9 (Extra Credit)<br />- Murach Ex 5-1<br />- Debugging practice |
+| 11   | Project presentations                                        |                                                              |                                                              |
 
 
 
