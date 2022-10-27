@@ -122,3 +122,9 @@ Note: You should already have an existing HTTP GET method in your HomeController
 3.  In the "online text" for the Moodle assignment:
     - Paste a link to the branch of your GitHub repository for this lab.
     - Paste a link to your web site running on Azure.
+
+
+
+## Grading Criteria
+
+[Grading rubric for lab 3](Lab3Rubric_CS295N.htm)
