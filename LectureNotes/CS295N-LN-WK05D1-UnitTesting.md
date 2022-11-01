@@ -1,13 +1,6 @@
-**CS295N Web Development 1: ASP.NET
-**
-
-Brian Bird
+**CS295N Web Development 1: ASP.NET**
 
 <h1>Unit Testing</h1>
-
-Weekly Topics:
-
-
 
 | Weekly Topics                           |                                          |
 | --------------------------------------- | ---------------------------------------- |
@@ -201,5 +194,5 @@ public void Review_PostTest()
 
 ------
 
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) ASP.NET Core MVC Lecture Notes by [Brian Bird](https://birdsbits.blog), 2018, revised 2022, is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) ASP.NET Core MVC Lecture Notes by [Brian Bird](https://birdsbits.blog), 2018, revised 2022, are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
 
