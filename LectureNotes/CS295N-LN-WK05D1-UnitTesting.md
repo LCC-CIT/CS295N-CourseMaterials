@@ -1,3 +1,12 @@
+---
+title: Unit Testing
+description: How to write unit tests for buisiness logic and for controller methods.
+keywords: test, test driven development, test first
+material: Lecture Notes
+generator: PanWriter
+author: Brian Bird
+---
+
 **CS295N Web Development 1: ASP.NET**
 
 <h1>Unit Testing</h1>
@@ -84,33 +93,36 @@ First, add a unit test project for C# to the Visual Studio Solution. Then add a 
 The unit test will be for the method below, from a class named AuthorQuiz, used to implement a quiz about authors:
 
 ```C#
-public static string CheckAnswer(int questionNumber, string answer)
+public static class Quiz
 {
-    string correct;
-    const string RIGHT = "Right";
-    const string WRONG = "Wrong";
-    const string NAQ = "Not a question";
-    
-    switch (questionNumber)
+    public const string RIGHT = "Right";
+    public const string WRONG = "Wrong";
+    public const string NAQ = "Not a question";
+
+    public static string CheckAnswer(int questionNumber, string answer)
     {
-        case 1:
-            correct = answer == "Victor Hugo"? RIGHT : WRONG;
-            break;
-        case 2:
-            correct = answer == "1812" ? RIGHT : WRONG;
-            break;
-        case 3:
-            correct = answer == "false" ? RIGHT : WRONG;
-            break;
-        default:
-            correct = NAQ;
-            break;
+        string correct;
+        switch (questionNumber)
+        {
+            case 1:
+                correct = answer == "Victor Hugo" ? RIGHT : WRONG;
+                break;
+            case 2:
+                correct = answer == "1812" ? RIGHT : WRONG;
+                break;
+            case 3:
+                correct = answer == "false" ? RIGHT : WRONG;
+                break;
+            default:
+                correct = NAQ;
+                break;
+        }
+        return correct;
     }
-    return correct;
 }
 ```
 
-Here is a unit test:
+Here is a unit test. Note that this unit test is not complete, it only checks one of the cases in the switch statement.
 
 ```C#
 [Fact]
@@ -125,9 +137,9 @@ public void CheckAnswerTest()
     string resultNaq = AuthorQuiz.CheckAnswer(0, "1812");
 
     // Assert
-    Assert.Equal(RIGHT, resultRight);
-    Assert.Equal(WRONT, resultWrong);
-    Assert.Equal(RIGHT == resultNaq);
+    Assert.Equal(Quiz.RIGHT, resultRight);
+    Assert.Equal(Quiz.WRONG, resultWrong);
+    Assert.Equal(Quiz.NAQ, resultNaq);
 }
 ```
 
