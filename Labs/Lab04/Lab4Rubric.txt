@@ -1,3 +1,15 @@
-Textbook exercise: 10/10
-Bootstrap code: 30/30
-Publish to Azure: 10/10
+Textbook exercise 3-1	10	
+Published to Azure	8	
+Bootstrap code	Bootstrap 4	Bootstrap 5
+Responsive	10	10
+container	2	2
+row	3	2
+column	3	2
+jumbotron	3	
+form classes		8
+margin	3	2
+padding	3	2
+button	5	4
+Bootstrap sub-total:	32	32
+		
+Total	50	50

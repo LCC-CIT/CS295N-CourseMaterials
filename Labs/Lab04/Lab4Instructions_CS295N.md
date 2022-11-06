@@ -23,7 +23,7 @@ D. I didn't do the exercise.
 
 ## Part B: Make Your Web Site Responsive
 
-All three lab groups will use the Bootstrap classes listed below on a web page in your site that uses a form. The web page should be responsive for two screen sizes: laptop or desktop screen size and mobile phone screen size.
+All three lab groups will use the Bootstrap classes listed below on a web page in your site that uses a form. The web page should be responsive for at least two screen sizes: a laptop screen size (>=768px) and mobile phone screen size (<768 px).
 
 - container
 
@@ -31,7 +31,7 @@ All three lab groups will use the Bootstrap classes listed below on a web page i
 
 - column
 
-- jumbotron
+- <s>jumbotron</s> form (form-label, form-control, etc.)
 
 - margin (mt, mr, mb, ml, or m)
 
@@ -61,3 +61,9 @@ All three lab groups will use the Bootstrap classes listed below on a web page i
 3.  In the "online text" for the Moodle assignment:
     - Paste a link to the branch of your GitHub repository for this lab.
     - Paste a link to your web site running on Azure.
+
+
+
+## Grading Criteria
+
+[Lab 4 grading rubric](Lab04Rubric.htm)

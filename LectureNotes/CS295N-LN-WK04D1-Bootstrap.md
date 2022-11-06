@@ -44,7 +44,7 @@ CS296N Web Development 2: ASP.NET
 - A CSS and JavaScript front-end web framework
 - Simplifies responsive design
 - Includes templates for typography, forms, buttons, tables, navigation, modals, image carousels and more
-- Tutorial:[W3Schools Bootstrap 4 Tutorial](https://www.w3schools.com/bootstrap4/)
+- Tutorial: [W3Schools Bootstrap 4 Tutorial](https://www.w3schools.com/bootstrap4/)
 - Use with Razor views:
   - Add a link for the bootstrap min.css file to _Layout.cshtml so that it is available in all the views.
 
@@ -93,7 +93,10 @@ Bootstrap’s grid system uses a series of *containers*, *rows*, and *columns* t
 | `col-lg-` | &gt;=992px   | Large       |
 | `col-xl-` | &gt;=1200px  | eXtra Large |
 
+Note that *screen width* is in CSS pixels, not physical pixels.[^1]
+
 #### Margins and Padding
+
 ([From W3Schools](https://www.w3schools.com/bootstrap4/bootstrap_utilities.asp))
 
 The classes are used in the format: `{property}{sides}-{size}` for `xs` and `{property}{sides}-{breakpoint}-{size}` for `sm`, `md`, `lg`, and `xl`.
@@ -282,13 +285,19 @@ Ch. 3, "How to make a web app responsive with Bootstrap", *Murach’s ASP.NET Co
 
 ### Online
 
-[Use LibMan with ASP.NET Core in Visual Studio](https://docs.microsoft.com/en-us/aspnet/core/client-side/libman/libman-vs?view=aspnetcore-3.1)&mdash;Microsoft Tutorial by Scott Addie
+[Use LibMan with ASP.NET Core in Visual Studio](https://docs.microsoft.com/en-us/aspnet/core/client-side/libman/libman-vs?view=aspnetcore-3.1)&mdash;Microsoft Tutorial by Scott Addie.
 
-[Bootstrap 4 Tutorial](https://www.w3schools.com/bootstrap4/default.asp)&mdash;W3Schools
+[Bootstrap 4 Tutorial](https://www.w3schools.com/bootstrap4/default.asp)&mdash;W3Schools.
 
-[Bootstrap Web Site](http://getbootstrap.com)&mdash;Official site
+[Bootstrap Web Site](http://getbootstrap.com)&mdash;Official site.
 
-------
+[Difference Between Viewport, Screen Resolution, DPR, and PPI for Responsive Web Development](https://webspeedtools.com/viewport-vs-screen-resolution-vs-dpr-vs-ppi/#:~:text=The%20viewport%20size%20will%20allow%20your%20laptop%20screen,is%20a%20good%20explanation%20of%20the%20logical%20resolution.)
+
+[Responsivo](https://addons.mozilla.org/en-US/firefox/addon/responsivo/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search)&mdash;A Firefox add-on for testing responsive web sites.
+
+[^1]: Viewport size is the number of CSS or software pixels in the visible area of the browser. One CSS pixel can equal one or more physical pixels depending on the device.
+
+
 
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) ASP.NET Core MVC Lecture Notes by [Brian Bird](https://birdsbits.blog) is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
 
