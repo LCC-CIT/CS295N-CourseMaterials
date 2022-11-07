@@ -1,31 +1,34 @@
 **CS295N Web Development 1: ASP.NET
 **
 
-Brian Bird
+<h1>Entity Framework</h1>
 
-# Entity Framework
+| Weekly Topics                           |                                          |
+| --------------------------------------- | ---------------------------------------- |
+| 1. Intro to Web Dev                     | 6. Unit Testing                          |
+| 2. Intro to MVC & Deploying to Azure    | 7. Database & Entity Framework           |
+| 3. Working with Data                    | 8. Unit Testing & The Repository Pattern |
+| 4. Bootstrap                            | 9. Linq & Seed Data                      |
+| 5. Midterm Quiz & Term Project Proposal | 10. Debugging                            |
 
-| Weekly Topics                             |                                                     |
-| ----------------------------------------- | --------------------------------------------------- |
-| 1. Intro to Web Dev                       | 6. **Database & Entity Framework**                  |
-| 2. Intro to MVC & Deploying to Azure      | 7. Unit Testing with a DB / *Veteran's Day holiday* |
-| 3. MVC Architectural patterns             | 8. Controllers & Debugging                          |
-| 4. Bootstrap                              | 9. Razor Views / *Thanksgiving holiday*             |
-| 5. Midterm Quiz & Unit testing with xUnit | 10. Razor Views (continued)                         |
-
-
-
-## Contents
+<h2>Contents</h2>
 
 [TOC]
 
+## Q and A
+
+- Answer any questions about the quiz.
+- Lab 5
+  - Show the additions to the Book Review web site.
+  - Answer questions.
+
+- Look at due dates on Moodle.
+
 ## Introduction
 
-- Discuss the quiz.
-- Answer questions about lab 5.
-- Describe where we're going: databases, unit testing with databases.
+This week we will learn how to add a database to our web app. We will use a SQL database, but we won't be writing code to interact directly with the database, we'll use *Entity Framework* (EF) to simplify our database code.
 
-
+We'll put the new code that does database operations in our controller methods.This will be a bit problematic for unit testing, so next week we'll refactor our database code to use something called the *Repository Pattern* which will facilitate unit tests for controller methods that access a database.
 
 ## Object Relational Mapping and Entity Framework Core 
 
@@ -130,8 +133,8 @@ Ideally, we would like our models to be designed solely with object oriented des
     public ApplicationDbContext(
        DbContextOptions<ApplicationDbContext> options) : base(options) { }
     public DbSet<Book> Books { get; set; }
-    public DbSet<Author> Authors { get; set; }
-    public DbSet<User> Users { get; set; }
+    public DbSet<Review> Reviews { get; set; }
+    public DbSet<AppUser> AppUsers { get; set; }
   }
   ```
 
@@ -145,8 +148,8 @@ Ideally, we would like our models to be designed solely with object oriented des
 
   ```json
   "Data": {
-    "GoodBookNook": {
-      "ConnectionString": "Server=(localdb)\\MSSQLLocalDB;Database=GoodBookNook; Trusted_Connection=True;MultipleActiveResultSets=true"
+    "BookReviews": {
+      "ConnectionString": "Server=(localdb)\\MSSQLLocalDB;Database=BookReviews; Trusted_Connection=True;MultipleActiveResultSets=true"
      }
   }
   ```
@@ -167,64 +170,59 @@ In the *ConfigureServices* method, add a service for DbContext.
 - Example:
 
   ```C#
-  services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["Data:GoodBookNook:ConnectionString"]));
+  services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["Data:BookReviews:ConnectionString"]));
   ```
 
-  
 
 #### Loading related data
 
 Related data is data that comes from objects that are related to the object that you are getting from  DbContext by aggregation or composition. 
 
-For example, in the Book model below, the two lists are related data (also called *navigational properties*) because they are lists of domain model objects that are related to Book objects both conceptually and by object composition.
+For example, in the `Review` model below, the `Book` and `Reviewer` properties are related data  because they get and set domain model objects that are related to Review objects by object composition (a Book and an AppUser are part of the review).
 
 ```c#
-public class Book 
+public class Review
 {
-// Backing fields for the navigational properties
-  private List<Author> authors = new List();
-  private List<Review> reviews = new List();
-  // Ordinary properties
-  public int BookID { get; set; }
-  public string Title { get; set; }
-  public DateTime PubDate { get; set; }
-  // Navigational properties
-  public List<Author> Authors { get { return authors; } }
-  public List<Review> Reviews** { get { return reviews; } }
+  public int ReviewId {get; set;}
+  public Book Book { get; set; }
+  public AppUser Reviewer { get; set; }
+  public string ReviewText { get; set; }
+  public DateTime ReviewDate { get; set; }
 }
 ```
 
-Note that the *navigational properties* will cause EF to create foreign key fields for BookID in the Author and Review tables in the database.
-
-
+Note that EF will create foreign key fields for ReviewID in the AppUser and Book tables in the database.
 
 #### Ways to load related data
 
 - **Eager loading**
   Related data is loaded from the database as part of the initial query.
 
-- - Use the *Include* method to include dependent objects. You only need this when you include your own model classes (not for *DateTime* or other classes that are not part of your domain model.)
-
+  - Use the *Include* method to include dependent objects. You only need this when you include your own model classes (not for *DateTime* or other classes that are not part of your domain model.)
+  
   - Use *ThenInclude* for second-level dependencies.
-    Example code from a repository class:
-
-    ```C#
-    public List Books { get {
-      return context.Books.Include(book => book.Authors)
-      .Include(book => book.Reviews)
-      .ThenInclude(review => review.Reviewer)
-      .ToList();
-      }
-    }
-    ```
-
     
-
+    Example code snippet from a controller method that gets a list of `Review` objects from a database:
+    
+    ```C#
+    public List Reviews = context.Reviews
+      .Include(review => review.AppUser) // returns Reivew.AppUser object
+      .Include(review => review.Book) // returns Review.Book object
+      .ThenInclude(book => book.Author)  // returns Review.Book.Author object
+      .ToList();
+    ```
+    
+  
+    The syntax of the include statement is:  
+    
+    *Include(parameterRepresentingDbSet => parameter.ModelPropertyName)*
+  
 - **Explicit loading**
   Related data is explicitly loaded from the database at a later time.
   (See the article below for more details.)
+  
 - **Lazy loading**
-  Related data is transparently loaded from the database when a navigation property is accessed.
+  Related data is transparently loaded from the database when a dependent property (or navigation property) is accessed.
   (See the article below for more details.)
 
 > **Reference**
@@ -347,7 +345,7 @@ After EF has created a database, you can use *SQL Server Object Explorer* in Vis
 ## Running Unit Tests 
 
 
-Adding EF should not have broken any of your unit tests. But it's good practice to run the tests before pushing our code to the central repository (on GitHub). 
+Adding EF should not have broken any of your Quiz unit tests, but it will have broken your unit tests for controller methods that work with data&mdash;comment those tests out for now. But it's still good practice to run the tests on the quiz before pushing your code to GitHub. 
 
 
 

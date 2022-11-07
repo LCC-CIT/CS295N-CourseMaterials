@@ -1,31 +1,26 @@
 **CS295N Web Development 1: ASP.NET** 
 
-# More EF, LINQ and Publishing to Azure 
+<h1>More EF, LINQ and Publishing to Azure </h1>
 
-**Where we are** 
+| Weekly Topics                           |                                          |
+| --------------------------------------- | ---------------------------------------- |
+| 1. Intro to Web Dev                     | 6. Unit Testing                          |
+| 2. Intro to MVC & Deploying to Azure    | 7. Database & Entity Framework           |
+| 3. Working with Data                    | 8. Unit Testing & The Repository Pattern |
+| 4. Bootstrap                            | 9. Linq & Seed Data                      |
+| 5. Midterm Quiz & Term Project Proposal | 10. Debugging                            |
 
-
-
-| Weekly Topics                             |                                                     |
-| ----------------------------------------- | --------------------------------------------------- |
-| 1. Intro to Web Dev                       | 6. **Database & Entity Framework**                  |
-| 2. Intro to MVC & Deploying to Azure      | 7. Unit Testing with a DB / *Veteran's Day holiday* |
-| 3. MVC Architectural patterns             | 8. Controllers & Debugging                          |
-| 4. Bootstrap                              | 9. Razor Views / *Thanksgiving holiday*             |
-| 5. Midterm Quiz & Unit testing with xUnit | 10. Razor Views (continued)                         |
-
-
-
- **Contents**
+<h2>Contents</h2>
 
 [TOC]
 
+## Q and A
+
+- Announcements.
+- Discuss questions about the previous lab.
+- Review lab due dates on Moodle.
+
 ## Introduction
-
-- Announcements
-
-- Review lab due dates on Moodle
-- Discuss questions about the previous lab
 
 We will finish up last week's topic of adding a database to your web app by looking at how to add seed data to a database and publish it to Azure.
 
@@ -34,8 +29,6 @@ We will finish up last week's topic of adding a database to your web app by look
 Last week we added Entity Framework to our project and used it to create a database.
 
 I created a new branch, Lab06-Mac, for the students doing development on a Mac. The only difference is that this version uses SQLite instead of SQL Server as a database engine.
-
-
 
 ## Deploying a Web Site with a Database to Azure
 
