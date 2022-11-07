@@ -4,13 +4,13 @@ CS296N Web Development 2: ASP.NET
 
 **Topics by week** 
 
-| Weekly Topics                             |                                               |
-| ----------------------------------------- | --------------------------------------------- |
-| 1. Intro to Web Dev                       | 6. Entity Framework / Deploying a DB to Azure |
-| 2. Intro to MVC / Deploying to Azure      | 7. Debugging / *Veteran's Day holiday*        |
-| 3. Working with data                      | 8. Controllers                                |
-| 4. **Bootstrap**                          | 9. Razor Views / *Thanksgiving holiday*       |
-| 5. Midterm Quiz / Unit testing with xUnit | 10. Razor Views (continued)                   |
+| Weekly Topics                           |                                          |
+| --------------------------------------- | ---------------------------------------- |
+| 1. Intro to Web Dev                     | 6. Unit Testing                          |
+| 2. Intro to MVC & Deploying to Azure    | 7. Database & Entity Framework           |
+| 3. Working with Data                    | 8. Unit Testing & the Repository Pattern |
+| 4. <mark>Bootstrap</mark>               | 9. Linq and Seed Data                    |
+| 5. Midterm Quiz & Term Project Proposal | 10. Debugging                            |
 
 
 

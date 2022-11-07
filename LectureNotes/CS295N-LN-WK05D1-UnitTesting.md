@@ -13,7 +13,7 @@ author: Brian Bird
 
 | Weekly Topics                           |                                          |
 | --------------------------------------- | ---------------------------------------- |
-| 1. Intro to Web Dev                     | 6. Unit Testing                          |
+| 1. Intro to Web Dev                     | 6. <mark>Unit Testing</mark>             |
 | 2. Intro to MVC & Deploying to Azure    | 7. Database & Entity Framework           |
 | 3. Working with Data                    | 8. Unit Testing & the Repository Pattern |
 | 4. Bootstrap                            | 9. Linq and Seed Data                    |

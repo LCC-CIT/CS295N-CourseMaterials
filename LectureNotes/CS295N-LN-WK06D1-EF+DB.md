@@ -3,19 +3,19 @@
 
 <h1>Entity Framework</h1>
 
-| Weekly Topics                           |                                          |
-| --------------------------------------- | ---------------------------------------- |
-| 1. Intro to Web Dev                     | 6. Unit Testing                          |
-| 2. Intro to MVC & Deploying to Azure    | 7. Database & Entity Framework           |
-| 3. Working with Data                    | 8. Unit Testing & The Repository Pattern |
-| 4. Bootstrap                            | 9. Linq & Seed Data                      |
-| 5. Midterm Quiz & Term Project Proposal | 10. Debugging                            |
+| Weekly Topics                           |                                             |
+| --------------------------------------- | ------------------------------------------- |
+| 1. Intro to Web Dev                     | 6. Unit Testing                             |
+| 2. Intro to MVC & Deploying to Azure    | 7. <mark>Database & Entity Framework</mark> |
+| 3. Working with Data                    | 8. Unit Testing & The Repository Pattern    |
+| 4. Bootstrap                            | 9. Linq & Seed Data                         |
+| 5. Midterm Quiz & Term Project Proposal | 10. Debugging                               |
 
 <h2>Contents</h2>
 
 [TOC]
 
-## Q and A
+# Q and A
 
 - Answer any questions about the quiz.
 - Lab 5
@@ -24,13 +24,13 @@
 
 - Look at due dates on Moodle.
 
-## Introduction
+# Introduction
 
 This week we will learn how to add a database to our web app. We will use a SQL database, but we won't be writing code to interact directly with the database, we'll use *Entity Framework* (EF) to simplify our database code.
 
 We'll put the new code that does database operations in our controller methods.This will be a bit problematic for unit testing, so next week we'll refactor our database code to use something called the *Repository Pattern* which will facilitate unit tests for controller methods that access a database.
 
-## Object Relational Mapping and Entity Framework Core 
+## Object Relational Mapping and EF Core 
 
 One of the main functions of Entity Framework is to do [Object Relational Mapping](https://en.wikipedia.org/wiki/Object-relational_mapping). The purpose of an Object Relational Mapper (ORM) is to serve as a bridge between the world of our object oriented code and the world of the relational database. An ORM maps a domain model to a database schema and allows developers to just focus on writing OO code while the ORM takes care of database operations.
 
@@ -55,7 +55,7 @@ Entity Framework Core has [database providers](https://docs.microsoft.com/en-us/
 
 
 
-## Adding Entity Framework to a Web App
+# Adding Entity Framework to a Web App
 
 There are two major approaches to software development with EF:
 - Code first (Model first) -- we are using this approach
@@ -64,21 +64,17 @@ There are two major approaches to software development with EF:
 
 In order to use Entity Framework in your web app, you need to modify your code in the ways shown below.
 
-
-
-### NuGet Packages
+## NuGet Packages
 
 Use the NuGet Package Manager in Visual Studio to add the following packages to your project:
 
 - Microsoft.EntityFrameworkCore
-
-- Microsoft.EntityFrameworkCore.SqlServer
-
 - Microsoft.EntityFrameworkCore.Design
+- Microsoft.EntityFrameworkCore.SqlServer (with LocalDB on Windows)
+- Microsoft.EntityFrameworkCore.Sqlite (with SQLite on MacOS)
 
-  
 
-### Models
+## Models
 
 
 Ideally, we would like our models to be designed solely with object oriented design in mind-- without thinking about databases. But in reality we do need to consider how Entity Framework will generate a database schema based on our models. There are two main things to consider:
@@ -119,9 +115,8 @@ Ideally, we would like our models to be designed solely with object oriented des
 
   The current LTS version of EF, version 3.1, [doesn't support many-to-many relationships](https://docs.microsoft.com/en-us/ef/core/modeling/relationships#many-to-many)
   
-  
 
-### DbContext Class
+## DbContext Class
 
 - This class provides an entry point for your application to access Entity Framework Core which provides access to the database. 
 
@@ -140,23 +135,20 @@ Ideally, we would like our models to be designed solely with object oriented des
 
 
 
-### Connection String in appsettings.json 
+## Connection String in appsettings.json 
 
 - A connection string specifies the location and name of the database and provides configuration settings.
 
 - Connection strings are stored in appsettings.json. 
 
   ```json
-  "Data": {
-    "BookReviews": {
-      "ConnectionString": "Server=(localdb)\\MSSQLLocalDB;Database=BookReviews; Trusted_Connection=True;MultipleActiveResultSets=true"
-     }
+  "ConnectionStrings": {
+    "ConnectionString": "Server=(localdb)\\MSSQLLocalDB;Database=BookReviews; Trusted_Connection=True;MultipleActiveResultSets=true"
   }
   ```
-
   
 
-### Startup Class
+## Startup Class
 
 
 In the *ConfigureServices* method, add a service for DbContext. 
@@ -170,11 +162,50 @@ In the *ConfigureServices* method, add a service for DbContext.
 - Example:
 
   ```C#
-  services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["Data:BookReviews:ConnectionString"]));
+  services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:ConnectionString"]));
   ```
 
+## Controller Code for Storing and Retrieving Data
 
-#### Loading related data
+In Controller methods where you want to store or retrieve data you will use an instance (object) of your DbContext class (ApplicationDbContext in our example), to do database operations. In order to use the DbContext object in a controller it needs to be passed in via the controller's constructor, like this:
+
+```C#
+public class ReviewController : Controller
+    {
+        ApplicationDbContext context;
+        public ReviewController(ApplicationDbContext c)
+        {
+            context = c;
+        }
+        // The rest of the class is not shown
+```
+
+In a controller method that needs to store data, you would call the `Add`, and `SaveChanges` methods on the DbContext object like this:
+
+```C#
+ context.Reviews.Add(model);
+            context.SaveChanges(); 
+```
+
+
+
+In a controller method that needs to retrieve a particular item from the database you could call the `Find` method:
+
+```C#
+ review = context.Reviews.Find(reviewId);
+```
+
+
+
+In order to retrieve multiple items, you would just convert the DbSet to a C# List:
+
+```C#
+List<Review> reviews = context.Reviews.ToList();
+```
+
+The code above will work, but the only properties that are directly on the `Review` objects. The properties on object that are a part of `Review` will not be included.
+
+## Loading related data
 
 Related data is data that comes from objects that are related to the object that you are getting from  DbContext by aggregation or composition. 
 
@@ -193,7 +224,7 @@ public class Review
 
 Note that EF will create foreign key fields for ReviewID in the AppUser and Book tables in the database.
 
-#### Ways to load related data
+### Ways to load related data
 
 - **Eager loading**
   Related data is loaded from the database as part of the initial query.
@@ -232,9 +263,11 @@ Note that EF will create foreign key fields for ReviewID in the AppUser and Book
 
 
 
-## Creating a Database
+# Creating a Database
 
 Before you can run your app, you need to create a database on the host system. This might be your development machine, or a production server. On your development machine. But, before you can create a database, you need to add a database migration. You can read about that in the Migrations section below. 
+
+#### dotnet CLI Tools
 
 In order to do operations on our database, we will be using CLI (Command Line Interface) commands. (Not the commands for the Package Manager Console) You can check to see if you have the CLI tools for Entity Framework installed by entering the command:
  `dotnet ef`
@@ -267,21 +300,20 @@ Use "dotnet ef [command] --help" for more information about a command.
 If you get a message like this:
 "Could not execute because the specified command or file was not found", it is probably because the CLI tools for EF haven't been installed. You can install them by executing this command:
 
-`dotnet tool install --global dotnet-ef --version 3.1.x`
-Where x is the patch level that matches the version of EF Core you are using.
+`dotnet ef tool install --global dotnet-ef --version 3.1.x`
+**Replace x** with the patch level that matches the version of EF Core you are using, for example: 3.1.30.
 
 Note that this will install the tools globally, if you only want to install them for the current project, then leave off the --global switch. And, if you are using a version of ASP.NET Core other than 3.1 (which we are using this term in class), then change the version number. If you omit the --version switch, it will install the latest version.
 
+You can also update the tools using this command:
 
+`dotnet ef tool update --version 3.1.x`
 
-### Migrations
-
+## Migrations
 
 *Migrations* are a means of solving the problem of how to update the database when the models change. After changing any model, you will need to "add a migration" which puts code in the Migrations folder of the project that will be used by EF to update the Db schema as well as migrate the data from the old schema to the new schema.
 
-
-
-#### Creating a Migration
+### Creating a Migration
 
 Use the CLI command: 
 `dotnet ef migrations add Initial`
@@ -304,9 +336,7 @@ Running this command will cause the following to take place:
 9. Create new migration file in the Migrations folder
 10. Update the sanpshot file in the Migrations folder 
 
-
-
-#### Applying a Migration and creating (or updating) the database 
+### Applying a Migration and creating (or updating) the database 
 
 Use the CLI command:
  `dotnet ef database update`
@@ -324,8 +354,6 @@ Note: if you want to drop the database so you can run update again, use this CLI
 
 `dotnet ef database drop`
 
-
-
 ## Viewing Your Database
 
 
@@ -340,16 +368,14 @@ After EF has created a database, you can use *SQL Server Object Explorer* in Vis
 - Columns
 - Data 
 
-
-
-## Running Unit Tests 
+# Running Unit Tests 
 
 
 Adding EF should not have broken any of your Quiz unit tests, but it will have broken your unit tests for controller methods that work with data&mdash;comment those tests out for now. But it's still good practice to run the tests on the quiz before pushing your code to GitHub. 
 
 
 
-## Example
+# Example
 
 
 [BookInfo, branch EF](https://github.com/LCC-CIT/CS295N-Bookinfo-Core-21/tree/EF)
@@ -358,9 +384,9 @@ Adding EF should not have broken any of your Quiz unit tests, but it will have b
 
 ------
 
-## References
+# References
 
-### Print Books
+## Print Books
 
 - Ch. 4, "How to develop a data-driven MVC web app", 
 
@@ -370,7 +396,7 @@ Adding EF should not have broken any of your Quiz unit tests, but it will have b
 
   *Pro ASP.NET Core MVC 2*, Adam Freeman, Apress, 2017.
 
-### Online
+## Online
 
 - Microsoft Docs: [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/)
 - Microsoft Tutorial: [Get started with ASP.NET Core MVC and Entity Framework Core using Visual Studio](https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/)
