@@ -5,15 +5,17 @@
     <id>UMLClass</id>
     <coordinates>
       <x>140</x>
-      <y>40</y>
+      <y>30</y>
       <w>230</w>
-      <h>80</h>
+      <h>110</h>
     </coordinates>
     <panel_attributes>Review
 --
 +ReviewId: int
 +ReviewDate: DateTime
 +ReviewText: String
++Book: Book
++Reviewer: AppUser
 
 </panel_attributes>
     <additional_attributes/>
@@ -22,7 +24,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>70</x>
-      <y>180</y>
+      <y>200</y>
       <w>170</w>
       <h>130</h>
     </coordinates>
@@ -32,14 +34,15 @@
 +BookTitle: String
 +Isbn: int
 +PubDate: DateTime
-+Publisher: String</panel_attributes>
++Publisher: String
++Author: Author</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>270</x>
-      <y>180</y>
+      <y>200</y>
       <w>190</w>
       <h>80</h>
     </coordinates>
@@ -56,7 +59,7 @@
     <id>Relation</id>
     <coordinates>
       <x>160</x>
-      <y>110</y>
+      <y>130</y>
       <w>30</w>
       <h>90</h>
     </coordinates>
@@ -67,7 +70,7 @@
     <id>Relation</id>
     <coordinates>
       <x>310</x>
-      <y>110</y>
+      <y>130</y>
       <w>30</w>
       <h>90</h>
     </coordinates>
@@ -78,7 +81,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>70</x>
-      <y>370</y>
+      <y>390</y>
       <w>170</w>
       <h>130</h>
     </coordinates>
@@ -93,7 +96,7 @@
     <id>Relation</id>
     <coordinates>
       <x>150</x>
-      <y>300</y>
+      <y>320</y>
       <w>30</w>
       <h>90</h>
     </coordinates>
