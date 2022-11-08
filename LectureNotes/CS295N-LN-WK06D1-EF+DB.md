@@ -207,22 +207,11 @@ The code above will work, but the only properties that are directly on the `Revi
 
 ## Loading related data
 
-Related data is data that comes from objects that are related to the object that you are getting from  DbContext by aggregation or composition. 
+Related data is data that comes from objects that are related to the object you are retrieving by aggregation or composition. 
 
-For example, in the `Review` model below, the `Book` and `Reviewer` properties are related data  because they get and set domain model objects that are related to Review objects by object composition (a Book and an AppUser are part of the review).
+For example, in the hypothetical `Review` domain model below, the `Book`, `Reviewer`, and `Author` properties are related data because they are related to Review objects by aggregation (a Review "has-a" Book and an AppUser, a Book "has-an" Author).
 
-```c#
-public class Review
-{
-  public int ReviewId {get; set;}
-  public Book Book { get; set; }
-  public AppUser Reviewer { get; set; }
-  public string ReviewText { get; set; }
-  public DateTime ReviewDate { get; set; }
-}
-```
-
-Note that EF will create foreign key fields for ReviewID in the AppUser and Book tables in the database.
+![](ReviewComplexDomainModel.png)
 
 ### Ways to load related data
 
@@ -233,11 +222,11 @@ Note that EF will create foreign key fields for ReviewID in the AppUser and Book
   
   - Use *ThenInclude* for second-level dependencies.
     
-    Example code snippet from a controller method that gets a list of `Review` objects from a database:
+    Example code snippet from a controller method that gets a list of `Review` objects from a database:
     
     ```C#
     public List Reviews = context.Reviews
-      .Include(review => review.AppUser) // returns Reivew.AppUser object
+      .Include(review => review.Reviewer) // returns Reivew.AppUser object
       .Include(review => review.Book) // returns Review.Book object
       .ThenInclude(book => book.Author)  // returns Review.Book.Author object
       .ToList();
@@ -267,7 +256,7 @@ Note that EF will create foreign key fields for ReviewID in the AppUser and Book
 
 Before you can run your app, you need to create a database on the host system. This might be your development machine, or a production server. On your development machine. But, before you can create a database, you need to add a database migration. You can read about that in the Migrations section below. 
 
-#### dotnet CLI Tools
+## dotnet CLI Tools
 
 In order to do operations on our database, we will be using CLI (Command Line Interface) commands. (Not the commands for the Package Manager Console) You can check to see if you have the CLI tools for Entity Framework installed by entering the command:
  `dotnet ef`
@@ -301,7 +290,8 @@ If you get a message like this:
 "Could not execute because the specified command or file was not found", it is probably because the CLI tools for EF haven't been installed. You can install them by executing this command:
 
 `dotnet ef tool install --global dotnet-ef --version 3.1.x`
-**Replace x** with the patch level that matches the version of EF Core you are using, for example: 3.1.30.
+
+**Note:** Replace x with the patch level that matches the version of EF Core you are using, for example: 3.1.30.
 
 Note that this will install the tools globally, if you only want to install them for the current project, then leave off the --global switch. And, if you are using a version of ASP.NET Core other than 3.1 (which we are using this term in class), then change the version number. If you omit the --version switch, it will install the latest version.
 
