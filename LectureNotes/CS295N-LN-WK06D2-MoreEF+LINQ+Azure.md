@@ -19,7 +19,7 @@
 - Announcements.
 - Discuss questions about the previous lab.
 - Review lab due dates on Moodle.
-- Review changes to Monday's code and the lecture notes:
+- Review changes to Monday's (11/7/2022) code and the lecture notes:
   - Changed the location of the connection string in Appsettings.json  
     and the corresponding code in Startup.cs.
   - Changed the code in Startup to work with either SQLite on MacOS or LocalDb on Windows.
@@ -43,23 +43,24 @@ These instructions assume you have already set up a [free student Azure account]
 
 ### Create a database via the Azure Web Portal 
 
-- Log into the [Azure portal](https://portal.azure.com)
+- Log into the [Azure portal](https://portal.azure.com).
 
-- Select SQL databases from the menu of services
+- Select SQL databases from the menu of services.
 
-- Click on +Add, then fill in the required fields
+- Click on +Add, then fill in the required fields.
 
-  - Create a resource group if you don't already have one
+  - Create a resource group if you don't already have one.
 
-  - Create a server if you don't already have one
+  - Create a server if you don't already have one (and you probably don't).
 
-    - You are only allowed to have one free database per region. You select the region when you set up your server.
+    - Select the region when you set up your server.
 
-  - Select a pricing tier
+  - <u>Don't</u> click on "Configure Database"
+    - The service tier should be set to "Standard S0" by default. This is the tier that is free with your Azure for Students plan.
+  - Accept the rest of the default settings. You're done creating your database.
+    - There may be a monthly cost shown on the screen, but as long as you have a free <u>Azure for Students subscription</u> and have <u>only one database</u> and it's using the <u>Standard service tier</u>, you won't actually be charged (your student credit won't be used).
 
-    - If you are using a free student subscription, select the Free, 32 MB pricing tier.
-
-- Copy the ADO.NET connection string for your database. You will need to add it to the publish profile in Visual Studio.
+- Copy the ADO.NET connection string for your database. This is found in the "Overview" section of your SQL Database page. You will need to add this to your publish profile in Visual Studio.
 
 - Example connection string:
 
@@ -70,11 +71,13 @@ These instructions assume you have already set up a [free student Azure account]
 ### Publish from Visual Studio 
 
 
-- In Visual Studio, run the publish wizard by right-clicking on the project and selecting publish.
+- In Visual Studio, open the publish wizard by right-clicking on the project and selecting publish.
 
-- Click on configure to change the settings in your publish profile
+- Open your existing publish profile (or make a new one).
 
-- Select the Settings page
+- Click on "More actions", then "Edit" to change the settings in your publish profile
+
+- Select the Settings tab.
 
 - - In the *Databases* section, check the checkbox for your SQL Server connection string and paste the connection string for your Azure SQL Database.
 
