@@ -1,4 +1,5 @@
-# Lab 6: Database and Entity Framework
+<h1>Lab 6: Database and Entity Framework</h1>
+
  CS295N, Web Development 1: ASP.NET
 
 **Contents**
@@ -27,31 +28,40 @@ C. I didn't do the exercise.
 
 **Community Web Site**
 
-Refactor your code so that the messages entered on the Home/Contact page are saved in a database.
+Refactor your code so that the messages entered by the user on the Home/Contact page are saved in a database.
 
 #### Group B
 
 **Fan Site**
 
-Refactor your code so that the stories entered on the Home/Stories page are saved in a database.
+Refactor your code so that the stories entered by the user on the Home/Stories page are saved in a database.
 
 #### Group C
 
 **Informational Site**
 
-Refactor your code so that the comments entered on the Home/Forum page are saved in a database.
+Refactor your code so that the comments entered by the user on the Home/Forum page are saved in a database.
 
 
 
 #### For all groups
 
-- Modify your data entry view so that:
-  - The entry is shown on a different view.
-  -  All messages, stories, or comments are displayed on that view.
-- Use SQL Server as the database type.
-- Store a user object as related data with the message, story, or comment object.
-- Add migrations.
+- Modify your views so that:
+  - The user's entry is no longer echoed back to a view.
+  -  All messages, stories, or comments are read from the database and displayed on the Contact, Stories, or Forum page.
+- Use either SQL Server or MySQL as the database type.
+  - You should use the same database type on both your local development machine and on Azure.
+
+- Add an intial migration.
+  - Hint: include the database type in the name, for example: InitialMySql, or InitialSqlServer.
+
 - Publish the site to Azure.
+  - Set up either a *SQL Database*, or *Azure Database for MySQL* on Azure.
+    - Remember, you <u>only get one free database</u> with your Azure for Students account, and only the <u>Standard S0</u> service tier is free.
+
+  - Modify your Visual Studio publish profile to use the new database.
+  - Publish your site to Azure.
+
 
 
 
