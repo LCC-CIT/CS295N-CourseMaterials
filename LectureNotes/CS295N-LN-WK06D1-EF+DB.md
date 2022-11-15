@@ -287,17 +287,19 @@ Use "dotnet ef [command] --help" for more information about a command.
 ```
 
 If you get a message like this:
-"Could not execute because the specified command or file was not found", it is probably because the CLI tools for EF haven't been installed. You can install them by executing this command:
+"*Could not execute because the specified command or file was not found*", it is probably because the CLI tools for EF haven't been installed. You can install them by executing this command:
 
 `dotnet ef tool install --global dotnet-ef --version 3.1.x`
 
-**Note:** Replace x with the patch level that matches the version of EF Core you are using, for example: 3.1.30.
+**Note:** Replace `x` with the patch level that matches the version of EF Core you are using, for example: 3.1.30.
 
 Note that this will install the tools globally, if you only want to install them for the current project, then leave off the --global switch. And, if you are using a version of ASP.NET Core other than 3.1 (which we are using this term in class), then change the version number. If you omit the --version switch, it will install the latest version.
 
 You can also update the tools using this command:
 
-`dotnet ef tool update --version 3.1.x`
+`dotnet tool update dotnet-ef --global --version 3.1.x`
+
+Again, `x` is a placeholder for an actual number.
 
 ## Migrations
 
