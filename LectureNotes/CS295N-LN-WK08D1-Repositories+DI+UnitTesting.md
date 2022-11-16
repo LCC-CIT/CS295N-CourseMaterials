@@ -1,24 +1,38 @@
 CS295N Web Development 1: ASP.NET 
 
-#  Repositories and Unit Testing
+<h1>Repositories and Unit Testing</h1>
 
-| Weekly Topics                             |                                                     |
-| ----------------------------------------- | --------------------------------------------------- |
-| 1. Intro to Web Dev                       | 6. Database & Entity Framework                      |
-| 2. Intro to MVC & Deploying to Azure      | 7. Unit Testing with a DB / *Veteran's Day holiday* |
-| 3. MVC Architectural patterns             | **8. Repositories and Unit Testing**                |
-| 4. Bootstrap                              | 9. Controllers & Debugging / *Thanksgiving holiday* |
-| 5. Midterm Quiz & Unit testing with xUnit | 10. Razor Views                                     |
+| Weekly Topics                           |                                          |
+| --------------------------------------- | ---------------------------------------- |
+| 1. Intro to Web Dev                     | 6. Unit Testing                          |
+| 2. Intro to MVC & Deploying to Azure    | 7. Database & Entity Framework           |
+| 3. Working with Data                    | 8. Unit Testing & The Repository Pattern |
+| 4. Bootstrap                            | 9. Linq & Seed Data                      |
+| 5. Midterm Quiz & Term Project Proposal | 10. Debugging                            |
 
-
-
-## Contents 
+<h2>Contents</h2>
 
 [TOC]               
 
-## Introduction
+## Q and A
 
 - Review due dates on Moodle
+- Site structure clarification  
+  The form for user data entry should be in a separate view from the one that displays the data after pulling it from the database.
+
+  - Group A: Community Web Site
+    - Home/Contact view for entering contacts
+    - Home/Contacts view for displaying contacts
+
+  - Group B: Fan Site
+    - Home/Story view for entering contacts
+    - Home/Stories view for displaying contacts
+  - Group C: Informational Site
+    - Home/Comment view for entering comments.
+    - Home/Forum for displaying comments.
+
+
+  If the code you have written is working, it doesn't have to follow this structure, but it will be easier to make it work if it does follow this structure.
 - Answer questions
 
 ## Repositories: Real and Fake
@@ -163,7 +177,7 @@ Before writing any unit tests, you need to know what methods to test. We want to
 
 #### A fake repository class
 
-Note that the `List` object is used in place of a database.
+Note that the `List` object is used in place of a database.
 
 ```C#
 public class FakeBookRepository : IBookRepository

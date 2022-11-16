@@ -209,7 +209,7 @@ The code above will work, but the only properties that are directly on the `Revi
 
 Related data is data that comes from objects that are related to the object you are retrieving by aggregation or composition. 
 
-For example, in the hypothetical `Review` domain model below, the `Book`, `Reviewer`, and `Author` properties are related data because they are related to Review objects by aggregation (a Review "has-a" Book and an AppUser, a Book "has-an" Author).
+For example, in the <u>hypothetical</u> `Review` domain model below, the `Book`, `Reviewer`, and `Author` properties are related data because they are related to Review objects by aggregation (a Review "has-a" Book and an AppUser, a Book "has-an" Author).
 
 ![](ReviewComplexDomainModel.png)
 

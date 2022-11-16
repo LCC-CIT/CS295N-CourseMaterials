@@ -39,13 +39,14 @@ These pages will all be place-holders. The only content will be:
 
     -   **History**: a brief history of the community.
 
-    -   **Contact**:  a page with a form where users can send messages to the other users.
+    -   **Message**:  a page with a form where users can send messages to the other users.
 
-- 
-    **Info**:  Highlights of the community. 
-
+    -   **Messages**:  a page where messages are displayed.
+    
+- **Info**:  Highlights of the community. 
+    
     Has links to the sub-pages below.
-
+    
     -   **Locations**: important locations and links to external sites.
     -   **People**: significant people (and links if available)
 - ***Your choice**:  you can make this be whatever you want it to be*
@@ -60,7 +61,8 @@ These pages will all be place-holders. The only content will be:
   Has links to *Sources* and *Your choice* top-level pages and to the sub-pages below.
   
   - **History**: A brief history of the person.
-  - **Stories**: a page with a form where users can enter stories.
+  - **Story**: a page with a form where users can enter a story.
+  - **Stories**: a page where stories are displayed.
   
 - **Sources**: Where to find sources for stories and more info.
   
@@ -80,7 +82,8 @@ These pages will all be place-holders. The only content will be:
   Has links to *References* and *Your choice* top-level pages and to the sub-pages below.
   
   - **Overview**: a brief description of the topic.
-  - **Forum** – a page with a form where users can post comments.
+  - **Comment** – a page with a form where users can post comments.
+  - **Forum** – a page where comments are displayed.
   
 - **References**: where to find out about the topic.
   
