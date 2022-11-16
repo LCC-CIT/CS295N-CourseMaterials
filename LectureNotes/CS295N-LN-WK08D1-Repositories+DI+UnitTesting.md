@@ -145,9 +145,9 @@ public IActionResult Index()
 
 You don't need to use IQueryable to implement repositories, but it's a good idea to use it whenever you are doing operations that pull data from a database.
 
-The IQueryable<T> interface is useful because it allows a collection of objects of this type to be queried efficiently. Using the IQueryable<T> interface allows you to ask the database for just the objects that you require using standard LINQ statements and without needing to know what kind of database stores the data or how it processes the query. Without the IQueryable<T> interface, you would have to retrieve all of the objects from a data set and then discard the ones you don’t want. ***This is why the IQueryable<T>   interface is typically used for collection classes instead of IEnumerable<T> .***
+The IQueryable<T> interface is useful because it allows a collection of objects of this type to be queried efficiently. Using the IQueryable<T> interface allows you to ask the database for just the objects that you require using standard LINQ statements and without needing to know what kind of database stores the data or how it processes the query. Without the IQueryable<T> interface, you would have to retrieve all of the objects from a data set and then discard the ones you don’t want. *This is why the IQueryable&lt;T&gt;   interface is typically used for collection classes instead of IEnumerable .*
 
-However, care must be taken with the IQueryable<T> interface because each time the collection of objects is enumerated, the query will be evaluated again, which means that a new query will be sent to the database. This can undermine the efficiency gains of using IQueryable<T>. In such situations, you can convert IQueryable<T> to a concrete form using the ToList() or ToArray() method.
+However, care must be taken with the IQueryable&lt;T&gt; interface because each time the collection of objects is enumerated, the query will be evaluated again, which means that a new query will be sent to the database. This can undermine the efficiency gains of using IQueryable&lt;T&gt;. In such situations, you can convert IQueryable&lt;T&gt; to a concrete form using the ToList() or ToArray() method.
 
 \- paraphrased from Freeman, 2017, page 201
 
@@ -162,6 +162,8 @@ Before writing any unit tests, you need to know what methods to test. We want to
 ### Example, in the Test Project
 
 #### A fake repository class
+
+Note that the `List` object is used in place of a database.
 
 ```C#
 public class FakeBookRepository : IBookRepository
@@ -292,14 +294,16 @@ Why some people use the Unit of Work pattern:
 ## Further Reading
 
 - [xUnit Documentation](https://xunit.github.io)
-
 - [Dependency Injection Demystified](http://www.jamesshore.com/Blog/Dependency-Injection-Demystified.html)
-
 - [Repository Pattern in ASP.NET Core](https://www.c-sharpcorner.com/article/repository-pattern-in-asp-net-core/)
-
+- *Murach’s ASP.NET Core MVC*, 1st Edition, by Mary Delamater and Joel Murach, Murach Books, 2020.  
+  In Ch. 14:
+  - "How to use dependency injection (DI)", pg. 560–569,
+  - "How to test methods that have dependencies", pg. 578–581.
+  
 - *Pro ASP.NET Core MVC 2*,
   7th Edition, Adam Freeman
-  Apress, 2017
+  Apress, 2017.
   - Ch. 7 – Unit Testing MVC Applications
   - Ch. 18 - Dependency Injection
 
