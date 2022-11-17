@@ -1,24 +1,38 @@
 CS295N Web Development 1: ASP.NET 
 
-#  Repositories and Unit Testing
+<h1>Repositories and Unit Testing</h1>
 
-| Weekly Topics                             |                                                     |
-| ----------------------------------------- | --------------------------------------------------- |
-| 1. Intro to Web Dev                       | 6. Database & Entity Framework                      |
-| 2. Intro to MVC & Deploying to Azure      | 7. Unit Testing with a DB / *Veteran's Day holiday* |
-| 3. MVC Architectural patterns             | **8. Repositories and Unit Testing**                |
-| 4. Bootstrap                              | 9. Controllers & Debugging / *Thanksgiving holiday* |
-| 5. Midterm Quiz & Unit testing with xUnit | 10. Razor Views                                     |
+| Weekly Topics                           |                                          |
+| --------------------------------------- | ---------------------------------------- |
+| 1. Intro to Web Dev                     | 6. Unit Testing                          |
+| 2. Intro to MVC & Deploying to Azure    | 7. Database & Entity Framework           |
+| 3. Working with Data                    | 8. Unit Testing & The Repository Pattern |
+| 4. Bootstrap                            | 9. Linq & Seed Data                      |
+| 5. Midterm Quiz & Term Project Proposal | 10. Debugging                            |
 
-
-
-## Contents 
+<h2>Contents</h2>
 
 [TOC]               
 
-## Introduction
+## Q and A
 
 - Review due dates on Moodle
+- Site structure clarification  
+  The form for user data entry should be in a separate view from the one that displays the data after pulling it from the database.
+
+  - Group A: Community Web Site
+    - Home/Contact view for entering contacts
+    - Home/Contacts view for displaying contacts
+
+  - Group B: Fan Site
+    - Home/Story view for entering contacts
+    - Home/Stories view for displaying contacts
+  - Group C: Informational Site
+    - Home/Comment view for entering comments.
+    - Home/Forum for displaying comments.
+
+
+  If the code you have written is working, it doesn't have to follow this structure, but it will be easier to make it work if it does follow this structure.
 - Answer questions
 
 ## Repositories: Real and Fake
@@ -145,9 +159,9 @@ public IActionResult Index()
 
 You don't need to use IQueryable to implement repositories, but it's a good idea to use it whenever you are doing operations that pull data from a database.
 
-The IQueryable<T> interface is useful because it allows a collection of objects of this type to be queried efficiently. Using the IQueryable<T> interface allows you to ask the database for just the objects that you require using standard LINQ statements and without needing to know what kind of database stores the data or how it processes the query. Without the IQueryable<T> interface, you would have to retrieve all of the objects from a data set and then discard the ones you don’t want. ***This is why the IQueryable<T>   interface is typically used for collection classes instead of IEnumerable<T> .***
+The IQueryable<T> interface is useful because it allows a collection of objects of this type to be queried efficiently. Using the IQueryable<T> interface allows you to ask the database for just the objects that you require using standard LINQ statements and without needing to know what kind of database stores the data or how it processes the query. Without the IQueryable<T> interface, you would have to retrieve all of the objects from a data set and then discard the ones you don’t want. *This is why the IQueryable&lt;T&gt;   interface is typically used for collection classes instead of IEnumerable .*
 
-However, care must be taken with the IQueryable<T> interface because each time the collection of objects is enumerated, the query will be evaluated again, which means that a new query will be sent to the database. This can undermine the efficiency gains of using IQueryable<T>. In such situations, you can convert IQueryable<T> to a concrete form using the ToList() or ToArray() method.
+However, care must be taken with the IQueryable&lt;T&gt; interface because each time the collection of objects is enumerated, the query will be evaluated again, which means that a new query will be sent to the database. This can undermine the efficiency gains of using IQueryable&lt;T&gt;. In such situations, you can convert IQueryable&lt;T&gt; to a concrete form using the ToList() or ToArray() method.
 
 \- paraphrased from Freeman, 2017, page 201
 
@@ -162,6 +176,8 @@ Before writing any unit tests, you need to know what methods to test. We want to
 ### Example, in the Test Project
 
 #### A fake repository class
+
+Note that the `List` object is used in place of a database.
 
 ```C#
 public class FakeBookRepository : IBookRepository
@@ -292,14 +308,16 @@ Why some people use the Unit of Work pattern:
 ## Further Reading
 
 - [xUnit Documentation](https://xunit.github.io)
-
 - [Dependency Injection Demystified](http://www.jamesshore.com/Blog/Dependency-Injection-Demystified.html)
-
 - [Repository Pattern in ASP.NET Core](https://www.c-sharpcorner.com/article/repository-pattern-in-asp-net-core/)
-
+- *Murach’s ASP.NET Core MVC*, 1st Edition, by Mary Delamater and Joel Murach, Murach Books, 2020.  
+  In Ch. 14:
+  - "How to use dependency injection (DI)", pg. 560–569,
+  - "How to test methods that have dependencies", pg. 578–581.
+  
 - *Pro ASP.NET Core MVC 2*,
   7th Edition, Adam Freeman
-  Apress, 2017
+  Apress, 2017.
   - Ch. 7 – Unit Testing MVC Applications
   - Ch. 18 - Dependency Injection
 

@@ -34,7 +34,7 @@ Refactor your code so that the messages entered by the user on the Home/Contact 
 
 **Fan Site**
 
-Refactor your code so that the stories entered by the user on the Home/Stories page are saved in a database.
+Refactor your code so that the stories entered by the user on the Home/Story page are saved in a database.
 
 #### Group C
 
@@ -48,7 +48,7 @@ Refactor your code so that the comments entered by the user on the Home/Forum pa
 
 - Modify your views so that:
   - The user's entry is no longer echoed back to a view.
-  -  All messages, stories, or comments are read from the database and displayed on the Contact, Stories, or Forum page.
+  -  All messages, stories, or comments are read from the database and displayed on the Contacts, Stories, or Forum page. (Not the same page with the HTML form for entering information.)
 - Use either SQL Server or MySQL as the database type.
   - You should use the same database type on both your local development machine and on Azure.
 

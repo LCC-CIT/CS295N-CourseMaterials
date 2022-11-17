@@ -139,8 +139,6 @@ These instructions assume you have already set up a [free student Azure account]
 
 
 
-
-
 ## Language Integrated Query (LINQ) 
 
 - Language Integrated Query – it’s part of C# (and all the .NET languages) and can be used to query almost anything: an array, list, XML file, database, and more.
