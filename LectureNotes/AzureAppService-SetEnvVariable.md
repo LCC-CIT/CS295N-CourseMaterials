@@ -6,23 +6,23 @@ Setting the ASPNETCORE_ENVIRONMENT variable in an Azure App Service to "Developm
 Here are the steps:
 
 1. In Portal.Azure.com, open your Azure App Service and click on "Configuration":  
-   ![AzureAppService-Overview](/Users/birdb/Projects/CS295N-CourseMaterials/LectureNotes/Images/AzureAppService-Overview.png)
+   ![AzureAppService-Overview](Images/AzureAppService-Overview.png)
 
 
 
 2. On the Configuration screen, click on "+ New application setting" (in the middle): 
-   ![](/Users/birdb/Projects/CS295N-CourseMaterials/LectureNotes/Images/ApplicationSettings.png)
+   ![](Images/ApplicationSettings.png)
 
 
 
 3. Enter the new setting:  
-   ![](/Users/birdb/Projects/CS295N-CourseMaterials/LectureNotes/Images/Configuration.png)
+   ![](Images/Configuration.png)
 
    
 
 4. Click on the "Save" button (at the top):
 
-   ![](/Users/birdb/Projects/CS295N-CourseMaterials/LectureNotes/Images/ApplicationSettings-ASPNETCORE_ENVIRONMENT.png)
+   ![](Images/ApplicationSettings-ASPNETCORE_ENVIRONMENT.png)
 
 
 
