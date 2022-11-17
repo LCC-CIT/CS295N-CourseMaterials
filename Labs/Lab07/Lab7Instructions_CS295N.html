@@ -1,8 +1,13 @@
 <!doctype html>
-<html>
+<html style='font-size:20px !important'>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-
+<meta name="title" content="${title}">
+<meta name="description" content="${description}">
+<meta name="keywords" content="${keywords}">
+<meta name="material" content="${material}">
+<meta name="author" content="${author}">
+<meta name="generator" content="${generator}">
 <link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
 .mac-os-11 { --title-bar-height: 28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
@@ -19,11 +24,9 @@ a:active, a:hover { outline: 0px; }
 body.typora-export { padding-left: 30px; padding-right: 30px; }
 .typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
 .typora-export .task-list-item input { pointer-events: none; }
-@media screen and (max-width: 500px) { 
+@media screen and (max-width: 500px) {
   body.typora-export { padding-left: 0px; padding-right: 0px; }
   #write { padding-left: 20px; padding-right: 20px; }
-  .CodeMirror-sizer { margin-left: 0px !important; }
-  .CodeMirror-gutters { display: none !important; }
 }
 #write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
@@ -46,12 +49,12 @@ h6 { font-size: 1rem; }
 .hidden { display: none; }
 .md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
 a { cursor: pointer; }
-sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
 sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
 #write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
 figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
 figure > table { margin: 0px; }
-tr { break-inside: avoid; break-after: auto; }
+thead, tr { break-inside: avoid; break-after: auto; }
 thead { display: table-header-group; }
 table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
 table.md-table td { min-width: 32px; }
@@ -73,6 +76,7 @@ div.hr:focus { cursor: none; }
 #write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
 .md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
 .CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
 .footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
 .footnotes + .footnotes { margin-top: 0px; }
 .md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; }
@@ -85,10 +89,10 @@ blockquote > :last-child { margin-bottom: 0px; }
 blockquote > :first-child, li > :first-child { margin-top: 0px; }
 .footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
 #write .footnote-line { white-space: pre-wrap; }
-@media print { 
+@media print {
   body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
-  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
-  .typora-export * { -webkit-print-color-adjust: exact; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; padding-bottom: 0px !important; }
+  .typora-export * { print-color-adjust: exact; }
   .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
   .is-mac table { break-inside: avoid; }
@@ -109,7 +113,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
 .md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
 .math { font-size: 1rem; }
-.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
 .md-toc-content { position: relative; margin-left: 0px; }
 .md-toc-content::after, .md-toc::after { display: none; }
 .md-toc-item { display: block; color: rgb(65, 131, 196); }
@@ -122,7 +126,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 .md-toc-h4 .md-toc-inner { margin-left: 6em; }
 .md-toc-h5 .md-toc-inner { margin-left: 8em; }
 .md-toc-h6 .md-toc-inner { margin-left: 10em; }
-@media screen and (max-width: 48em) { 
+@media screen and (max-width: 48em) {
   .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
   .md-toc-h4 .md-toc-inner { margin-left: 5em; }
   .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
@@ -130,10 +134,11 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 }
 a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
 .footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
 .md-attr { display: none; }
 .md-fn-count::after { content: "."; }
 code, pre, samp, tt { font-family: var(--monospace); }
-kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
 .md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
 code { text-align: left; }
 a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; }
@@ -149,7 +154,7 @@ mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
 .md-expand mark .md-meta { opacity: 0.3 !important; }
 mark .md-meta { color: rgb(0, 0, 0); }
-@media print { 
+@media print {
   .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
 }
 .md-diagram-panel .messageText { stroke: none !important; }
@@ -162,19 +167,19 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
 .typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
 .typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
-@media screen and (max-width: 1024px) { 
+@media screen and (max-width: 1024px) {
   .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
 }
-@media screen and (max-width: 800px) { 
+@media screen and (max-width: 800px) {
   .typora-export-sidebar { display: none; }
 }
 .outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
 .outline-content ul { margin-top: 0px; margin-bottom: 0px; }
 .outline-content strong { font-weight: 400; }
 .outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
-.outline-expander::before { content: ''; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
 .outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
-.outline-expander:hover::before { content: ''; }
+.outline-expander:hover::before { content: ""; }
 .outline-h1 > .outline-item { padding-left: 0px; }
 .outline-h2 > .outline-item { padding-left: 1em; }
 .outline-h3 > .outline-item { padding-left: 2em; }
@@ -186,19 +191,20 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
 .outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
 .outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
-.outline-item-open > .outline-item > .outline-expander::before { content: ''; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
 .outline-children { display: none; }
 .info-panel-tab-wrapper { display: none; }
 .outline-item-open > .outline-children { display: block; }
 .typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
 .typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
 .typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
-.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: '−'; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
 .typora-export-collapse-outline .outline-children { display: none; }
 .typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
 .typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
 .typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
 .md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
 
 
 :root {
@@ -457,11 +463,8 @@ code {
     html {
         font-size: 13px;
     }
-    table,
     pre {
         page-break-inside: avoid;
-    }
-    pre {
         word-wrap: break-word;
     }
 }
@@ -593,6 +596,6 @@ header, .context-menu, .megamenu-content, footer{
 </style><title>Lab7Instructions_CS295N</title>
 </head>
 <body class='typora-export'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='lab-7-unit-testing-with-repositories'><span>Lab 7: Unit Testing with Repositories</span></h1><p><span> CS295N, Web Development 1: ASP.NET</span></p><p><strong><span>Contents</span></strong></p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" style="" href="#lab-7-unit-testing-with-repositories">Lab 7: Unit Testing with Repositories</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n5"><a class="md-toc-inner" style="" href="#part-a-textbook-exercise">Part A: Textbook Exercise</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n7"><a class="md-toc-inner" style="" href="#part-b-repositories-and-unit-tests">Part B: Repositories and Unit tests</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n23"><a class="md-toc-inner" style="" href="#part-c-publish-your-site-to-azure">Part C: Publish Your Site to Azure</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n26"><a class="md-toc-inner" style="" href="#review-and-submission">Review and Submission</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n27"><a class="md-toc-inner" style="" href="#prs-and-code-reviews">PRs and Code Reviews</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n35"><a class="md-toc-inner" style="" href="#final-submission-to-moodle">Final Submission to Moodle</a></span></p></div><h2 id='part-a-textbook-exercise'><span>Part A: Textbook Exercise</span></h2><p><span>Do exercise 14-1 in the Textbook, &quot;Add dependency Injection and some unit tests&quot;</span></p><h2 id='part-b-repositories-and-unit-tests'><span>Part B: Repositories and Unit tests</span></h2><p><span>The instructions are the same for groups A, B, and C.</span></p><p><span>Add repositories and unit tests to your web site.</span></p><ol start='' ><li><p><span>Create a repository interface for the DbSet class that is based on your &quot;top level&quot; model.</span></p><p><span>(For example, if I have a User class that is part of my Review class, then, for this lab assignment, I just need to create IReviewRepository.)</span></p></li><li><p><span>Create a &quot;real&quot; repository based on the interface above.</span></p></li><li><p><span>Replace the code in each of your controller methods that uses your DB context with code that uses the repository. This will require adding dependency injection for your repository.</span></p></li><li><p><span>Write a fake repository. You can put this in the main project or the test project.</span></p></li><li><p><span>Add unit tests for at least three of your controller methods. </span></p><p><span>Choose methods that do something worth testing. These would be controller methods that actually do some kind of processing like:</span></p><ul><li><span>Adding information to a model property (a date, a user, etc.)</span></li><li><span>Searching or sorting data it gets from the database.</span></li><li><span>Calculating some kind of result based on user data.</span></li><li><span>Making logical determinations, like checking quiz results, based on user data.</span></li></ul><p><span>Remember that you are testing what the controller method does, not what the fake repository does.</span></p></li></ol><p>&nbsp;</p><h2 id='part-c-publish-your-site-to-azure'><span>Part C: Publish Your Site to Azure</span></h2><p><span>Follow the instruction given in class to publish your web site to Azure.</span></p><p>&nbsp;</p><h2 id='review-and-submission'><span>Review and Submission</span></h2><h3 id='prs-and-code-reviews'><span>PRs and Code Reviews</span></h3><ol start='' ><li><p><span>Send a PR (Pull Request) to your lab partner asking them to review your code. </span></p><p><span>After you have gotten a code review and revised your code as needed, you can merge it into the main branch, but keep the lab branch, don&#39;t delete it.</span></p></li><li><p><span>You should receive a PR from your lab partner and review their code using this </span><a href='../CodeReviewGuide.html'><span>Code Review Guide</span></a><span>.</span></p><p><span>On Moodle, in the &quot;online text&quot; field of the Code Review assignment, enter the URL of the pull request with the code review </span><u><span>you gave</span></u><span>.</span></p></li></ol><h3 id='final-submission-to-moodle'><span>Final Submission to Moodle</span></h3><ol start='' ><li><p><span>Upload a screen-shot of the textbook exercise. Take of screen-shot of the unit test runner, showing the passing tests.</span></p></li><li><p><span>Publish your web site from part B to Azure.</span></p></li><li><p><span>In the &quot;online text&quot; for the Moodle assignment:</span></p><ul><li><span>Paste a link to the branch of your GitHub repository for this lab.</span></li><li><span>Paste a link to your web site running on Azure.</span></li></ul></li></ol></div></div>
-</body>
+<div id='write'  class=''><h1 id='lab-7-unit-testing-with-repositories'><span>Lab 7: Unit Testing with Repositories</span></h1><p><span> CS295N, Web Development 1: ASP.NET</span></p><p><strong><span>Contents</span></strong></p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" style="" href="#lab-7-unit-testing-with-repositories">Lab 7: Unit Testing with Repositories</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n5"><a class="md-toc-inner" style="" href="#part-a-textbook-exercise">Part A: Textbook Exercise</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n7"><a class="md-toc-inner" style="" href="#part-b-repositories-and-unit-tests">Part B: Repositories and Unit Tests</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n34"><a class="md-toc-inner" style="" href="#part-c-publish-your-site-to-azure">Part C: Publish Your Site to Azure</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n37"><a class="md-toc-inner" style="" href="#review-and-submission">Review and Submission</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n38"><a class="md-toc-inner" style="" href="#prs-and-code-reviews">PRs and Code Reviews</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n46"><a class="md-toc-inner" style="" href="#final-submission-to-moodle">Final Submission to Moodle</a></span></p></div><h2 id='part-a-textbook-exercise'><span>Part A: Textbook Exercise</span></h2><p><span>Do exercise 14-1 in the Textbook, &quot;Add dependency Injection and some unit tests&quot;</span></p><h2 id='part-b-repositories-and-unit-tests'><span>Part B: Repositories and Unit Tests</span></h2><p><span>The instructions are the same for groups A, B, and C.</span></p><p><span>Add repositories and unit tests to your web site.</span></p><ol start='' ><li><p><span>Create a repository interface for the DbSet class that is based on your &quot;top level&quot; model.</span></p><p><span>(For example, if I have a User class that is part of my Review class, then, for this lab assignment, I just need to create IReviewRepository.)</span></p></li><li><p><span>Create a &quot;real&quot; repository based on the interface above.</span></p></li><li><p><span>Replace the code in each of your controller methods that uses your DB context with code that uses the repository. This will require adding dependency injection for your repository.</span></p></li><li><p><span>Write a fake repository. You can put this in the main project or the test project.</span></p></li><li><p><span>Add unit tests for at least one of your controller methods that uses a repository.</span></p><p><span>Choose a method that do something worth testing. These would be controller methods that actually does some kind of processing like:</span></p><ul><li><span>Adding information to a model property (a date, a user, etc.)</span></li><li><span>Searching or sorting data it gets from the database.</span></li><li><span>Calculating some kind of result based on user data.</span></li></ul><p><span>Remember that you are testing what the controller method does, not what the fake repository does.</span></p></li></ol><p>&nbsp;</p><h2 id='part-c-publish-your-site-to-azure'><span>Part C: Publish Your Site to Azure</span></h2><p><span>Follow the instruction given in class to publish your web site to Azure.</span></p><p>&nbsp;</p><h2 id='review-and-submission'><span>Review and Submission</span></h2><h3 id='prs-and-code-reviews'><span>PRs and Code Reviews</span></h3><ol start='' ><li><p><span>Send a PR (Pull Request) to your lab partner asking them to review your code. </span></p><p><span>After you have gotten a code review and revised your code as needed, you can merge it into the main branch, but keep the lab branch, don&#39;t delete it.</span></p></li><li><p><span>You should receive a PR from your lab partner and review their code using this </span><a href='../CodeReviewGuide.html'><span>Code Review Guide</span></a><span>.</span></p><p><span>On Moodle, in the &quot;online text&quot; field of the Code Review assignment, enter the URL of the pull request with the code review </span><u><span>you gave</span></u><span>.</span></p></li></ol><h3 id='final-submission-to-moodle'><span>Final Submission to Moodle</span></h3><ol start='' ><li><p><span>Upload a screen-shot of the textbook exercise. Take of screen-shot of the unit test runner, showing the passing tests.</span></p></li><li><p><span>Publish your web site from part B to Azure.</span></p></li><li><p><span>In the &quot;online text&quot; for the Moodle assignment:</span></p><ul><li><span>Paste a link to the branch of your GitHub repository for this lab.</span></li><li><span>Paste a link to your web site running on Azure.</span></li></ul></li></ol></div></div>
+<base target="_blank"></body>
 </html>
