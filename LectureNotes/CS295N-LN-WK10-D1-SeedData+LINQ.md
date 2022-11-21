@@ -20,8 +20,20 @@
 
 ## Q and A
 
-- Review due dates on Moodle
-- Discuss questions
+- Labs
+
+  - Lab 7, Repositories and Unit Tests
+    - Revised the requirements to just require two unit tests which can both be of the same controller method.
+    - Accepting submissions through the end of the week, I won't grade them until Saturday at the earliest.
+
+
+  - Lab 8 will be due 12/1, Thursday night of next week (week 10).
+
+  - Lab 9 is optional, extra credit and will be due 12/5, Monday night of finals week (week 11).
+- the term project is also due Monday, 12/5.
+
+- Discuss questions.  
+  After covering seed data, I will talk about how to avoid creating duplicate entities, for example Books. We won't address duplicate entities for the same user this term. That will be taken care of by Identity next term.
 
 
 
