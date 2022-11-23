@@ -122,8 +122,8 @@ Walk through the [Planet example](https://github.com/ProfBird/CS295-Demos/tree/m
 ```c#
   public class Planet  {
       public string Name {get; set;}
-      public       int Diameter {get; set;}     // km
-      public int DistanceToSun {get;     set;}  // million km
+      public int Diameter {get; set;}     // km
+      public int DistanceToSun {get; set;}  // million km
   }
 ```
 - Assume a Planet List in which each of the eight planets has: a name, size, and distance from the sun.
@@ -148,7 +148,7 @@ Walk through the [Planet example](https://github.com/ProfBird/CS295-Demos/tree/m
   - *where* filters the objects that are retrieved.
   - *select* specifies the objects to retrieve.
 
-- Compare the LINQ statement above to the header of the `foreach` loop below. Notice the similar use of the *range variables.
+- Compare the LINQ statement above to the header of the `foreach` loop below. Notice the similar use of the *range variables*.
   ```c#
   foreach (Planet p in planets)
   ```
