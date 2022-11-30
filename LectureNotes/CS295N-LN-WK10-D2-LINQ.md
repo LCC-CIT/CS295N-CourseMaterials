@@ -4,13 +4,13 @@
 
 
 
-| Weekly Topics                             |                                                     |
-| ----------------------------------------- | --------------------------------------------------- |
-| 1. Intro to Web Dev                       | 6. Database & Entity Framework                |
-| 2. Intro to MVC & Deploying to Azure      | 7. Unit Testing with a DB / *Veteran's Day holiday* |
-| 3. MVC Architectural patterns             | 8. More on the Repository Pattern                   |
-| 4. Bootstrap                              | 9. Debugging / *Thanksgiving holiday*               |
-| 5. Midterm Quiz & Unit testing with xUnit | 10. **Seed Data and LINQ**                              |
+| Weekly Topics                           |                                          |
+| --------------------------------------- | ---------------------------------------- |
+| 1. Intro to Web Dev                     | 6. Unit Testing                          |
+| 2. Intro to MVC & Deploying to Azure    | 7. Database & Entity Framework           |
+| 3. Working with Data                    | 8. Unit Testing & The Repository Pattern |
+| 4. Bootstrap                            | 9. Linq & Seed Data                      |
+| 5. Midterm Quiz & Term Project Proposal | 10. Debugging                            |
 
 
 
@@ -74,7 +74,7 @@
 - A hint for understanding *range variables*:
 
   Compare the LINQ statement above to the header of the *foreach* loop below. Notice the similar use of the *range variables*.
-  `foreach (**Planet p** in planets)`
+  `foreach (Planet p in planets)`
 
 - Deferred execution: A LINQ statement returns an IEnumerable or an IQueryable. They look like collections, but they do not contain any actual data. They just represent the query and are executed when enumerated.
 

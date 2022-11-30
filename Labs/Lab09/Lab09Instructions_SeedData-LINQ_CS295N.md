@@ -1,4 +1,4 @@
-# Lab 9: Seed Data and LINQ
+# Lab 8: Seed Data and LINQ
 
 ## Objectives
 
@@ -49,7 +49,7 @@ The code to add seed data should be called from startup, as shown in the lecture
 
 ### LINQ
 
-Put the code that executes the LINQ queries in a new controller method for the page that you are filtering. This will be an HTTP POST method since it will need to have search criteria passed to it from the form that you added to the messages, stories, or comments page. 
+Put the code that executes the LINQ queries in a new controller method for the page that you are filtering. This should be an HTTP GET method since the convention is to use GET requests when you are searching a database and POST requests when you want to save data to the database. 
 
 
 
