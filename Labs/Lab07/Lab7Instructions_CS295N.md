@@ -57,7 +57,7 @@ Follow the instruction given in class to publish your web site to Azure.
 
 ### Final Submission to Moodle
 
-1.  Upload a screen-shot of the textbook exercise. Take of screen-shot of the unit test runner, showing the passing tests.
+1.  Upload a screen-shot of the textbook exercise. Take a screen-shot of the unit test runner, showing the passing tests.
 2.  Publish your web site from part B to Azure.
 3.  In the "online text" for the Moodle assignment:
     - Paste a link to the branch of your GitHub repository for this lab.
