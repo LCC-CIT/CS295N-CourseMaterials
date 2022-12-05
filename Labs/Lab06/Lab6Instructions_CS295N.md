@@ -10,7 +10,13 @@
 
 In *Murach's ASP.NET Core MVC*, complete exercise 4-1, "Create the Movie List app". 
 
-You will take a screen-shot of the app running in your web browser at the end of the exercise and on the document containing the screen-shot you will also report one of the following:
+Note: If you are using MySQL or SQLite rather than SQL Server, a few of the steps will be different:
+
+- Step 3: you will need to install the correct NuGet package for the database provider for your database type.
+- Step 10: Use the correct connection string for your database type.
+- Steps 14 and 15: Use a database management program that works with your database, such as  MySQL Workbench or DB Browser for SQLite.
+
+Take a screen-shot of the app running in your web browser at the end of the exercise. Put the screen-shot in a Word document and in that document, report one of the following:
 
 A. I Followed all the steps shown in the book and successfully compiled and ran the program.
 
@@ -47,20 +53,25 @@ Refactor your code so that the comments entered by the user on the Home/Forum pa
 #### For all groups
 
 - Modify your views so that:
-  - The user's entry is no longer echoed back to a view.
+  - The user's entry is no longer just echoed back to a view.
   -  All messages, stories, or comments are read from the database and displayed on the Contacts, Stories, or Forum page. (Not the same page with the HTML form for entering information.)
 - Use either SQL Server or MySQL as the database type.
   - You should use the same database type on both your local development machine and on Azure.
 
 - Add an intial migration.
-  - Hint: include the database type in the name, for example: InitialMySql, or InitialSqlServer.
+  - Hint: include the database type in the name of the migration, for example: *InitialMySql*, or *InitialSqlServer*.
 
 - Publish the site to Azure.
-  - Set up either a *SQL Database*, or *Azure Database for MySQL* on Azure.
-    - Remember, you <u>only get one free database</u> with your Azure for Students account, and only the <u>Standard S0</u> service tier is free.
-
-  - Modify your Visual Studio publish profile to use the new database.
-  - Publish your site to Azure.
+  - Set up either an  *Azure SQL Database* (compatible with SQL Server), or *Azure Database for MySQL* server on Azure.
+    - For Azure SQL, you <u>only get one free database</u> with your Azure for Students account, and only the <u>Standard S0</u> service tier is free.
+    - For Azure Database for MySQL, you can also set up a free server and you are allowed to create multiple free databases on it. For the databases to be free you must choose these settings on the server:
+      - Workload type: *For development or hobby projects.*
+      - Compute + Storage:  *Burstable B1ms* with a maximum of 32GB of storage.
+    
+  - Create a database schema by either:
+    - Running `dotnet ef database update` using the connection string for your database server on Azure.
+    - Modifying your Visual Studio publish profile so that it applies the migrations when you publish the web app. (This only works on Visual Studio for Windows.)
+  - Publish your web app to Azure.
 
 
 
