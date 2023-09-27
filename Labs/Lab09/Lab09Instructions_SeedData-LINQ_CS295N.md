@@ -51,7 +51,9 @@ The code to add seed data should be called from startup, as shown in the lecture
 
 Put the code that executes the LINQ queries in a new controller method for the page that you are filtering. This should be an HTTP GET method since the convention is to use GET requests when you are searching a database and POST requests when you want to save data to the database. 
 
+#### Date Search Hint
 
+Objects you create from the [.NET DateTime struct](https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-7.0) include (not surprisingly) both the date and time. When you are searching (filtering) by date, this causes a problem when you try to match dates since you want to just match the date and not the time. In order to solve this problem look at the Microsoft documentation and look for a property that would help you solve this problem.
 
 ## Submission
 

@@ -23,7 +23,7 @@ There is no beta version or code review required for this lab assignment. Just u
 ****
 
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
-These ASP.NET Core MVC lab instructions, written by [Brian Bird](https://birdsbits.blog), written fall 2019, revised fall 2020, are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+These ASP.NET Core MVC lab instructions, written by [Brian Bird](https://profbird.dev), written fall 2019, revised fall 2020, are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
 
 ------
 
