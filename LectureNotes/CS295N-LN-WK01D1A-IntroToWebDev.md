@@ -26,15 +26,13 @@
 
 ### Job Prospects for Developers
 
-U.S. News [The 100 Best Job](https://money.usnews.com/careers/best-jobs/rankings/the-100-best-jobs) for 2023
+U.S. News [The 100 Best Jobs](https://money.usnews.com/careers/best-jobs/rankings/the-100-best-jobs) for 2023
 
 - [#1: Software Developer](https://money.usnews.com/careers/best-jobs/software-developer)
 
   > A software developer is a professional who is responsible for designing and building computer programs. Some may build underlying operating systems, while others may focus only on developing new mobile and desktop applications. They also develop computer games and other digital architecture.&mdash;Indeed.com
->
-  > - #1 in Best Technology Jobs
-  >
-  > - Median Salary: $120,730
+  - Also #1 in Best Technology Jobs
+  - Median Salary: $120,730
 
 - [#9: Web Developer](https://money.usnews.com/careers/best-jobs/web-developer)
 

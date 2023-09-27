@@ -15,12 +15,12 @@ In this lab, you will be creating a web site that you will continue to build on 
    - Add a [.gitignore file](https://www.toptal.com/developers/gitignore/api/aspnetcore) for ASP.NET Core projects and commit it to the main branch.
      <u>Important</u>: commit the gitignore file before you commint any other code!
    - Make a branch named lab1, which is derived form the main and put your web project into it.
-  
+    
    - Invite your lab partners and your instructor to be members of the repository.
 
-2. Follow the instructions in, [Getting Started with ASP.NET Core MVC](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-3.1&tabs=visual-studio) to create a web site in the working directory of your local Git repository.
+2. Follow the instructions in, [Getting Started with ASP.NET Core MVC](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-6.0&tabs=visual-studio) to create a web site in the working directory of your local Git repository.
 
-   -  Instead of naming the project "MVCMovie", name it something that reflects the purpose of your site, like "AllAboutPigeons", but replace YourName with your actual name.
+   -  Instead of naming the project "MVCMovie", name it something that reflects the purpose of your site, like "AllAboutPigeons".
    - Change the home page so that it has a title and a sentence or two appropriate to the type of site designated by the lab assignment group you are in.
 
 ### Submission
