@@ -7,7 +7,7 @@
 | CRN       | Hybrid (on campus) 21226<br />Online 21961                   |      | Instructor   | Brian Bird                                                   |
 | Credits   | 4                                                            |      | Email        | birdb@lanecc.edu                                             |
 | Day, Time | M, W, 10:00&ndash;11:50                                      |      | Office       | Building 19, Room 152                                        |
-| Classroom | Building 19, Room 128<br />[Zoom meeting](https://lanecc.zoom.us/j/97010574746) |      | Office Hours | M, W 12:00&ndash;12:50 <br />T, Th  2:00&ndash;2:50<br />[Zoom meeting](https://lanecc.zoom.us/j/93774726097) |
+| Classroom | Building 19, Room 128<br />[Zoom meeting](https://lanecc.zoom.us/j/96761530931) |      | Office Hours | M, W 12:00&ndash;12:50 <br />T, Th  2:00&ndash;2:50<br />[Zoom meeting](https://lanecc.zoom.us/j/93774726097) |
 
 
 
