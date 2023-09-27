@@ -6,7 +6,7 @@
 
 | Weekly Topics                             |                                               |
 | ----------------------------------------- | --------------------------------------------- |
-| 1. Intro to Web Dev                       | 6. Entity Framework / Deploying a DB to Azure |
+| <mark>1. Intro to Web Dev</mark>          | 6. Entity Framework / Deploying a DB to Azure |
 | 2. Intro to MVC / **Deploying to Azure**  | 7. Debugging / *Veteran's Day holiday*        |
 | 3. MVC Architectural patterns             | 8. Controllers                                |
 | 4. Bootstrap                              | 9. Razor Views / *Thanksgiving holiday*       |
