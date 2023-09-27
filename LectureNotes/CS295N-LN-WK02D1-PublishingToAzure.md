@@ -4,13 +4,13 @@
 
 
 
-| Weekly Topics                             |                                               |
-| ----------------------------------------- | --------------------------------------------- |
-| <mark>1. Intro to Web Dev</mark>          | 6. Entity Framework / Deploying a DB to Azure |
-| 2. Intro to MVC / **Deploying to Azure**  | 7. Debugging / *Veteran's Day holiday*        |
-| 3. MVC Architectural patterns             | 8. Controllers                                |
-| 4. Bootstrap                              | 9. Razor Views / *Thanksgiving holiday*       |
-| 5. Midterm Quiz / Unit testing with xUnit | 10. Razor Views (continued)                   |
+| Weekly Topics                                   |                                                |
+| ----------------------------------------------- | ---------------------------------------------- |
+| 1. Intro to Web Dev and MVC                     | 6. Entity Framework \| Deploying a DB to Azure |
+| 2. <mark>More on MVC \| Azure \| Git PRs</mark> | 7. Debugging \| *Veteran's Day holiday*        |
+| 3. MVC Architectural patterns                   | 8. Controllers                                 |
+| 4. Bootstrap                                    | 9. Razor Views \| *Thanksgiving holiday*       |
+| 5. Midterm Quiz \| Unit testing with xUnit      | 10. Razor Views (continued)                    |
 
 
 
@@ -100,7 +100,7 @@ If you are having problems with your web app on Azure there are a couple things 
 
 ------
 
-[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), 2020, revised 2022, are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
+[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), 2020, revised 2023, are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
 
 ------
 
