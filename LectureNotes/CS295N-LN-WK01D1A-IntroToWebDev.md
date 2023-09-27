@@ -4,7 +4,7 @@
 
 | Weekly Topics                             |                                               |
 | ----------------------------------------- | --------------------------------------------- |
-| 1. **Intro to Web Dev**                   | 6. Entity Framework / Deploying a DB to Azure |
+| <mark>1. Intro to Web Dev</mark>          | 6. Entity Framework / Deploying a DB to Azure |
 | 2. Intro to MVC / Deploying to Azure      | 7. Debugging / *Veteran's Day holiday*        |
 | 3. MVC Architectural patterns             | 8. Controllers                                |
 | 4. Bootstrap                              | 9. Razor Views / *Thanksgiving holiday*       |
@@ -26,23 +26,20 @@
 
 ### Job Prospects for Developers
 
-U.S. News [Best Job Rankings](https://money.usnews.com/careers/best-jobs/rankings) for 2022
+U.S. News [The 100 Best Jobs](https://money.usnews.com/careers/best-jobs/rankings/the-100-best-jobs) for 2023
 
-- [Software Developer](https://money.usnews.com/careers/best-jobs/software-developer)
+- [#1: Software Developer](https://money.usnews.com/careers/best-jobs/software-developer)
 
   > A software developer is a professional who is responsible for designing and building computer programs. Some may build underlying operating systems, while others may focus only on developing new mobile and desktop applications. They also develop computer games and other digital architecture.&mdash;Indeed.com
+  - Also #1 in Best Technology Jobs
+  - Median Salary: $120,730
 
-  - &#35;2 in Best Technology Jobs
-  - &#35;5 in 100 Best Jobs
-  - $110,140
-
-- [Web Developer](https://money.usnews.com/careers/best-jobs/web-developer)
+- [#9: Web Developer](https://money.usnews.com/careers/best-jobs/web-developer)
 
   > Web developers create and maintain websites and web applications, and they use web-facing technology to build software. &mdash;U.S. News and World Report
 
-  - &#35;6 in Best Technology Jobs
-  - &#35;32 in 100 Best Jobs
-  - Median Salary: $77,200.
+  - &#35;4 in Best Technology Jobs
+  - Median Salary: $77,030.
 
 ### Meaning of Different Job Titles
 
