@@ -13,7 +13,7 @@ In this lab, you will be creating a web site that you will continue to build on 
 1. Create a private repository on [GitHub](https://github.com/). Use your real name in the name of the repository. For example: "BrianBird_CS295N_Labs".
 
    - Add a [.gitignore file](https://www.toptal.com/developers/gitignore/api/aspnetcore) for ASP.NET Core projects and commit it to the main branch.
-     <u>Important</u>: commit the gitignore file before you commint any other code!
+     <u>Important</u>: commit the gitignore file before you commit any other code!
    - Make a branch named lab1, which is derived form the main and put your web project into it.
 
    - Invite your lab partners and your instructor to be collaborators on the repository. 

@@ -88,7 +88,7 @@ To be able to design and code a web site that uses the ASP.NET Core MVC framewor
 
 - Effectively use software development tools like Visual Studio.
 
-- Use Git to manager your source code.
+- Use Git to manage your source code and do code reviews.
 
   
 
@@ -178,21 +178,22 @@ Letter grades for the course will be determined by the following percentages:
 ## Late Work
 
 - The grade for assignments submitted after the due date will be reduced by 10%.
-  - Late labs 1 – 4 will only be accepted by the end of week 5
-  - Late labs 5 – 8 will only be accepted by the end of week 10
+  - Late labs 1 – 4 will only be accepted by the end of week 5.
+  - Late labs 5 – 8 will only be accepted by the end of week 10.
   
 - Quizzes and exams cannot be taken after the due date. Contact your instructor in advance if you know you will have a schedule conflict.
 
-- Exceptions will be made for illness or emergency situations
+- Exceptions will be made for illness or emergency situations.
 
 ## Weekly Learning Activities
 
-You should complete each step in the learing activities by the day of the week shown below. Of course, it's always great to do these things even sooner!
+You should complete each step in the learning activities by the day of the week shown below. Of course, it's always great to do these things even sooner!
 
-| Sunday                                                       | Monday                | Tuesday                                     | Wednesday                                                    | Thursday                                                     |
-| ------------------------------------------------------------ | --------------------- | ------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| -Start the assigned reading.<br />- Send a PR to your lab partner. | Participate in class. | Submist a code review for your lab partner. | - Take the reading quiz <u>before class</u><br />- Particpate in class. | Submit the production version of last week's lab assignment. |
+| Sunday                                                       | Monday                | Tuesday                                    | Wednesday                                                    | Thursday                                                     |
+| ------------------------------------------------------------ | --------------------- | ------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| -Start the assigned reading.<br />- Send a PR to your lab partner. | Participate in class. | Submit a code review for your lab partner. | - Take the reading quiz <u>before class</u><br />- Participate in class. | Submit the production version of last week's lab assignment. |
 
+*This cycle will start on the secoond week of the term.*
 
 ## Academic Honesty
 
