@@ -116,7 +116,7 @@ The version of the .NET framework we will be using is [.NET Core 6.0](https://do
 
 ### Git
 
-You will need to use Git for version control. Git itself is a command line program which you can [download from the Git Community web site](https://git-scm.com/downloads). You can use Git from the command line , or use a Git GUI client. There is a very good [Git client built into Visual Studio](https://learn.microsoft.com/en-us/visualstudio/version-control/git-with-visual-studio?view=vs-2022) and you can also donwload the free [GitHub Desktop](https://desktop.github.com/) app for working with Git.
+You will need to use Git for version control. Git itself is a command line program which you can [download from the Git Community web site](https://git-scm.com/downloads). You can use Git from the command line , or use a Git GUI client. There is a very good [Git client built into Visual Studio](https://learn.microsoft.com/en-us/visualstudio/version-control/git-with-visual-studio?view=vs-2022) and you can also downoad the free [GitHub Desktop](https://desktop.github.com/) app for working with Git.
 
 ##  Free and Discounted Software for Students
 
