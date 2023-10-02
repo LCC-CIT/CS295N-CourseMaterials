@@ -12,7 +12,7 @@ Complete Exercise 1-1 in *Murach's ASP.NET Core MVC*
 
 ## Part 2: Skeletal Web Site
 
-Add to the web site you crated in lab 1 by creating a "skeleton" (a set of empty pages) for your site. A site map is shown below for each group's web site. The site map is shown in the form of an outline. The main bullet points represent top-level web pages, and sub-point bullets represent pages linked from the top-level pages. 
+Add to the web site you crated in lab 1 by creating a "skeleton" (a set of nearly empty pages) for your site. A site map is shown below for each group's web site. The site map is shown in the form of an outline. The main bullet points represent top-level web pages, and sub-point bullets represent pages linked from the top-level pages. 
 
 Each top level page requires it's own controller. Each sub-page will have a method in the controller.
 
@@ -63,7 +63,7 @@ These pages will all be place-holders. The only content will be:
   - **FanSites**: links to other official and un-official fan sites.
   - **News**: links to news sites, blogs, etch.
   
-- ***Your choice***: you can make this be whatever you want it to be*. Give it your own name.
+- ***Your choice***: you can make this be whatever you want it to be. Give it your own name.
 
 #### Group C
 
@@ -77,6 +77,9 @@ These pages will all be place-holders. The only content will be:
   - **References**: Sources of information in print or online.
   
 - **Blog**: A page where the web author can make posts and users can add comments.
+  
+  - Placeholder page for links to top posts.
+  - About the author.
   
 - ***Your choice***: You can make this be whatever you want it to be. Give it your own name.
 

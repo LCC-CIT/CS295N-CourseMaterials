@@ -7,7 +7,7 @@
 | CRN       | Hybrid (on campus) 21226<br />Online 21961                   |      | Instructor   | Brian Bird                                                   |
 | Credits   | 4                                                            |      | Email        | birdb@lanecc.edu                                             |
 | Day, Time | M, W, 10:00&ndash;11:50                                      |      | Office       | Building 19, Room 152                                        |
-| Classroom | Building 19, Room 128<br />[Zoom meeting](https://lanecc.zoom.us/j/96761530931) |      | Office Hours | M, W 12:00&ndash;12:50 <br />T, Th  2:00&ndash;2:50<br />[Zoom meeting](https://lanecc.zoom.us/j/93774726097) |
+| Classroom | Building 19, Room 128<br />[Zoom meeting](https://lanecc.zoom.us/j/96761530931) |      | Office Hours | T&mdash;Th  2:00&ndash;2:50<br />[Zoom meeting](https://lanecc.zoom.us/j/93774726097) |
 
 
 
@@ -158,22 +158,22 @@ Specific grading criteria will be applied to each of the labs, quizzes, and exam
 
 | Assessment Activities   | % each | % total |
 | ----------------------- | ------ | ------- |
-| Quizzes 1 - 8           | 1      | 8       |
-| Labs 1-8                | 4      | 32      |
-| Code Reviews 1-8        | 1      | 8       |
+| Quizzes 1&ndash;8       | 1      | 8       |
+| Labs 1&ndash;8          | 4      | 32      |
+| Code Reviews 1&ndash;8  | 1      | 8       |
 | Midterm and Final Exams | 10     | 20      |
 | Term Project            | 32     | 32      |
 
 
 Letter grades for the course will be determined by the following percentages:              
 
-|      | -        |         | +       |
-| ---- | -------- | ------- | ------- |
-| A    | 90 - 91  | 92 - 97 | 98-100  |
-| B    | 80 - 81  | 82 - 87 | 88 - 89 |
-| C    | 70 - 71  | 72 - 77 | 78 - 79 |
-| D    | 60 - 61  | 62 - 67 | 68 - 69 |
-| F    | Below 60 |         |         |
+|      | -           |         | +       |
+| ---- | ----------- | ------- | ------- |
+| A    | 90&ndash;91 | 92 - 97 | 98-100  |
+| B    | 80&ndash;81 | 82 - 87 | 88 - 89 |
+| C    | 70&ndash;71 | 72 - 77 | 78 - 79 |
+| D    | 60&ndash;61 | 62 - 67 | 68 - 69 |
+| F    | Below 60    |         |         |
 
 ## Late Work
 
