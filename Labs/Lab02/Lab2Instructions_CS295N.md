@@ -22,9 +22,6 @@ These pages will all be place-holders. The only content will be:
 - A heading.
 - A sentence saying what the page is for.
 - One or more links to other pages.
-  - The home page will have links to the three top-level pages.
-  - The other prescribed top-level page will have links to the two sub-pages.
-  - Sub-pages will have links back to the home page.
 
 ### Site Maps
 
@@ -32,24 +29,20 @@ These pages will all be place-holders. The only content will be:
 
 **Community Web Site**
 
-- 
-    **Home**: General information about the community and the purpose of the site.
-
-    Has links to *Info* and *Your choice* top-level pages and to the sub-pages below.
-
+- **Home**: General information about the community and the purpose of the site.
+    
+    Has links to *About* and *[Your choice]* top-level pages and to the sub-pages below:
+    
     -   **History**: a brief history of the community.
-
-    -   **Message**:  a page with a form where users can send messages to the other users.
-
-    -   **Messages**:  a page where messages are displayed.
+    -   **Messages**:  a page where messages from other members are displayed.
+        -   **Message**:  a page that in the future will have an HTML form that users can use to send messages to the other users.
     
-- **Info**:  Highlights of the community. 
+- **About**:  Information about you, the author of the site and moare about the community. 
+  
+    -   **Links**: Links to external sites related to the community.
+    -   **FAQ**: Frequently Asked Questions.
     
-    Has links to the sub-pages below.
-    
-    -   **Locations**: important locations and links to external sites.
-    -   **People**: significant people (and links if available)
-- ***Your choice**:  you can make this be whatever you want it to be*
+- ***Your choice***:  you can make this be whatever you want it to be. Give it your own name.
 
 #### Group B
 
@@ -58,20 +51,19 @@ These pages will all be place-holders. The only content will be:
 - 
   **Home**: General information about the person (or group, or thing) and the purpose of the site. 
   
-  Has links to *Sources* and *Your choice* top-level pages and to the sub-pages below.
+  Has links to *Sources* and *[Your choice]* top-level pages and to the sub-pages below.
   
   - **History**: A brief history of the person.
-  - **Story**: a page with a form where users can enter a story.
-  - **Stories**: a page where stories are displayed.
+  - **Stories**: a page that in the future will have a forum that users can use for discussions.
   
 - **Sources**: Where to find sources for stories and more info.
   
   Has links to the sub-pages below.
   
-  - **FanSites**: links to official and un-official fan sites.
+  - **FanSites**: links to other official and un-official fan sites.
   - **News**: links to news sites, blogs, etch.
   
-- ***Your choice** - you can make this be whatever you want it to be*.
+- ***Your choice***: you can make this be whatever you want it to be*. Give it your own name.
 
 #### Group C
 
@@ -82,17 +74,11 @@ These pages will all be place-holders. The only content will be:
   Has links to *References* and *Your choice* top-level pages and to the sub-pages below.
   
   - **Overview**: a brief description of the topic.
-  - **Comment** – a page with a form where users can post comments.
-  - **Forum** – a page where comments are displayed.
+  - **References**: Sources of information in print or online.
   
-- **References**: where to find out about the topic.
+- **Blog**: A page where the web author can make posts and users can add comments.
   
-  Has links to the sub-pages below.
-  
-  - **Print**: list of books and print media.
-  - **Online**: links to online media.
-  
-- *Your choice - you can make this be whatever you want it to be*
+- ***Your choice***: You can make this be whatever you want it to be. Give it your own name.
 
 
 
@@ -104,12 +90,12 @@ Write a controller class for each top-level page of the site. Write a method in 
 
 #### Views
 
-Each view can just be a place-holder for the information described above.
-It should have links to any sub-pages.
+Each view can be mostly a place-holder for the information described above.
+It should have links to any sub-pages and back to the home page.
 
 #### Models
 
-No models are needed yet. You will add those in a future lab.
+No models are needed yet. You will add those in a future lab assignment.
 
 
 
