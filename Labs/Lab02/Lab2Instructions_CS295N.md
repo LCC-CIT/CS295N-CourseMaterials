@@ -30,7 +30,7 @@ These pages will all be place-holders. The only content will be:
 **Community Web Site**
 
 - **Home**: General information about the community and the purpose of the site.
-    
+  
     Has links to *About* and *[Your choice]* top-level pages and to the sub-pages below:
     
     -   **History**: a brief history of the community.
@@ -71,7 +71,7 @@ These pages will all be place-holders. The only content will be:
 
 - **Home**: General information about the topic and the purpose of the site.
   
-  Has links to *References* and *Your choice* top-level pages and to the sub-pages below.
+  Has links to *Blog* and [*Your choice*] top-level pages and to the sub-pages below.
   
   - **Overview**: a brief description of the topic.
   - **References**: Sources of information in print or online.
