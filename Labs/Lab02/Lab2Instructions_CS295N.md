@@ -76,7 +76,7 @@ These pages will all be place-holders. The only content will be:
   - **Overview**: a brief description of the topic.
   - **References**: Sources of information in print or online.
   
-- **Blog**: A page where the web author can make posts and users can add comments.
+- **Blog**: A page where blog posts will appear.
   
   - Placeholder page for links to top posts.
   - About the author.
