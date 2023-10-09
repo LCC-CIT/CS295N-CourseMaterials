@@ -346,6 +346,44 @@ Note: if you want to drop the database so you can run update again, use this CLI
 
 `dotnet ef database drop`
 
+### Managing Development and Production Databases
+
+- Remove the ConnectionStrings object from the appsettings.json file.
+
+- Add two new appsettings files
+  Your web app will automatically choose the appsettings file with the right connection string based on whether the app is running in a production or development environment.
+
+  - appsettings.Development.json 
+    Containing the connection string for your local database. For example: 
+
+    ```json
+    }"ConnectionStrings": {
+        "MySqlConnection": "server=localhost;userid=birdb;password=Secret!123;database=BookReviews;",
+        "SqliteConnection": "Data Source=Data/BookReviews.db"
+      }
+    ```
+
+  - appsettings.Production.json 
+    Containing the connection string for the database on your web server. For example: 
+
+    ```json
+    
+    {
+      "ConnectionStrings": {
+        "MySqlConnection": "Server=bookreviews.mysql.database.azure.com;UserID=userName;Password=Not1Telling!;Database=BookReviews;"
+      }
+    
+    ```
+
+- Updating the database (which means applying migrations)
+
+  - The CLI command for using the production version is: 
+    `dotnet ef database update -- --environment Production`
+
+    For more options when updating a database, see: [dotnet ef database update](https://learn.microsoft.com/en-us/ef/core/cli/dotnet#dotnet-ef-database-update)
+
+  - When publishing to a web server (or Azure) from Visual Studio for Windows, you will choose the production connection string in the publish dialog.
+
 ## Viewing Your Database
 
 
@@ -359,6 +397,8 @@ After EF has created a database, you can use *SQL Server Object Explorer* in Vis
 - Tables
 - Columns
 - Data 
+
+
 
 # Running Unit Tests 
 

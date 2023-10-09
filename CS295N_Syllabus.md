@@ -1,13 +1,15 @@
 <h1>Syllabus for Web Development 1: ASP.NET</h1>
 
-<h2>CS295N, Fall 2022</h2>
+<h2>CS295N, Fall 2023</h2>
 
 |           | Class Info                                                   |      |              | Instructor Info                                              |
 | --------- | ------------------------------------------------------------ | ---- | ------------ | ------------------------------------------------------------ |
-| Class     | HyFlex, CRN 20646                                            |      | Instructor   | Brian Bird                                                   |
+| CRN       | Hybrid (on campus) 21226<br />Online 21961                   |      | Instructor   | Brian Bird                                                   |
 | Credits   | 4                                                            |      | Email        | birdb@lanecc.edu                                             |
 | Day, Time | M, W, 10:00&ndash;11:50                                      |      | Office       | Building 19, Room 152                                        |
-| Classroom | Building 19, Room 126<br />[Zoom meeting](https://lanecc.zoom.us/j/96615057074) |      | Office Hours | M&mdash;Th, 12:00&ndash;12:50<br />CIT Computer Lab, rm 135<br />[Zoom meeting](https://lanecc.zoom.us/j/94159665543) |
+| Classroom | Building 19, Room 128<br />[Zoom meeting](https://lanecc.zoom.us/j/96761530931) |      | Office Hours | T&mdash;Th  2:00&ndash;2:50<br />[Zoom meeting](https://lanecc.zoom.us/j/93774726097) |
+
+
 
 
 <h2>Table of Contents</h2>
@@ -42,15 +44,15 @@ To be able to design and code a web site that uses the ASP.NET Core MVC framewor
 
 - ASP.NET Core MVC
 
-- xUnit
+- xUnit for unit testing
 
-- Azure
+- Azure cloud service
 
-- SQL Server
+- SQL Server and/or MySQL
 
-- LINQ
+- LINQ (Language INtegrated Query for C#)
 
-- Entity Framework
+- Entity Framework (Object Relational Manager for database operations)
 
   
 
@@ -86,7 +88,7 @@ To be able to design and code a web site that uses the ASP.NET Core MVC framewor
 
 - Effectively use software development tools like Visual Studio.
 
-- Use Git to manager your source code.
+- Use Git to manage your source code and do code reviews.
 
   
 
@@ -94,9 +96,9 @@ To be able to design and code a web site that uses the ASP.NET Core MVC framewor
 
 ## Required Textbook   
 
-*Murach’s ASP.NET Core MVC*, 1st Edition, by Mary Delamater and Joel Murach, Murach Books, 2020. ISBN 978-1-943872-49-7. You can purchase the textbook from the [Titan Store](https://www.bkstr.com/laneccstore/home) or from the publisher, [Murach Books](https://www.murach.com/shop-books/web-development-books/murach-s-asp-net-core-mvc-detail). 
+*Murach’s ASP.NET Core MVC*, 2nd Edition, by Mary Delamater and Joel Murach, Murach Books, 2022. ISBN 978-1-943873-02-9. You can purchase the textbook from the [Titan Store](https://www.bkstr.com/laneccstore/home) or from the publisher, [Murach Books](https://www.murach.com/shop-books/web-development-books/murach-s-asp-net-core-mvc-detail). 
 
-[Free chapters and code](https://www.murach.com/shop-books/web-development-books/murach-s-asp-net-core-mvc-detail)
+[Free chapters and code](https://www.murach.com/shop/murach-s-asp-net-core-mvc-2nd-edition-detail)
 
 The first two chapters of the book and the source code for the sample programs and exercises in the text are also available for download on the [publisher's web site](https://www.murach.com/shop-books/web-development-books/murach-s-asp-net-core-mvc-detail), under the tab "Free Downloads".
 
@@ -104,15 +106,17 @@ The first two chapters of the book and the source code for the sample programs a
 
 The class examples and the textbook are based on using the Windows operating system for development, but you may alternatively use Mac OS or Linux. 
 
-### Visual Studio IDE
+### IDE and .NET Framework
 
-We will be using [Visual Studio 2022, Community Edition](https://visualstudio.microsoft.com/vs/community/), which is available as a free download. You may alternatively use the Visual Studio 2022, Enterprise Edition which is available at no cost to students (see below). 
+We will be using [Visual Studio 2022, Community Edition](https://visualstudio.microsoft.com/vs/community/), which is available as a free download. This is the most popular IDE for .NET development on Windows.
 
-The version of the .NET framework we will be using is [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1). You will need to download the latest release of this version of the .NET framework SDK for your OS (Windows, Mac, or Linux).
+For Mac OS and Linux, the best IDE is [JetBrains Rider](https://www.jetbrains.com/rider/), which also runs on Windows and is available free to Students.
+
+The version of the .NET framework we will be using is [.NET Core 6.0](https://dotnet.microsoft.com/download/dotnet-core/6.0). You will need to download the latest release of this version of the .NET framework SDK for your OS (Windows, Mac, or Linux).
 
 ### Git
 
-You will need to use Git for version control. Git itself is a command line program which you can [download from the Git Community web site](https://git-scm.com/downloads). You can use Git from the command line , or use a Git GUI client. There is a very good [Git client built into Visual Studio](https://learn.microsoft.com/en-us/visualstudio/version-control/git-with-visual-studio?view=vs-2022) and you can also donwload the free [GitHub Desktop](https://desktop.github.com/) app for working with Git.
+You will need to use Git for version control. Git itself is a command line program which you can [download from the Git Community web site](https://git-scm.com/downloads). You can use Git from the command line , or use a Git GUI client. There is a very good [Git client built into Visual Studio](https://learn.microsoft.com/en-us/visualstudio/version-control/git-with-visual-studio?view=vs-2022) and you can also downoad the free [GitHub Desktop](https://desktop.github.com/) app for working with Git.
 
 ##  Free and Discounted Software for Students
 
@@ -125,7 +129,7 @@ You will need to use Git for version control. Git itself is a command line progr
 
   - [Visual Studio Markdown extension](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor): This is a full featured Markdown editor and viewer.
   - [Visual Studio Code](https://code.visualstudio.com/): VS Code has [built in Markdown editing features](https://code.visualstudio.com/Docs/languages/markdown) and there are a number of Markdown add-ons available as well.
-  - [Typora](https://typora.io/): Not free ($14.99), but probably the best editor I've ever used. Available for Windows, MacOS, and LInux.
+  - [Typora](https://typora.io/): Not free ($14.99), but probably the best Markdown editor I've ever used. Available for Windows, MacOS, and LInux.
   - [PanWriter](https://panwriter.com/): A free, bare-bones editor and viewer for Windows, MacOS, and Linux.
   - [Markdown Viewer for Firefox](https://addons.mozilla.org/en-US/firefox/addon/markdown-viewer-chrome/): In addition to this, there are other markdown viewer add-ons available for Firefox as well as all other browsers.
 
@@ -154,41 +158,42 @@ Specific grading criteria will be applied to each of the labs, quizzes, and exam
 
 | Assessment Activities   | % each | % total |
 | ----------------------- | ------ | ------- |
-| Quizzes 1 - 8           | 1      | 8       |
-| Labs 1-8                | 4      | 32      |
-| Code Reviews 1-8        | 1      | 8       |
+| Quizzes 1&ndash;8       | 1      | 8       |
+| Labs 1&ndash;8          | 4      | 32      |
+| Code Reviews 1&ndash;8  | 1      | 8       |
 | Midterm and Final Exams | 10     | 20      |
 | Term Project            | 32     | 32      |
 
 
 Letter grades for the course will be determined by the following percentages:              
 
-|      | -        |         | +       |
-| ---- | -------- | ------- | ------- |
-| A    | 90 - 91  | 92 - 97 | 98-100  |
-| B    | 80 - 81  | 82 - 87 | 88 - 89 |
-| C    | 70 - 71  | 72 - 77 | 78 - 79 |
-| D    | 60 - 61  | 62 - 67 | 68 - 69 |
-| F    | Below 60 |         |         |
+|      | -           |         | +       |
+| ---- | ----------- | ------- | ------- |
+| A    | 90&ndash;91 | 92 - 97 | 98-100  |
+| B    | 80&ndash;81 | 82 - 87 | 88 - 89 |
+| C    | 70&ndash;71 | 72 - 77 | 78 - 79 |
+| D    | 60&ndash;61 | 62 - 67 | 68 - 69 |
+| F    | Below 60    |         |         |
 
 ## Late Work
 
 - The grade for assignments submitted after the due date will be reduced by 10%.
-  - Late labs 1 – 4 will only be accepted by the end of week 5
-  - Late labs 5 – 8 will only be accepted by the end of week 10
+  - Late labs 1 – 4 will only be accepted by the end of week 5.
+  - Late labs 5 – 8 will only be accepted by the end of week 10.
   
 - Quizzes and exams cannot be taken after the due date. Contact your instructor in advance if you know you will have a schedule conflict.
 
-- Exceptions will be made for illness or emergency situations
-
+- Exceptions will be made for illness or emergency situations.
 
 ## Weekly Learning Activities
 
-|                      | Sunday                                     | Monday                            | Tuesday                               | Thursday                       |
-| -------------------- | ------------------------------------------ | --------------------------------- | ------------------------------------- | ------------------------------ |
-| **Reading and quiz** |                                            | Take the quiz <u>before class</u> |                                       | Start reading the next chapter |
-| **Last week's lab**  | Finish beta, send a PR to your lab partner |                                   | Do a code review for your lab partner | Submit production version      |
+You should complete each step in the learning activities by the day of the week shown below. Of course, it's always great to do these things even sooner!
 
+| Sunday                                                       | Monday                | Tuesday                                    | Wednesday                                                    | Thursday                                                     |
+| ------------------------------------------------------------ | --------------------- | ------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| -Start the assigned reading.<br />- Send a PR to your lab partner. | Participate in class. | Submit a code review for your lab partner. | - Take the reading quiz <u>before class</u><br />- Participate in class. | Submit the production version of last week's lab assignment. |
+
+*This cycle will start on the secoond week of the term.*
 
 ## Academic Honesty
 
@@ -212,16 +217,16 @@ Please be aware that any accessible tables and chairs in this room should remain
 
 
 
-# Academic Calendar for Fall Term 2022
+## Academic Calendar for Fall Term 2023
 
-| Event                                              | Date          |
-| -------------------------------------------------- | ------------- |
-| Fall term classes begin                            | 9/27          |
-| Last day to receive refund                         | 10/3          |
-| Veteran’s Day – college closed on Friday           | 11/11         |
-| Last day for schedule changes                      | 11/18         |
-| Thanksgiving Vacation – college closed on Thursday | 11/24 – 11/27 |
-| Finals week                                        | 12/5 – 12/9   |
+| Event                                                        | Date              |
+| ------------------------------------------------------------ | ----------------- |
+| Fall term classes begin                                      | 9/26 Tuesday      |
+| Last day to receive refund                                   | 10/2 Monday       |
+| Veteran’s Day&mdash;college closed                           | 11/10 Friday      |
+| Last day for schedule changes                                | 11/17 Friday      |
+| Thanksgiving Vacation – college closed on Thursday and Friday | 11/23&ndash;11/26 |
+| Final exam                                                   | 12/5 Tuesday      |
 
 View [academic calendars](https://www.lanecc.edu/calendars/academic-calendar) on the LCC web site.
 
@@ -231,19 +236,19 @@ View [academic calendars](https://www.lanecc.edu/calendars/academic-calendar) on
 
 (May be subject to change)
 
-| Week | Topics                                                       | Reading                                                      | Lab Assignment                                               |
-| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 1    | Intro to Web Dev<br />*Class starts Wednesday*               |                                                              | Lab 1<br />Create an empty MVC site                          |
-| 2    | Intro to MVC                                                 | Murach Ch. 1                                                 | Lab 2<br />- Murach Ex 1-1<br />- Add pages and links to a site |
-| 3    | Working with Data                                            | Murach Ch. 2                                                 | Lab 3<br />- Murach Ex 2-1<br />- Add models and data entry<br />- Publish to Azure |
-| 4    | Bootstrap                                                    | Murach Ch. 3                                                 | Lab 4<br />- Murach Ex 3-1, 3-2<br />- Add Bootstrap to your site |
-| 5    | Midterm quiz                                                 |                                                              | Term project proposal                                        |
-| 6    | Unit testing with xUnit                                      | Murach Ch. 14<br />Pg. 570-577                               | Lab 5<br />Add a quiz and <br />unit tests to your site.     |
-| 7    | Entity Framework<br />Database Migrations<br />Deploying a DB to Azure<br /><br /> | Murach Ch. 4<br />Online tutorial<br />                      | Lab 6<br />- Murach Ex 4-1<br />- Add a DB to your site<br /> |
-| 8    | Repository Pattern<br />More Unit Testing                    | Murach Ch. 14                                                | Lab 7                                                        |
-| 9    | Linq and Seed Data                                           | Ch. 4: A Data driven web app<br/> 138–139: Seeding initial data<br/> 144–145: Working with data<br />Ch. 12: How to Use EF Core<br/>  472–475: How to query data | Lab 8                                                        |
-| 10   | Debugging<br />Final quiz                                    | Murach Ch. 5                                                 | Lab 9 (Extra Credit)<br />- Murach Ex 5-1<br />- Debugging practice |
-| 11   | Project presentations                                        |                                                              |                                                              |
+| Week              | Topics                                                       | Reading                                                      | Lab Assignment                                               |
+| ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **1**<br />9/27   | Intro to Web Dev<br />*Class starts Wednesday*               |                                                              | Lab 1<br />Create an empty MVC site                          |
+| **2**<br />10/2   | Intro to MVC                                                 | Murach Ch. 1                                                 | Lab 2<br />- Murach Ex 1-1<br />- Add pages and links to a site |
+| **3**<br />10/9   | Working with Data                                            | Murach Ch. 2                                                 | Lab 3<br />- Murach Ex 2-1<br />- Add models and data entry<br />- Publish to Azure |
+| **4**<br />10/16  | Bootstrap                                                    | Murach Ch. 3                                                 | Lab 4<br />- Murach Ex 3-1, 3-2<br />- Add Bootstrap to your site |
+| **5**<br />10/23  | Midterm quiz                                                 |                                                              | Term project proposal                                        |
+| **6**<br />10/30  | Unit testing with xUnit                                      | Murach Ch. 14<br />Pg. 570-577                               | Lab 5<br />Add a quiz and <br />unit tests to your site.     |
+| 7<br />11/6       | Entity Framework<br />Database Migrations<br />Deploying a DB to Azure<br /><br /> | Murach Ch. 4<br />Online tutorial<br />                      | Lab 6<br />- Murach Ex 4-1<br />- Add a DB to your site<br /> |
+| **8**<br />11/13  | Repository Pattern<br />More Unit Testing                    | Murach Ch. 14                                                | Lab 7                                                        |
+| **9**<br />11/20  | Linq and Seed Data                                           | Ch. 4: A Data driven web app<br/> 138–139: Seeding initial data<br/> 144–145: Working with data<br />Ch. 12: How to Use EF Core<br/>  472–475: How to query data | Lab 8                                                        |
+| **10**<br />11/27 | Debugging<br />Final quiz                                    | Murach Ch. 5                                                 | Lab 9 (Extra Credit)<br />- Murach Ex 5-1<br />- Debugging practice |
+| **11**<br />12/4  | Project presentations                                        |                                                              |                                                              |
 
 
 

@@ -99,7 +99,7 @@ Here are some useful commands for working with branches:
 
 3. Add the new files to the repo index by typing; `git add .`
 
-4. Commit the files to the repo by typing `git commit -m` folllowed by a commit message in quotes.
+4. Commit the files to the repo by typing `git commit -m` followed by a commit message in quotes.
 
 5. Push the new files you just committed to the origin (GitHub) by typing: `git push`
 

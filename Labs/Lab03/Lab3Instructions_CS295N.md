@@ -9,6 +9,8 @@
 
 In *Murach's ASP.NET Core MVC*, complete exercise 2-2, "Build the Future Value app using the Empty template". 
 
+*Note that this exercise uses the ViewBag to send data (the discount and total) to a view. This is usually not recommended, it is better to send a model to the view.*
+
 You do not need to do exercise 2-1. 
 
 
@@ -63,9 +65,9 @@ Are there any other properties you think you might need or want? (Don't add more
 
 **Informational Site**
 
-Modify the Home / Forum so users can post comments about informational pages in the site.
+Modify the Blog page so the site admin can make blog posts.
 
-Forum posts will contain:
+Blog posts will contain:
 
 - URL of the Page being commented on
 - Subject
@@ -90,16 +92,17 @@ Do you want the posts to be identified as either comments or additional informat
 
 #### Views
 
-- Add a new view containing a HTML form for entering a message, story, or forum post. Make the view strongly typed. This will be a child view of an existing Contact, Stories or Forum view.
+- Add a new view containing a HTML form for entering a message, story, or forum post. Make the view strongly typed. Name it Message, Story, or Post
+  - Add a link to the existing Message, Stories or Blog view to open the new view.
 
-- Modify the existing Contact, Stories, or Forum view so that it can display data echoed back when the user submits information they entered in the form described above.
+- Modify the existing Contact, Stories, or Blog view so that it can display data echoed back when the user submits information they entered in the form described above.
 
 #### Controllers
 
 - Write an HTTP GET method for the new HTML form view described in *Views* above.
 - Write an HTTP POST method that receives the information from the new HTML form. This method should use the Redirect method to send the information back to the Contact, Stories, or Forum view (back to the controller method for that view.)
 
-Note: You should already have an existing HTTP GET method in your HomeController that renders a Contact, Stories, or Forum view and sends it to the browser.
+Note: You should already have an existing HTTP GET method in your HomeController that renders a Contact, Stories, or Blog view.
 
 
 
