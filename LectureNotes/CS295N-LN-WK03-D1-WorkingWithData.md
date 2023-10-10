@@ -16,7 +16,7 @@
 
 - Any questions about lab 2?
 - Any questions about PRs and code reviews?
-- Any questions from the reading or the Ch. 2 quiz?
+- Any questions from reading  Ch. 2?
 
 
 
@@ -73,7 +73,7 @@ One of the first steps in designing object oriented software is to decide what c
 
   - Association (similar to aggregation): "uses-a" (or "has-a")
 
-  - Composition: "part-of" &larr; *model classes will almost always have this relationship to each other.*
+  - Composition: "part-of" &larr; *model classes will almost always have this relationship to each other.*
 
 - Model Relationships
     - Any of the three above are possible.
@@ -164,22 +164,9 @@ Draw a UML diagram that shows the relationships between all three models.
 ```
 
 - May optionally include a query for data (as a parameter in the Index method.)
+- Used for displaying a view with, or without sending it data (as an argument in the View method).
+- Controller methods are HTTP GET methods by default.
 
-- Used for displaying a view with or without sending it data (as an argument in the View method).
-
-- Passing a model to the view is optional. (This would be another way of sending it data.)
-
-- Controller methods are GET methods by default.
-
-  ```C#
-  public IActionResult Review()
-          {
-              Review model = new Review();
-              User reviewer = new User();
-              model.Reviewer = reviewer;
-              return View(model);
-          }
-  ```
 
 
 ### HTTP POST methods
@@ -192,18 +179,19 @@ Draw a UML diagram that shows the relationships between all three models.
     [HttpPost]
     public IActionResult Review(Review model)
     {
-        model.ReviewDate = DateTime.Now;
+        model.ReviewDate = DateTime.Now;  // Add date and time to the model
         return View(model);
     }
     ```
 
   - In parameters that match the HTML form field names:
 
-    ```
+    ```c#
     [HttpPost]
     public IActionResult Review(string bookTitle, string authorName,
             string reviewerName, string reviewText, string reviewDate)
     {
+    		// Create a new model since one wasn't passed in
     		Review model = new Review(){BookTitle = bookTitle, 
     		     AuthorName = authorName, ReviewText = reviewText,
     		     Reviewer = new User(){Name = reviewerName},
@@ -247,8 +235,34 @@ Hello world, it's @Model.Day and the time is @Model.Time
 
 ### Form Views
 
-- This view would be invoked by an HttpGet method in the controller.
-- This view will send data to a HttpPost method in the controller.
+- This view would be invoked by an `HttpGet` method in the controller.
+- Here are two versions of a view that will send data to a `HttpPost` method in the controller.  
+  Note that we are using the refactored version of the Review model that has  Book and AppUser as property types.
+  - This version uses regular HTML attributes in the labels and input elements.
+
+```c#
+@model Review
+@{
+    ViewData["Title"] = "Books";
+}
+
+<form method="post">
+    <label for="title">Title</label>
+    <input id="title" name="Book.Title" /><br />
+
+    <label for="author">Author</label>
+    <input id="author" name="Book.Author"/><br />
+
+    <label for="reviewer">Reviewer</label>
+    <input id="reviewer" name="Reviewer.Name" /><br />
+
+    <label for="text">Review</label>
+    <textarea id="text" name="ReviewText"></textarea><br />
+
+    <button type="submit">Submit</button>
+</form>
+```
+  - This version uses the `asp-for` tag helper in the labels and input elements.
 
 ```c#
 @model Review
