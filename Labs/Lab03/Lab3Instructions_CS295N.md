@@ -68,13 +68,11 @@ Are there any other properties you think you might need or want? (Don't add more
 Modify the Blog page so the site admin can make blog posts.
 
 Blog posts will contain:
-
-- URL of the Page being commented on
-- Subject
-- Rating of the page (an integer)
+- Title
 - Text of the post
 - Name of person posting
 - Date posted
+- Rating
 
 Are there any other properties you think you might need or want? (Don't add more than one or two.)
 
