@@ -292,6 +292,8 @@ Ch. 3, "How to make a web app responsive with Bootstrap", *Murach’s ASP.NET Co
 
 [Responsivo](https://addons.mozilla.org/en-US/firefox/addon/responsivo/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search)&mdash;A Firefox add-on for testing responsive web sites.
 
+[Responsive Web Design Testing Tool](http://mattkersley.com/responsive/)&mdash;A website to test your web page on different size screens.
+
 [^1]: Viewport size is the number of CSS or software pixels in the visible area of the browser. One CSS pixel can equal one or more physical pixels depending on the device.
 
 
