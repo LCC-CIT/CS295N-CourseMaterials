@@ -282,9 +282,9 @@ Ch. 3, "How to make a web app responsive with Bootstrap", *Murach’s ASP.NET Co
 
 ### Online
 
-[Use LibMan with ASP.NET Core in Visual Studio](https://docs.microsoft.com/en-us/aspnet/core/client-side/libman/libman-vs?view=aspnetcore-3.1)&mdash;Microsoft Tutorial by Scott Addie.
+[Use LibMan with ASP.NET Core in Visual Studio](https://docs.microsoft.com/en-us/aspnet/core/client-side/libman/libman-vs?view=aspnetcore-6.0)&mdash;Microsoft Tutorial by Scott Addie.
 
-[Bootstrap 4 Tutorial](https://www.w3schools.com/bootstrap4/default.asp)&mdash;W3Schools.
+[Bootstrap 5 Tutorial](https://www.w3schools.com/bootstrap5/index.php)&mdash;W3Schools.
 
 [Bootstrap Web Site](http://getbootstrap.com)&mdash;Official site.
 

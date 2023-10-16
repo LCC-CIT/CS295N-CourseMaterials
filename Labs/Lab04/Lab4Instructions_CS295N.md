@@ -9,7 +9,7 @@
 
 In *Murach's ASP.NET Core MVC*, complete exercise 3-1, "Work with the Bootstrap classes in the Future Value app". 
 
-You will take a screen-shot of the app running in your web browser at the end of the exercise. On the document containing the screen-shot you will also report one of the following:
+You will take a screen-shot of the app running in your web browser at the end of the exercise. On the document containing the screen-shot, or in the Moodle online text entry,  you will also report one of the following:
 
 A. I Followed all the steps shown in the book and successfully compiled and ran the program.
 
@@ -23,7 +23,7 @@ D. I didn't do the exercise.
 
 ## Part B: Make Your Web Site Responsive
 
-All three lab groups will use the Bootstrap classes listed below on a web page in your site that uses a form. The web page should be responsive for at least two screen sizes: a laptop screen size (>=768px) and mobile phone screen size (<768 px).
+All three lab groups will add Bootstrap to the layout for all views. Use the Bootstrap classes listed below on the web page in your site that uses a form. All web pages should be responsive for at least two screen sizes: a laptop screen size (>=768px) and mobile phone screen size (<768 px). Note that most of your web pages are already responsive since they are just place-holders or only contain text.
 
 - container
 
@@ -31,7 +31,7 @@ All three lab groups will use the Bootstrap classes listed below on a web page i
 
 - column
 
-- <s>jumbotron</s> form (form-label, form-control, etc.)
+- form (form-label, form-control, etc.)
 
 - margin (mt, mr, mb, ml, or m)
 
