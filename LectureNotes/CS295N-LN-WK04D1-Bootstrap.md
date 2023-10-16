@@ -42,12 +42,9 @@ Current version: 5.3 as of October 2023, but these notes are based on version 4.
 
 ### What is Bootstrap?
 
-- A CSS and JavaScript front-end web framework
-- Simplifies responsive design
-- Includes templates for typography, forms, buttons, tables, navigation, modals, image carousels and more
-- Tutorial: [W3Schools Bootstrap 4 Tutorial](https://www.w3schools.com/bootstrap4/)
-- Use with Razor views:
-  - Add a link for the bootstrap min.css file to _Layout.cshtml so that it is available in all the views.
+- A CSS and JavaScript front-end web framework.
+- Simplifies responsive design.
+- Includes templates for typography, forms, buttons, tables, navigation, modals, image carousels and more.
 
 ### Improvements on basic HTML and CSS
 
@@ -153,7 +150,7 @@ Where *size* is one of:
 
 - Add Bootstrap to wwwroot
 
-- Enable static pages in startup.cs
+- Enable static pages in program.cs
 
 - Add to the head section of Razor views:
 
@@ -168,7 +165,7 @@ Where *size* is one of:
   - *initial-scale=1*
     Sets the initial zoom level when the page is first loaded by the browser.
 
-
+- Add a link for the bootstrap min.css file to _Layout.cshtml so that it is available in all the views.
 
 
 ------
@@ -259,8 +256,8 @@ libman.json modified to reflect the default versions of libraries included in th
     - Modify a source .js or .css file to see how the bundle.min file gets updated
 - Linking to the files in the Razor View
   - Modify the original link and script elements to link to the new minified bundles:
-    - <link rel="stylesheet" href="css/bundle.min.css" />
-    - <script src="js/bundle.min.js"></script>
+    - `<link rel="stylesheet" href="css/bundle.min.css" />`
+    - `<script src="js/bundle.min.js"></script>`
 
 ------
 
@@ -291,6 +288,8 @@ Ch. 3, "How to make a web app responsive with Bootstrap", *Murach’s ASP.NET Co
 [Difference Between Viewport, Screen Resolution, DPR, and PPI for Responsive Web Development](https://webspeedtools.com/viewport-vs-screen-resolution-vs-dpr-vs-ppi/#:~:text=The%20viewport%20size%20will%20allow%20your%20laptop%20screen,is%20a%20good%20explanation%20of%20the%20logical%20resolution.)
 
 [Responsivo](https://addons.mozilla.org/en-US/firefox/addon/responsivo/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search)&mdash;A Firefox add-on for testing responsive web sites.
+
+[Responsive Web Design Testing Tool](http://mattkersley.com/responsive/)&mdash;A website to test your web page on different size screens.
 
 [^1]: Viewport size is the number of CSS or software pixels in the visible area of the browser. One CSS pixel can equal one or more physical pixels depending on the device.
 
