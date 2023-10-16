@@ -47,6 +47,10 @@ Microsoft offers a free Azure subscription for students and gives you $100 in cr
 
 - Now you can publish your web app.
 
+Note that your publish profile won't be tracked in Git. This is for security reasons. You will need to download the publish profile from your Azure portal on each computer you use. The download link is in the App Service.
+
+![AzureDownloadPublishProfile](Images/AzureDownloadPublishProfile.png)
+
 
 
 ## Managing Your Free Account
@@ -68,7 +72,11 @@ All of the services we will use in this class are free and will not reduce your 
 
 ### Monitoring your charges
 
-To be sure you aren't being charged, or to see what you are being charged for, you can check the [Microsoft Azure Sponsorships](https://www.microsoftazuresponsorships.com/) page. To see which services you are being charged for, click on the link for [Usage Details](https://www.microsoftazuresponsorships.com/Usage) and if you want to see which days each charge was made, you can click on the "Download" button, select "csv", and download a file you can open in a spreadsheet program like Excel so you can see a detailed description of your charges. Once you see what is using your credit, you can either shut down that service or change it's pricing tier.
+To be sure you aren't being charged, or to see what you are being charged for, you can go to the Azure portal, open the Eduction service, and check to see how much credit and time you have remaining on your free subscription.
+
+<img src="Images/AzureEducationService.png" alt="AzureEducationService" style="zoom:50%;" />
+
+
 
 
 
