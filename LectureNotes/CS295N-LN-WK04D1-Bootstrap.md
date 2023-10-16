@@ -32,7 +32,8 @@ CS296N Web Development 2: ASP.NET
 
 
 > *Build responsive, mobile-first projects on the web with the world's most popular front-end component library.* - from the Bootstrap web site
-> Current version: 4.0.0
+
+Current version: 5.3 as of October 2023, but these notes are based on version 4.0, however the concepts and features described here haven't changed.
 
 ### Responsive Web Design
 
@@ -152,8 +153,6 @@ Where *size* is one of:
 
 - Add Bootstrap to wwwroot
 
-  - 
-
 - Enable static pages in startup.cs
 
 - Add to the head section of Razor views:
@@ -163,7 +162,7 @@ Where *size* is one of:
   ```
 
   - *meta*
-    Metadata is data about data. The <meta> tag provides metadata about the HTML document.Metadata will not be displayed on the page, but will be machine parsable. - W3Schools
+    Metadata is data about data. The <meta> tag provides metadata about the HTML document. Metadata will not be displayed on the page, but will be machine parsable. - W3Schools
   - *width=device-width* 
     Sets the width of the page to follow the screen-width of the device
   - *initial-scale=1*
@@ -176,7 +175,7 @@ Where *size* is one of:
 
 ## Other Popular Front-End Libraries and Frameworks
 
-These are libraries and frameworks that you could use with ASP.NET MVC
+These are libraries and frameworks that you could use with ASP.NET
 
 - [jQuery](http://jquery.com)
   jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript. - from the jQuery web site
@@ -201,7 +200,7 @@ Static web content primarily consists of HTML, CSS and JavaScript files (but can
 
 ### LibMan
 
-> Library Manager (LibMan) is a lightweight, client-side library  acquisition tool. LibMan downloads popular libraries and frameworks from the file system or from a [content delivery network (CDN)](https://wikipedia.org/wiki/Content_delivery_network). The supported CDNs include [CDNJS](https://cdnjs.com/), [jsDelivr](https://www.jsdelivr.com/), and [unpkg](https://unpkg.com/#/). The selected library files are fetched and placed in the appropriate location within the ASP.NET Core project.&mdash;Scott Addie in [Client-side library acquisition in aSP.NET Core with LibMan](https://docs.microsoft.com/en-us/aspnet/core/client-side/libman/?view=aspnetcore-3.1)
+> Library Manager (LibMan) is a lightweight, client-side library  acquisition tool. LibMan installs popular libraries and frameworks from the file system or from a [content delivery network (CDN)](https://wikipedia.org/wiki/Content_delivery_network). The supported CDNs include [CDNJS](https://cdnjs.com/), [jsDelivr](https://www.jsdelivr.com/), and [unpkg](https://unpkg.com/#/). The selected library files are fetched and placed in the appropriate location within the ASP.NET Core project.&mdash;Scott Addie in [Client-side library acquisition in aSP.NET Core with LibMan](https://docs.microsoft.com/en-us/aspnet/core/client-side/libman/?view=aspnetcore-3.1)
 
 Default libman.json for VS 2022, v. 17.3.6
 Note: the bootstrap.js bundle includes popper.js
@@ -279,9 +278,7 @@ AddBootstrap branch](https://github.com/LCC-CIT/CS296N-BookInfo-Core-2/tree/AddB
 
 ### Textbook
 
-Ch. 3, "How to make a web app responsive with Bootstrap", *Murach’s ASP.NET Core MVC*, 1st Edition, by Mary Delamater and Joel Murach, Murach Books, 2020.
-
-**Note:** the textbook example uses the Bootstrap class `form-horizontal` [which has been deprecated in Bootstrap 4](https://getbootstrap.com/docs/4.5/migration/#forms-1).
+Ch. 3, "How to make a web app responsive with Bootstrap", *Murach’s ASP.NET Core MVC*, 2nd Edition, by Mary Delamater and Joel Murach, Murach Books, 2022.
 
 ### Online
 
@@ -299,7 +296,7 @@ Ch. 3, "How to make a web app responsive with Bootstrap", *Murach’s ASP.NET Co
 
 
 
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) ASP.NET Core MVC Lecture Notes by [Brian Bird](https://birdsbits.blog) is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) ASP.NET Core MVC Lecture Notes by [Brian Bird](https://birdsbits.blog), written in 2020 and revised in 2023, are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
 
 ------
 
