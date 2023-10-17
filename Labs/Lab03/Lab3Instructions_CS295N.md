@@ -30,7 +30,7 @@ Modify the Home/Contact page so that users can send messages to the other users.
 Messages will contain:
 
 - Name of sender
-- Name of recipient
+- Name of recipient (AppUser)
 - Subject
 - Message priority (an integer)
 - Body of the message
@@ -54,7 +54,7 @@ Stories will contain:
 - Topic
 - Year the story took place (an integer)
 - Text of the story
-- Name of the submitter
+- Name of the submitter (AppUser)
 - Date submitted
 
 Are there any other properties you think you might need or want? (Don't add more than one or two.)
@@ -70,9 +70,9 @@ Modify the Blog page so the site admin can make blog posts.
 Blog posts will contain:
 - Title
 - Text of the post
-- Name of person posting
+- Name of person posting (AppUser)
 - Date posted
-- Rating
+- Rating (an integer)
 
 Are there any other properties you think you might need or want? (Don't add more than one or two.)
 
@@ -84,7 +84,7 @@ Do you want the posts to be identified as either comments or additional informat
 
 #### Models
 
-- Decide what two or three models you will need.
+- Decide what two or three models you will need to add to your project .
 - Decide the relationship between the models.
 - Code the models.
 
