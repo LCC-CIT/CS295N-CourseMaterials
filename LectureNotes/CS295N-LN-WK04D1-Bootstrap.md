@@ -124,36 +124,32 @@ Where *sides* is one of:
 
 - `t` - sets `margin-top` or `padding-top`
 - `b` - sets `margin-bottom` or `padding-bottom`
-- `l` - sets `margin-left` or `padding-left`
-- `r` - sets `margin-right` or `padding-right`
+- `s` - sets `margin-start` or `padding-start` (*start* is generally the left side.)
+- `e` - sets `margin-end` or `padding-end`(*end* is generally the right side.)
 - `x` - sets both `padding-left` and `padding-right` or `margin-left` and `margin-right`
 - `y` - sets both `padding-top` and `padding-bottom` or `margin-top` and `margin-bottom`
 - blank - sets a `margin` or `padding` on all 4 sides of the element
 
 Where *size* is one of:
+Size is measured in *rem* which stands for “root em”. This is a CSS unit of measurement relative to the font-size of the root element (usually the &lt;html&gt; element). This means that the value of a rem unit is proportional to the font size of the root element, which is usually 16px by default for most browsers.
 
 - `0` - sets `margin` or `padding` to `0`
-- `1` - sets `margin` or `padding` to `.25rem` (4px if font-size is 16px)
-- `2` - sets `margin` or `padding` to `.5rem` (8px if font-size is 16px)
-- `3` - sets `margin` or `padding` to `1rem` (16px if font-size is 16px)
-- `4` - sets `margin` or `padding` to `1.5rem` (24px if font-size is 16px)
-- `5` - sets `margin` or `padding` to `3rem` (48px if font-size is 16px)
+- `1` - sets `margin` or `padding` to `.25rem` (4px if root font-size is 16px)
+- `2` - sets `margin` or `padding` to `.5rem` (8px if root font-size is 16px)
+- `3` - sets `margin` or `padding` to `1rem` (16px if root font-size is 16px)
+- `4` - sets `margin` or `padding` to `1.5rem` (24px if root font-size is 16px)
+- `5` - sets `margin` or `padding` to `3rem` (48px if root font-size is 16px)
 - `auto` - sets `margin` to auto
 
 **Note:** margins can also be negative, by adding an "n" in front of *size*:
 
-- `n1` - sets `margin` to `-.25rem` (-4px if font-size is 16px)
-- `n2` - sets `margin` to `-.5rem` (-8px if font-size is 16px)
-- `n3` - sets `margin` to `-1rem` (-16px if font-size is 16px)
-- `n4` - sets `margin` to `-1.5rem` (-24px if font-size is 16px)
-- `n5` - sets `margin` to `-3rem` (-48px if font-size is 16px)
+- `n1` - sets `margin` to `-.25rem` (-4px if root font-size is 16px)
+- `n2` - sets `margin` to `-.5rem` (-8px if root font-size is 16px)
+- `n3` - sets `margin` to `-1rem` (-16px if root font-size is 16px)
+- `n4` - sets `margin` to `-1.5rem` (-24px if root font-size is 16px)
+- `n5` - sets `margin` to `-3rem` (-48px if root font-size is 16px)
 
 
-- Jumbotron
-
-  
-  - [See W3Schools](https://www.w3schools.com/bootstrap4/bootstrap_jumbotron.asp)
-  
 - Buttons
 
   - [See W3Schools](https://www.w3schools.com/bootstrap4/bootstrap_buttons.asp)
