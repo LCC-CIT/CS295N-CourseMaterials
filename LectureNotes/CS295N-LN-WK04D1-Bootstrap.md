@@ -1,6 +1,6 @@
 CS296N Web Development 2: ASP.NET
 
-# Responsive Web Sites with Bootstrap
+<h1>Responsive Web Sites with Bootstrap</h1>
 
 **Topics by week** 
 
@@ -12,19 +12,17 @@ CS296N Web Development 2: ASP.NET
 | 4. <mark>Bootstrap</mark>               | 9. Linq and Seed Data                    |
 | 5. Midterm Quiz & Term Project Proposal | 10. Debugging                            |
 
-
-
-## Contents
+<h2>Contents</h2>
 
 [TOC]
 
 ------
 
-## Introduction
+# Introduction
 
 
 
-### Announcements, Q and A
+## Announcements, Q and A
 
 - Don't forget the reading and quiz.
 
@@ -32,12 +30,12 @@ CS296N Web Development 2: ASP.NET
 
   
 
-## Responsive Web Design
+# Responsive Web Design
 
 - Responsive web design (RWD) is an approach to web design which makes web pages render well on a variety of devices and window or screen sizes - [Wikipedia](https://en.wikipedia.org/wiki/Responsive_web_design)
 - Responsive Web Design is about using HTML and CSS to resize, hide, shrink, enlarge, or move the content to make it look good on any screen - [W3Schools](https://www.w3schools.com/html/html_responsive.asp)
 
-### Testing a Web Page for Responsiveness
+## Testing a Web Page for Responsiveness
 
 - There are a number of web sites you can use to simulate different device screen sizes such as this one: [Responsive Web Design Testing Tool](http://mattkersley.com/responsive/). 
 
@@ -50,19 +48,19 @@ CS296N Web Development 2: ASP.NET
 
 
 
-## Bootstrap 
+# Bootstrap 
 
 > *Build responsive, mobile-first projects on the web with the world's most popular front-end component library.* - from the Bootstrap web site
 
 Current version: 5.3 as of October 2023, but these notes are based on version 4.0, however the concepts and features described here haven't changed.
 
-### What is Bootstrap?
+## What is Bootstrap?
 
 - A CSS and JavaScript front-end web framework.
 - Simplifies responsive design.
 - Includes templates for typography, forms, buttons, tables, navigation, modals, image carousels and more.
 
-### Improvements on basic HTML and CSS
+## Improvements on basic HTML and CSS
 
 - Typography - redefines the default fonts for HTML elements and provides special font management classes
 - Colors - contextual classes that provide "meaning through colors"
@@ -74,11 +72,11 @@ Current version: 5.3 as of October 2023, but these notes are based on version 4.
 - Inputs
 - Tooltip
 
-### Features and Concepts
+## Features and Concepts
 
 This is not a comprehensive list of Bootstraps features and concepts. See one of the tutorials or the official Bootstrap site in the [Reference]() section for more.
 
-#### Grid System
+### Grid System
 
 The grid system is fundamental to the way Bootstrap facilitates responsive web sites. In version 4, the grid system is built with the CSS3 Flexbox, and in version 3 it was built using CSS floats. Both versions are fully responsive.
 
@@ -109,11 +107,15 @@ Bootstrap’s grid system uses a series of *containers*, *rows*, and *columns* t
 
 Note that *screen width* is in CSS pixels, not physical pixels.[^1]
 
-#### Margins and Padding
+### Margin and Padding (Spacing)
 
-([From W3Schools](https://www.w3schools.com/bootstrap4/bootstrap_utilities.asp))
+The classes used for setting spacing are named acording to a pattern, which is:  
 
-The classes are used in the format: `{property}{sides}-{size}` for `xs` and `{property}{sides}-{breakpoint}-{size}` for `sm`, `md`, `lg`, and `xl`.
+- `{property}{sides}-{size}` for `xs`  (default breakpoint screen size)
+
+- `{property}{sides}-{breakpoint}-{size}` for `sm`, `md`, `lg`, and `xl` breakpoint screen sizes  
+
+  (See examples at the bottom of this section)
 
 Where *property* is one of:
 
@@ -149,18 +151,25 @@ Size is measured in *rem* which stands for “root em”. This is a CSS unit of 
 - `n4` - sets `margin` to `-1.5rem` (-24px if root font-size is 16px)
 - `n5` - sets `margin` to `-3rem` (-48px if root font-size is 16px)
 
+#### Examples
 
-- Buttons
-
-  - [See W3Schools](https://www.w3schools.com/bootstrap4/bootstrap_buttons.asp)
-
-- Forms
-
-    - [See W3Schools](https://www.w3schools.com/bootstrap4/bootstrap_forms.asp)
+- `<div class="mt-4">`  Sets the top margin to 1.5rem when the screen size is `xs`.
+- `<div class="me-md-3">` Sets the end (right) margin to 1rem when the screen size is `md`.
+- `<div class="px-lg-2">` Sets the left and right padding to .5rem when the screen size is `lg`.
 
 
 
-## Using Bootstrap with ASP.NET Core
+### Buttons
+
+[See W3Schools](https://www.w3schools.com/bootstrap4/bootstrap_buttons.asp)
+
+### Forms
+
+[See W3Schools](https://www.w3schools.com/bootstrap4/bootstrap_forms.asp)
+
+
+
+# Using Bootstrap with ASP.NET Core
 
 - Add Bootstrap to wwwroot
 
@@ -186,7 +195,7 @@ Size is measured in *rem* which stands for “root em”. This is a CSS unit of 
 
 
 
-## Other Popular Front-End Libraries and Frameworks
+# Other Popular Front-End Libraries and Frameworks
 
 These are libraries and frameworks that you could use with ASP.NET
 
@@ -199,7 +208,7 @@ These are libraries and frameworks that you could use with ASP.NET
 
 
 
-## Static Web Content in Core ASP.NET MVC
+# Static Web Content in Core ASP.NET MVC
 
 Static web content primarily consists of HTML, CSS and JavaScript files (but can also include images, etc.) 
 
@@ -209,7 +218,7 @@ Static web content primarily consists of HTML, CSS and JavaScript files (but can
 - Static pages must be enabled your web app. 
   - They are enabled by default when you use the Visual Studio MVC App project template to create your app.
 
-### LibMan
+## LibMan
 
 > Library Manager (LibMan) is a lightweight, client-side library  acquisition tool. LibMan installs popular libraries and frameworks from the file system or from a [content delivery network (CDN)](https://wikipedia.org/wiki/Content_delivery_network). The supported CDNs include [CDNJS](https://cdnjs.com/), [jsDelivr](https://www.jsdelivr.com/), and [unpkg](https://unpkg.com/#/). The selected library files are fetched and placed in the appropriate location within the ASP.NET Core project.&mdash;Scott Addie in [Client-side library acquisition in aSP.NET Core with LibMan](https://docs.microsoft.com/en-us/aspnet/core/client-side/libman/?view=aspnetcore-3.1)
 
@@ -253,7 +262,7 @@ libman.json modified to reflect the default versions of libraries included in th
 
 
 
-### Bundling and Minification
+## Bundling and Minification
 
 - Facilitate fast file loading for client browsers
   - Bundling - reduce the number of HTTP requests needed
@@ -277,19 +286,19 @@ libman.json modified to reflect the default versions of libraries included in th
 
 
 
-## Example
+# Example
 
 [Book Review Web App, Lab04 branch on GitHub](https://github.com/ProfBird/CS295N-Fall2020LabExample/tree/lab04)
 
 
 
-## Reference
+# References
 
-### Textbook
+## Textbook
 
 Ch. 3, "How to make a web app responsive with Bootstrap", *Murach’s ASP.NET Core MVC*, 2nd Edition, by Mary Delamater and Joel Murach, Murach Books, 2022.
 
-### Online
+## Online
 
 [Use LibMan with ASP.NET Core in Visual Studio](https://docs.microsoft.com/en-us/aspnet/core/client-side/libman/libman-vs?view=aspnetcore-6.0)&mdash;Microsoft Tutorial by Scott Addie.
 
