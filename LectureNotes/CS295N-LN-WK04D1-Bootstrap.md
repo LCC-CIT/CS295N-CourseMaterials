@@ -190,19 +190,6 @@ Where *size* is one of:
 
 
 
-## Other Popular Front-End Libraries and Frameworks
-
-These are libraries and frameworks that you could use with ASP.NET
-
-- [jQuery](http://jquery.com)
-  jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript. - from the jQuery web site
-- [Font Awesome](https://fontawesome.com)
-  *Gives you scalable vector icons that can instantly be customized — size, color, drop shadow, and anything that can be done with the power of CSS*. - from the FontAwesome web site
-
-------
-
-
-
 ## Static Web Content in Core ASP.NET MVC
 
 Static web content primarily consists of HTML, CSS and JavaScript files (but can also include images, etc.) 
@@ -276,6 +263,19 @@ libman.json modified to reflect the default versions of libraries included in th
   - Modify the original link and script elements to link to the new minified bundles:
     - `<link rel="stylesheet" href="css/bundle.min.css" />`
     - `<script src="js/bundle.min.js"></script>`
+
+------
+
+
+
+## Other Popular Front-End Libraries
+
+These are libraries that you can use with ASP.NET
+
+- [jQuery](http://jquery.com)
+  jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript. - from the jQuery web site
+- [Font Awesome](https://fontawesome.com)
+  *Gives you scalable vector icons that can instantly be customized — size, color, drop shadow, and anything that can be done with the power of CSS*. - from the FontAwesome web site
 
 ------
 
