@@ -286,7 +286,14 @@ These are libraries that you can use with ASP.NET
 
 
 # Example
+
+Note: this example was written for .NET 3.1 and Bootstrap 4 and is somewhat out of date, but still relevant.
+
 [Book Review Web App, Lab04 branch on GitHub](https://github.com/ProfBird/CS295N-Fall2020LabExample/tree/lab04)
+
+Look at the input form in this view: 
+
+BookReviews/BookReviews/Views/Book/Review.cshtml
 
 
 
