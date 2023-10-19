@@ -36,13 +36,11 @@ Form classes are used to format labels and controls on forms. These provide cust
 These classes provide provides bootstrap's customized formatting which makes minor changes to the appearance of the elements.
 
 - `form-label` The main formatting change is to put a margin at the bottom.
-- `form-control` Changes the appearance of the border.
-  - `form-control-lg` and `form-control-sm` control the size of text in an input control.
-  - 
+- `form-control` Many changes including the appearance of the border and making the input element a block element.
+  
+  There are [more form-control classes](https://getbootstrap.com/docs/5.3/forms/form-control/) that do additional formatting.
 
 - `form-select`
-
-
 
 
 
