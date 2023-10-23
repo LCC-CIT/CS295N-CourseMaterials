@@ -29,7 +29,8 @@ Your web site should meet the following requirements:
     - Windows Paint 
     - [Google Drawings](https://docs.google.com/drawings) 
     - [Lucid Chart](https://www.lucidchart.com) 
-    - [Balsamiq](https://balsamiq.com)
+    - [Balsamiq](https://balsamiq.com)  (Free student license available)
+    - [Figma](https://www.figma.com/)
 
 
 

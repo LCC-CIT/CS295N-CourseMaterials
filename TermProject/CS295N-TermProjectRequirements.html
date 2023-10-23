@@ -2,16 +2,22 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-
-<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
-.mac-os-11 { --title-bar-height:28px; }
+<meta name="title" content="${title}">
+<meta name="description" content="${description}">
+<meta name="keywords" content="${keywords}">
+<meta name="material" content="${material}">
+<meta name="author" content="${author}">
+<meta name="generator" content="${generator}">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
 #write.first-line-indent p { text-indent: 2em; }
 #write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
 #write.first-line-indent li { margin-left: 2em; }
@@ -19,14 +25,14 @@ a:active, a:hover { outline: 0px; }
 body.typora-export { padding-left: 30px; padding-right: 30px; }
 .typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
 .typora-export .task-list-item input { pointer-events: none; }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) { 
   body.typora-export { padding-left: 0px; padding-right: 0px; }
   #write { padding-left: 20px; padding-right: 20px; }
 }
 #write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
 img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
-button, input, select, textarea { color: inherit; font: inherit; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
 input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
 *, ::after, ::before { box-sizing: border-box; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
@@ -44,7 +50,7 @@ h6 { font-size: 1rem; }
 .hidden { display: none; }
 .md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
 a { cursor: pointer; }
-sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
 sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
 #write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
 figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
@@ -53,8 +59,8 @@ thead, tr { break-inside: avoid; break-after: auto; }
 thead { display: table-header-group; }
 table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
 table.md-table td { min-width: 32px; }
-.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
-.CodeMirror-linenumber { user-select: none; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { -webkit-user-select: none; }
 .CodeMirror { text-align: left; }
 .CodeMirror-placeholder { opacity: 0.3; }
 .CodeMirror pre { padding: 0px 4px; }
@@ -64,7 +70,7 @@ div.hr:focus { cursor: none; }
 #write.fences-no-line-wrapping pre { white-space: pre; }
 #write pre.ty-contain-cm { white-space: normal; }
 .CodeMirror-gutters { margin-right: 4px; }
-.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit; background-repeat: inherit; }
 .md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
 #write .md-fences.mock-cm { white-space: pre-wrap; }
 .md-fences.md-fences-with-lineno { padding-left: 0px; }
@@ -74,7 +80,7 @@ div.hr:focus { cursor: none; }
 svg { break-inside: avoid; }
 .footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
 .footnotes + .footnotes { margin-top: 0px; }
-.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; }
 li div { padding-top: 0px; }
 blockquote { margin: 1rem 0px; }
 li .mathjax-block, li p { margin: 0.5rem 0px; }
@@ -84,18 +90,20 @@ blockquote > :last-child { margin-bottom: 0px; }
 blockquote > :first-child, li > :first-child { margin-top: 0px; }
 .footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
 #write .footnote-line { white-space: pre-wrap; }
-@media print {
+@media print { 
   body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
-  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; padding-bottom: 0px !important; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
   .typora-export * { -webkit-print-color-adjust: exact; }
   .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
   .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
   .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
-pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; }
 p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
 #write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
 p > .md-image:only-child { display: inline-block; width: 100%; }
@@ -108,7 +116,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
 .md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
 .math { font-size: 1rem; }
-.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
 .md-toc-content { position: relative; margin-left: 0px; }
 .md-toc-content::after, .md-toc::after { display: none; }
 .md-toc-item { display: block; color: rgb(65, 131, 196); }
@@ -121,7 +129,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 .md-toc-h4 .md-toc-inner { margin-left: 6em; }
 .md-toc-h5 .md-toc-inner { margin-left: 8em; }
 .md-toc-h6 .md-toc-inner { margin-left: 10em; }
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 48em) { 
   .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
   .md-toc-h4 .md-toc-inner { margin-left: 5em; }
   .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
@@ -133,23 +141,23 @@ a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; 
 .md-attr { display: none; }
 .md-fn-count::after { content: "."; }
 code, pre, samp, tt { font-family: var(--monospace); }
-kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
 .md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
-code { text-align: left; vertical-align: initial; }
-a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
 .md-diagram-panel > svg { max-width: 100%; }
 [lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
 [lang="mermaid"] .node text { font-size: 1rem; }
-table tr th { border-bottom: 0px; }
+table tr th { border-bottom-width: 0px; }
 video { max-width: 100%; display: block; margin: 0px auto; }
 iframe { max-width: 100%; width: 100%; border: none; }
 .highlight td, .highlight tr { border: 0px; }
-mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
 .md-expand mark .md-meta { opacity: 0.3 !important; }
 mark .md-meta { color: rgb(0, 0, 0); }
-@media print {
+@media print { 
   .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
 }
 .md-diagram-panel .messageText { stroke: none !important; }
@@ -157,24 +165,24 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
 .md-fences.md-fences-math { font-size: 1em; }
 .md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
-.md-fences-advanced:not(.md-focus) { background: inherit; }
+.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
 .typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
 .typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
-.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
 .typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) { 
   .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) { 
   .typora-export-sidebar { display: none; }
 }
 .outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
 .outline-content ul { margin-top: 0px; margin-bottom: 0px; }
 .outline-content strong { font-weight: 400; }
-.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
-.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ''; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
 .outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
-.outline-expander:hover::before { content: ""; }
+.outline-expander:hover::before { content: ''; }
 .outline-h1 > .outline-item { padding-left: 0px; }
 .outline-h2 > .outline-item { padding-left: 1em; }
 .outline-h3 > .outline-item { padding-left: 2em; }
@@ -184,16 +192,16 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
 .outline-label:hover { text-decoration: underline; }
 .outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
-.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
 .outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
-.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ''; }
 .outline-children { display: none; }
 .info-panel-tab-wrapper { display: none; }
 .outline-item-open > .outline-children { display: block; }
 .typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
-.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
 .typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
-.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: '−'; }
 .typora-export-collapse-outline .outline-children { display: none; }
 .typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
 .typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
@@ -207,7 +215,7 @@ mjx-container { break-inside: avoid; }
     --control-text-color: #777;
 }
 
-@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
 
 /* open-sans-regular - latin-ext_latin */
   /* open-sans-italic - latin-ext_latin */
@@ -587,12 +595,12 @@ header, .context-menu, .megamenu-content, footer{
 }
 
 
-
+ @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}} .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} h1,h2,h3,h4,h5 {white-space:pre-line}
 </style><title>CS295N-TermProjectRequirements</title>
 </head>
-<body class='typora-export os-windows'><div class='typora-export-content'>
-<div id='write'  class=''><h1>CS295N Term Project</h1><h2 id='term-project-requirements'><span>Term Project Requirements</span></h2><p><span>Your web site should meet the following requirements:</span></p><ol start='' ><li><p><span>Be interactive. This means that it doesn&#39;t just consist of static views with links to other views. There should be one or more web pages that display content that is generated by code running on the server that generates output in response to input from the user. Examples would be a web page with a game, a quiz or a calculator.</span></p></li><li><p><span>Be data-driven. This means that the content of one or more of your web pages contains content derived from information stored in a database. In addition:</span></p><ul><li><span>Users should be able to enter data that will be stored in the database.</span></li><li><span>Users should be able to do some kind of searching of the database. An example would be a to-do list app where a user could search for a particular to-do item.</span></li></ul></li><li><p><span>Be moderately complex</span>&mdash;<span>not too simple, but not too hard to build. Here are some criteria:</span></p><ul><li><span>There should be no more than two domain models (models that get translated into tables in the database.)</span></li><li><span>The number of properties in the domain model should be between 7 and 12.</span>
-<span>(The total number of properties from your one or two domain model classes not counting IDs.)</span></li><li><span>There should be between 4 and 7 views.</span></li></ul></li><li><p><span>The web site should have some kind of navigation that appears on each page.</span></p></li><li><p><span>The web site will be deployed to a web server on the internet.</span></p><p>&nbsp;</p></li></ol><p><strong><span>Write a proposal for your web site that includes:</span></strong></p><ol start='' ><li><p><span>A written description of the site.</span></p></li><li><p><span>A list of all the properties in the domain model.</span></p></li><li><p><span>A &quot;site map&quot;, in the form of an outline, that shows the navigation links between the pages.</span></p></li><li><p><span>UI sketches for each page. Here are some alternatives for making the sketches:</span></p><ul><li><span>Windows Paint </span></li><li><a href='https://docs.google.com/drawings'><span>Google Drawings</span></a><span> </span></li><li><a href='https://www.lucidchart.com'><span>Lucid Chart</span></a><span> </span></li><li><a href='https://balsamiq.com'><span>Balsamiq</span></a></li></ul></li></ol><p>&nbsp;</p><h2 id='submission'><span>Submission</span></h2><h3 id='proposal'><span>Proposal</span></h3><ul><li><span>This will be due sometime after the middle of the term. See Moodle for the due date.</span></li><li><span>Submit the entire proposal in one document. Please use a pdf or docx document and don&#39;t zip it. (so I can read it online in Moodle).</span></li></ul><h3 id='presentation'><span>Presentation</span></h3><ul><li><span>This will be made in class, near the end of the term. See the </span><a href='CS295N-TermProjectPresentationGuide.html'><span>Presentation Guide</span></a><span> for details and Moodle for the due date.</span></li></ul><h3 id='final-submission'><span>Final Submission</span></h3><p><span>Submit the following links to Moodle:</span></p><ul><li><span>A link to the web site running on a web server (like Azure).</span></li><li><span>A link to the Git repository.</span>
-<span>(Be sure to invite your instructor to your online Git repository!)</span></li></ul><p>&nbsp;</p><p><strong><span>Notes:</span></strong></p><ol><li><p><span>The term project web site should a completely new project that is !00% your own work:</span></p><ul><li><span>It should </span><u><span>not</span></u><span> be the same as one of your weekly lab assignments, or any of the example web apps from the textbook, tutorials or your instructor. </span></li><li><span>It should not be a refactored copy of your lab project or the instructor&#39;s examples, or anyone else&#39;s project.</span></li></ul></li><li><p><span>Good coding practices, such as using unit tests, and separation of UI code and business logic are expected in the term project.</span></p></li><li><p><span>Don&#39;t use features of ASP.NET Core or technologies that weren&#39;t covered in the class. If you try to use things like scaffolding, Identity, more complex domain models, or other things we haven&#39;t covered, your project may become too difficult to complete.</span></p></li></ol><p><span> </span></p><hr /><p><a href='http://creativecommons.org/licenses/by/4.0/'><img src="https://i.creativecommons.org/l/by/4.0/88x31.png" referrerpolicy="no-referrer" alt="Creative Commons License"></a><span> These ASP.NET Core MVC term project instructions, written by </span><a href='https://profbird.dev'><span>Brian Bird</span></a><span>, written fall 2017, revised fall 2022, are licensed under a </span><a href='http://creativecommons.org/licenses/by/4.0/'><span>Creative Commons Attribution 4.0 International License</span></a><span>. </span></p><hr /><p><span> </span></p></div></div>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><h1>CS295N Term Project</h1><h2 id='term-project-requirements'><span>Term Project Requirements</span></h2><p><span>Your web site should meet the following requirements:</span></p><ol start='' ><li><p><span>Be data-driven. This means that the content of one or more of your web pages contains content derived from information stored in a database. In addition:</span></p><ul><li><p><span>Users should be able to enter data that will be stored in the database.</span></p></li><li><p><span>Users should be able to do some kind of searching of the database. An example would be a to-do list app where a user could search for a particular to-do item.</span></p></li></ul></li><li><p><span>Be moderately complex</span>&mdash;<span>not too simple, but not too hard to build. Here are some criteria:</span></p><ul><li><p><span>There should be two to three domain model classes (classes that get translated into tables in the database.)</span></p></li><li><p><span>The number of properties in the domain model should be between 7 and 15.</span>
+<span>(The total number of properties from all of your domain model classes, not counting IDs.)</span></p></li><li><p><span>There should be between 4 and 7 views. These are views that have some purpose consistent with your site and that you created, not auto-generated by Visual Studio.</span></p></li></ul></li><li><p><span>Have at least one interactive feature (other than searching or filtering. This means that it doesn&#39;t just consist of static views with links to other views. There should be one or more web pages that display content that is generated by code running on the server that generates output in response to input from the user. Examples would be a web page with a game, a quiz or a calculator. The code for this should be in a separate C# class.</span></p></li><li><p><span>The web site should have some kind of navigation that appears on each page. The navigation should be consistent (look the same and be in the same place) on each page.</span></p></li><li><p><span>The web site will be deployed to a web server on the internet.</span></p><p><span>   </span></p></li></ol><p><strong><span>Write a proposal for your web site that includes:</span></strong></p><ol start='' ><li><p><span>A written description of the site.</span></p></li><li><p><span>A list of all the properties in the domain model.</span></p></li><li><p><span>A &quot;site map&quot;, in the form of an outline, that shows the navigation links between the pages.</span></p></li><li><p><span>UI sketches for each page. Here are some alternatives for making the sketches:</span></p><ul><li><p><span>Windows Paint </span></p></li><li><p><a href='https://docs.google.com/drawings'><span>Google Drawings</span></a><span> </span></p></li><li><p><a href='https://www.lucidchart.com'><span>Lucid Chart</span></a><span> </span></p></li><li><p><a href='https://balsamiq.com'><span>Balsamiq</span></a><span>  (Free student license available)</span></p></li><li><p><a href='https://www.figma.com/'><span>Figma</span></a></p></li></ul></li></ol><p>&nbsp;</p><h2 id='submission'><span>Submission</span></h2><h3 id='proposal'><span>Proposal</span></h3><ul><li><p><span>This will be due sometime after the middle of the term. See Moodle for the due date.</span></p></li><li><p><span>Submit the entire proposal in one document. Please use a pdf or docx document and don&#39;t zip it. (so I can read it online in Moodle).</span></p></li></ul><h3 id='presentation'><span>Presentation</span></h3><ul><li><p><span>This will be made in class, near the end of the term. See the </span><a href='CS295N-TermProjectPresentationGuide.html'><span>Presentation Guide</span></a><span> for details and Moodle for the due date.</span></p></li></ul><h3 id='final-submission'><span>Final Submission</span></h3><p><span>Submit the following links to Moodle:</span></p><ul><li><p><span>A link to the web site running on a web server (like Azure).</span></p></li><li><p><span>A link to the Git repository.</span>
+<span>(Be sure to invite your instructor to your online Git repository!)</span></p></li></ul><p>&nbsp;</p><p><strong><span>Notes:</span></strong></p><ol start='' ><li><p><span>The term project web site should a completely new project that is !00% your own work:</span></p><ul><li><p><span>It should </span><u><span>not</span></u><span> be the same as one of your weekly lab assignments, or any of the example web apps from the textbook, tutorials or your instructor. </span></p></li><li><p><span>It should not be a refactored copy of your lab project or the instructor&#39;s examples, or anyone else&#39;s project.</span></p></li></ul></li><li><p><span>Good coding practices, such as using unit tests, and separation of UI code and business logic are expected in the term project.</span></p></li><li><p><span>Don&#39;t use features of ASP.NET Core or technologies that weren&#39;t covered in the class. If you try to use things like scaffolding, Identity, more complex domain models, or other things we haven&#39;t covered, your project may become too difficult to complete.</span></p></li></ol><p><span> </span></p><hr /><p><a href='http://creativecommons.org/licenses/by/4.0/'><img src="https://i.creativecommons.org/l/by/4.0/88x31.png" referrerpolicy="no-referrer" alt="Creative Commons License"></a><span> These ASP.NET Core MVC term project instructions, written by </span><a href='https://profbird.dev'><span>Brian Bird</span></a><span>, written fall 2017, revised fall 2023, are licensed under a </span><a href='http://creativecommons.org/licenses/by/4.0/'><span>Creative Commons Attribution 4.0 International License</span></a><span>. </span></p><hr /><p><span> </span></p></div></div>
 </body>
 </html>
