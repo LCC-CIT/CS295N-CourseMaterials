@@ -26,7 +26,7 @@ author: Brian Bird
 # Introduction
 
 - Answer questions about the midterm.
-- Answer questions about lab 4 and publishing to Azure.
+- Answer questions about lab 4.
 - Describe where we're going: databases, unit testing with databases.
 
 
@@ -56,26 +56,29 @@ We'll cover more details of unit testing later, but here are some basic concepts
 
   - Solution - test against a "fake" repository.
 
-## Test Driven Development
+## Test Driven Development (TDD)
 
-- Test first. Writing unit tests before writing the methods they test gives you a clear idea of what the method should do and speeds up development by letting you test easily and often.
+- *Test first* is one of the key concept in [TDD](https://en.wikipedia.org/wiki/Test-driven_development). Writing unit tests before writing the methods they test gives you a clear idea of what the method should do and speeds up development by letting you test easily and often.
 - Test after bug fixes.
 - Test after adding new features.
 - Regression testing.
 
 ## xUnit
 
-Used by the .NET Core team to test their own code.
+Used by the .NET Core team to test their own code ("dog fooding"). Written by the original developer of NUnit.
 
-Test runner integrated in Visual Studio
+The test runner is integrated into Visual Studio. Here is a [getting started guide](https://xunit.net/docs/getting-started/netcore/visual-studio).
 
-Note: The `Assert.Equal` test method uses the base class `Equal` method of C# objects for comparison. Primitive .NET types and many classes in the .NET library have fully implemented this method. You only need to write a Compare class (as shown in the textbook) if you are using a class that doesn't already have a comparator implemented for the `Equals` method.
+Alternative unit testing frameworks are:
 
+- NUnit
+- MSUnit
 
+# How to Add Unit Tests to a VS Solution
 
-# How to Write a Unit Test
-
-First, add a unit test project for C# to the Visual Studio Solution. Then add a reference to the web app project to the test project. Now you can start writing tests.
+1. Add a unit test project for C# to the Visual Studio Solution. 
+2. Add a reference to the web app project to the test project. 
+3. Now you can start writing tests.
 
 ## Parts of a Unit Test
 
@@ -85,6 +88,14 @@ First, add a unit test project for C# to the Visual Studio Solution. Then add a 
   Call the method that you are testing.
 - Assert  
   Check the return value and/or any other object affected by the method call.
+
+## Asserts
+
+Use Intellisense in Visual Studio to get a list of asserts.
+
+Note: When comparing for equality, remember that if you use == to compare two objects, you are not comparing the objects properties.  
+
+The `Assert.Equal` test method uses the base class `Equal` method of C# objects for comparison. Primitive .NET types and many classes in the .NET library have fully implemented this method. You only need to write a Compare class (as shown in the textbook) if you are using a class that doesn't already have a comparator implemented for the `Equals` method.
 
 ## Example Tests
 
@@ -206,5 +217,5 @@ public void Review_PostTest()
 
 ------
 
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) ASP.NET Core MVC Lecture Notes by [Brian Bird](https://birdsbits.blog), 2018, revised 2022, are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) ASP.NET Core MVC Lecture Notes by [Brian Bird](https://birdsbits.blog), 2018, revised 2023, are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
 
