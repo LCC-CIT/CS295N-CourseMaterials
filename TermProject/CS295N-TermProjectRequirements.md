@@ -29,7 +29,7 @@ Your web site should meet the following requirements:
     - Windows Paint 
     - [Google Drawings](https://docs.google.com/drawings) 
     - [Lucid Chart](https://www.lucidchart.com) 
-    - [Balsamiq](https://balsamiq.com)  (Free student license available)
+    - [Balsamiq](https://balsamiq.com)  (Free student license available)
     - [Figma](https://www.figma.com/)
 
 
@@ -56,7 +56,7 @@ Submit the following links to Moodle:
 
 **Notes:**
 
-1. The term project web site should a completely new project that is !00% your own work:
+1. The term project web site should a completely new project that is 100% your own work:
    - It should <u>not</u> be the same as one of your weekly lab assignments, or any of the example web apps from the textbook, tutorials or your instructor. 
    - It should not be a refactored copy of your lab project or the instructor's examples, or anyone else's project.
 2. Good coding practices, such as using unit tests, and separation of UI code and business logic are expected in the term project.
