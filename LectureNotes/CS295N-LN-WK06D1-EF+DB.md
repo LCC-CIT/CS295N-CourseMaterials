@@ -290,8 +290,8 @@ You should get this response:
         | __|| __|  |  )   \\\
         | _| | _|   \_/ |  //|\\
         |___||_|       /   \\\/\\
-
-Entity Framework Core .NET Command-line Tools 3.1.2
+dotnet
+Entity Framework Core .NET Command-line Tools 6.0.0
 Usage: dotnet ef [options] [command]
 Options:
   --version        Show version information
@@ -309,15 +309,15 @@ Use "dotnet ef [command] --help" for more information about a command.
 If you get a message like this:
 "*Could not execute because the specified command or file was not found*", it is probably because the CLI tools for EF haven't been installed. You can install them by executing this command:
 
-`dotnet ef tool install --global dotnet-ef --version 3.1.x`
+`dotnet ef tool install --global dotnet-ef --version 6.0.x`
 
-**Note:** Replace `x` with the patch level that matches the version of EF Core you are using, for example: 3.1.30.
+**Note:** Replace `x` with the patch level that matches the version of EF Core you are using, for example: 6.0.24.
 
 Note that this will install the tools globally, if you only want to install them for the current project, then leave off the --global switch. And, if you are using a version of ASP.NET Core other than 3.1 (which we are using this term in class), then change the version number. If you omit the --version switch, it will install the latest version.
 
 You can also update the tools using this command:
 
-`dotnet tool update dotnet-ef --global --version 3.1.x`
+`dotnet tool update dotnet-ef --global --version 6.0.x`
 
 Again, `x` is a placeholder for an actual number.
 
@@ -442,7 +442,7 @@ Adding EF should not have broken any of your Quiz unit tests, but it will have b
 
 - Ch. 4, "How to develop a data-driven MVC web app", 
 
-  *Murach’s ASP.NET Core MVC*, 1st Edition, by Mary Delamater and Joel Murach, Murach Books, 2020.
+  *Murach’s ASP.NET Core MVC*, 2nd Edition, by Mary Delamater and Joel Murach, Murach Books, 2022.
 
 - Ch. 8 "Sports Store, a Real Application", section titled, "Preparing a Database",
 
@@ -452,7 +452,7 @@ Adding EF should not have broken any of your Quiz unit tests, but it will have b
 
 - Microsoft Docs: [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/)
 - Microsoft Tutorial: [Get started with ASP.NET Core MVC and Entity Framework Core using Visual Studio](https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/)
-- .NET Core API Reference: [System.ComponentModel.DataAnnotations Namespace](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=netcore-3.1)
+- .NET Core API Reference: [System.ComponentModel.DataAnnotations Namespace](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=netcore-6.0)
 - Microsoft Reference: [Entity Framework Core tools reference - .NET CLI](https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/dotnet)
 - Microsoft Reference:[SQL Server Express LocalDB](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/sql-server-express-localdb)
   SQL Server Express LocalDB is automatically installed with Visual Studio. This article explains what it is, how it works, how to use it, troubleshooting, and how to install it independently from Visual Studio.
