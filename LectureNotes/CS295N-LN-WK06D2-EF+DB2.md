@@ -147,7 +147,7 @@ This class provides your web app with an entry point to access Entity Framework 
 
 - You will eventually have four versions:
 
-  - `appsettings.json` &mdash; containing general settings (no login credentials).
+  - `appsettings.json` &mdash; containing general settings (no login credentials).
 
   - `appsettings.Development.json` &mdash; containing settings specific to your development machine, such as the connection string for your local database (possibly containing login credentials).
 
@@ -185,13 +185,96 @@ This serves as the `main` for the application and is not a class. This is the fi
       options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
   ```
 
+## Controller Code for Storing and Retrieving Data
+
+In Controller methods where you want to store or retrieve data you will use an instance (object) of your DbContext class (ApplicationDbContext in our example), to do database operations. In order to use the DbContext object in a controller it needs to be passed in via the controller's constructor, like this:
+
+```C#
+public class ReviewController : Controller
+    {
+        ApplicationDbContext context;
+        public ReviewController(ApplicationDbContext c)
+        {
+            context = c;
+        }
+        // The rest of the class is not shown
+```
+
+In a controller method that needs to store data, you would call the `Add`, and `SaveChanges` methods on the DbContext object like this:
+
+```C#
+ context.Reviews.Add(model);
+            context.SaveChanges(); 
+```
+
+
+
+In a controller method that needs to retrieve a particular item from the database you could call the `Find` method:
+
+```C#
+ review = context.Reviews.Find(reviewId);
+```
+
+
+
+In order to retrieve multiple items, you would just convert the DbSet to a C# List:
+
+```C#
+List<Review> reviews = context.Reviews.ToList();
+```
+
+The code above will work, but the only properties that are directly on the `Review` objects. The properties on object that are a part of `Review` will not be included.
+
+## Loading related data
+
+Related data is data that comes from objects that are related to the object you are retrieving by aggregation or composition. 
+
+For example, in the <u>hypothetical</u> `Review` domain model below, the `Book`, `Reviewer`, and `Author` properties are related data because they are related to Review objects by aggregation (a Review "has-a" Book and an AppUser, a Book "has-an" Author).
+
+![](ReviewComplexDomainModel.png)
+
+### Ways to load related data
+
+- **Eager loading**
+  Related data is loaded from the database as part of the initial query.
+
+  - Use the *Include* method to include dependent objects. You only need this when you include your own model classes (not for *DateTime* or other classes that are not part of your domain model.)
+  
+  - Use *ThenInclude* for second-level dependencies.
+    
+    Example code snippet from a controller method that gets a list of `Review` objects from a database:
+    
+    ```C#
+    public List Reviews = context.Reviews
+      .Include(review => review.Reviewer) // returns Reivew.AppUser object
+      .Include(review => review.Book) // returns Review.Book object
+      .ThenInclude(book => book.Author)  // returns Review.Book.Author object
+      .ToList();
+    ```
+    
+  
+    The syntax of the include statement is:  
+    
+    *Include(parameterRepresentingDbSet => parameter.ModelPropertyName)*
+  
+- **Explicit loading**
+  Related data is explicitly loaded from the database at a later time.
+  (See the article below for more details.)
+  
+- **Lazy loading**
+  Related data is transparently loaded from the database when a dependent property (or navigation property) is accessed.
+  (See the article below for more details.)
+
+> **Reference**
+> MS EF Core Tutorial: [Loading Related Data](https://docs.microsoft.com/en-us/ef/core/querying/related-data)
+
+------
+
 
 
 # Creating a Database
 
-Before you can run your app, you need to create a database on the host system. This might be your development machine, or a production server like Azure.  These instructions assume you have already installed and set up your database management software (such as SQL Server or MySQL).
-
-Before you can create a database using EF, you will need to add a *database migration*. You can read about that in the Migrations section below. But, first you need to set up the EF tools you will use for that.
+Before you can run your app, you need to create a database on the host system. This might be your development machine, or a production server. On your development machine. But, before you can create a database, you need to add a database migration. You can read about that in the Migrations section below. 
 
 ## dotnet CLI Tools
 
@@ -340,7 +423,7 @@ After EF has created a database, you can use *SQL Server Object Explorer* in Vis
 # Running Unit Tests 
 
 
-Adding EF should not have broken any of your Quiz unit tests. But it's still good practice to run the tests on the quiz before pushing your code to GitHub. 
+Adding EF should not have broken any of your Quiz unit tests, but it will have broken your unit tests for controller methods that work with data&mdash;comment those tests out for now. But it's still good practice to run the tests on the quiz before pushing your code to GitHub. 
 
 
 
@@ -355,11 +438,15 @@ Adding EF should not have broken any of your Quiz unit tests. But it's still goo
 
 # References
 
-## Text Book
+## Print Books
 
 - Ch. 4, "How to develop a data-driven MVC web app", 
 
   *Murach’s ASP.NET Core MVC*, 2nd Edition, by Mary Delamater and Joel Murach, Murach Books, 2022.
+
+- Ch. 8 "Sports Store, a Real Application", section titled, "Preparing a Database",
+
+  *Pro ASP.NET Core MVC 2*, Adam Freeman, Apress, 2017.
 
 ## Online
 
