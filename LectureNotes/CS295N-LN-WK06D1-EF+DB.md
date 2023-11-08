@@ -309,7 +309,7 @@ Use "dotnet ef [command] --help" for more information about a command.
 If you get a message like this:
 "*Could not execute because the specified command or file was not found*", it is probably because the CLI tools for EF haven't been installed. You can install them by executing this command:
 
-`dotnet ef tool install --global dotnet-ef --version 6.0.x`
+`dotnet tool install --global dotnet-ef --version 6.0.x`
 
 **Note:** Replace `x` with the patch level that matches the version of EF Core you are using, for example: 6.0.24.
 
