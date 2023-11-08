@@ -15,14 +15,14 @@
 
 [TOC]
 
-# Q and A
+# Announcements and Discussion
 
-- Answer any questions about the quiz.
-- Lab 5
-  - Show the additions to the Book Review web site.
-  - Answer questions.
+For fall term 2023
 
-- Look at due dates on Moodle.
+- Lab 5, any questions on the quiz code or unit tests?
+  - Beta version due Tuesday (tomorrow), production version Thursday
+
+- Quiz closes at class time Wednesday.
 
 # Introduction
 
@@ -67,25 +67,29 @@ In order to use Entity Framework in your web app, you need to modify your code i
 ## NuGet Packages
 
 Use the NuGet Package Manager in Visual Studio to add the following packages to your project:
+Note: select a pacakge version that matches your .NET version.
 
 - Microsoft.EntityFrameworkCore
 - Microsoft.EntityFrameworkCore.Design
-- Microsoft.EntityFrameworkCore.SqlServer (with LocalDB on Windows)
-- Microsoft.EntityFrameworkCore.Sqlite (with SQLite on MacOS)
+- A database provider for the type of database you will use:
+  - Microsoft.EntityFrameworkCore.SqlServer (for LocalDB on Windows)
+  - Microsoft.EntityFrameworkCore.Sqlite (for SQLite on MacOS)
+  - Pomelo.EntityFrameworkCore.MySql (for MySQL on any OS)
+
 
 
 ## Models
 
 
-Ideally, we would like our models to be designed solely with object oriented design in mind-- without thinking about databases. But in reality we do need to consider how Entity Framework will generate a database schema based on our models. There are two main things to consider:
+Ideally, we would like our models to be designed solely with object oriented design in mind&mdash;without thinking about databases. But in reality we do need to consider how Entity Framework will generate a database schema based on our models. There are two main things to consider:
 
-- Defining primary keys
+- Defining primary keys:
 
   We need to identify a field in the model that EF can map to a primary key. 
 
   We have two alternatives:
 
-  - Add the [&lsqb;key&rsqb;](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.keyattribute?view=netcore-2.1) data annotation attribute to a property.
+  - Add the [&lsqb;key&rsqb;](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.keyattribute?view=netcore-2.1) data annotation attribute to a property to make a *natural key*:
 
     Ask yourself, would this provide a unique key?
 
@@ -98,71 +102,87 @@ Ideally, we would like our models to be designed solely with object oriented des
     }
     ````
 
-  - Add an ID property:
+  - Add an ID property to make a *synthetic key*:
     By convention, any property name ending in ID will be mapped to a primary key
     This is guaranteed to be a unique key
 
     ```c#
     public class Book
     {
-      public int BookID { get; set; }
+      public int BookId { get; set; }
       public string Title { get; set; }
       // Additional properties not shown
     }
     ```
 
-- Avoid many-to-many relationships
-
-  The current LTS version of EF, version 3.1, [doesn't support many-to-many relationships](https://docs.microsoft.com/en-us/ef/core/modeling/relationships#many-to-many)
-  
+- Many-to-many relationships are supported in .NET 5.0 and later, but you often don't need that complexity.  
+TODO: Provide an example of a search that might look like it requires a many-to-many relationship, but doesn't.
 
 ## DbContext Class
 
-- This class provides an entry point for your application to access Entity Framework Core which provides access to the database. 
+This class provides your web app with an entry point to access Entity Framework Core which provides access to the database. 
 
 - You need to define your own database context class that inherits from DbContext
 
   ```C#
   public class ApplicationDbContext : DbContext
   {
+    // constructor just calls the base class constructor
     public ApplicationDbContext(
        DbContextOptions<ApplicationDbContext> options) : base(options) { }
+    
+    // one DbSet for each domain model class
     public DbSet<Book> Books { get; set; }
     public DbSet<Review> Reviews { get; set; }
     public DbSet<AppUser> AppUsers { get; set; }
   }
   ```
 
-
+- This class is often put in a folder named `Data` which will alter hold other database related classes.
 
 ## Connection String in appsettings.json 
 
-- A connection string specifies the location and name of the database and provides configuration settings.
+- A connection string specifies the location and name of the database and provides configuration settings.  
+  Note: it is best practice to not store login credentials in your Git repository.
 
-- Connection strings are stored in appsettings.json. 
+- You will eventually have four versions:
+
+  - `appsettings.json` &mdash; containing general settings (no login credentials).
+
+  - `appsettings.Development.json` &mdash; containing settings specific to your development machine, such as the connection string for your local database (possibly containing login credentials).
+
+  - `appsettings.Staging.json` &mdash; containing settings specific to your web server, but for testing.
+
+  - `appsettings.Production.json` &mdash; containing settings specific to your web server.
+
+- Example of three different connection strings stored in appsettings.Development.json. 
 
   ```json
   "ConnectionStrings": {
-    "ConnectionString": "Server=(localdb)\\MSSQLLocalDB;Database=BookReviews; Trusted_Connection=True;MultipleActiveResultSets=true"
+   "SQLServerConnection":"Server=(localdb)\\MSSQLLocalDB;Database=BookReviews; Trusted_Connection=True;MultipleActiveResultSets=true",
+   "SQLiteConnection":"DataSource=Data/BookReviews.db", 
+   "MySqlConnection":"server=localhost;userid=birdb;password=Secret!123;database=BookReviews;"
   }
   ```
-  
-
-## Startup Class
 
 
-In the *ConfigureServices* method, add a service for DbContext. 
+## Program.cs
+
+
+This serves as the `main` for the application and is not a class. This is the first code to run when the application starts.
 
 - [AddDbContext](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.entityframeworkservicecollectionextensions.adddbcontext?view=efcore-2.1) will read the connection string and configure your DbContext object to connect to your database. 
 
-- This service also performs *dependency injection* to inject your DbContext object into any of your classes (like your controller classes) that the framework instantiates and where you have your DbContext class as a parameter in the constructor.
+- This where you will later add more calls to `builder.services` methods to set up *dependency injection* to inject your DbContext object into any of your classes (like your controller classes) that the framework instantiates and where you have your DbContext class as a parameter in the constructor.
 
 - The options argument specifies that this is a Microsoft SQL Server database, but you could also use another database, like SQLite.
 
 - Example:
 
   ```C#
-  services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:ConnectionString"]));
+  var connectionString = builder.Configuration.GetConnectionString("MySqlConnection");
+  builder.Services.AddDbContext<ApplicationDbContext>(options =>
+      options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
   ```
 
 ## Controller Code for Storing and Retrieving Data
@@ -270,8 +290,8 @@ You should get this response:
         | __|| __|  |  )   \\\
         | _| | _|   \_/ |  //|\\
         |___||_|       /   \\\/\\
-
-Entity Framework Core .NET Command-line Tools 3.1.2
+dotnet
+Entity Framework Core .NET Command-line Tools 6.0.0
 Usage: dotnet ef [options] [command]
 Options:
   --version        Show version information
@@ -289,15 +309,15 @@ Use "dotnet ef [command] --help" for more information about a command.
 If you get a message like this:
 "*Could not execute because the specified command or file was not found*", it is probably because the CLI tools for EF haven't been installed. You can install them by executing this command:
 
-`dotnet ef tool install --global dotnet-ef --version 3.1.x`
+`dotnet tool install --global dotnet-ef --version 6.0.x`
 
-**Note:** Replace `x` with the patch level that matches the version of EF Core you are using, for example: 3.1.30.
+**Note:** Replace `x` with the patch level that matches the version of EF Core you are using, for example: 6.0.24.
 
-Note that this will install the tools globally, if you only want to install them for the current project, then leave off the --global switch. And, if you are using a version of ASP.NET Core other than 3.1 (which we are using this term in class), then change the version number. If you omit the --version switch, it will install the latest version.
+Note that this will install the tools globally, if you only want to install them for the current project, then leave off the --global switch. And, if you are using a version of ASP.NET Core other than 6.0 (which we are using this term in class), then change the version number. If you omit the --version switch, it will install the latest version.
 
 You can also update the tools using this command:
 
-`dotnet tool update dotnet-ef --global --version 3.1.x`
+`dotnet tool update dotnet-ef --global --version 6.0.x`
 
 Again, `x` is a placeholder for an actual number.
 
@@ -422,7 +442,7 @@ Adding EF should not have broken any of your Quiz unit tests, but it will have b
 
 - Ch. 4, "How to develop a data-driven MVC web app", 
 
-  *Murach’s ASP.NET Core MVC*, 1st Edition, by Mary Delamater and Joel Murach, Murach Books, 2020.
+  *Murach’s ASP.NET Core MVC*, 2nd Edition, by Mary Delamater and Joel Murach, Murach Books, 2022.
 
 - Ch. 8 "Sports Store, a Real Application", section titled, "Preparing a Database",
 
@@ -432,14 +452,14 @@ Adding EF should not have broken any of your Quiz unit tests, but it will have b
 
 - Microsoft Docs: [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/)
 - Microsoft Tutorial: [Get started with ASP.NET Core MVC and Entity Framework Core using Visual Studio](https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/)
-- .NET Core API Reference: [System.ComponentModel.DataAnnotations Namespace](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=netcore-3.1)
+- .NET Core API Reference: [System.ComponentModel.DataAnnotations Namespace](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=netcore-6.0)
 - Microsoft Reference: [Entity Framework Core tools reference - .NET CLI](https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/dotnet)
-- Microsoft Reference:[SQL Server Express LocalDB](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/sql-server-express-localdb)
+- Microsoft Reference: [SQL Server Express LocalDB](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/sql-server-express-localdb)
   SQL Server Express LocalDB is automatically installed with Visual Studio. This article explains what it is, how it works, how to use it, troubleshooting, and how to install it independently from Visual Studio.
 
 
 
 ------
 
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) These ASP.NET Core MVC Lecture Notes written by [Brian Bird](https://profbird.dev) in 2018 and revised in 2022,  are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) These ASP.NET Core MVC Lecture Notes written by [Brian Bird](https://profbird.dev) in 2018 and revised in 2023,  are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
 
