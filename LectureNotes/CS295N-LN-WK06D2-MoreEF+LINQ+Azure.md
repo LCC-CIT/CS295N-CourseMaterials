@@ -1,3 +1,12 @@
+---
+title: Unit Testing
+description: How to write unit tests for buisiness logic and for controller methods.
+keywords: test, test driven development, test first
+material: Lecture Notes
+generator: PanWriter
+author: Brian Bird
+---
+
 **CS295N Web Development 1: ASP.NET** 
 
 <h1>More EF, LINQ and Publishing to Azure </h1>

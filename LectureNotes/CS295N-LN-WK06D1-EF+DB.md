@@ -1,7 +1,15 @@
-**CS295N Web Development 1: ASP.NET
-**
+---
+title: DB & EF
+description: How to add a database to a web app using Entity Framework
+keywords: ORM, EF, DbContext, Migration, SQL Server, Local DB, MySQL
+material: Lecture Notes
+generator: PanWriter
+author: Brian Bird
+---
 
-<h1>Entity Framework</h1>
+**CS295N Web Development 1: ASP.NET**
+
+<h1>Data base and Entity Framework</h1>
 
 | Weekly Topics                           |                                             |
 | --------------------------------------- | ------------------------------------------- |
