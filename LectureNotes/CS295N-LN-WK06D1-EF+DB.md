@@ -344,10 +344,11 @@ Adding EF should not have broken any of your Quiz unit tests. But it's still goo
 
 
 
-# Example
+# Examples
 
+[Book Reviews Example, 6-Database branch](https://github.com/LCC-CIT/CS295N-Example-BookReviews/tree/6-Database)
 
-[BookInfo, branch EF](https://github.com/LCC-CIT/CS295N-Bookinfo-Core-21/tree/EF)
+[All About Pigeons Example, Lab06 branch](https://github.com/ProfBird/BrianBird_CS295N_Labs/tree/Lab06)
 
 
 
@@ -363,12 +364,15 @@ Adding EF should not have broken any of your Quiz unit tests. But it's still goo
 
 ## Online
 
-- Microsoft Docs: [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/)
-- Microsoft Tutorial: [Get started with ASP.NET Core MVC and Entity Framework Core using Visual Studio](https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/)
-- .NET Core API Reference: [System.ComponentModel.DataAnnotations Namespace](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=netcore-6.0)
+- Microsoft Tutorial: [Get started with ASP.NET Core MVC and Entity Framework Core using Visual Studio](https://learn.microsoft.com/en-us/aspnet/core/data/ef-mvc/?view=aspnetcore-6.0)
 - Microsoft Reference: [Entity Framework Core tools reference - .NET CLI](https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/dotnet)
 - Microsoft Reference: [SQL Server Express LocalDB](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/sql-server-express-localdb)
   SQL Server Express LocalDB is automatically installed with Visual Studio. This article explains what it is, how it works, how to use it, troubleshooting, and how to install it independently from Visual Studio.
+- Oracle Reference: [Getting Started with MySQL](https://dev.mysql.com/doc/mysql-getting-started/en/)  
+  This tutorial includes a links to instructions for:
+  -  [MySQL Installer for Windows](https://dev.mysql.com/doc/refman/8.0/en/mysql-installer.html)
+  - [Installing MySQL on Mac OS](https://dev.mysql.com/doc/refman/8.0/en/macos-installation.html)
+
 
 
 
