@@ -36,21 +36,47 @@ Form classes are used to format labels and controls on forms. These provide cust
 These classes provide provides bootstrap's customized formatting which makes minor changes to the appearance of the elements.
 
 - `form-label` The main formatting change is to put a margin at the bottom.
-- `form-control` Many changes including the appearance of the border and making the input element a block element.
-  
-  There are [more form-control classes](https://getbootstrap.com/docs/5.3/forms/form-control/) that do additional formatting.
+- `form-control` Changes the appearance of the border.
+  - `form-control-lg` and `form-control-sm` control the size of text in an input control.
+  - 
 
 - `form-select`
 
+### Form Example
+
+The `form-label` class makes the label an *inline-block* element and the `form-control` class makes the input element a *block* element, so the labels will be above the input elements.
+
+```html
+<form method="Post" class="container">
+    <div class="row col-10 p-2">
+        <label for="to" class="col-md-2 form-label">To</label>
+        <input id="to" name="To.Name" class="form-control col-md-8">
+    </div>
+    <div class="row col-10 p-2">
+        <label for="from" class="col-md-2 form-label">From</label>
+        <input id="from" name="From.Name" class="col-md-8 form-control">
+    </div>
+    <div class="row col-10 p-2">
+        <label for="message" class="col-md-2 form-label">Message:</label>
+        <input id="message" name="Text" class="col-md-8 form-control">
+    </div>
+    <div class="row col-10 p-2">
+        <input type="submit" class="btn btn-primary col-md-2" value="Submit"><br />
+    </div>
+```
 
 
-# Example
 
-Note: this example was written for .NET 3.1 and Bootstrap 4 and is somewhat out of date, but still relevant.
+
+
+# Example Web Site
+
+[All About Pigeons, Lab04 branch on GitHub](https://github.com/ProfBird/BrianBird_CS295N_Labs/tree/Lab04)  
+This example uses .NET 6.0 and Bootstrap 5. Look at Views/Registry/ForumPost.cshtml
 
 [Book Review Web App, Lab04 branch on GitHub](https://github.com/ProfBird/CS295N-Fall2020LabExample/tree/lab04)
-
-Look at the input form in this view: BookReviews/BookReviews/Views/Book/Review.cshtml
+Look at Views/Book/Review.cshtml 
+Note: this example was written for .NET 3.1 and Bootstrap 4 and is somewhat out of date, but still relevant.
 
 
 
