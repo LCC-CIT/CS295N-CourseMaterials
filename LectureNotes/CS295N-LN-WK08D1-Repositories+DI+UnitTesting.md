@@ -19,7 +19,7 @@ CS295N Web Development 1: ASP.NET
 **For 11/13/2023**
 
 - Upcoming due dates:
-  - This week's quiz closes before class on Thursday.
+  - This week's quiz closes before class on Wednesday.
   - Lab 6 is due Thursday night, publishing to Azure is not required.
   - This is the last week to change grade options.
 
@@ -57,6 +57,18 @@ One way of managing data in our web app is to use the [Repository Pattern](https
   - Are Just used for unit testing.
   - Can contain hard-coded test data.
   - Different test data can be supplied for different tests.
+
+
+
+
+## Dependency Injection  
+
+Change the dependency of a class at run-time
+
+- One way to create *loosely coupled* classes
+- Example: https://dotnetfiddle.net/PcxXrD
+
+
 
 ### Example
 
@@ -106,15 +118,6 @@ public interface IReviewRepository
 
 
 
-
-## Dependency Injection  
-
-Change the dependency of a class at run-time
-- One way to create *loosely coupled* classes
--  Example: https://dotnetfiddle.net/PcxXrD
-
-
-
 ## Injecting Repositories into Controllers 
 
 ### Example
@@ -122,7 +125,7 @@ Change the dependency of a class at run-time
 #### In Program.cs
 
 ```C#
-services.AddTransient<IReviewRepository, ReviewRepository>();
+builder.Services.AddTransient<IReviewRepository, ReviewRepository>();
 ```
 
 #### In a controller class
