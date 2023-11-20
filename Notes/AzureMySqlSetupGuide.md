@@ -2,7 +2,13 @@
 
 <h2>Setup Guide</h2>
 
-Note: Firefox for Mac does not seem to work for all the steps in this guide. Safari was used successfully on a Mac.
+[TOC]
+
+
+
+Note: Firefox for Mac does not seem to work for all the steps in this guide. Safari was used successfully on a Mac (November 2022).
+
+# Setup Through the Azure Portal
 
 
 
@@ -82,7 +88,39 @@ Now your database is ready for use!
 
 
 
-### References
+# Connecting to the Database
+
+## From a Web App
+
+Connection string for the Entity Framwork Pomelo MySql database provider:
+
+```json
+"Server=pigeondb.mysql.database.azure.com:3306;Uid=birdb;Pwd=Secret!123;database=pigeons;Encrypt=False;"
+```
+
+**Note:** this connection string is causing errors when I try to use it to apply migrations when publishing.
+
+
+
+## With EF CLI Tools
+
+Use this command to apply a migration from the command line:
+
+```bash
+dotnet ef database update --connection "Server=pigeondb.mysql.database.azure.com;Port=3306;User=birdb;Password=Secret!123;database=pigeons;Encrypt=False;"
+```
+
+
+
+## With Workbench for MySQL
+
+Create a connection using these parameters:
+
+
+
+
+
+# References
 
 - [Use an Azure free account to try Azure Database for MySQL - Flexible Server for free](https://learn.microsoft.com/en-us/azure/mysql/flexible-server/how-to-deploy-on-azure-free-account#connect-and-query)  
   Note that this tutorial is subscribers to the free 12 month Azure trial which requires a credit card for billing purposes. I don't recommend using the free trial since you can get unexpected charges on your credit card. But the procedure for setting up a free MySQL database is nearly identical for Azure for Students subscribers.
