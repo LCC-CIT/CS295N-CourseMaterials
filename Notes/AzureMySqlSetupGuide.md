@@ -95,7 +95,7 @@ Now your database is ready for use!
 Connection string for the Entity Framwork Pomelo MySql database provider:
 
 ```json
-"Server=pigeondb.mysql.database.azure.com:3306;Uid=birdb;Pwd=Secret!123;database=pigeons;Encrypt=False;"
+"Server=pigeondb.mysql.database.azure.com:3306;User=birdb;Password=Secret!123;database=pigeons;"
 ```
 
 **Note:** this connection string is causing errors when I try to use it to apply migrations when publishing.
@@ -107,7 +107,7 @@ Connection string for the Entity Framwork Pomelo MySql database provider:
 Use this command to apply a migration from the command line:
 
 ```bash
-dotnet ef database update --connection "Server=pigeondb.mysql.database.azure.com;Port=3306;User=birdb;Password=Secret!123;database=pigeons;Encrypt=False;"
+dotnet ef database update --connection "Server=pigeondb.mysql.database.azure.com;Port=3306;User=birdb;Password=Secret!123;database=pigeons;"
 ```
 
 
