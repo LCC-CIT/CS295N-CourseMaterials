@@ -10,7 +10,7 @@ Note: Firefox for Mac does not seem to work for all the steps in this guide. Saf
 
 # Setup Through the Azure Portal
 
-
+## Create an Azure Database for MySQL
 
 Open the [Azure portal](https;//portal.azure.com), on the main screen, **click *Create a Resource***.
 
@@ -25,6 +25,10 @@ Click on ***Databases*** in the left-side menu, then under *Azure Database for M
 ***Select Flexible Server (Reccommended)***, then click on ***Create***.
 
 <img src="Images/AzureDbMySql-DeployOption-Create.png" alt="AzureDbMySql-DeployOption-Create" style="zoom:50%;" />
+
+
+
+## Configure the MySQL Database Server
 
 On the next screen, fill in all the values as shown in the image below. For some of the fields you will need to make choices or entries that are specific to your database, such as:
 
@@ -42,13 +46,22 @@ Now click on the *Networking* tab, or ***Next: Networking***
 
 ![AzureDbMySqlFlexibleServerConfig](Images/AzureDbMySqlFlexibleServerConfig.png)
 
-On the networking screen, select ***Public access (allowed IP addresses)***, check the checkbox to Allow ***Public access from any Azure service*** and select ***+ Add current client IP address***, then click on ***Next: Security***
+On the networking screen:
+
+- Select ***Public access (allowed IP addresses)***
+
+- Check the checkbox to Allow ***Public access from any Azure service***
+
+- Select ***+ Add current client IP address***
+
+You're done, click on ***Next: Security***
 
 ![AzureDbMySqlFlexibleServerConfig-Networking](Images/AzureDbMySqlFlexibleServerConfig-Networking.png)
 
 
 
-That's it for the settings. Click ***Review + Create***, then if everything looks ok, click ***Create***!
+That's it for the settings.  
+Click ***Review + Create***, then if everything looks ok, click ***Create***!
 
 You will see the deployment screen. The deployment might take a few minutes.
 
@@ -116,7 +129,7 @@ dotnet ef database update --connection "Server=pigeondb.mysql.database.azure.com
 
 Create a connection using these parameters:
 
-
+<img src="/Users/birdb/Projects/CS295N-CourseMaterials/Notes/Images/MySqlWorkbenchAzureSettings.png" alt="MySqlWorkbenchAzureSettings" style="zoom:50%;" />
 
 
 
