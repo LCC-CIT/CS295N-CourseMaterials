@@ -123,7 +123,7 @@ Create a connection using these parameters:
 # References
 
 - [Use an Azure free account to try Azure Database for MySQL - Flexible Server for free](https://learn.microsoft.com/en-us/azure/mysql/flexible-server/how-to-deploy-on-azure-free-account#connect-and-query)  
-  Note that this tutorial is subscribers to the free 12 month Azure trial which requires a credit card for billing purposes. I don't recommend using the free trial since you can get unexpected charges on your credit card. But the procedure for setting up a free MySQL database is nearly identical for Azure for Students subscribers.
+  Note that this tutorial is for subscribers to the free 12 month Azure trial which requires a credit card for billing purposes. I do *<u>not</u>* recommend using this free trial since you can get unexpected charges on your credit card. But the procedure for setting up a free MySQL database is nearly identical for Azure for Students subscribers.
 - [Quickstart: Use the Azure portal to create an Azure Database for MySQL flexible server](https://learn.microsoft.com/en-us/azure/mysql/flexible-server/quickstart-create-server-portal)
 
 - [Connect to Azure Database for MySQL - Flexible Server with encrypted connections](https://learn.microsoft.com/en-us/azure/mysql/flexible-server/how-to-connect-tls-ssl#disable-ssl-enforcement-on-your-flexible-server)
