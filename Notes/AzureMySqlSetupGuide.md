@@ -97,7 +97,17 @@ Server=bookreviews-mysqdb.mysql.database.azure.com;UserID=birdb;Password=Secret!
 Database=bookreviews;
 ```
 
-Now your database is ready for use!
+Now your database server is ready for use!
+
+##Adding a Database
+
+You can add a database to the server in a number of ways:
+
+- Use MySQL workbench to add a schema to the server.
+- On your development machine, run the dotnet CLI command: `dotnet ef database update`, using the connection string for your server on Azure (see below),  which will apply the current migration and create the database on the server on Azure.
+- Use the Azure Database for MySQL page on the Azure Portal to create a database.
+
+<img src="/Users/birdb/Projects/CS295N-CourseMaterials/Notes/Images/AzureMySqlAddDatabase.png" alt="AzureMySqlAddDatabase" style="zoom:75%;" />
 
 
 
@@ -129,7 +139,7 @@ dotnet ef database update --connection "Server=pigeondb.mysql.database.azure.com
 
 Create a connection using these parameters:
 
-<img src="/Users/birdb/Projects/CS295N-CourseMaterials/Notes/Images/MySqlWorkbenchAzureSettings.png" alt="MySqlWorkbenchAzureSettings" style="zoom:50%;" />
+<img src="Images/MySqlWorkbenchAzureSettings.png" alt="MySqlWorkbenchAzureSettings" style="zoom:50%;" />
 
 
 
