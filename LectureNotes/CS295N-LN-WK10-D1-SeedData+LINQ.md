@@ -71,23 +71,31 @@ Seed data is data that is automatically added to your database when the applicat
 
 One way to seed your database is to write a class with a static method that will add entities to the database. The method to seed the database will be called from *Startup*. I put mine in a static class named *SeedData*, but it's not a special name (not part of a convention).
 
-Note that the method I'm using here is different from the method shown in the textbook (Murach and Delameter, 2020).
+Note that the method I'm using here is different from the method shown in the textbook (Murach and Delameter, Ch. 4, pg 142, 2022).
 
 ### Seed Data class and method
 
 ````c#
 public class SeedData
 {
-   public static void Seed(BookReviewContext context)
+   public static void Seed(AppDbContext context)
    {
       if (!context.Reviews.Any())  // this is to prevent adding duplicate data
       {
+        	// Create User objects
+        	User reviewer1 = new User { Name = "Emma Watson" };
+        	User reviewer2 = new User { Name = "Brian Bird" };
+        	// Queue up user objects to be saved to the DB
+          context.Reviews.Add(user1);  
+        	context.Reviews.Add(user1);
+        	context.SaveChantes();  // Saving adds UserId to User objects
+        
           Review review = new Review
           {
               BookTitle = "Prince of Foxes",
               AuthorName = "Samuel Shellabarger",
               ReviewText = "Great book, a must read!",
-              Reviewer = new User { Name = "Emma Watson" },
+              Reviewer = reviewer1,
               ReviewDate = DateTime.Parse("11/1/2020")
           };
           context.Reviews.Add(review);  // queues up a review to be added to the DB
@@ -97,7 +105,7 @@ public class SeedData
               BookTitle = "Virgil Wander",
               AuthorName = "Lief Enger",
               ReviewText = "Wonderful book, written by a distant cousin of mine.",
-              Reviewer = new User { Name = "Brian Bird" },
+              Reviewer = reviewer2,
               ReviewDate = DateTime.Parse("11/30/2020")
           };
           context.Reviews.Add(review);  
@@ -109,14 +117,34 @@ public class SeedData
 }
 ````
 
-### Call the Seed method from the Startup class
+### Call the Seed method from Program.cs
 
-- Add your `DbContext` class as an additional parameter on the Configure method:
-`public void Configure(IApplicationBuilder app, IWebHostEnvironment env, BookReviewContext context)`
-- Add a call to the *Seed* method at the end of the *Configure* method in the *Startup* class.
-`SeedData.Seed(context);`
+- Add code at the end of the file, just before `app.Run();`
 
-The Seed method will get called when you update the database, <u>or</u> when you run your web app.
+- Get an instance of your class that is derived from `DbContext`  
+  ```c#
+  // Get a DbContext object -- we will refactor this
+  var scope = app.Services.CreateScope())
+  var context = scope.ServiceProvider
+                     .GetRequiredService<AppDbContext>();
+  ```
+
+- Call the Seed method and pass it your DbContext object  
+  ```c#
+  SeedData.Seed(context);
+  ```
+
+- Refactor this to use a  [`using` statement](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/using) (this is not the same as the using statement for namespaces).
+  ```c#
+  using (var scope = app.Services.CreateScope())
+  {
+      var dbContext = scope.ServiceProvider
+                           .GetRequiredService<AppDbContext>();
+      SeedData.Seed(dbContext);
+  }
+  ```
+
+The `Seed` method will get called when you run your web app.
 
 
 
