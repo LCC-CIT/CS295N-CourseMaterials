@@ -9,7 +9,7 @@
 | 1. Intro to Web Dev                     | 6. Unit Testing                          |
 | 2. Intro to MVC & Deploying to Azure    | 7. Database & Entity Framework           |
 | 3. Working with Data                    | 8. Unit Testing & The Repository Pattern |
-| 4. Bootstrap                            | 9. Linq & Seed Data                      |
+| 4. Bootstrap                            | <mark>9. Linq & Seed Data</mark>         |
 | 5. Midterm Quiz & Term Project Proposal | 10. Debugging                            |
 
 
@@ -18,19 +18,37 @@
 
 [TOC]
 
-## Q and A
+## Announcements  
 
-- Labs
-
-  - Lab 7, Repositories and Unit Tests
-    - Revised the requirements to just require two unit tests which can both be of the same controller method.
-    - Accepting submissions through the end of the week, I won't grade them until Saturday at the earliest.
+**For 11/22/23**
 
 
-  - Lab 8 will be due 12/1, Thursday night of next week (week 10).
+- Upcoming due dates:
 
-  - Lab 9 is optional, extra credit and will be due 12/5, Monday night of finals week (week 11).
-- The term project is also due Monday, 12/5.
+  - Term project  
+    The dates for the beta version and code review are flexible, but make arrangements with your lab partners if you want to change these dates.
+
+    - Send a PR for the beta version: Tuesday, 11/28
+
+    - Submit a link to a code review on a PR: Thursday, 11/30 
+
+    - Presentation to the class: Monday, 12/4
+
+    - Submit links to the production version: Monday, 12/4
+
+  - Labs
+
+    - Lab 7 Production version: pushed out to Thursday, 11/30  
+      But, if you have it working this week, submit it.
+
+    - Lab 8 Code review: Tuesday, 11/28
+
+    - Lab 8 Production version: 11/30
+
+    - Lab 9 is optional, extra credit: 12/4
+
+  - Final Quiz: online Monday 12/4 through Wednesday 12/6  
+    If anyone wants to take the quiz on campus, in the classroom, I'll open the classroom on Wednesday.
 
 - Discuss questions.  
 
