@@ -81,6 +81,7 @@ Overall concept of troubleshooting: "Divide and conquor", meaning use a systemat
 
 These are things we haven't talked talked about yet.
 
+- Viewing network traffic in the browser's developer tools.
 - Visual Studio tracepoints.
 - Error logging and the Error page added by Visual Studio.
 - Setting development mode on Azure
