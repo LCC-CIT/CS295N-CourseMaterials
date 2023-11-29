@@ -90,11 +90,16 @@ These are things we haven't talked talked about yet.
 
 ## References
 
-- *Murach's ASP.NET Core MVC*, Delamater and Murach, 
+- *Murach's ASP.NET Core MVC*, Delamater and Murach, 2022,
 
-  Ch. 4  – "How to develop a data-driven MVC web app"
+  Ch. 5  – "How to manually test and debug an ASP.NET Core web app"
 
-- [Publish an ASP.NET Core app to Azure with Visual Studio](https://docs.microsoft.com/en-us/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?view=aspnetcore-6.0)
+- [Debugger Documentation for Visual Studio 2022 for Windows](https://learn.microsoft.com/en-us/visualstudio/debugger/?view=vs-2022), Microsoft.
+
+  - [Debug ASP.NET Core with the Visual Studio debugger](https://learn.microsoft.com/en-us/visualstudio/debugger/quickstart-debug-aspnet?view=vs-2022), Microsoft, 2023
+
+  - [Debug live ASP.NET Azure apps using the Snapshot Debugger](https://learn.microsoft.com/en-us/visualstudio/debugger/debug-live-azure-applications?view=vs-2022), Microsoft, 2022.
+
 
 ------
 
