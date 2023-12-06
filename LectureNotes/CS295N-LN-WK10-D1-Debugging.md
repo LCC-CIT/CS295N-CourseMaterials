@@ -22,30 +22,36 @@
 
 **For 11/27/23**
 
+Upcoming due dates:
 
-- Upcoming due dates:
+- Term project  
+  The dates for the beta version and code review are flexible, but make arrangements with your lab partners if you want to change these dates.
 
-  - Term project  
-    The dates for the beta version and code review are flexible, but make arrangements with your lab partners if you want to change these dates.
+  - Send a PR for the beta version: Tuesday, 11/28
 
-    - Send a PR for the beta version: Tuesday, 11/28
+  - Submit a link to a code review on a PR: Thursday, 11/30 
 
-    - Submit a link to a code review on a PR: Thursday, 11/30 
+  - Presentation to the class: Monday, 12/4  
+    Be sure to read the [presentation guidelines](../TermProject/CS295N-TermProjectPresentationGuide.html).
+  
+  - Submit links for the production version: Monday, 12/4
+  
+- Labs
 
-    - Presentation to the class: Monday, 12/4
+  - Lab 8 (Seed data and Line) Code review: Tuesday, 11/28
+  
+  - Lab 8 Production version: 11/30
+  
+  - Lab 9 (Debugging) is optional, extra credit: 12/4
+  
+- Final Quiz: online Monday 12/4 through Wednesday 12/6  
+  If anyone wants to take the quiz on campus, in the classroom, I'll open the classroom on Wednesday at class time, 10:00am.
+  
 
-    - Submit links to the production version: Monday, 12/4
 
-  - Labs
+- Late submissions  
 
-    - Lab 8 (Seed data and Line) Code review: Tuesday, 11/28
-    
-    - Lab 8 Production version: 11/30
-    
-    - Lab 9 (Debugging) is optional, extra credit: 12/4
-    
-  - Final Quiz: online Monday 12/4 through Wednesday 12/6  
-    If anyone wants to take the quiz on campus, in the classroom, I'll open the classroom on Wednesday at class time, 10:00am.
+  Monday of finals week is the last day I will accept late work.
 
 
 

@@ -1,23 +1,18 @@
 <!doctype html>
-<html style='font-size:20px !important'>
+<html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<meta name="title" content="${title}">
-<meta name="description" content="${description}">
-<meta name="keywords" content="${keywords}">
-<meta name="material" content="${material}">
-<meta name="author" content="${author}">
-<meta name="generator" content="${generator}">
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
-.mac-os-11 { --title-bar-height: 28px; }
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 h1, h2, h3, h4, h5 { white-space: pre-wrap; }
-body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
 #write.first-line-indent p { text-indent: 2em; }
 #write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
 #write.first-line-indent li { margin-left: 2em; }
@@ -32,7 +27,7 @@ body.typora-export { padding-left: 30px; padding-right: 30px; }
 #write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
 img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
-button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+button, input, select, textarea { color: inherit; font: inherit; }
 input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
 *, ::after, ::before { box-sizing: border-box; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
@@ -59,8 +54,8 @@ thead, tr { break-inside: avoid; break-after: auto; }
 thead { display: table-header-group; }
 table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
 table.md-table td { min-width: 32px; }
-.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
-.CodeMirror-linenumber { -webkit-user-select: none; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
 .CodeMirror { text-align: left; }
 .CodeMirror-placeholder { opacity: 0.3; }
 .CodeMirror pre { padding: 0px 4px; }
@@ -70,7 +65,7 @@ div.hr:focus { cursor: none; }
 #write.fences-no-line-wrapping pre { white-space: pre; }
 #write pre.ty-contain-cm { white-space: normal; }
 .CodeMirror-gutters { margin-right: 4px; }
-.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit; background-repeat: inherit; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
 .md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
 #write .md-fences.mock-cm { white-space: pre-wrap; }
 .md-fences.md-fences-with-lineno { padding-left: 0px; }
@@ -80,7 +75,7 @@ div.hr:focus { cursor: none; }
 svg { break-inside: avoid; }
 .footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
 .footnotes + .footnotes { margin-top: 0px; }
-.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
 li div { padding-top: 0px; }
 blockquote { margin: 1rem 0px; }
 li .mathjax-block, li p { margin: 0.5rem 0px; }
@@ -93,7 +88,7 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
 @media print {
   body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
   #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
-  .typora-export * { print-color-adjust: exact; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
   .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
   .is-mac table { break-inside: avoid; }
@@ -103,7 +98,7 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
-pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
 p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
 #write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
 p > .md-image:only-child { display: inline-block; width: 100%; }
@@ -141,19 +136,19 @@ a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; 
 .md-attr { display: none; }
 .md-fn-count::after { content: "."; }
 code, pre, samp, tt { font-family: var(--monospace); }
-kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
 .md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
-code { text-align: left; }
-a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
 .md-diagram-panel > svg { max-width: 100%; }
 [lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
 [lang="mermaid"] .node text { font-size: 1rem; }
-table tr th { border-bottom-width: 0px; }
+table tr th { border-bottom: 0px; }
 video { max-width: 100%; display: block; margin: 0px auto; }
 iframe { max-width: 100%; width: 100%; border: none; }
 .highlight td, .highlight tr { border: 0px; }
-mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
 .md-expand mark .md-meta { opacity: 0.3 !important; }
 mark .md-meta { color: rgb(0, 0, 0); }
@@ -165,10 +160,10 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
 .md-fences.md-fences-math { font-size: 1em; }
 .md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
-.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
 .typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
 .typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
-.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
 .typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
 @media screen and (max-width: 1024px) {
   .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
@@ -179,7 +174,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
 .outline-content ul { margin-top: 0px; margin-bottom: 0px; }
 .outline-content strong { font-weight: 400; }
-.outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
 .outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
 .outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
 .outline-expander:hover::before { content: ""; }
@@ -192,14 +187,14 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
 .outline-label:hover { text-decoration: underline; }
 .outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
-.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
 .outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
 .outline-item-open > .outline-item > .outline-expander::before { content: ""; }
 .outline-children { display: none; }
 .info-panel-tab-wrapper { display: none; }
 .outline-item-open > .outline-children { display: block; }
 .typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
-.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
 .typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
 .typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
 .typora-export-collapse-outline .outline-children { display: none; }
@@ -595,11 +590,11 @@ header, .context-menu, .megamenu-content, footer{
 }
 
 
- @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}} .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} h1,h2,h3,h4,h5 {white-space:pre-line}
+
 </style><title>CS295N-LN-WK10-D1-Debugging</title>
 </head>
-<body class='typora-export'><div class='typora-export-content'>
-<div id='write'  class=''><p><strong><span>CS295N Web Development 1: ASP.NET</span></strong><span> </span></p><h1>Seed Data</h1><p>&nbsp;</p><figure class='table-figure'><table><thead><tr><th><span>Weekly Topics</span></th><th>&nbsp;</th></tr></thead><tbody><tr><td><span>1. Intro to Web Dev</span></td><td><span>6. Unit Testing</span></td></tr><tr><td><span>2. Intro to MVC &amp; Deploying to Azure</span></td><td><span>7. Database &amp; Entity Framework</span></td></tr><tr><td><span>3. Working with Data</span></td><td><span>8. Unit Testing &amp; The Repository Pattern</span></td></tr><tr><td><span>4. Bootstrap</span></td><td><span>9. Linq &amp; Seed Data</span></td></tr><tr><td><span>5. Midterm Quiz &amp; Term Project Proposal</span></td><td><mark><span>10. Debugging</span></mark></td></tr></tbody></table></figure><p>&nbsp;</p><p><span> </span><strong><span>Contents</span></strong></p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n601"><a class="md-toc-inner" style="" href="#announcements">Announcements  </a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n631"><a class="md-toc-inner" style="" href="#introduction">Introduction</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n682"><a class="md-toc-inner" style="" href="#additional-debugging-techniques">Additional Debugging Techniques</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n698"><a class="md-toc-inner" style="" href="#references">References</a></span></p></div><h2 id='announcements'><span>Announcements  </span></h2><p><strong><span>For 11/27/23</span></strong></p><ul><li><p><span>Upcoming due dates:</span></p><ul><li><p><span>Term project</span><br/><span>The dates for the beta version and code review are flexible, but make arrangements with your lab partners if you want to change these dates.</span></p><ul><li><p><span>Send a PR for the beta version: Tuesday, 11/28</span></p></li><li><p><span>Submit a link to a code review on a PR: Thursday, 11/30 </span></p></li><li><p><span>Presentation to the class: Monday, 12/4</span></p></li><li><p><span>Submit links to the production version: Monday, 12/4</span></p></li></ul></li><li><p><span>Labs</span></p><ul><li><p><span>Lab 8 (Seed data and Line) Code review: Tuesday, 11/28</span></p></li><li><p><span>Lab 8 Production version: 11/30</span></p></li><li><p><span>Lab 9 (Debugging) is optional, extra credit: 12/4</span></p></li></ul></li><li><p><span>Final Quiz: online Monday 12/4 through Wednesday 12/6</span><br/><span>If anyone wants to take the quiz on campus, in the classroom, I&#39;ll open the classroom on Wednesday at class time, 10:00am.</span></p></li></ul></li></ul><p>&nbsp;</p><h2 id='introduction'><span>Introduction</span></h2><p><span>You&#39;ve already been debugging using these techniques:</span></p><ul><li><p><span>Running in debug mode in Visual Studio:</span></p><ul><li><p><span>Setting breakpoints in Visual Studio to:</span></p><ul><li><p><span>discover flow of execution</span></p></li><li><p><span>examine the values of variables by hovering and using local and watch windows.</span></p></li><li><p><span>Try out code using the immediate window.</span></p></li></ul></li><li><p><span>Stopping on exceptions and viewing the Exception Helper. This happens automatically.</span></p></li></ul></li><li><p><span>Internal Server Error page. (This is not the same as the Error page in the shared view folder.)</span></p></li><li><p><span>Unit tests:</span></p><ul><li><p><span>Run existing unit tests.</span></p></li><li><p><span>Add unit tests for suspicous methods.</span></p></li></ul></li><li><p><span>Eliminating suspicous code:</span></p><ul><li><p><span>Temporarily comment out code that you think might be causing a run-time error.</span></p></li><li><p><span>Disable or replace method calls to code you think might be causing a run-time error.</span></p></li></ul></li><li><p><span>Looking at URLs in the browser to see which controller methods a link or redirect are going to.</span></p></li><li><p><span>View the source code in the browser to see how ASP.NET has rendered a razor view.</span></p></li><li><p><span>Check for HTML, CSS, or JavaScript errors in the browser console.</span></p></li><li><p><span>Checking the database schema and data using:</span></p><ul><li><p><span>MySQL Workbench for MySQL databases.</span></p></li><li><p><span>Server Explorer in Visual Studio for SQL Server.</span></p></li></ul></li><li><p><span>Swapping connection strings to try to narrow down the source of database problems.</span></p></li><li><p><span>Looking at log files on Azure.</span></p></li></ul><p><span>Overall concept of troubleshooting: &quot;Divide and conquor&quot;, meaning use a systematic process of elimination to narrow down the possible causes of failure until you&#39;ve found the problem.</span></p><h2 id='additional-debugging-techniques'><span>Additional Debugging Techniques</span></h2><p><span>These are things we haven&#39;t talked talked about yet.</span></p><ul><li><p><span>Viewing network traffic in the browser&#39;s developer tools.</span></p></li><li><p><span>Visual Studio tracepoints.</span></p></li><li><p><span>Error logging and the Error page added by Visual Studio.</span></p></li><li><p><span>Setting development mode on Azure</span></p><ul><li><p><span>Change the environment variable.</span></p></li><li><p><span>Requires changing the connection string in appsettings.development.json for the deployed site.</span></p></li></ul></li></ul><h2 id='references'><span>References</span></h2><ul><li><p><em><span>Murach&#39;s ASP.NET Core MVC</span></em><span>, Delamater and Murach, 2022,</span></p><p><span>Ch. 5  – &quot;How to manually test and debug an ASP.NET Core web app&quot;</span></p></li><li><p><a href='https://learn.microsoft.com/en-us/visualstudio/debugger/?view=vs-2022'><span>Debugger Documentation for Visual Studio 2022 for Windows</span></a><span>, Microsoft.</span></p><ul><li><p><a href='https://learn.microsoft.com/en-us/visualstudio/debugger/quickstart-debug-aspnet?view=vs-2022'><span>Debug ASP.NET Core with the Visual Studio debugger</span></a><span>, Microsoft, 2023</span></p></li><li><p><a href='https://learn.microsoft.com/en-us/visualstudio/debugger/debug-live-azure-applications?view=vs-2022'><span>Debug live ASP.NET Azure apps using the Snapshot Debugger</span></a><span>, Microsoft, 2022.</span></p></li></ul></li></ul><hr /><p><a href='http://creativecommons.org/licenses/by-sa/4.0/'><img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" referrerpolicy="no-referrer" alt="Creative Commons License"></a>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><p><strong><span>CS295N Web Development 1: ASP.NET</span></strong><span> </span></p><h1>Seed Data</h1><p>&nbsp;</p><figure class='table-figure'><table><thead><tr><th><span>Weekly Topics</span></th><th>&nbsp;</th></tr></thead><tbody><tr><td><span>1. Intro to Web Dev</span></td><td><span>6. Unit Testing</span></td></tr><tr><td><span>2. Intro to MVC &amp; Deploying to Azure</span></td><td><span>7. Database &amp; Entity Framework</span></td></tr><tr><td><span>3. Working with Data</span></td><td><span>8. Unit Testing &amp; The Repository Pattern</span></td></tr><tr><td><span>4. Bootstrap</span></td><td><span>9. Linq &amp; Seed Data</span></td></tr><tr><td><span>5. Midterm Quiz &amp; Term Project Proposal</span></td><td><mark><span>10. Debugging</span></mark></td></tr></tbody></table></figure><p>&nbsp;</p><p><span> </span><strong><span>Contents</span></strong></p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n26"><a class="md-toc-inner" href="#announcements">Announcements  </a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n56"><a class="md-toc-inner" href="#introduction">Introduction</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n107"><a class="md-toc-inner" href="#additional-debugging-techniques">Additional Debugging Techniques</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n123"><a class="md-toc-inner" href="#references">References</a></span></p></div><h2 id='announcements'><span>Announcements  </span></h2><p><strong><span>For 11/27/23</span></strong></p><p><span>Upcoming due dates:</span></p><ul><li><p><span>Term project</span><br/><span>The dates for the beta version and code review are flexible, but make arrangements with your lab partners if you want to change these dates.</span></p><ul><li><p><span>Send a PR for the beta version: Tuesday, 11/28</span></p></li><li><p><span>Submit a link to a code review on a PR: Thursday, 11/30 </span></p></li><li><p><span>Presentation to the class: Monday, 12/4</span><br/><span>Be sure to read the </span><a href='../TermProject/CS295N-TermProjectPresentationGuide.html'><span>presentation guidelines</span></a><span>.</span></p></li><li><p><span>Submit links for the production version: Monday, 12/4</span></p></li></ul></li><li><p><span>Labs</span></p><ul><li><p><span>Lab 8 (Seed data and Line) Code review: Tuesday, 11/28</span></p></li><li><p><span>Lab 8 Production version: 11/30</span></p></li><li><p><span>Lab 9 (Debugging) is optional, extra credit: 12/4</span></p></li></ul></li><li><p><span>Final Quiz: online Monday 12/4 through Wednesday 12/6</span><br/><span>If anyone wants to take the quiz on campus, in the classroom, I&#39;ll open the classroom on Wednesday at class time, 10:00am.</span></p></li></ul><ul><li><p><span>Late submissions  </span></p><p><span>Monday of finals week is the last day I will accept late work.</span></p></li></ul><p>&nbsp;</p><h2 id='introduction'><span>Introduction</span></h2><p><span>You&#39;ve already been debugging using these techniques:</span></p><ul><li><p><span>Running in debug mode in Visual Studio:</span></p><ul><li><p><span>Setting breakpoints in Visual Studio to:</span></p><ul><li><p><span>discover flow of execution</span></p></li><li><p><span>examine the values of variables by hovering and using local and watch windows.</span></p></li><li><p><span>Try out code using the immediate window.</span></p></li></ul></li><li><p><span>Stopping on exceptions and viewing the Exception Helper. This happens automatically.</span></p></li></ul></li><li><p><span>Internal Server Error page. (This is not the same as the Error page in the shared view folder.)</span></p></li><li><p><span>Unit tests:</span></p><ul><li><p><span>Run existing unit tests.</span></p></li><li><p><span>Add unit tests for suspicous methods.</span></p></li></ul></li><li><p><span>Eliminating suspicous code:</span></p><ul><li><p><span>Temporarily comment out code that you think might be causing a run-time error.</span></p></li><li><p><span>Disable or replace method calls to code you think might be causing a run-time error.</span></p></li></ul></li><li><p><span>Looking at URLs in the browser to see which controller methods a link or redirect are going to.</span></p></li><li><p><span>View the source code in the browser to see how ASP.NET has rendered a razor view.</span></p></li><li><p><span>Check for HTML, CSS, or JavaScript errors in the browser console.</span></p></li><li><p><span>Checking the database schema and data using:</span></p><ul><li><p><span>MySQL Workbench for MySQL databases.</span></p></li><li><p><span>Server Explorer in Visual Studio for SQL Server.</span></p></li></ul></li><li><p><span>Swapping connection strings to try to narrow down the source of database problems.</span></p></li><li><p><span>Looking at log files on Azure.</span></p></li></ul><p><span>Overall concept of troubleshooting: &quot;Divide and conquor&quot;, meaning use a systematic process of elimination to narrow down the possible causes of failure until you&#39;ve found the problem.</span></p><h2 id='additional-debugging-techniques'><span>Additional Debugging Techniques</span></h2><p><span>These are things we haven&#39;t talked talked about yet.</span></p><ul><li><p><span>Viewing network traffic in the browser&#39;s developer tools.</span></p></li><li><p><span>Visual Studio tracepoints.</span></p></li><li><p><span>Error logging and the Error page added by Visual Studio.</span></p></li><li><p><span>Setting development mode on Azure</span></p><ul><li><p><span>Change the environment variable.</span></p></li><li><p><span>Requires changing the connection string in appsettings.development.json for the deployed site.</span></p></li></ul></li></ul><h2 id='references'><span>References</span></h2><ul><li><p><em><span>Murach&#39;s ASP.NET Core MVC</span></em><span>, Delamater and Murach, 2022,</span></p><p><span>Ch. 5  – &quot;How to manually test and debug an ASP.NET Core web app&quot;</span></p></li><li><p><a href='https://learn.microsoft.com/en-us/visualstudio/debugger/?view=vs-2022'><span>Debugger Documentation for Visual Studio 2022 for Windows</span></a><span>, Microsoft.</span></p><ul><li><p><a href='https://learn.microsoft.com/en-us/visualstudio/debugger/quickstart-debug-aspnet?view=vs-2022'><span>Debug ASP.NET Core with the Visual Studio debugger</span></a><span>, Microsoft, 2023</span></p></li><li><p><a href='https://learn.microsoft.com/en-us/visualstudio/debugger/debug-live-azure-applications?view=vs-2022'><span>Debug live ASP.NET Azure apps using the Snapshot Debugger</span></a><span>, Microsoft, 2022.</span></p></li></ul></li></ul><hr /><p><a href='http://creativecommons.org/licenses/by-sa/4.0/'><img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" referrerpolicy="no-referrer" alt="Creative Commons License"></a>
 <span>ASP.NET Core MVC Lecture Notes by </span><a href='https://profbird.dev'><span>Brian Bird</span></a><span>, written 2023, is licensed under a </span><a href='http://creativecommons.org/licenses/by-sa/4.0/'><span>Creative Commons Attribution-ShareAlike 4.0 International License</span></a><span>. </span></p><hr /></div></div>
-<base target="_blank"></body>
+</body>
 </html>
