@@ -381,10 +381,12 @@ Adding EF should not have broken any of your Quiz unit tests. But it's still goo
   -  [MySQL Installer for Windows](https://dev.mysql.com/doc/refman/8.0/en/mysql-installer.html)
   - [Installing MySQL on Mac OS](https://dev.mysql.com/doc/refman/8.0/en/macos-installation.html)
 
+## Instructor's Notes
 
+[Setup for Azure Database for MySQL Flexible Server](../Notes/AzureMySqlSetupGuide.html#with-ef-cli-tools)
 
 
 ------
 
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) These ASP.NET Core MVC Lecture Notes written by [Brian Bird](https://profbird.dev) in 2018 and revised in 2023,  are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) These ASP.NET Core MVC Lecture Notes written by [Brian Bird](https://profbird.dev) in 2018 and revised in 2024,  are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
 
