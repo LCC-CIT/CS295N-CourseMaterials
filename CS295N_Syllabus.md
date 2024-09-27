@@ -209,13 +209,32 @@ LCC has a [no-show drop](https://www.lanecc.edu/esfs/noshow-drops) policy. You m
 
 
 
-# Accessibility and Accommodations
+# Accessibility and Campus Navigation
 
-If you need support or assistance because of a disability, you may be eligible for academic accommodations through Disability Services. For more information, contact Disability Services at 463-5150 (voice) or 463-3079 (TTY), or stop by building 1, room 218.
-Please be aware that any accessible tables and chairs in this room should remain available for authorized students who find that standard classroom seating is not usable.
-(may be subject to change)
+## Center for Accessible Resources
 
+Lane Community College (LCC) is dedicated to providing inclusive learning environments. The Center for Accessible Resources (CAR) coordinates all academic accommodations for students at LCC. If you anticipate or experience academic barriers due to a disability, to request assistance or accommodations, contact the Center for Accessible Resources.
 
+**In-Person Services:** Monday and Thursday, 9:00am - 12:30 and 1:30pm - 3:00pm.
+**Location:** Main Campus, Building 19, Room 263A
+
+**Remote Support through Support Hub:** Monday - Thursday 9:00am&ndash;12:30 and 1:30pm&ndash;3:00pm. 
+Enter the Support Hub by going to [lanecc.edu/hub](https://www.lanecc.edu/hub). Wait for a Lane staff to let you into the Zoom.
+
+**Phone:** Voice, (541) 463-5150 TTY: 711, Monday&mdash;Friday 9:00am&ndash;12:30pm and 1:30pm&ndash;3:00pm.
+**Email:** AccessibleResources@lanecc.edu
+
+For upcoming closures, please visit the [Center for Accessible Resources webpage ](https://www.lanecc.edu/disability)
+
+ # Campus Location and Maps
+
+- [Bus service and free student bus pass](https://www.lanecc.edu/experience-lane/transportation-getting-around/lcc-bus-pass)
+
+- [Interactive Map of the LCC Main Campus](https://map.concept3d.com/?id=780#!ct/80243,11008,10696,80244,80245?s/)
+
+- [Map (floor plan) of Building 19](Images/Building19FloorPlan.pdf)
+
+  
 
 ## Academic Calendar for Fall Term 2024
 
