@@ -1,13 +1,13 @@
 <h1>Syllabus for Web Development 1: ASP.NET</h1>
 
-<h2>CS295N, Fall 2023</h2>
+<h2>CS295N, Fall 2024</h2>
 
 |           | Class Info                                                   |      |              | Instructor Info                                              |
 | --------- | ------------------------------------------------------------ | ---- | ------------ | ------------------------------------------------------------ |
-| CRN       | Hybrid (on campus) 21226<br />Online 21961                   |      | Instructor   | Brian Bird                                                   |
+| CRN       | Hybrid (on campus) 20934<br />Online 21466                   |      | Instructor   | Brian Bird                                                   |
 | Credits   | 4                                                            |      | Email        | birdb@lanecc.edu                                             |
 | Day, Time | M, W, 10:00&ndash;11:50                                      |      | Office       | Building 19, Room 152                                        |
-| Classroom | Building 19, Room 128<br />[Zoom meeting](https://lanecc.zoom.us/j/96761530931) |      | Office Hours | T&mdash;Th  2:00&ndash;2:50<br />[Zoom meeting](https://lanecc.zoom.us/j/93774726097) |
+| Classroom | Building 19, Room 128<br />[Zoom meeting](https://lanecc.zoom.us/j/95855574335) |      | Office Hours | T&mdash;Th  4:00&ndash;4:50<br />[Zoom meeting](https://lanecc.zoom.us/j/94514229670) |
 
 
 
@@ -217,16 +217,16 @@ Please be aware that any accessible tables and chairs in this room should remain
 
 
 
-## Academic Calendar for Fall Term 2023
+## Academic Calendar for Fall Term 2024
 
-| Event                                                        | Date              |
-| ------------------------------------------------------------ | ----------------- |
-| Fall term classes begin                                      | 9/26 Tuesday      |
-| Last day to receive refund                                   | 10/2 Monday       |
-| Veteran’s Day&mdash;college closed                           | 11/10 Friday      |
-| Last day for schedule changes                                | 11/17 Friday      |
-| Thanksgiving Vacation – college closed on Thursday and Friday | 11/23&ndash;11/26 |
-| Final exam                                                   | 12/5 Tuesday      |
+| Event                                                        | Date             |
+| ------------------------------------------------------------ | ---------------- |
+| Fall term classes begin                                      | 9/30 Monday      |
+| Last day to receive refund                                   | 10/7 Monday      |
+| Veteran’s Day&mdash;college closed                           | 11/11 Monday     |
+| Last day for schedule changes                                | 11/22 Friday     |
+| Thanksgiving Vacation – college closed on Thursday and Friday | 11/28&ndash;12/1 |
+| Final exam                                                   | 12/9 Monday      |
 
 View [academic calendars](https://www.lanecc.edu/calendars/academic-calendar) on the LCC web site.
 
@@ -236,19 +236,19 @@ View [academic calendars](https://www.lanecc.edu/calendars/academic-calendar) on
 
 (May be subject to change)
 
-| Week              | Topics                                                       | Reading                                                      | Lab Assignment                                               |
-| ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **1**<br />9/27   | Intro to Web Dev<br />*Class starts Wednesday*               |                                                              | Lab 1<br />Create an empty MVC site                          |
-| **2**<br />10/2   | Intro to MVC                                                 | Murach Ch. 1                                                 | Lab 2<br />- Murach Ex 1-1<br />- Add pages and links to a site |
-| **3**<br />10/9   | Working with Data                                            | Murach Ch. 2                                                 | Lab 3<br />- Murach Ex 2-1<br />- Add models and data entry<br />- Publish to Azure |
-| **4**<br />10/16  | Bootstrap                                                    | Murach Ch. 3                                                 | Lab 4<br />- Murach Ex 3-1, 3-2<br />- Add Bootstrap to your site |
-| **5**<br />10/23  | Midterm quiz                                                 |                                                              | Term project proposal                                        |
-| **6**<br />10/30  | Unit testing with xUnit                                      | Murach Ch. 14<br />Pg. 570-577                               | Lab 5<br />Add a quiz and <br />unit tests to your site.     |
-| 7<br />11/6       | Entity Framework<br />Database Migrations<br />Deploying a DB to Azure<br /><br /> | Murach Ch. 4<br />Online tutorial<br />                      | Lab 6<br />- Murach Ex 4-1<br />- Add a DB to your site<br /> |
-| **8**<br />11/13  | Repository Pattern<br />More Unit Testing                    | Murach Ch. 14                                                | Lab 7                                                        |
-| **9**<br />11/20  | Linq and Seed Data                                           | Ch. 4: A Data driven web app<br/> 138–139: Seeding initial data<br/> 144–145: Working with data<br />Ch. 12: How to Use EF Core<br/>  472–475: How to query data | Lab 8                                                        |
-| **10**<br />11/27 | Debugging<br />Final quiz                                    | Murach Ch. 5                                                 | Lab 9 (Extra Credit)<br />- Murach Ex 5-1<br />- Debugging practice |
-| **11**<br />12/4  | Project presentations                                        |                                                              |                                                              |
+| Week             | Topics                                                       | Reading                                                      | Lab Assignment                                               |
+| ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **1**<br />9/30  | Intro to Web Dev<br />*Class starts Wednesday*               |                                                              | Lab 1<br />Create an empty MVC site                          |
+| **2**<br />10/7  | Intro to MVC                                                 | Murach Ch. 1                                                 | Lab 2<br />- Murach Ex 1-1<br />- Add pages and links to a site |
+| **3**<br />10/14 | Working with Data                                            | Murach Ch. 2                                                 | Lab 3<br />- Murach Ex 2-1<br />- Add models and data entry<br />- Publish to Azure |
+| **4**<br />10/21 | Bootstrap                                                    | Murach Ch. 3                                                 | Lab 4<br />- Murach Ex 3-1, 3-2<br />- Add Bootstrap to your site |
+| **5**<br />10/28 | Midterm quiz                                                 |                                                              | Term project proposal<br>Midterm quiz:<br />- In the classroom on 10/30<br />- In the testing center 10/30 through 11/1 |
+| **6**<br />11/4  | Unit testing with xUnit                                      | Murach Ch. 14<br />Pg. 570-577                               | Lab 5<br />Add a quiz and <br />unit tests to your site.     |
+| 7<br />11/11     | Entity Framework<br />Database Migrations<br />Deploying a DB to Azure<br /><br /> | Murach Ch. 4<br />Online tutorial<br />                      | Lab 6<br />- Murach Ex 4-1<br />- Add a DB to your site<br /> |
+| **8**<br />11/18 | Repository Pattern<br />More Unit Testing                    | Murach Ch. 14                                                | Lab 7                                                        |
+| **9**<br />11/25 | Linq and Seed Data                                           | Ch. 4: A Data driven web app<br/> 138–139: Seeding initial data<br/> 144–145: Working with data<br />Ch. 12: How to Use EF Core<br/>  472–475: How to query data | Lab 8                                                        |
+| **10**<br />12/2 | Debugging<br />Final quiz                                    | Murach Ch. 5                                                 | Lab 9 (Extra Credit)<br />- Murach Ex 5-1<br />- Debugging practice<br />Final in classroom 12/4<br />Final in testing center 12/4&ndash;12/6 |
+| **11**<br />12/9 | Project presentations                                        |                                                              | Term project                                                 |
 
 
 
