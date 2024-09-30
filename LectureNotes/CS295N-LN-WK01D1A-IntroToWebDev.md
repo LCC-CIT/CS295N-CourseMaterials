@@ -26,24 +26,17 @@
 
 ### Job Prospects for Developers
 
-U.S. News [The 100 Best Jobs](https://money.usnews.com/careers/best-jobs/rankings/the-100-best-jobs) for 2023
+U.S. News [The 100 Best Jobs](https://money.usnews.com/careers/best-jobs/rankings/the-100-best-jobs) for 2024
 
-- [#1: Software Developer](https://money.usnews.com/careers/best-jobs/software-developer)
+- [#3: Software Developer](https://money.usnews.com/careers/best-jobs/software-developer)
 
   > A software developer is a professional who is responsible for designing and building computer programs. Some may build underlying operating systems, while others may focus only on developing new mobile and desktop applications. They also develop computer games and other digital architecture.&mdash;Indeed.com
-  - Also #1 in Best Technology Jobs
-  - Median Salary: $120,730
-
-- [#9: Web Developer](https://money.usnews.com/careers/best-jobs/web-developer)
-
-  > Web developers create and maintain websites and web applications, and they use web-facing technology to build software. &mdash;U.S. News and World Report
-
-  - &#35;4 in Best Technology Jobs
-  - Median Salary: $77,030.
+  - #1 in Best Technology Jobs
+  - Median Salary: $127,260
 
 ### Meaning of Different Job Titles
 
-- [Software engineer vs. software developer](https://www.fullstackacademy.com/blog/software-engineer-vs-software-developer) vs. web developer  
+- Software engineer vs. software developer vs. web developer  
   The terms *software engineer* and *software developer* are often used interchangeably, but many professionals see the following distinctions:
   - Engineers are the architects who can design complete software systems.
   - Developers are coders who build what the engineers design (although most engineers are also coders).
@@ -121,10 +114,14 @@ U.S. News [The 100 Best Jobs](https://money.usnews.com/careers/best-jobs/ranking
 - Discuss weekly cycle of assignments 
 - Review due dates
 
+## References
+
+- [Software Engineer vs. Software Developer—What’s the Difference?](https://www.fullstackacademy.com/blog/software-engineer-vs-software-developer)  Fullstack Academy, 2023.
+
 ------
 
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
-ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev) is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), <time>2024</time>, are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
 
 ------
 
