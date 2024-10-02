@@ -16,8 +16,7 @@ In this lab, you will be creating a web site that you will continue to build on 
      <u>Important</u>: commit the gitignore file before you commit any other code!
    - Make a branch named lab1, which is derived form the main and put your web project into it.
 
-   - Invite your lab partners and your instructor to be collaborators on the repository. 
-     You can send a Moodle message to each of your lab partners to let them know your GitHub user name and/or email address so they can use it to add you as a collaborator.
+   - Invite your lab partners and your instructor to be collaborators on the repository. You can send a message to each of your lab partners to let them know your GitHub user name and/or email address so they can use it to add you as a collaborator.
 2. Follow the instructions in, [Getting Started with ASP.NET Core MVC](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-6.0&tabs=visual-studio) to create a web site in the working directory of your local Git repository.
 
    -  Instead of naming the project "MVCMovie", name it something that reflects the purpose of your site, like "AllAboutPigeons".
@@ -28,7 +27,9 @@ In this lab, you will be creating a web site that you will continue to build on 
 - [Trust the ASP.NET Core HTTPS development certificate on Windows and macOS]()
 - [Trust the HTTPS certificate with Firefox to prevent SEC_ERROR_INADEQUATE_KEY_USAGE error](https://learn.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-6.0&tabs=visual-studio%2Clinux-ubuntu#trust-the-https-certificate-with-firefox-to-prevent-sec_error_inadequate_key_usage-error)
 
+### Grading Rubric
 
+[Lab 1 Grading Rubric](Lab1Rubric_CS295N.htm)
 
 ### Submission
 
@@ -41,8 +42,6 @@ This week you will not submit a beta version of your web site or do code reviews
 2. Upload the screen-shot to Moodle.
 
 3. Enter the URL of the lab1 branch of your Git repository in the Moodle online text.
-
-Completing this assignment will satisfy the "no-show / drop" requirement of completing an assignment in the first week for any students who did not participate in the live Zoom class session.
 
 
 
