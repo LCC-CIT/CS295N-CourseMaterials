@@ -29,6 +29,10 @@ LCC requires students to either come to class in person, or complete one assignm
 - Take the reading quiz by the end of the day Friday, 10/4/24
 - Start the lab assignment which is due next Thursday, 10/10/24
 
+### Discord
+
+I'm changing our class communication from Moodle forums to Discord channels. Join our class Discord server to get announcements and communicate with the class.
+
 ## Git Repository Overview
 
 There are two ways you can create a repository:
