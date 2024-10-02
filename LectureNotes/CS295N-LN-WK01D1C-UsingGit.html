@@ -2,16 +2,12 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<meta name="title" content="${title}">
-<meta name="description" content="${description}">
-<meta name="keywords" content="${keywords}">
-<meta name="material" content="${material}">
-<meta name="author" content="${author}">
-<meta name="generator" content="${generator}">
-<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
 .mac-os-11 { --title-bar-height: 28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit; background-repeat: inherit; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
@@ -24,7 +20,7 @@ a:active, a:hover { outline: 0px; }
 body.typora-export { padding-left: 30px; padding-right: 30px; }
 .typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
 .typora-export .task-list-item input { pointer-events: none; }
-@media screen and (max-width: 500px) { 
+@media screen and (max-width: 500px) {
   body.typora-export { padding-left: 0px; padding-right: 0px; }
   #write { padding-left: 20px; padding-right: 20px; }
 }
@@ -49,7 +45,7 @@ h6 { font-size: 1rem; }
 .hidden { display: none; }
 .md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
 a { cursor: pointer; }
-sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
 sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
 #write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
 figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
@@ -59,7 +55,7 @@ thead { display: table-header-group; }
 table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
 table.md-table td { min-width: 32px; }
 .CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
-.CodeMirror-linenumber { }
+.CodeMirror-linenumber { -webkit-user-select: none; }
 .CodeMirror { text-align: left; }
 .CodeMirror-placeholder { opacity: 0.3; }
 .CodeMirror pre { padding: 0px 4px; }
@@ -89,14 +85,16 @@ blockquote > :last-child { margin-bottom: 0px; }
 blockquote > :first-child, li > :first-child { margin-top: 0px; }
 .footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
 #write .footnote-line { white-space: pre-wrap; }
-@media print { 
+@media print {
   body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
-  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; padding-bottom: 0px !important; }
-  .typora-export * { -webkit-print-color-adjust: exact; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { print-color-adjust: exact; }
   .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
   .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
   .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
@@ -113,7 +111,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
 .md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
 .math { font-size: 1rem; }
-.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
 .md-toc-content { position: relative; margin-left: 0px; }
 .md-toc-content::after, .md-toc::after { display: none; }
 .md-toc-item { display: block; color: rgb(65, 131, 196); }
@@ -126,7 +124,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 .md-toc-h4 .md-toc-inner { margin-left: 6em; }
 .md-toc-h5 .md-toc-inner { margin-left: 8em; }
 .md-toc-h6 .md-toc-inner { margin-left: 10em; }
-@media screen and (max-width: 48em) { 
+@media screen and (max-width: 48em) {
   .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
   .md-toc-h4 .md-toc-inner { margin-left: 5em; }
   .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
@@ -138,7 +136,7 @@ a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; 
 .md-attr { display: none; }
 .md-fn-count::after { content: "."; }
 code, pre, samp, tt { font-family: var(--monospace); }
-kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
 .md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
 code { text-align: left; }
 a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; }
@@ -154,7 +152,7 @@ mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
 .md-expand mark .md-meta { opacity: 0.3 !important; }
 mark .md-meta { color: rgb(0, 0, 0); }
-@media print { 
+@media print {
   .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
 }
 .md-diagram-panel .messageText { stroke: none !important; }
@@ -167,19 +165,19 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
 .typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
 .typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
-@media screen and (max-width: 1024px) { 
+@media screen and (max-width: 1024px) {
   .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
 }
-@media screen and (max-width: 800px) { 
+@media screen and (max-width: 800px) {
   .typora-export-sidebar { display: none; }
 }
-.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
 .outline-content ul { margin-top: 0px; margin-bottom: 0px; }
 .outline-content strong { font-weight: 400; }
 .outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
-.outline-expander::before { content: ''; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
 .outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
-.outline-expander:hover::before { content: ''; }
+.outline-expander:hover::before { content: ""; }
 .outline-h1 > .outline-item { padding-left: 0px; }
 .outline-h2 > .outline-item { padding-left: 1em; }
 .outline-h3 > .outline-item { padding-left: 2em; }
@@ -191,19 +189,34 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
 .outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
 .outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
-.outline-item-open > .outline-item > .outline-expander::before { content: ''; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
 .outline-children { display: none; }
 .info-panel-tab-wrapper { display: none; }
 .outline-item-open > .outline-children { display: block; }
 .typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
 .typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
 .typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
-.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: '−'; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
 .typora-export-collapse-outline .outline-children { display: none; }
 .typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
 .typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
 .typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
 .md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left-width: 0.25em; border-left-style: solid; border-left-color: rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
 
 
 :root {
@@ -211,7 +224,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
     --control-text-color: #777;
 }
 
-@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
 
 /* open-sans-regular - latin-ext_latin */
   /* open-sans-italic - latin-ext_latin */
@@ -559,6 +572,10 @@ header, .context-menu, .megamenu-content, footer{
     background-color: var(--side-bar-bg-color);
 }
 
+.mac-os #write{
+    caret-color: AccentColor;
+}
+
 .md-lang {
     color: #b4654d;
 }
@@ -591,14 +608,14 @@ header, .context-menu, .megamenu-content, footer{
 }
 
 
- @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}} .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+ @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
 </style><title>CS295N-LN-WK01D1C-UsingGit</title>
 </head>
 <body class='typora-export'><div class='typora-export-content'>
-<div id='write'  class=''><h1>Creating a Git Repo for a VS Solution</h1><h2>CS295N, ASP.NET Core Web Development</h2><p>&nbsp;</p><h3>Contents</h3><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n6"><a class="md-toc-inner" style="" href="#overview">Overview</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n14"><a class="md-toc-inner" style="" href="#git-clients">Git Clients</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n26"><a class="md-toc-inner" style="" href="#create-a-personal-access-token">Create a personal access token</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n29"><a class="md-toc-inner" style="" href="#a-note-about-labs">A note about labs</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n31"><a class="md-toc-inner" style="" href="#creating-a-repo">Creating a Repo</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n37"><a class="md-toc-inner" style="" href="#cloning-a-repo">Cloning a Repo</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n57"><a class="md-toc-inner" style="" href="#adding-a-branch-with-a-vs-solution">Adding a Branch with a VS Solution</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n58"><a class="md-toc-inner" style="" href="#create-a-branch">Create a branch</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n73"><a class="md-toc-inner" style="" href="#add-a-visual-studio-solution">Add a Visual Studio Solution</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n138"><a class="md-toc-inner" style="" href="#reference">Reference</a></span></p></div><h2 id='overview'><span>Overview</span></h2><p><span>There are two ways you can create a repository:</span></p><ol start='' ><li><span>Create a repo on your local machine and then push it up to GitHub.</span></li><li><span>Create a repo on GitHub and clone it to your local machine. </span></li></ol><p><em><span>We will do it the second way.</span></em></p><h3 id='git-clients'><span>Git Clients</span></h3><p><span>There are also multiple ways you can work with Git on your local machine. You can use:</span></p><ul><li><strong><span>GitHub desktop</span></strong><span>, or any of a number of other Git GUI client apps.</span></li><li><strong><span>Visual Studio</span></strong><span> or </span><strong><span>Visual Studio Code</span></strong><span>. Both of these have Git clients built in or that you can add as extensions.</span></li><li><strong><span>GitHub CLI</span></strong><span> which is a special purpose Command Line Interface designed just for working with GitHub.</span></li><li><span>The </span><strong><span>command line</span></strong><span>. This is a general purpose way to work with git using a terminal app, the Windows console, GitBash or any other way of directly using the command line of the OS on your local machine.</span></li></ul><p><span>We will use the </span><em><span>command line</span></em><span> since that&#39;s what most of you are familiar with.</span></p><h4 id='create-a-personal-access-token'><span>Create a personal access token</span></h4><p><span>If you haven&#39;t already created a GitHub Personal Access Token, then create one following these instructions: </span><a href='https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token'><span>Creating a personal access token</span></a><span>.</span></p><p><span>When you execute a git command that requires you to enter your user name and password, use the personal access token instead of your password.</span></p><h3 id='a-note-about-labs'><span>A note about labs</span></h3><p><span>For your lab assignments in CS295N, you will be creating a single web app. Each week you will add new features to it. You will not make separate folders for each lab assignment, you will just put the code for each lab assignment on a different branch in Git.</span></p><h2 id='creating-a-repo'><span>Creating a Repo</span></h2><ul><li><p><span>Open the GitHub web page and log in.</span></p></li><li><p><span>Create a new repository. Name it in a way that identifies it as a repo for your CS295N lab assignments for this term. For example: </span><em><span>CS295N-F22-BrianBird</span></em><span>.</span></p><p><span>Note: you will use one repository for all your lab assignments.</span></p></li></ul><ul><li><p><span>Add a </span><em><span>gitignore</span></em><span> file for Visual Studio.</span></p><p><span>Note that the gitignore file must be committed to the repository </span><u><span>before any other commits</span></u><span> in order for it to be effective!</span></p></li></ul><h2 id='cloning-a-repo'><span>Cloning a Repo</span></h2><ul><li><p><span>On the GitHub Repository web page, click on the green &quot;Code&quot; button. You will see options for cloning the repository using any of these:</span></p><ul><li><p><span>GitHub desktop app.</span></p></li><li><p><span>Visual Studio.</span></p></li><li><p><span>Git command line.</span></p><p><span>Select HTTPS and copy the URL for the repository.</span></p></li></ul></li><li><p><span>On your development machine, use a terminal app or console window or GitBash to:</span></p><ul><li><span>Navigate to the directory (folder) where you want to put the repository using the command: </span><code>cd</code><span> followed by the path to the directory you want.</span></li><li><code>git clone</code><span> followed by the URL of the repository.</span></li></ul></li></ul><p><span>That&#39;s it. You&#39;ve cloned the repository</span></p><h2 id='adding-a-branch-with-a-vs-solution'><span>Adding a Branch with a VS Solution</span></h2><h3 id='create-a-branch'><span>Create a branch</span></h3><p><span>On your local machine, use the command line for each step below.</span></p><ol start='' ><li><p><span>Change directories to the new repo you created by typing: </span><code>cd</code><span> followed by the directory name.</span></p></li><li><p><span>Create a new branch by typing: </span><code>git checkout -b</code><span> </span><em><span>followed by the new branch name</span></em><span>.</span>
-<span>This will create a new branch and copy the files, including the .gitignore file, from the main branch into the new branch.</span></p><p><span>For example: </span><code>git checkout -b lab1</code><span> .</span></p></li></ol><p><span>Here are some useful commands for working with branches:</span></p><ul><li><code>git branch</code><span> shows all branches in the local clone of the repository.</span></li><li><code>git branch -r</code><span> shows all remote branches at the origin  (on GitHub).</span></li><li><code>git branch</code><span> </span><em><span>followed by a branch name</span></em><span> creates a new local branch.</span></li><li><code>git checkout</code><span> </span><em><span>followed by an existing branch name</span></em><span> switches the local branch. </span>
-<span>If you enter the name of a remote branch, that branch will be pulled from the origin.</span></li><li><code>git checkout -b</code><span> </span><em><span>followed by a new branch name</span></em><span> created a new branch </span><u><span>and</span></u><span> copies the files from the current branch into it.</span></li></ul><h3 id='add-a-visual-studio-solution'><span>Add a Visual Studio Solution</span></h3><ol start='' ><li><p><span>Confirm that you are using the branch you want in the local repository.</span></p></li><li><p><span>Create or add a solution folder to the repo.</span></p><ul><li><span>If you already have a VS Solution folder, just copy it into the local repository folder.</span></li><li><span>If you are creating a new solution, then in Visual Studio, create a </span><em><span>New Project</span></em><span> and specify the repository as the directory to use.</span>
-<span>Note: Name the project (aka solution) with a name descriptive of your web site. For example: </span><em><span>BookReviewSite</span></em><span>.</span></li></ul></li><li><p><span>Add the new files to the repo index by typing; </span><code>git add .</code></p></li><li><p><span>Commit the files to the repo by typing </span><code>git commit -m</code><span> folllowed by a commit message in quotes.</span></p></li><li><p><span>Push the new files you just committed to the origin (GitHub) by typing: </span><code>git push</code></p><p>&nbsp;</p></li></ol><p><span>That&#39;s it. You can now see your new Visual Studio solution in your repo on GitHub!</span></p><p>&nbsp;</p><h2 id='reference'><span>Reference</span></h2><p><a href='https://www.w3schools.com/git/default.asp?remote=github'><span>W3 Schools Git Tutorial</span></a></p><p><span>Chacon, Scott and Straub, Ben. </span><em><a href='https://git-scm.com/book/en/v2'><span>Pro Git book</span></a></em><span>. 2nd Edition. Apress, 2014.</span></p><p>&nbsp;</p><hr /><p><a href='http://creativecommons.org/licenses/by/4.0/'><img src="https://i.creativecommons.org/l/by/4.0/88x31.png" referrerpolicy="no-referrer" alt="Creative Commons License"></a>
+<div id='write'  class=''><h1>Creating a Git Repo for a VS Solution</h1><h2>CS295N, ASP.NET Core Web Development</h2><p>&nbsp;</p><figure class='table-figure'><table><thead><tr><th><span>Weekly Topics</span></th><th>&nbsp;</th></tr></thead><tbody><tr><td><mark><span>1. Intro to Web Dev</span></mark></td><td><span>6. Entity Framework / Deploying a DB to Azure</span></td></tr><tr><td><span>2. Intro to MVC / Deploying to Azure</span></td><td><span>7. Debugging / </span><em><span>Veteran&#39;s Day holiday</span></em></td></tr><tr><td><span>3. MVC Architectural patterns</span></td><td><span>8. Controllers</span></td></tr><tr><td><span>4. Bootstrap</span></td><td><span>9. Razor Views / </span><em><span>Thanksgiving holiday</span></em></td></tr><tr><td><span>5. Midterm Quiz / Unit testing with xUnit</span></td><td><span>10. Razor Views (continued)</span></td></tr></tbody></table></figure><h3>Contents</h3><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n159"><a class="md-toc-inner" style="" href="#announcements">Announcements</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n274"><a class="md-toc-inner" style="" href="#no-show-drop-policy">No-show Drop Policy</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n275"><a class="md-toc-inner" style="" href="#todo-this-week">Todo this Week</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n264"><a class="md-toc-inner" style="" href="#git-repository-overview">Git Repository Overview</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n167"><a class="md-toc-inner" style="" href="#git-clients">Git Clients</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n179"><a class="md-toc-inner" style="" href="#create-a-personal-access-token">Create a personal access token</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n182"><a class="md-toc-inner" style="" href="#a-note-about-labs">A note about labs</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n184"><a class="md-toc-inner" style="" href="#creating-a-repo">Creating a Repo</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n194"><a class="md-toc-inner" style="" href="#cloning-a-repo">Cloning a Repo</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n214"><a class="md-toc-inner" style="" href="#adding-a-branch-with-a-vs-solution">Adding a Branch with a VS Solution</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n215"><a class="md-toc-inner" style="" href="#create-a-branch">Create a branch</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n235"><a class="md-toc-inner" style="" href="#add-a-visual-studio-solution">Add a Visual Studio Solution</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n255"><a class="md-toc-inner" style="" href="#reference">Reference</a></span></p></div><h2 id='announcements'><span>Announcements</span></h2><h3 id='no-show-drop-policy'><span>No-show Drop Policy</span></h3><p><span>LCC requires students to either come to class in person, or complete one assignment during the first week or they will be automaitcally dropped. The reason for this is to reduce the amount of financial aid fraud.</span></p><h3 id='todo-this-week'><span>Todo this Week</span></h3><ul><li><p><span>Do the assigned reading</span></p></li><li><p><span>Take the reading quiz by the end of the day Friday, 10/4/24</span></p></li><li><p><span>Start the lab assignment which is due next Thursday, 10/10/24</span></p></li></ul><h2 id='git-repository-overview'><span>Git Repository Overview</span></h2><p><span>There are two ways you can create a repository:</span></p><ol start='' ><li><p><span>Create a repo on your local machine and then push it up to GitHub.</span></p></li><li><p><span>Create a repo on GitHub and clone it to your local machine. </span></p></li></ol><p><em><span>We will do it the second way.</span></em></p><h3 id='git-clients'><span>Git Clients</span></h3><p><span>There are also multiple ways you can work with Git on your local machine. You can use:</span></p><ul><li><p><strong><span>GitHub desktop</span></strong><span>, or any of a number of other Git GUI client apps.</span></p></li><li><p><strong><span>Visual Studio</span></strong><span> or </span><strong><span>Visual Studio Code</span></strong><span>. Both of these have Git clients built in or that you can add as extensions.</span></p></li><li><p><strong><span>GitHub CLI</span></strong><span> which is a special purpose Command Line Interface designed just for working with GitHub.</span></p></li><li><p><span>The </span><strong><span>command line</span></strong><span>. This is a general purpose way to work with git using a terminal app, the Windows console, GitBash or any other way of directly using the command line of the OS on your local machine.</span></p></li></ul><p><span>We will use the </span><em><span>command line</span></em><span> since that&#39;s what most of you are familiar with.</span></p><h4 id='create-a-personal-access-token'><span>Create a personal access token</span></h4><p><span>If you haven&#39;t already created a GitHub Personal Access Token, then create one following these instructions: </span><a href='https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token'><span>Creating a personal access token</span></a><span>.</span></p><p><span>When you execute a git command that requires you to enter your user name and password, use the personal access token instead of your password.</span></p><h3 id='a-note-about-labs'><span>A note about labs</span></h3><p><span>For your lab assignments in CS295N, you will be creating a single web app. Each week you will add new features to it. You will not make separate folders for each lab assignment, you will just put the code for each lab assignment on a different branch in Git.</span></p><h2 id='creating-a-repo'><span>Creating a Repo</span></h2><ul><li><p><span>Open the GitHub web page and log in.</span></p></li><li><p><span>Create a new repository. Name it in a way that identifies it as a repo for your CS295N lab assignments for this term. For example: </span><em><span>CS295N-F22-BrianBird</span></em><span>.</span></p><p><span>Note: you will use one repository for all your lab assignments.</span></p></li><li><p><span>Add a </span><em><span>gitignore</span></em><span> file for Visual Studio.</span></p><p><span>Note that the gitignore file must be committed to the repository </span><u><span>before any other commits</span></u><span> in order for it to be effective!</span></p></li></ul><h2 id='cloning-a-repo'><span>Cloning a Repo</span></h2><ul><li><p><span>On the GitHub Repository web page, click on the green &quot;Code&quot; button. You will see options for cloning the repository using any of these:</span></p><ul><li><p><span>GitHub desktop app.</span></p></li><li><p><span>Visual Studio.</span></p></li><li><p><span>Git command line.</span></p><p><span>Select HTTPS and copy the URL for the repository.</span></p></li></ul></li><li><p><span>On your development machine, use a terminal app or console window or GitBash to:</span></p><ul><li><p><span>Navigate to the directory (folder) where you want to put the repository using the command: </span><code>cd</code><span> followed by the path to the directory you want.</span></p></li><li><p><code>git clone</code><span> followed by the URL of the repository.</span></p></li></ul></li></ul><p><span>That&#39;s it. You&#39;ve cloned the repository</span></p><h2 id='adding-a-branch-with-a-vs-solution'><span>Adding a Branch with a VS Solution</span></h2><h3 id='create-a-branch'><span>Create a branch</span></h3><p><span>On your local machine, use the command line for each step below.</span></p><ol start='' ><li><p><span>Change directories to the new repo you created by typing: </span><code>cd</code><span> followed by the directory name.</span></p></li><li><p><span>Create a new branch by typing: </span><code>git checkout -b</code><span> </span><em><span>followed by the new branch name</span></em><span>.</span>
+<span>This will create a new branch and copy the files, including the .gitignore file, from the main branch into the new branch.</span></p><p><span>For example: </span><code>git checkout -b lab1</code><span> .</span></p></li></ol><p><span>Here are some useful commands for working with branches:</span></p><ul><li><p><code>git branch</code><span> shows all branches in the local clone of the repository.</span></p></li><li><p><code>git branch -r</code><span> shows all remote branches at the origin  (on GitHub).</span></p></li><li><p><code>git branch</code><span> </span><em><span>followed by a branch name</span></em><span> creates a new local branch.</span></p></li><li><p><code>git checkout</code><span> </span><em><span>followed by an existing branch name</span></em><span> switches the local branch. </span>
+<span>If you enter the name of a remote branch, that branch will be pulled from the origin.</span></p></li><li><p><code>git checkout -b</code><span> </span><em><span>followed by a new branch name</span></em><span> created a new branch </span><u><span>and</span></u><span> copies the files from the current branch into it.</span></p></li></ul><h3 id='add-a-visual-studio-solution'><span>Add a Visual Studio Solution</span></h3><ol start='' ><li><p><span>Confirm that you are using the branch you want in the local repository.</span></p></li><li><p><span>Create or add a solution folder to the repo.</span></p><ul><li><p><span>If you already have a VS Solution folder, just copy it into the local repository folder.</span></p></li><li><p><span>If you are creating a new solution, then in Visual Studio, create a </span><em><span>New Project</span></em><span> and specify the repository as the directory to use.</span>
+<span>Note: Name the project (aka solution) with a name descriptive of your web site. For example: </span><em><span>BookReviewSite</span></em><span>.</span></p></li></ul></li><li><p><span>Add the new files to the repo index by typing; </span><code>git add .</code></p></li><li><p><span>Commit the files to the repo by typing </span><code>git commit -m</code><span> followed by a commit message in quotes.</span></p></li><li><p><span>Push the new files you just committed to the origin (GitHub) by typing: </span><code>git push</code></p><p>&nbsp;</p></li></ol><p><span>That&#39;s it. You can now see your new Visual Studio solution in your repo on GitHub!</span></p><p>&nbsp;</p><h2 id='reference'><span>Reference</span></h2><p><a href='https://www.w3schools.com/git/default.asp?remote=github'><span>W3 Schools Git Tutorial</span></a></p><p><span>Chacon, Scott and Straub, Ben. </span><em><a href='https://git-scm.com/book/en/v2'><span>Pro Git book</span></a></em><span>. 2nd Edition. Apress, 2014.</span></p><p>&nbsp;</p><hr /><p><a href='http://creativecommons.org/licenses/by/4.0/'><img src="https://i.creativecommons.org/l/by/4.0/88x31.png" referrerpolicy="no-referrer" alt="Creative Commons License"></a>
 <span>ASP.NET Core MVC Lecture Notes by </span><a href='https://profbird.dev'><span>Brian Bird</span></a><span>, 2022, is licensed under a </span><a href='http://creativecommons.org/licenses/by/4.0/'><span>Creative Commons Attribution 4.0 International License</span></a><span>. </span></p><hr /><p>&nbsp;</p></div></div>
-<base target="_blank"></body>
+</body>
 </html>

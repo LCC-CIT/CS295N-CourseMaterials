@@ -4,11 +4,32 @@
 
 
 
+
+| Weekly Topics                             |                                               |
+| ----------------------------------------- | --------------------------------------------- |
+| <mark>1. Intro to Web Dev</mark>          | 6. Entity Framework / Deploying a DB to Azure |
+| 2. Intro to MVC / Deploying to Azure      | 7. Debugging / *Veteran's Day holiday*        |
+| 3. MVC Architectural patterns             | 8. Controllers                                |
+| 4. Bootstrap                              | 9. Razor Views / *Thanksgiving holiday*       |
+| 5. Midterm Quiz / Unit testing with xUnit | 10. Razor Views (continued)                   |
+
 <h3>Contents</h3>
 
 [TOC]
 
-## Overview
+## Announcements
+
+### No-show Drop Policy
+
+LCC requires students to either come to class in person, or complete one assignment during the first week or they will be automaitcally dropped. The reason for this is to reduce the amount of financial aid fraud.
+
+### Todo this Week
+
+- Do the assigned reading
+- Take the reading quiz by the end of the day Friday, 10/4/24
+- Start the lab assignment which is due next Thursday, 10/10/24
+
+## Git Repository Overview
 
 There are two ways you can create a repository:
 
