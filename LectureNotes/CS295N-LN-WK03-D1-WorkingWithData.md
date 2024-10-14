@@ -18,6 +18,16 @@
 - Any questions about PRs and code reviews?
 - Any questions from reading  Ch. 2?
 
+## What's Due
+
+- Lab 2 beta version PR was due last Sunday
+- Lab 2 code review: Tuesday
+- Quiz 3: Wednesday
+- Lab 2 production version: Thursday
+  - Part 2 (your web site) should be published to Azure.
+
+- Lab 3 beta version PR: Sunday
+
 
 
 ## Overview
@@ -60,20 +70,20 @@ One of the first steps in designing object oriented software is to decide what c
 
 - For model classes
 
-  - We just use properties rather than create fields (aka instance variables) unless they are backing fields for properties.
+  - We just use *properties* rather than create fields (aka instance variables) unless they are *backing fields* for properties.
 
   - We normally don't include methods.
-    - If methods are included they should be small and just for doing some kind of unit or format conversion of the data.
+    - If methods are included they should be small and just for doing something like unit or format conversion of the data.
     - The methods should have no dependencies, since model classes should have no dependencies.
 
 ###  Relationships Between Model Classes
 - Some general OOP relationships:
 
-  - Inheritance: "is-a"
+  - **Inheritance**: "is-a"
 
-  - Association (similar to aggregation): "uses-a" (or "has-a")
+  - **Association** (similar to aggregation): "uses-a" (or "has-a")
 
-  - Composition: "part-of" &larr; *model classes will almost always have this relationship to each other.*
+  - **Composition**: "part-of" &larr; *complex model classes will almost always have this relationship to each other.*
 
 - Model Relationships
     - Any of the three above are possible.
@@ -105,20 +115,20 @@ public class AppUser
 }
 ```
 
-FYI, the AppUser model will get more added to it next term when we add *authentication* and *authorization* to our web sites.
+FYI, the `AppUser` model will get more added to it next term when we add *authentication* and *authorization* to our web sites.
 
  #### Identifying Relationships
 
   What is the relationship between our two models?
 
-  - Can a Review exist without the AppUser?
-  - Can a AppUser exist without a Review?
+  - Can a `Review` exist without the `AppUser`?
+  - Can a `AppUser` exist without a `Review`?
 
 ### Refactoring Model Classes
 
-We might decide that we want a separate Book model. (Or even separate Book and Author models.) Lets refactor our domain model so that we have separate Review and Book models.
+We might decide that we want a separate `Book` model. (Or even separate `Book` and `Author` models.) Lets refactor our domain model so that we have separate `Review` and `Book` models.
 
-Example: refactored Review model class and a new Book model class
+Example: refactored `Review` model class and a new `Book` model class
 
 ```C#
 public class Review
@@ -145,8 +155,8 @@ public class Book
 
 What is the relationship between our three models?
 
-  - Can a Review exist without the Book?
-  - Can a Book exist without a Review?
+  - Can a `Review` exist without the `Book`?
+  - Can a `Book` exist without a `Review`?
 
 Draw a UML diagram that shows the relationships between all three models.
 
@@ -237,7 +247,7 @@ Hello world, it's @Model.Day and the time is @Model.Time
 
 - This view would be invoked by an `HttpGet` method in the controller.
 - Here are two versions of a view that will send data to a `HttpPost` method in the controller.  
-  Note that we are using the refactored version of the Review model that has  Book and AppUser as property types.
+  Note that we are using the refactored version of the `Review` model that has  `Book` and `AppUser` as property types.
   - This version uses regular HTML attributes in the labels and input elements.
 
 ```c#
@@ -291,14 +301,14 @@ Hello world, it's @Model.Day and the time is @Model.Time
 
 ## Reference
 
-Ch. 2, "How to code a single-page MVC web app", *Murach’s ASP.NET Core MVC*, 1st Edition, by Mary Delamater and Joel Murach, Murach Books, 2020.
+Ch. 2, "How to code a single-page MVC web app", *Murach’s ASP.NET Core MVC*, 2st Edition, by Mary Delamater and Joel Murach, Murach Books, 2022.
 
-[Overview of ASP.NET Core MVC](https://learn.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-3.1), Microsoft Tutorial, 2022
+[Overview of ASP.NET Core MVC](https://learn.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-6.0), Microsoft Tutorial, 2024
 
 
 ------
 
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
-ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev) is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), revised <time>2024</time>, are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
 
 ------
