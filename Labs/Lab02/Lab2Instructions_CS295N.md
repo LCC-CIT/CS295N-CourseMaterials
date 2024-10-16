@@ -25,6 +25,9 @@ These pages will all be place-holders. The only content will be:
 
 ### Site Maps
 
+Each bullet point or sub-point represents a view.  
+Make a new controller for each top level view and it's sub-views.
+
 #### Group A
 
 **Community Web Site**
@@ -37,7 +40,7 @@ These pages will all be place-holders. The only content will be:
     -   **Messages**:  a page where messages from other members are displayed.
         -   **Message**:  a page that in the future will have an HTML form that users can use to send messages to the other users.
     
-- **About**:  Information about you, the author of the site and moare about the community. 
+- **About**:  Information about you, the author of the site and more about the community. 
   
     -   **Links**: Links to external sites related to the community.
     -   **FAQ**: Frequently Asked Questions.
