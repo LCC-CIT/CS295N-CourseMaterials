@@ -109,7 +109,7 @@ No models are needed yet. You will add those in a future lab assignment.
 
 ### PRs and Code Reviews
 
-1. Send a PR (Pull Request) to your lab partner asking them to review your code. 
+1. Send a PR (Pull Request) to your lab partner asking them to review your code for part 2, your web site. 
 
    After you have gotten a code review and revised your code as needed, you can merge it into the main branch, but keep the lab branch, don't delete it.
 
