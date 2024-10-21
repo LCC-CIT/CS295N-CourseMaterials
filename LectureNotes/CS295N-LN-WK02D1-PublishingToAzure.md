@@ -46,6 +46,12 @@ Microsoft offers a free Azure subscription for students and gives you $100 in cr
 
 ## Deploy a Web App to Azure
 
+### Create an App Service on Azure
+
+- On the [Azure portal](https://portal.azure.com) web page, search for or browse to "App Services" (aka "Web App") and click on "Create", then choose "Web App".
+- Select the options shown in the screen-shot below:
+  
+
 ### Publish Your App from Visual Studio 
 
 - In Visual Studio, run the publish wizard by right-clicking on the project and selecting publish.
