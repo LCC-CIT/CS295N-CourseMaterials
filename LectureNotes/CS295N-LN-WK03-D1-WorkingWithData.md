@@ -246,9 +246,11 @@ Hello world, it's @Model.Day and the time is @Model.Time
 ### Form Views
 
 - This view would be invoked by an `HttpGet` method in the controller.
+- The form method attribute must be set to `post`. (The default is `get`.)
 - Here are two versions of a view that will send data to a `HttpPost` method in the controller.  
-  Note that we are using the refactored version of the `Review` model that has  `Book` and `AppUser` as property types.
-  - This version uses regular HTML attributes in the labels and input elements.
+  Note that we are using the refactored version of the `Review` model that has `Book` and `AppUser` as property types.
+
+The version below uses regular HTML attributes in the labels and input elements.
 
 ```c#
 @model Review
@@ -272,7 +274,7 @@ Hello world, it's @Model.Day and the time is @Model.Time
     <button type="submit">Submit</button>
 </form>
 ```
-  - This version uses the `asp-for` tag helper in the labels and input elements.
+This version uses the `asp-for` tag helper in the labels and input elements.
 
 ```c#
 @model Review
