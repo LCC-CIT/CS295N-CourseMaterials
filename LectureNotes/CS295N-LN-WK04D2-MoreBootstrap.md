@@ -29,7 +29,7 @@ CS296N Web Development 2: ASP.NET
 
 # Bootstrap Form classes
 
-Form classes are used to format labels and controls on forms. These provide customized formatting for a more consistent rendering across browsers and devices. There are type attribute that should be used on all inputs (e.g., email for email address or number for numerical information) to take advantage of newer input controls like email verification, number selection, etc.
+Form classes are used to format labels and controls on forms. These provide customized formatting for a more consistent rendering across browsers and devices. There are type attributes that should be used on all inputs (e.g., email for email address or number for numerical information) to take advantage of newer (HTML 5) input controls like email verification, number selection, etc.
 
 ## Commonly Used Classes
 

@@ -54,7 +54,7 @@ CS296N Web Development 2: ASP.NET
 
 > *Build responsive, mobile-first projects on the web with the world's most popular front-end component library.*&mdash;from the [Bootstrap web site](https://getbootstrap.com/).
 
-Current version: 5.3 as of October 2023, but these notes are based on version 4.0, however the concepts and features described here haven't changed.
+Current version: 5.3 as of October 2023, but these notes are based on version 5, however the majority of the classes and concepts apply to version 4 as well.
 
 ## What is Bootstrap?
 
@@ -80,23 +80,34 @@ This is not a comprehensive list of Bootstraps features and concepts. See one of
 
 ### Grid System
 
-The grid system is fundamental to the way Bootstrap facilitates responsive web sites. In version 4, the grid system is built with the CSS3 Flexbox, and in version 3 it was built using CSS floats. Both versions are fully responsive.
+The grid system is fundamental to the way Bootstrap facilitates responsive web sites. In version 4 and later, the grid system is built with the CSS3 Flexbox, and in version 3 it was built using CSS floats. Both versions are fully responsive.
 
 > [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox): A one-dimensional layout model that is part of CSS3. It provides a way to distribute space between items and align them. ("One dimensional" means flexbox deals with layout in one dimension at a time — either a row or a column.)
 
 Bootstrap’s grid system uses a series of *containers*, *rows*, and *columns* to position and align content. 
 
-- Containers: contain one or more rows.
-  - The `container` class creates a container that is centered in the `<body>` of the page. It's width can be set as a percentage of the viewport size.
-  - The `container-fluid` class is similar to the container class, but the width is always 100% of the viewport.
-- Rows: can span up to 12 columns.
-  - The `row` class must be used inside an HTML element that uses a container class.
+#### Containers
 
-- Columns: every row can have one or more elements with col classes.
-  - A column class must be inside an HTML element that uses a row class.
-  - The col class specifies the number of columns an element will span for a particular screen size.
-    Example: `class="col-md-4"`
-  - The content of the page goes inside the elements with the col classes.
+- Containers can contain one or more rows.
+
+- The `container` class creates a container that is centered in the `<body>` of the page.
+  - It sets a fixed width that is determined by the screen size. See the official documentation for a [table of widths](https://getbootstrap.com/docs/5.3/layout/containers/).
+- The `container-fluid` class is similar to the container class, but the width is always 100% of the screen width.
+
+#### Rows
+
+- The `row` class must be used inside an HTML element that uses a container class.
+- By default, elements inside a row will have a width of 100% of the container width.
+- By default, rows span 12 columns.
+
+#### Columns
+
+- Every row can have one or more elements with `col` classes.
+
+- A column class must be inside an HTML element that uses a `row` class.
+- The `col` class specifies the number of columns an element will span for a particular screen size.
+  Example: `class="col-md-4"`
+- The content of the page goes inside the elements with the col classes.
 
 
 | Class     | Screen Width | Name        |
@@ -121,8 +132,8 @@ The classes used for setting spacing are named acording to a pattern, which is:
 
 Where *property* is one of:
 
-- `m` - sets `margin`
-- `p` - sets `padding`
+- `m` - sets `margin` (white space outside the element).
+- `p` - sets `padding` (white space inside the element).
 
 Where *sides* is one of:
 
@@ -155,7 +166,8 @@ Size is measured in *rem* which stands for “root em”. This is a CSS unit of 
 
 #### Examples
 
-- `<div class="mt-4">`  Sets the top margin to 1.5rem when the screen size is `xs`.
+- `<div class="m-1">`  Sets a margin of .25rem around the div.
+- `<div class="mt-4">`  Sets the top margin to 1.5rem around the div.
 - `<div class="me-md-3">` Sets the end (right) margin to 1rem when the screen size is `md`.
 - `<div class="px-lg-2">` Sets the left and right padding to .5rem when the screen size is `lg`.
 
