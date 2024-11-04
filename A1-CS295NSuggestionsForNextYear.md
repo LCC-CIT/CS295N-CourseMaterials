@@ -1,12 +1,11 @@
-# Suggestions for Next Year's Class (2023)
+# Suggestions for Next Year's Class (2025)
 
 [TOC]
 
-## Update to .NET 6
+## Bootstrap Lab
 
-This is so that students can use many-to-many relationships for things like tags.
-
-[Migrate for ASP.NET Core 5.0 to 60](https://docs.microsoft.com/en-us/aspnet/core/migration/50-to-60?view=aspnetcore-6.0&tabs=visual-studio)
+- Make the instrutions more specific as to where each class should be used so that grading is easier (don't have to look for where classes are used).
+- Put breakpoints on a page other than the form since forms do their own kind of responsiveness.
 
 
 

@@ -26,8 +26,8 @@ author: Brian Bird
 # Introduction
 
 - Answer questions about the midterm.
-- Answer questions about lab 4.
-- Describe where we're going: databases, unit testing with databases.
+- Answer questions about term project, proposal is due Sunday.
+- Describe where we're going: unit testing, databases, unit testing with databases.
 
 
 
@@ -62,6 +62,8 @@ We'll cover more details of unit testing later, but here are some basic concepts
 - Test after bug fixes.
 - Test after adding new features.
 - Regression testing.
+
+One of the major early proponants of TDD was [Kent Beck](https://en.wikipedia.org/wiki/Kent_Beck), who is a graduate of the U of O.
 
 ## xUnit
 
