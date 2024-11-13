@@ -55,22 +55,27 @@ Refactor your code so that the comments entered by the user on the Home/Forum pa
 - Modify your views so that:
   - The user's entry is no longer just echoed back to a view.
   -  All messages, stories, or comments are read from the database and displayed on the Contacts, Stories, or Forum page. (Not the same page with the HTML form for entering information.)
+  
 - Use either SQL Server or MySQL as the database type.
-  - You should use the same database type on both your local development machine and on Azure.
+  - You should use the same database type on both your local development machine and on Azure. Use the same type that your lab partners are using.
 
-- Add an intial migration.
+- Add an initial migration.
   - Hint: include the database type in the name of the migration, for example: *InitialMySql*, or *InitialSqlServer*.
 
 - Publish the site to Azure.
   - Set up either an  *Azure SQL Database* (compatible with SQL Server), or *Azure Database for MySQL* server on Azure.
     - For Azure SQL, you <u>only get one free database</u> with your Azure for Students account, and only the <u>Standard S0</u> service tier is free.
+    
     - For Azure Database for MySQL, you can also set up a free server and you are allowed to create multiple free databases on it. For the databases to be free you must choose these settings on the server:
       - Workload type: *For development or hobby projects.*
       - Compute + Storage:  *Burstable B1ms* with a maximum of 32GB of storage.
+      
+      For complete instructions read: [How to set up a MySQL Database on Azure](https://lcc-cit.github.io/CS295N-CourseMaterials/Notes/AzureMySqlSetupGuide.html).
     
   - Create a database schema by either:
     - Running `dotnet ef database update` using the connection string for your database server on Azure.
     - Modifying your Visual Studio publish profile so that it applies the migrations when you publish the web app. (This only works on Visual Studio for Windows.)
+    
   - Publish your web app to Azure.
 
 

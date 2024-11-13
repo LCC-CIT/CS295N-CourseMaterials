@@ -25,12 +25,13 @@ author: Brian Bird
 
 # Announcements and Discussion
 
-For fall term 2023
+Due this week
 
-- Lab 5, any questions on the quiz code or unit tests?
-  - Beta version due Tuesday (tomorrow), production version Thursday
+- Lab 5 code review: Tuesday
 
-- Quiz closes at class time Wednesday.
+- Lab 5 production version: Thursday
+
+Any Questions on lab 5?
 
 # Introduction
 
