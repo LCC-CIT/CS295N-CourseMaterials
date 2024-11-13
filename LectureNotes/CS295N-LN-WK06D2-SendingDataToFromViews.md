@@ -24,7 +24,7 @@ author: Brian Bird
 
 [TOC]
 
-# Announcements and Discussion
+## Announcements and Discussion
 
 For fall term 2023
 
@@ -175,9 +175,24 @@ Read more about loading related data in the *MS EF Core Tutorial* listed in [Ref
 
   `dotnet ef database update`
 
- 
+## Publish from Visual Studio 
 
-# Examples
+
+- In Visual Studio, run the publish wizard by right-clicking on the project and selecting publish.
+
+- Click on configure to change the settings in your publish profile
+
+- Select the Settings page
+
+- - In the *Databases* section, check the checkbox for your SQL Server connection string and paste the connection string for your Azure SQL Database.
+
+  - - Be sure to put the user name and password for your Azure SQL Database in place of your_username and your_password and delete the curly braces.
+
+  - In the *Entity Framework Migrations* section, check the check box for AppDbContext and add the connection string again.
+
+- Now you can re-publish your web app.
+
+## Examples
 
 [Book Reviews Example, 6-Database branch](https://github.com/LCC-CIT/CS295N-Example-BookReviews/tree/6-Database)
 
@@ -187,23 +202,21 @@ Read more about loading related data in the *MS EF Core Tutorial* listed in [Ref
 
 ------
 
-# References
+## References
 
-## Text Book
+### Text Book
 
 - Ch. 4, "How to develop a data-driven MVC web app", 
 
   *Murach’s ASP.NET Core MVC*, 2nd Edition, by Mary Delamater and Joel Murach, Murach Books, 2022.
 
-## Online
+### Online
 
 - Microsoft Tutorial: [Get started with ASP.NET Core MVC and Entity Framework Core using Visual Studio](https://learn.microsoft.com/en-us/aspnet/core/data/ef-mvc/?view=aspnetcore-6.0)
 - MS EF Core Tutorial: [Loading Related Data](https://docs.microsoft.com/en-us/ef/core/querying/related-data)
 - Microsoft Tutorial: [Publish an ASP.NET Core app to Azure with Visual Studio](https://docs.microsoft.com/en-us/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?view=aspnetcore-6.0)
 
-
-
 ------
 
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) These ASP.NET Core MVC Lecture Notes written by [Brian Bird](https://profbird.dev) in 2018 and revised in 2023,  are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) These ASP.NET Core MVC Lecture Notes written by [Brian Bird](https://profbird.dev) in 2018 and revised in <time>2024</time>,  are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
 

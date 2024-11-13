@@ -95,7 +95,7 @@ Refactor your code so that the comments entered by the user on the Home/Forum pa
 
 ### Final Submission to Moodle
 
-2.  Publish your web site to Azure.
+2.  <s>Publish your web site to Azure.</s> Not for fall 2024
 3.  In the "online text" for the Moodle assignment:
     - Paste a link to the branch of your GitHub repository for this lab.
     - Paste a link to your web site running on Azure.

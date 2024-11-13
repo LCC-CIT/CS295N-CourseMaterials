@@ -219,6 +219,87 @@ mjx-container { break-inside: avoid; }
 .md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
 
 
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; outline: 0px; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: auto hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 10px; z-index: 3; overflow-y: hidden; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; inset: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+span.cm-underlined { text-decoration: underline; }
+span.cm-strikethrough { text-decoration: line-through; }
+.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, 0, 0); }
+.cm-tw-deleted { text-decoration: line-through; }
+.cm-tw-header5 { font-weight: 700; }
+.cm-tw-listitem:first-child { padding-left: 10px; }
+.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-color: inherit; border-top-width: 0px !important; }
+.cm-tw-underline { text-decoration: underline; }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
 :root {
     --side-bar-bg-color: #fafafa;
     --control-text-color: #777;
@@ -609,9 +690,9 @@ header, .context-menu, .megamenu-content, footer{
 
 
 
-</style><title>Lab6Instructions_CS295N</title>
+</style><title>HowToSetUpLocalMySQLDatabase</title>
 </head>
 <body class='typora-export os-windows'><div class='typora-export-content'>
-<div id='write'  class=''><h1>Lab 6: Database and Entity Framework</h1><p><span> CS295N, Web Development 1: ASP.NET</span></p><p><strong><span>Contents</span></strong></p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n5"><a class="md-toc-inner" href="#part-a-textbook-tutorial-exercise">Part A: Textbook Tutorial Exercise</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n20"><a class="md-toc-inner" href="#part-b-saving-data-to-a-database">Part B: Saving Data to a Database</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n21"><a class="md-toc-inner" href="#add-a-database-to-your-project">Add a Database to your project</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n22"><a class="md-toc-inner" href="#group-a">Group A</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n25"><a class="md-toc-inner" href="#group-b">Group B</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n28"><a class="md-toc-inner" href="#group-c">Group C</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n32"><a class="md-toc-inner" href="#for-all-groups">For all groups</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n78"><a class="md-toc-inner" href="#review-and-submission">Review and Submission</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n79"><a class="md-toc-inner" href="#prs-and-code-reviews">PRs and Code Reviews</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n87"><a class="md-toc-inner" href="#final-submission-to-moodle">Final Submission to Moodle</a></span></p></div><h2 id='part-a-textbook-tutorial-exercise'><span>Part A: Textbook Tutorial Exercise</span></h2><p><span>In </span><em><span>Murach&#39;s ASP.NET Core MVC</span></em><span>, complete exercise 4-1, &quot;Create the Movie List app&quot;. </span></p><p><span>Note: If you are using MySQL or SQLite rather than SQL Server, a few of the steps will be different:</span></p><ul><li><p><span>Step 3: you will need to install the correct NuGet package for the database provider for your database type.</span></p></li><li><p><span>Step 10: Use the correct connection string for your database type.</span></p></li><li><p><span>Steps 14 and 15: Use a database management program that works with your database, such as  MySQL Workbench or DB Browser for SQLite.</span></p></li></ul><p><span>Take a screen-shot of the app running in your web browser at the end of the exercise. Put the screen-shot in a Word document and in that document, report one of the following:</span></p><p><span>A. I Followed all the steps shown in the book and successfully compiled and ran the program.</span></p><p><span>B. I Loaded the completed solution, experimented with the code, and ran the program.</span></p><p><span>C. I didn&#39;t do the exercise.</span></p><p>&nbsp;</p><h2 id='part-b-saving-data-to-a-database'><span>Part B: Saving Data to a Database</span></h2><h3 id='add-a-database-to-your-project'><span>Add a Database to your project</span></h3><h4 id='group-a'><span>Group A</span></h4><p><strong><span>Community Web Site</span></strong></p><p><span>Refactor your code so that the messages entered by the user on the Home/Contact page are saved in a database.</span></p><h4 id='group-b'><span>Group B</span></h4><p><strong><span>Fan Site</span></strong></p><p><span>Refactor your code so that the stories entered by the user on the Home/Story page are saved in a database.</span></p><h4 id='group-c'><span>Group C</span></h4><p><strong><span>Informational Site</span></strong></p><p><span>Refactor your code so that the comments entered by the user on the Home/Forum page are saved in a database.</span></p><p>&nbsp;</p><h4 id='for-all-groups'><span>For all groups</span></h4><ul><li><p><span>Modify your views so that:</span></p><ul><li><p><span>The user&#39;s entry is no longer just echoed back to a view.</span></p></li><li><p><span>All messages, stories, or comments are read from the database and displayed on the Contacts, Stories, or Forum page. (Not the same page with the HTML form for entering information.)</span></p></li></ul></li><li><p><span>Use either SQL Server or MySQL as the database type.</span></p><ul><li><p><span>You should use the same database type on both your local development machine and on Azure. Use the same type that your lab partners are using.</span></p></li></ul></li><li><p><span>Add an initial migration.</span></p><ul><li><p><span>Hint: include the database type in the name of the migration, for example: </span><em><span>InitialMySql</span></em><span>, or </span><em><span>InitialSqlServer</span></em><span>.</span></p></li></ul></li><li><p><span>Publish the site to Azure.</span></p><ul><li><p><span>Set up either an  </span><em><span>Azure SQL Database</span></em><span> (compatible with SQL Server), or </span><em><span>Azure Database for MySQL</span></em><span> server on Azure.</span></p><ul><li><p><span>For Azure SQL, you </span><u><span>only get one free database</span></u><span> with your Azure for Students account, and only the </span><u><span>Standard S0</span></u><span> service tier is free.</span></p></li><li><p><span>For Azure Database for MySQL, you can also set up a free server and you are allowed to create multiple free databases on it. For the databases to be free you must choose these settings on the server:</span></p><ul><li><p><span>Workload type: </span><em><span>For development or hobby projects.</span></em></p></li><li><p><span>Compute + Storage:  </span><em><span>Burstable B1ms</span></em><span> with a maximum of 32GB of storage.</span></p></li></ul><p><span>For complete instructions read: </span><a href='https://lcc-cit.github.io/CS295N-CourseMaterials/Notes/AzureMySqlSetupGuide.html'><span>How to set up a MySQL Database on Azure</span></a><span>.</span></p></li></ul></li><li><p><span>Create a database schema by either:</span></p><ul><li><p><span>Running </span><code>dotnet ef database update</code><span> using the connection string for your database server on Azure.</span></p></li><li><p><span>Modifying your Visual Studio publish profile so that it applies the migrations when you publish the web app. (This only works on Visual Studio for Windows.)</span></p></li></ul></li><li><p><span>Publish your web app to Azure.</span></p></li></ul></li></ul><p>&nbsp;</p><h2 id='review-and-submission'><span>Review and Submission</span></h2><h3 id='prs-and-code-reviews'><span>PRs and Code Reviews</span></h3><ol start='' ><li><p><span>Send a PR (Pull Request) to your lab partner asking them to review your code. </span></p><p><span>After you have gotten a code review and revised your code as needed, you can merge it into the main branch, but keep the lab branch, don&#39;t delete it.</span></p></li><li><p><span>You should receive a PR from your lab partner and review their code using this </span><a href='../CodeReviewGuide.html'><span>Code Review Guide</span></a><span>.</span></p><p><span>On Moodle, in the &quot;online text&quot; field of the Code Review assignment, enter the URL of the pull request with the code review </span><u><span>you gave</span></u><span>.</span></p></li></ol><h3 id='final-submission-to-moodle'><span>Final Submission to Moodle</span></h3><ol start='2' ><li><p><s><span>Publish your web site to Azure.</span></s><span> Not for fall 2024</span></p></li><li><p><span>In the &quot;online text&quot; for the Moodle assignment:</span></p><ul><li><p><span>Paste a link to the branch of your GitHub repository for this lab.</span></p></li><li><p><span>Paste a link to your web site running on Azure.</span></p></li></ul></li></ol></div></div>
+<div id='write'  class=''><h1>How to Set Up a Local MySQL Database</h1><p>&nbsp;</p><p><span>These instructions assume you have installed a MySQL Server and MySQL Workbench.</span></p><h3 id='1-create-a-new-user'><span>1. Create a New User</span></h3><ol start='' ><li><p><span>Open MySQL Workbench and connect to your MySQL server using the root user.</span></p></li><li><p><span>Go to </span><strong><span>Server</span></strong><span> &gt; </span><strong><span>Users and Privileges</span></strong><span>.</span></p></li><li><p><span>Click on </span><strong><span>Add Account</span></strong><span>.</span></p></li><li><p><span>Enter a username and password for the new user.</span></p></li><li><p><span>Set the account limits, roles, and schema privileges as needed.</span></p></li><li><p><span>Click </span><strong><span>Apply</span></strong><span> to create the new user.</span></p></li></ol><h3 id='2-log-in-as-the-new-user'><span>2. Log In as the New User</span></h3><ol start='' ><li><p><span>Close the current session in MySQL Workbench.</span></p></li><li><p><span>Reconnect to the MySQL server using the new user credentials.</span></p></li></ol><h3 id='3-connect-to-the-local-mysql-server'><span>3. Connect to the Local MySQL Server</span></h3><ol start='' ><li><p><span>Click on the </span><strong><span>+</span></strong><span> button next to MySQL Connections in the home screen.</span></p></li><li><p><span>Enter a connection name, hostname (usually </span><code>localhost</code><span>), port (default is </span><code>3306</code><span>), username, and password.</span></p></li><li><p><span>Click </span><strong><span>Store in Vault</span></strong><span> to save the password securely.</span></p></li><li><p><span>Test the connection and click </span><strong><span>OK</span></strong><span> to establish it.</span></p></li></ol><h3 id='4-create-a-new-database'><span>4. Create a New Database</span></h3><ol start='' ><li><p><span>Once connected, go to </span><strong><span>Server</span></strong><span> &gt; </span><strong><span>Data Import</span></strong><span>.</span></p></li><li><p><span>Select </span><strong><span>Import from Self-Contained Archive</span></strong><span> and browse for the database file (if you have one) or </span><strong><span>Import from Dump</span></strong><span>.</span></p></li><li><p><span>Follow the prompts to create a new database.</span></p></li></ol><h3 id='5-determine-the-adonet-connection-string'><span>5. Determine the ADO.NET Connection String</span></h3><ol start='' ><li><p><span>The ADO.NET connection string typically looks like this:</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="plaintext"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="plaintext"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Server=myServerAddress;Database=myDataBase;Uid=myUsername;Pwd=myPassword;</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div><div class="CodeMirror-gutters" style="display: none; height: 23px;"></div></div></div></pre><p><span>Replace </span><code>myServerAddress</code><span>, </span><code>myDataBase</code><span>, </span><code>myUsername</code><span>, and </span><code>myPassword</code><span> with your actual server address, database name, username, and password.</span></p></li></ol><h2 id='reference'><span>Reference</span></h2><p><a href='https://dev.mysql.com/doc/workbench/en/'><span>MySQL Workbench Manual</span></a>&mdash;<span>Oracle</span></p><hr /><p><span>These instructions were written by Brian Bird using Microsoft Copilot with GPT-4.</span></p><hr /><p>&nbsp;</p></div></div>
 </body>
 </html>
