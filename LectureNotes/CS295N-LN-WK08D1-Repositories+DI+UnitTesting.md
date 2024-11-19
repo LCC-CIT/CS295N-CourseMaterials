@@ -16,14 +16,10 @@ CS295N Web Development 1: ASP.NET
 
 ## Q and A
 
-**For 11/13/2023**
-
 - Upcoming due dates:
-  - This week's quiz closes before class on Wednesday.
-  - Lab 6 is due Thursday night, publishing to Azure is not required.
+  - This week's quiz closes Thursday.
+  - Lab 6 is due Thursday night.
   - This is the last week to change grade options.
-
-- I've caught up on grading! Please look at my feedback.
 
 
 - Answer questions.
