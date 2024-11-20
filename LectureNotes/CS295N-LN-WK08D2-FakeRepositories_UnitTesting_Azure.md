@@ -16,10 +16,8 @@ CS295N Web Development 1: ASP.NET
 
 # Q and A
 
-**For 11/15/2023**
-
 - Upcoming due dates:
-  - Lab 6 is due tonight, publishing to Azure is not required.
+  - Lab 6 is due Thursday.
   - This is the last week to change grade options.
   
 - Check your Azure for Students credit balance!  
@@ -37,10 +35,10 @@ See the [references](#References) below for instructions on how to publish a web
 
 Pay close attention to which services are [free with the Azure for Students subscription](https://azure.microsoft.com/en-us/free/students/). Don't create a database that isn't free; it will eat up your credits and you will loose your subscription!  You can have <u>only one</u> of each database type. Here are the database services that are free:
 
-| Service                  | Description                                                | Service details                                              | Pricing tier / Configuration                         |
-| ------------------------ | ---------------------------------------------------------- | ------------------------------------------------------------ | ---------------------------------------------------- |
-| Azure Database for MySQL | Host a fully managed, scalable MySQL database in Azure     | 750 hours of Flexible Server—Burstable B1MS Instance, 32 GB storage, and 32 GB backup storage | Burstable, B1ms, 1 vCores, 2 GiB RAM, 32 GiB storage |
-| SQL Database             | Create a SQL database that delivers intelligence built-in. | 100,000 vCore seconds of SQL database serverless usage per month with 32 GB of storage | Standard S0: 10 DTUs                                 |
+| Service                  | Description                                           | Service details                                              | Pricing tier / Configuration                         |
+| ------------------------ | ----------------------------------------------------- | ------------------------------------------------------------ | ---------------------------------------------------- |
+| Azure Database for MySQL | Host fully managed, scalable MySQL databases in Azure | 750 hours of Flexible Server—Burstable B1MS Instance, 32 GB storage, and 32 GB backup storage | Burstable, B1ms, 1 vCores, 2 GiB RAM, 32 GiB storage |
+| SQL Database             | Create a SQL Server compatible database               | 100,000 vCore seconds of SQL database serverless usage per month with 32 GB of storage | Standard S0: 10 DTUs                                 |
 
 
 
@@ -59,7 +57,7 @@ Note that the `List` object is used in place of a database.
 ```C#
 public class FakeReviewRepository : IReviewRepository
 {
-    private List<Review> reviews = new List<Review>();   // Use a list as a data store
+    private List<Review> reviews = new List<Review>();  // Use a list as a data store
 
     public Review GetReviewById(int id)
     {
@@ -127,14 +125,6 @@ public class ReviewControllerTests
 
 
 
-# Unit of Work
-
-Why some people use the Unit of Work pattern:
-
-> The goal of the unit of work pattern is to simplify DML (Data Manipulation Language) in your code and only commit changes to the database/objects when it's truly time to commit. &mdash;https://github.com/Coding-With-The-Force/Salesforce-Separation-Of-Concerns-And-The-Apex-Common-Library/wiki/05)-The-Unit-of-Work-Pattern
-
-
-
 # References
 
 - *Murach’s ASP.NET Core MVC*, 2nd Edition, by Mary Delamater and Joel Murach, Murach Books, 2022.
@@ -147,7 +137,7 @@ Why some people use the Unit of Work pattern:
 
 ------
 
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), written 2018, updated 2023, is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), written 2018, updated <time>2024</time>, is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
 
 ------
 
