@@ -151,6 +151,20 @@ public IActionResult Index()
     var reviews = repo.GetAllReviews();
     return View(reviews);
 }
+
+[HttpPost]
+public IActionResult Review(Review model)
+{
+    if (repo.StoreReview(model) > 0)
+    {
+        return RedirectToAction("Index", new { reviewId = model.ReviewId });
+    }
+    else
+    {
+        ViewBag.ErrorMessage = "There was an error saving the review.";
+        return View();
+    }
+}
 ```
 
 
