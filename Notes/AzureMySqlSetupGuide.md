@@ -114,7 +114,7 @@ You can add a database to the server in a number of ways:
 - On your development machine, run the dotnet CLI command: `dotnet ef database update`, using the connection string for your server on Azure (see below),  which will apply the current migration and create the database on the server on Azure.
 - Use the Azure Database for MySQL page on the Azure Portal to create a database.
 
-<img src="/Users/birdb/Projects/CS295N-CourseMaterials/Notes/Images/AzureMySqlAddDatabase.png" alt="AzureMySqlAddDatabase" style="zoom:75%;" />
+<img src="Images/AzureMySqlAddDatabase.png" alt="AzureMySqlAddDatabase" style="zoom:75%;" />
 
 
 
@@ -140,11 +140,11 @@ You can use the `dotnet ef update` command to update a remote database like the 
 
 By specifying an environment, `Development` or `Production`, you can control which `appsettings.json` file and by that, which connection string is used for the `update` command. Here is an example:
 ```
-dotnet ef database update -- --environment
+dotnet ef database update -- --environment production
 ```
 Note that there are two sets of dashes, `-- --` , this is not a typo!
 
-### Specify a Connetion String in the Command
+### Specify a Connection String in the Command
 
 Use this command to update the database and apply a migration:
 
