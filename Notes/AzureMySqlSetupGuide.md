@@ -172,7 +172,7 @@ Create a connection using these parameters:
 
 - [Connect to Azure Database for MySQL - Flexible Server with encrypted connections](https://learn.microsoft.com/en-us/azure/mysql/flexible-server/how-to-connect-tls-ssl#disable-ssl-enforcement-on-your-flexible-server)
 
-- https://learn.microsoft.com/en-us/ef/core/cli/dotnet
+- [Entity Framework Core tools reference - .NET Core CLI](https://learn.microsoft.com/en-us/ef/core/cli/dotnet)
 
 - [Connection String Options for Pomelo MySQL Database Provider](https://mysqlconnector.net/connection-options/)  
   This documentation is for MySqlConnector which is used by the Pomelo DB provider.
