@@ -27,6 +27,7 @@
     - Lab 7 code review: Tuesday, 11/26
     
     - Lab 7 production version: Sunday, 12/1
+      (Due date is later due to the holiday)
     
     - Lab 8 beta version: Sunday 12/1
     
@@ -34,11 +35,11 @@
     The dates for the beta version and code review are flexible, but make arrangements with your lab partners if you want to change these dates.
     - Next week (week 10)
       - Send a PR for the beta version: Tuesday, 12/3
-
+  
       - Submit a link to a code review on a PR: Thursday, 12/5
-
+  
     - Finals week:
-      - Presentation to the class: Monday, 12/9
+      - Term project presentation to the class: Monday, 12/9
     
       - Submit links for the production version: Monday, 12/9
   - Final Quiz: Monday 12/9 through Wednesday 12/11
