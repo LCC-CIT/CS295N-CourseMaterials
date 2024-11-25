@@ -99,7 +99,7 @@ Database=bookreviews;
 
 Now your database server is ready for use!
 
-##Adding a Database
+## Adding a Database
 
 You can add a database to the server in a number of ways:
 
@@ -107,7 +107,7 @@ You can add a database to the server in a number of ways:
 - On your development machine, run the dotnet CLI command: `dotnet ef database update`, using the connection string for your server on Azure (see below),  which will apply the current migration and create the database on the server on Azure.
 - Use the Azure Database for MySQL page on the Azure Portal to create a database.
 
-<img src="/Users/birdb/Projects/CS295N-CourseMaterials/Notes/Images/AzureMySqlAddDatabase.png" alt="AzureMySqlAddDatabase" style="zoom:75%;" />
+<img src="Images/AzureMySqlAddDatabase.png" alt="AzureMySqlAddDatabase" style="zoom:75%;" />
 
 
 
@@ -121,7 +121,7 @@ Connection string for the Entity Framwork Pomelo MySql database provider:
 "Server=pigeondb.mysql.database.azure.com:3306;User=birdb;Password=Secret!123;database=pigeons;"
 ```
 
-**Note:** this connection string is causing errors when I try to use it to apply migrations when publishing.
+**Note:** this connection string is causing errors when I try to use it to apply migrations when publishing from Visual Studio 2022.
 
 
 
@@ -133,7 +133,7 @@ Use this command to apply a migration from the command line:
 dotnet ef database update --connection "Server=pigeondb.mysql.database.azure.com;Port=3306;User=birdb;Password=Secret!123;database=pigeons;"
 ```
 
-
+Note: If you are using the terminal on MacOS with zsh, then you must use single quotes around the connection string instead of double quotes.
 
 ## With Workbench for MySQL
 
@@ -149,7 +149,14 @@ Create a connection using these parameters:
   Note that this tutorial is for subscribers to the free 12 month Azure trial which requires a credit card for billing purposes. I do *<u>not</u>* recommend using this free trial since you can get unexpected charges on your credit card. But the procedure for setting up a free MySQL database is nearly identical for Azure for Students subscribers.
 - [Quickstart: Use the Azure portal to create an Azure Database for MySQL flexible server](https://learn.microsoft.com/en-us/azure/mysql/flexible-server/quickstart-create-server-portal)
 - [Connect to Azure Database for MySQL - Flexible Server with encrypted connections](https://learn.microsoft.com/en-us/azure/mysql/flexible-server/how-to-connect-tls-ssl#disable-ssl-enforcement-on-your-flexible-server)
-- 
 - [Connection String Options for Pomelo MySQL Database Provider](https://mysqlconnector.net/connection-options/)  
   This documentation is for MySqlConnector which is used by the Pomelo DB provider.
+
+
+
+------
+
+[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) ASP.NET Core MVC Notes by [Brian Bird](https://profbird.dev), written 2022, updated <time>2024</time>, is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+
+------
 
