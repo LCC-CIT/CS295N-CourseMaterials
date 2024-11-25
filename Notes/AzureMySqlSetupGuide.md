@@ -1,12 +1,19 @@
+---
+title: Setup Azure Database for MySQL
+description: How to set up a MySQL database server on Azure using the free Azure for Students subscription.
+keywords:  MySQL, EF, migrations, database update, MySQL Workbench, Azure
+material: Lecture Notes
+generator: Typora
+author: Brian Bird
+---
+
 <h1>Setup for Azure Database for MySQL Flexible Server</h1>
 
 <h2>Setup Guide</h2>
 
 [TOC]
 
-
-
-Note: Firefox for Mac does not seem to work for all the steps in this guide. Safari was used successfully on a Mac (November 2022).
+Note: The Azure Portal when accessed via Firefox for Mac does not seem to work for all the steps in this guide. Safari was used successfully on a Mac (November 2022).
 
 # Setup Through the Azure Portal
 
@@ -115,25 +122,38 @@ You can add a database to the server in a number of ways:
 
 ## From a Web App
 
-Connection string for the Entity Framwork Pomelo MySql database provider:
+Example connection string for the Entity Framwork Pomelo MySql database provider:
 
 ```json
 "Server=pigeondb.mysql.database.azure.com:3306;User=birdb;Password=Secret!123;database=pigeons;"
 ```
 
-**Note:** this connection string is causing errors when I try to use it to apply migrations when publishing from Visual Studio 2022.
+**Note:** When using the *Publish* feture in Visual Studio, this connection string is causing errors when I add it to *Addional Settings, Database* and try to use it to apply migrations when publishing.
 
 
 
-## With EF CLI Tools
+## Updating a Database with EF CLI Tools
 
-Use this command to apply a migration from the command line:
+You can use the `dotnet ef update` command to update a remote database like the one you created on Azure.
+
+### Specify the Environment in the Command
+
+By specifying an environment, `Development` or `Production`, you can control which `appsettings.json` file and by that, which connection string is used for the `update` command. Here is an example:
+```
+dotnet ef database update -- --environment production
+```
+Note that there are two sets of dashes, `-- --` , this is not a typo!
+
+### Specify a Connection String in the Command
+
+Use this command to update the database and apply a migration:
+
 
 ```bash
-dotnet ef database update --connection "Server=pigeondb.mysql.database.azure.com;Port=3306;User=birdb;Password=Secret!123;database=pigeons;"
+dotnet ef database update --connection 'Server=pigeondb.mysql.database.azure.com;Port=3306;User=birdb;Password=Secret!123;database=pigeons;'
 ```
 
-Note: If you are using the terminal on MacOS with zsh, then you must use single quotes around the connection string instead of double quotes.
+Note that when using zsh in the terminal on a Mac, you must use single quotes around the connection string. With Bash on Windows you can use either double or single quotes.
 
 ## With Workbench for MySQL
 
@@ -147,10 +167,19 @@ Create a connection using these parameters:
 
 - [Use an Azure free account to try Azure Database for MySQL - Flexible Server for free](https://learn.microsoft.com/en-us/azure/mysql/flexible-server/how-to-deploy-on-azure-free-account#connect-and-query)  
   Note that this tutorial is for subscribers to the free 12 month Azure trial which requires a credit card for billing purposes. I do *<u>not</u>* recommend using this free trial since you can get unexpected charges on your credit card. But the procedure for setting up a free MySQL database is nearly identical for Azure for Students subscribers.
+  
 - [Quickstart: Use the Azure portal to create an Azure Database for MySQL flexible server](https://learn.microsoft.com/en-us/azure/mysql/flexible-server/quickstart-create-server-portal)
+
 - [Connect to Azure Database for MySQL - Flexible Server with encrypted connections](https://learn.microsoft.com/en-us/azure/mysql/flexible-server/how-to-connect-tls-ssl#disable-ssl-enforcement-on-your-flexible-server)
+
+- [Entity Framework Core tools reference - .NET Core CLI](https://learn.microsoft.com/en-us/ef/core/cli/dotnet)
+
 - [Connection String Options for Pomelo MySQL Database Provider](https://mysqlconnector.net/connection-options/)  
   This documentation is for MySqlConnector which is used by the Pomelo DB provider.
+  
+  
+
+[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) These ASP.NET Core MVC Lecture Notes written by [Brian Bird](https://profbird.dev) in 2022 and revised in <time>2024</time>,  are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
 
 
 
