@@ -58,9 +58,9 @@ Seed data is data that is automatically added to your database when the applicat
 
 ## Seeding Your Database
 
-One way to seed your database is to write a class with a static method that will add entities to the database. The method to seed the database will be called from *Startup*. I put mine in a static class named *SeedData*, but it's not a special name (not part of a convention).
+One way to seed your database is to write a class with a static method that will add entities to the database. The method to seed the database will be called from *Program.cs*. I put mine in a static class named *SeedData*, but it's not a special name (not part of a convention).
 
-Note that the method I'm using here is different from the method shown in the textbook (Murach and Delameter, Ch. 4, pg 142, 2022).
+Note that the approach I'm using here is different from the method shown in the textbook (Murach and Delameter, Ch. 4, pg 142, 2022).
 
 ### Seed Data class and method
 
@@ -75,9 +75,9 @@ public class SeedData
         	User reviewer1 = new User { Name = "Emma Watson" };
         	User reviewer2 = new User { Name = "Brian Bird" };
         	// Queue up user objects to be saved to the DB
-          context.Reviews.Add(user1);  
-        	context.Reviews.Add(user1);
-        	context.SaveChantes();  // Saving adds UserId to User objects
+          context.Users.Add(reviewer1);  
+        	context.Users.Add(reviewer1);
+        	context.SaveChanges();  // Saving adds UserId to User objects
         
           Review review = new Review
           {
