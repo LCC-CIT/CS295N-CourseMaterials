@@ -9,7 +9,7 @@
 | 1. Intro to Web Dev                     | 6. Unit Testing                          |
 | 2. Intro to MVC & Deploying to Azure    | 7. Database & Entity Framework           |
 | 3. Working with Data                    | 8. Unit Testing & The Repository Pattern |
-| 4. Bootstrap                            | 9. Linq & Seed Data                      |
+| 4. Bootstrap                            | 9. <mark>Linq & Seed Data</mark>         |
 | 5. Midterm Quiz & Term Project Proposal | 10. Debugging                            |
 
 

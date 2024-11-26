@@ -106,7 +106,7 @@ Database=bookreviews;
 
 Now your database server is ready for use!
 
-##Adding a Database
+## Adding a Database
 
 You can add a database to the server in a number of ways:
 
@@ -180,4 +180,12 @@ Create a connection using these parameters:
   
 
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) These ASP.NET Core MVC Lecture Notes written by [Brian Bird](https://profbird.dev) in 2022 and revised in <time>2024</time>,  are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+
+
+
+------
+
+[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) ASP.NET Core MVC Notes by [Brian Bird](https://profbird.dev), written 2022, updated <time>2024</time>, is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+
+------
 
