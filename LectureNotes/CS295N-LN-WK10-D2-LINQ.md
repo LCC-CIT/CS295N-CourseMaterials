@@ -103,11 +103,10 @@
 
   - Queries return a collection unless a scalar operator is applied (first, count, etc.)
 
-
-      ```C#
+    ```C#
     int planetCount = 
        (from p in planets where p.DistanceToSun < 200 select p.Name).count();
-      ```
+    ```
 
 ### Exercise: Add to the Planet example
 
