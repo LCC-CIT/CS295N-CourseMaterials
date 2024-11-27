@@ -31,9 +31,9 @@
 
 - Use this in place of embedding SQL in your C# code or in place of stored procedures.
 
-- LINQ use functional language concepts (SQL also uses [functional language](https://en.wikipedia.org/wiki/Functional_programming) some functional language concepts like statelessness and "all at once", non-sequential, operations)
+- LINQ uses [functional language](https://en.wikipedia.org/wiki/Functional_programming) concepts (SQL also uses some functional language concepts like *statelessness* and "all at once", non-sequential, operations)
 
-- LINQ Syntax (Query expression syntax, as opposed to fluent syntax) (inspired by languages like LISP and Haskell) Looks superficially like SQL – but it’s significantly different.
+- LINQ Syntax (*query syntax* aka *method syntax*, as opposed to *fluent syntax*)  Looks superficially like SQL – but it’s significantly different.
 
   - Essential operators: *from*, *select*, *where*
   - Full list of LINQ keywords: [Query Keywords](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/query-keywords)
@@ -75,6 +75,14 @@
 
   Compare the LINQ statement above to the header of the *foreach* loop below. Notice the similar use of the *range variables*.
   `foreach (Planet p in planets)`
+
+- Fluent syntax version of the same LINQ expression:
+
+  ```C#
+  IEnumerable<string> innerPlanets = planets
+      .Where(p => p.DistanceToSun < 200)
+      .Select(p => p.Name);
+  ```
 
 - Deferred execution: A LINQ statement returns an IEnumerable or an IQueryable. They look like collections, but they do not contain any actual data. They just represent the query and are executed when enumerated.
 
