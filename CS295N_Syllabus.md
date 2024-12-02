@@ -178,10 +178,9 @@ Letter grades for the course will be determined by the following percentages:
 ## Late Work
 
 - The grade for assignments submitted after the due date will be reduced by 10%.
-  - Late labs 1 – 4 will only be accepted by the end of week 5.
-  - Late labs 5 – 8 will only be accepted by the end of week 10.
+  - No late lab work will be accepted after the Wednesday of finals week (week 11).
   
-- Quizzes and exams cannot be taken after the due date. Contact your instructor in advance if you know you will have a schedule conflict.
+- Quizzes and exams cannot be taken after the due date. Contact your instructor in advance if you know you will have a schedule conflict so you can reschedul the quiz.
 
 - Exceptions will be made for illness or emergency situations.
 
@@ -245,7 +244,7 @@ For upcoming closures, please visit the [Center for Accessible Resources webpage
 | Veteran’s Day&mdash;college closed                           | 11/11 Monday     |
 | Last day for schedule changes                                | 11/22 Friday     |
 | Thanksgiving Vacation – college closed on Thursday and Friday | 11/28&ndash;12/1 |
-| Final exam                                                   | 12/9 Monday      |
+| Final exam                                                   | 12/9&ndash;12/11 |
 
 View [academic calendars](https://www.lanecc.edu/calendars/academic-calendar) on the LCC web site.
 

@@ -1,6 +1,6 @@
 **CS295N Web Development 1: ASP.NET** 
 
-<h1>Seed Data</h1>
+<h1>Debugging</h1>
 
 
 
@@ -20,38 +20,41 @@
 
 ## Announcements  
 
-**For 11/27/23**
+**For Fall 2024**
 
 Upcoming due dates:
 
 - Term project  
   The dates for the beta version and code review are flexible, but make arrangements with your lab partners if you want to change these dates.
 
-  - Send a PR for the beta version: Tuesday, 11/28
+  - Send a PR for the beta version: Tuesday, 12/3
 
-  - Submit a link to a code review on a PR: Thursday, 11/30 
+  - Submit a link to a code review on a PR: Thursday, 12/5 
 
-  - Presentation to the class: Monday, 12/4  
+  - Presentation to the class: Monday, 12/9  
     Be sure to read the [presentation guidelines](../TermProject/CS295N-TermProjectPresentationGuide.html).
   
-  - Submit links for the production version: Monday, 12/4
+  - Submit links for the production version: Monday, 12/9
   
 - Labs
 
-  - Lab 8 (Seed data and Line) Code review: Tuesday, 11/28
+  - Lab 8 (Seed data and LINQ) Code review: Tuesday, 12/3
   
-  - Lab 8 Production version: 11/30
+  - Lab 8 Production version: Thursday, 12/5
   
-  - Lab 9 (Debugging) is optional, extra credit: 12/4
+  - Lab 9 (Debugging) is optional, extra credit: Monday, 12/9
   
-- Final Quiz: online Monday 12/4 through Wednesday 12/6  
+- Final Quiz: in the Instructional Testing center: Monday, 12/9, through Wednesday, 12/11  
   If anyone wants to take the quiz on campus, in the classroom, I'll open the classroom on Wednesday at class time, 10:00am.
-  
 
 
 - Late submissions  
 
-  Monday of finals week is the last day I will accept late work.
+  Wednesday of finals week is the last day I will accept late work.
+  
+- Course Evaluation
+
+  Please fill out the course evaluation. There is a link at the end of the week 10 section on Moodle.
 
 
 
