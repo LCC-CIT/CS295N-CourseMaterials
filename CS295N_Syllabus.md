@@ -227,18 +227,9 @@ LCC has a [no-show drop](https://www.lanecc.edu/esfs/noshow-drops) policy. You m
 
 ### Center for Accessible Resources
 
-Lane Community College (LCC) is dedicated to providing inclusive learning environments. The Center for Accessible Resources (CAR) coordinates all academic accommodations for students at LCC. If you anticipate or experience academic barriers due to a disability, to request assistance or accommodations, contact the Center for Accessible Resources.
+Lane Community College (LCC) is dedicated to providing inclusive learning environments. The [Center for Accessible Resources (CAR)](https://www.lanecc.edu/get-support/resource-centers/center-accessible-resources) coordinates all academic accommodations for students at LCC. If you anticipate or experience academic barriers due to a disability, to request assistance or accommodations, contact the Center for Accessible Resources 541-463-5150 or [accessibleresources@lanecc.edu](mailto:accessibleresources@lanecc.edu).
 
-**In-Person Services:** Monday and Thursday, 9:00am - 12:30 and 1:30pm - 3:00pm.
-**Location:** Main Campus, Building 19, Room 263A
-
-**Remote Support through Support Hub:** Monday - Thursday 9:00am&ndash;12:30 and 1:30pm&ndash;3:00pm. 
-Enter the Support Hub by going to [lanecc.edu/hub](https://www.lanecc.edu/hub). Wait for a Lane staff to let you into the Zoom.
-
-**Phone:** Voice, (541) 463-5150 TTY: 711, Monday&mdash;Friday 9:00am&ndash;12:30pm and 1:30pm&ndash;3:00pm.
-**Email:** AccessibleResources@lanecc.edu
-
-For upcoming closures, please visit the [Center for Accessible Resources webpage ](https://www.lanecc.edu/disability)
+Please be aware that any accessible tables and chairs in this room should remain available for authorized students who find that standard classroom seating is not usable. 
 
 ### Campus Location and Maps
 
