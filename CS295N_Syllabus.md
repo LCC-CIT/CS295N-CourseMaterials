@@ -7,7 +7,7 @@
 | **Course Number** | CS 295N                                                      |      | Instructor        | Brian Bird                                                   |
 | **CRN**           | Hybrid (on campus) 32934<br />Online 32933                   |      | Email<br />Mobile | [birdb@lanecc.edu](mailto:birdb@lanecc.edu)<br />[‪(541) 525-0213‬](tel:5415250213) |
 | Day, Time | T, Th, 10:00&ndash;11:50                                     |      | Office            | Building 19, Room 152<br /> or [Zoom meeting](https://lanecc.zoom.us/j/8982554800) |
-| **Classroom**     | Building 19, Room 126<br />[Zoom meeting](https://lanecc.zoom.us/j/95729160529) |      | Office Hours | M, W 4:00–4:50<br />Tu, Th 2:00–2:50
+| **Classroom**     | Building 19, Room 126<br />[Zoom meeting](https://lanecc.zoom.us/j/97321830534) |      | Office Hours | M, W 4:00–4:50<br />Tu, Th 2:00–2:50|
 
 
 
@@ -248,7 +248,7 @@ The LCC main campus is located at 4000 East 30th Ave. Eugene, Oregon 97405.
 | **Winter Term 2026**                        |              |
 | ------------------------------------------- | ------------ |
 | Term begins                                 | 1/5, Monday  |
-| Last day to receive refund                  | 1/12, Monday |
+| Last day to drop and receive a refund       | 1/11, Sunday |
 | Martin Luther King Jr. Day (college closed) | 1/19, Monday |
 | Presidents' Day (college closed)            | 2/16, Monday |
 | Last day for schedule changes               | 2/27, Friday |
