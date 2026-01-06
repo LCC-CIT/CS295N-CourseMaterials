@@ -16,14 +16,10 @@ CS295N Web Development 1: ASP.NET
 
 ## Q and A
 
-**For 11/13/2023**
-
 - Upcoming due dates:
-  - This week's quiz closes before class on Wednesday.
-  - Lab 6 is due Thursday night, publishing to Azure is not required.
+  - This week's quiz closes Thursday.
+  - Lab 6 is due Thursday.
   - This is the last week to change grade options.
-
-- I've caught up on grading! Please look at my feedback.
 
 
 - Answer questions.
@@ -78,10 +74,11 @@ This example code is from the [Book Reviews](https://github.com/LCC-CIT/CS295N-E
 
 ```C#
 public interface IReviewRepository
-    {
-        public Review GetReviewById(int id); // Returns a model object
-        public int StoreReview(Review model);  // Saves a model object to the db
-    }
+{
+    public List<Review> GetAllReviews();  // Returns all review objects
+    public Review GetReviewById(int id); // Returns a model object
+    public int StoreReview(Review model);  // Saves a model object to the db
+}
 ```
 
 #### The "real" repository
@@ -96,6 +93,15 @@ public interface IReviewRepository
         context = appDbContext;
     }
 
+    public List<Review> GetAllReviews()
+    {
+        var reveiws = context.Reviews
+          .Include(review => review.Reviewer) // returns Reivew.AppUser object
+          .Include(review => review.Book) // returns Review.Book object
+          .ToList<Review>();
+        return reveiws;
+     }
+   
     public Review GetReviewById(int id)
     {
         var review = context.Reviews
@@ -142,8 +148,22 @@ public ReviewController(IReviewRepository r)
 
 public IActionResult Index()
 {
-    var reviews = repo.Reviews.ToList();
+    var reviews = repo.GetAllReviews();
     return View(reviews);
+}
+
+[HttpPost]
+public IActionResult Review(Review model)
+{
+    if (repo.StoreReview(model) > 0)
+    {
+        return RedirectToAction("Index", new { reviewId = model.ReviewId });
+    }
+    else
+    {
+        ViewBag.ErrorMessage = "There was an error saving the review.";
+        return View();
+    }
 }
 ```
 
@@ -176,87 +196,6 @@ Example:
 
 
 
-## Unit Testing with a Fake Repository
-
-### What to test
-
-Before writing any unit tests, you need to know what methods to test. We want to test any computation or processing done by our app. We primarily test controller methods and sometimes helper methods on models (if there are any). There may also be some additional classes we've added that have functionality that should be tested (like a quiz or game).
-
-### Example, in the Test Project
-
-#### A fake repository class
-
-Note that the `List` object is used in place of a database.
-
-```C#
-public class FakeReviewRepository : IReviewRepository
-{
-    private List<Review> reviews = new List<Review>();   // Use a list as a data store
-
-    public Review GetReviewById(int id)
-    {
-        Review review = reviews.Find(r => r.ReviewId == id);
-        return review;
-    }
-
-    public int StoreReview(Review model)
-    {
-        int status = 0;
-        if (model != null)
-        {
-            model.ReviewId = reviews.Count + 1;
-            reviews.Add(model);
-            status = 1;    
-        }
-        return status;
-    }
-}
-```
-
-#### Unit tests using the fake repository
-
-```c#
-public class ReviewControllerTests
-{
-    IReviewRepository repo = new FakeReviewRepository();
-    ReviewController controller;
-
-    public ReviewControllerTests()
-    {
-        controller = new ReviewController(repo);
-    }
-
-    [Fact]
-    public void Review_PostTest_Success()
-    {
-        // arrange
-        // Done in the constructor
-
-        // act
-        var result = controller.Review(new Review());
-
-        // assert
-        // Check to see if I got a RedirectToActionResult
-        Assert.True(result.GetType() == typeof(RedirectToActionResult));
-    }
-
-    [Fact]
-    public void Review_PostTest_Failure()
-    {
-        // arrange
-        // Done in the constructor
-
-        // act
-        var result = controller.Review(null);
-
-        // assert
-        // Check to see if I got a RedirectToActionResult
-        Assert.True(result.GetType() == typeof(ViewResult));
-    }
-
-}
-```
-
 
 
 ## Unit of Work
@@ -284,7 +223,7 @@ Why some people use the Unit of Work pattern:
 
 ------
 
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), written 2018, updated 2023, is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), written 2018, updated <time>2024</time>, is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
 
 ------
 

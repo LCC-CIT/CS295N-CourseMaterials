@@ -20,43 +20,32 @@
 
 ## Announcements  
 
-**For 11/22/23**
 
-
-- Upcoming due dates:
-
+- Upcoming due dates for fall 2024:
+  - Labs
+    
+    - Lab 7 code review: Tuesday, 11/26
+    
+    - Lab 7 production version: Sunday, 12/1
+      (Due date is later due to the holiday)
+    
+    - Lab 8 beta version: Sunday 12/1
+    
   - Term project  
     The dates for the beta version and code review are flexible, but make arrangements with your lab partners if you want to change these dates.
-
-    - Send a PR for the beta version: Tuesday, 11/28
-
-    - Submit a link to a code review on a PR: Thursday, 11/30 
-
-    - Presentation to the class: Monday, 12/4
-
-    - Submit links to the production version: Monday, 12/4
-
-  - Labs
-
-    - Lab 7 Production version: pushed out to Thursday, 11/30  
-      But, if you have it working this week, submit it.
-
-    - Lab 8 Code review: Tuesday, 11/28
-
-    - Lab 8 Production version: 11/30
-
-    - Lab 9 is optional, extra credit: 12/4
-
-  - Final Quiz: online Monday 12/4 through Wednesday 12/6  
-    If anyone wants to take the quiz on campus, in the classroom, I'll open the classroom on Wednesday.
-
-- Discuss questions.  
-
-  - .NET 6 example.
-  - MySQL on Azure.
-
-  - Duplicate entities in databases.  
-    After covering seed data, I will talk about how to avoid creating duplicate entities, for example Books. We won't address duplicate entities for the same user this term. That will be taken care of by Identity next term.
+    - Next week (week 10)
+      - Send a PR for the beta version: Tuesday, 12/3
+  
+      - Submit a link to a code review on a PR: Thursday, 12/5
+  
+    - Finals week:
+      - Term project presentation to the class: Monday, 12/9
+    
+      - Submit links for the production version: Monday, 12/9
+  - Final Quiz: Monday 12/9 through Wednesday 12/11
+    - In the testing center Monday through Wednesday.
+    - In class on Wednesday.
+- Questions?
 
 
 
@@ -69,9 +58,9 @@ Seed data is data that is automatically added to your database when the applicat
 
 ## Seeding Your Database
 
-One way to seed your database is to write a class with a static method that will add entities to the database. The method to seed the database will be called from *Startup*. I put mine in a static class named *SeedData*, but it's not a special name (not part of a convention).
+One way to seed your database is to write a class with a static method that will add entities to the database. The method to seed the database will be called from *Program.cs*. I put mine in a static class named *SeedData*, but it's not a special name (not part of a convention).
 
-Note that the method I'm using here is different from the method shown in the textbook (Murach and Delameter, Ch. 4, pg 142, 2022).
+Note that the approach I'm using here is different from the method shown in the textbook (Murach and Delameter, Ch. 4, pg 142, 2022).
 
 ### Seed Data class and method
 
@@ -86,9 +75,9 @@ public class SeedData
         	User reviewer1 = new User { Name = "Emma Watson" };
         	User reviewer2 = new User { Name = "Brian Bird" };
         	// Queue up user objects to be saved to the DB
-          context.Reviews.Add(user1);  
-        	context.Reviews.Add(user1);
-        	context.SaveChantes();  // Saving adds UserId to User objects
+          context.Users.Add(reviewer1);  
+        	context.Users.Add(reviewer1);
+        	context.SaveChanges();  // Saving adds UserId to User objects
         
           Review review = new Review
           {
@@ -159,6 +148,6 @@ The `Seed` method will get called when you run your web app.
 ------
 
 [![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
-ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), revised 2023, is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
+ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), revised <time>2024</time>, is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
 
 ------

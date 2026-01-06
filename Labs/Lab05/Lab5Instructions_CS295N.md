@@ -11,22 +11,30 @@ You will add a quiz page to your web site using *test driven development*.
 
 Below, are the steps to add a quiz to your site.
 
-### View Model
+## Quiz Class
 
-Create a *view model* class that contains:
+Write a class that provides:
 
-- Properties for:
-  - User's answers for each question.
-  - Whether each answer was right or wrong.
-- A *stub* for a method to check whether answers are right or wrong.
+- Provision for managing and storing questions and answers
+- A mehtod to check user's answers to see if they are correct.  
+  Initially this will just be a stub method.
 
 ### Unit Tests
 
-1. Create two unit tests for the check method above:
-  - A test that verifies that wrong answers are identified.
-  - A test that verifies that right answers are identified.
+1. Create two unit tests for the stub check method above:
+   - A test that verifies that wrong answers are identified.
+   - A test that verifies that right answers are identified.
 
-2. Write the body of the check method in the model, using the unit tests to verify it as you add code.
+2. Write the body of the check method in the quiz class&mdash;using the unit tests to verify it as you add code.
+
+### View Model
+
+Create a *view model* class that can contain:
+
+- Properties for:
+  - A list of questions
+  - Users' answers.
+  - Responses showing whether answers are right or wrong.
 
 ### Controller methods
 

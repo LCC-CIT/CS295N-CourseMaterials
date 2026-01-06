@@ -9,7 +9,7 @@
 | 1. Intro to Web Dev                     | 6. Unit Testing                          |
 | 2. Intro to MVC & Deploying to Azure    | 7. Database & Entity Framework           |
 | 3. Working with Data                    | 8. Unit Testing & The Repository Pattern |
-| 4. Bootstrap                            | 9. Linq & Seed Data                      |
+| 4. Bootstrap                            | 9. <mark>Linq & Seed Data</mark>         |
 | 5. Midterm Quiz & Term Project Proposal | 10. Debugging                            |
 
 
@@ -31,9 +31,9 @@
 
 - Use this in place of embedding SQL in your C# code or in place of stored procedures.
 
-- LINQ use functional language concepts (SQL also uses [functional language](https://en.wikipedia.org/wiki/Functional_programming) some functional language concepts like statelessness and "all at once", non-sequential, operations)
+- LINQ uses [functional language](https://en.wikipedia.org/wiki/Functional_programming) concepts (SQL also uses some functional language concepts like *statelessness* and "all at once", non-sequential, operations)
 
-- LINQ Syntax (Query expression syntax, as opposed to fluent syntax) (inspired by languages like LISP and Haskell) Looks superficially like SQL – but it’s significantly different.
+- LINQ Syntax (*query syntax* aka *method syntax*, as opposed to *fluent syntax*)  Looks superficially like SQL – but it’s significantly different.
 
   - Essential operators: *from*, *select*, *where*
   - Full list of LINQ keywords: [Query Keywords](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/query-keywords)
@@ -76,6 +76,14 @@
   Compare the LINQ statement above to the header of the *foreach* loop below. Notice the similar use of the *range variables*.
   `foreach (Planet p in planets)`
 
+- Fluent syntax version of the same LINQ expression:
+
+  ```C#
+  IEnumerable<string> innerPlanets = planets
+      .Where(p => p.DistanceToSun < 200)
+      .Select(p => p.Name);
+  ```
+
 - Deferred execution: A LINQ statement returns an IEnumerable or an IQueryable. They look like collections, but they do not contain any actual data. They just represent the query and are executed when enumerated.
 
   - The query above won't be executed until you enumerate *innerPlanets*
@@ -95,11 +103,10 @@
 
   - Queries return a collection unless a scalar operator is applied (first, count, etc.)
 
-
-      ```C#
+    ```C#
     int planetCount = 
        (from p in planets where p.DistanceToSun < 200 select p.Name).count();
-      ```
+    ```
 
 ### Exercise: Add to the Planet example
 

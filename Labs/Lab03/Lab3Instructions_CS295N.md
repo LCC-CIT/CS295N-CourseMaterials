@@ -29,8 +29,8 @@ Modify the Home/Contact page so that users can send messages to the other users.
 
 Messages will contain:
 
-- Name of sender
-- Name of recipient (AppUser)
+- Sender (AppUser)
+- Recipient (AppUser)
 - Subject
 - Message priority (an integer)
 - Body of the message
@@ -70,7 +70,7 @@ Modify the Blog page so the site admin can make blog posts.
 Blog posts will contain:
 - Title
 - Text of the post
-- Name of person posting (AppUser)
+- Person posting (AppUser)
 - Date posted
 - Rating (an integer)
 
@@ -84,23 +84,23 @@ Do you want the posts to be identified as either comments or additional informat
 
 #### Models
 
-- Decide what two or three models you will need to add to your project .
-- Decide the relationship between the models.
+- Decide what two or three model classes you will need to add to your project .
+- Decide the relationship between the model classes.
 - Code the models.
 
 #### Views
 
-- Add a new view containing a HTML form for entering a message, story, or forum post. Make the view strongly typed. Name it Message, Story, or Post
-  - Add a link to the existing Message, Stories or Blog view to open the new view.
+- Add a new view containing a HTML form for entering a message, story, or blog post. Make the view strongly typed. Name it Message, Story, or Post
+  - Add a link to the existing Messages, Stories or Blog view to open the new view.
 
-- Modify the existing Contact, Stories, or Blog view so that it can display data echoed back when the user submits information they entered in the form described above.
+- Modify the existing Messages, Stories, or Blog view so that it can display data echoed back when the user submits information they entered in the form described above.
 
 #### Controllers
 
 - Write an HTTP GET method for the new HTML form view described in *Views* above.
 - Write an HTTP POST method that receives the information from the new HTML form. This method should use the Redirect method to send the information back to the Contact, Stories, or Forum view (back to the controller method for that view.)
 
-Note: You should already have an existing HTTP GET method in your HomeController that renders a Contact, Stories, or Blog view.
+Note: You should already have an existing HTTP GET method in your HomeController that renders a Messages, Stories, or Blog view.
 
 
 

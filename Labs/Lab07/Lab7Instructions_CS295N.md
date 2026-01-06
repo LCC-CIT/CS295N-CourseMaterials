@@ -9,6 +9,14 @@
 
 Do exercise 14-1 in the Textbook, "Add dependency Injection and some unit tests"
 
+Take a screen-shot of the unit test runner, showing the passing tests. Put the screen-shot in a Word document and in that document, report one of the following:
+
+A. I Followed all the steps shown in the book and successfully compiled and ran the program.
+
+B. I Loaded the completed solution, experimented with the code, and ran the program.
+
+C. I didn't do the exercise.
+
 ## Part B: Repositories and Unit Tests
 
 The instructions are the same for groups A, B, and C.
@@ -57,7 +65,7 @@ Follow the instruction given in class to publish your web site to Azure.
 
 ### Final Submission to Moodle
 
-1.  Upload a screen-shot of the textbook exercise. Take a screen-shot of the unit test runner, showing the passing tests.
+1.  Upload the word doc with the screen shot and report of what you did in the exercise.
 2.  Publish your web site from part B to Azure.
 3.  In the "online text" for the Moodle assignment:
     - Paste a link to the branch of your GitHub repository for this lab.

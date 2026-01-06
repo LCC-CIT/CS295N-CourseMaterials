@@ -37,7 +37,7 @@ author: Brian Bird
 
 - Read the [term project requirements](../TermProject/CS295N-TermProjectRequirements.html)
 
-- A term project proposal is due next week (instead of a lab beta).
+- A term project proposal is due next week (instead of a lab production version).
 - Example of a wireframe: [Wire-frame of a web page](https://profbird.github.io/CS246-CourseMaterials/LectureNotes/Images/Beispiel-Balsamiq-Wireframe.jpg)
 
 ## References
