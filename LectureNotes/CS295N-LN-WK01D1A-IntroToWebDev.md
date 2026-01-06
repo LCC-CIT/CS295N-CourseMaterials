@@ -18,13 +18,26 @@
 
 ### Job Prospects for Developers
 
-U.S. News [The 100 Best Jobs](https://money.usnews.com/careers/best-jobs/rankings/the-100-best-jobs) for 2024
+U.S. News [The 100 Best Jobs](https://money.usnews.com/careers/best-jobs/rankings/the-100-best-jobs) for 2025
 
-- [#3: Software Developer](https://money.usnews.com/careers/best-jobs/software-developer)
+- The overall metrics U.S. News used to calculate the 2025 Best Jobs rankings are:
+
+  - Future prospects for employment growth (30%)
+  - Wage potential (25%) 
+  - Employment vs. unemployment rates (20%) 
+  - Job safety (health care, working conditions, injuries) and stability (15%) 
+  - Work-life balance (10%) 
+
+  The data U.S. News gathered for each metric comes from the U.S. Bureau of Labor Statistics.
+
+- [#5: Software Developer](https://money.usnews.com/careers/best-jobs/software-developer)
 
   > A software developer is a professional who is responsible for designing and building computer programs. Some may build underlying operating systems, while others may focus only on developing new mobile and desktop applications. They also develop computer games and other digital architecture.&mdash;Indeed.com
-  - #1 in Best Technology Jobs
-  - Median Salary: $127,260
+  - ##2 in Best Technology Jobs
+  
+    - Median Salary: $132,270
+    - Unemployment rate: 2.4%
+    - Number of jobs in the U.S.: 303,700
 
 ### Meaning of Different Job Titles
 
