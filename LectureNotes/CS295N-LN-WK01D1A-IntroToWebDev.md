@@ -1,16 +1,8 @@
 **[CS295N Web Development 1: ASP.NET](http://lcc-cit.github.io/CS295N-CourseMaterials/)**
 
-# Intro to Web Dev
+<h1>Intro to Web Dev</h1>
 
-| Weekly Topics                             |                                               |
-| ----------------------------------------- | --------------------------------------------- |
-| <mark>1. Intro to Web Dev</mark>          | 6. Entity Framework / Deploying a DB to Azure |
-| 2. Intro to MVC / Deploying to Azure      | 7. Debugging / *Veteran's Day holiday*        |
-| 3. MVC Architectural patterns             | 8. Controllers                                |
-| 4. Bootstrap                              | 9. Razor Views / *Thanksgiving holiday*       |
-| 5. Midterm Quiz / Unit testing with xUnit | 10. Razor Views (continued)                   |
-
-## Contents
+<h2>Contents</h2>
 
 [TOC]
 
@@ -116,12 +108,13 @@ U.S. News [The 100 Best Jobs](https://money.usnews.com/careers/best-jobs/ranking
 
 ## References
 
-- [Software Engineer vs. Software Developer—What’s the Difference?](https://www.fullstackacademy.com/blog/software-engineer-vs-software-developer)  Fullstack Academy, 2023.
+- [Software Engineer vs. Software Developer—What’s the Difference?](https://www.fullstackacademy.com/blog/software-engineer-vs-software-developer)&mdash;Fullstack Academy, 2023.
+- [Overview of ASP.NET Core MVC](https://learn.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-10.0#mvc-pattern)&mdash;Microsoft, Steve Smith, 2025.
 
 ------
 
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
-ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), <time>2024</time>, are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), 2024, revised in <time>2026</time>, are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
 
 ------
 

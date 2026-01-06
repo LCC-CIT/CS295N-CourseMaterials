@@ -4,27 +4,9 @@
 
 
 
-| Weekly Topics                                   |                                                |
-| ----------------------------------------------- | ---------------------------------------------- |
-| 1. Intro to Web Dev and MVC                     | 6. Entity Framework \| Deploying a DB to Azure |
-| 2. <mark>More on MVC \| Azure \| Git PRs</mark> | 7. Debugging \| *Veteran's Day holiday*        |
-| 3. MVC Architectural patterns                   | 8. Controllers                                 |
-| 4. Bootstrap                                    | 9. Razor Views \| *Thanksgiving holiday*       |
-| 5. Midterm Quiz \| Unit testing with xUnit      | 10. Razor Views (continued)                    |
-
 <h2>Contents</h2>
 
 [TOC]
-## Announcements for Fall 2024
-
-### Due this week
-
-- Lab 1 code review: Tuesday, 10/8
-  We'll talk about PRs and code reviews today.
-- Quiz over Ch. 1 in Murach: Wednesday, 10/9
-- Lab 1 production version: Thursday, 10/10
-- Lab 2 beta version/PR: Sunday, 10/13
-
 ## Overview
 
 **Microsoft Azure** is a [cloud computing](https://en.wikipedia.org/wiki/Cloud_computing) service created by [Microsoft](https://en.wikipedia.org/wiki/Microsoft) for building, testing, deploying, and managing applications and services through Microsoft-managed [data centers](https://en.wikipedia.org/wiki/Data_center). It provides [software as a service (SaaS)](https://en.wikipedia.org/wiki/Software_as_a_service), [platform as a service (PaaS)](https://en.wikipedia.org/wiki/Platform_as_a_service) and [infrastructure as a service (IaaS)](https://en.wikipedia.org/wiki/Infrastructure_as_a_service) and supports many different [programming languages](https://en.wikipedia.org/wiki/Programming_language), tools and frameworks, including both Microsoft-specific and third-party software and systems. - [Wikipedia](https://en.wikipedia.org/wiki/Microsoft_Azure)
