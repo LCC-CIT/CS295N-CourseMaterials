@@ -45,16 +45,17 @@ U.S. News [The 100 Best Jobs](https://money.usnews.com/careers/best-jobs/ranking
   The terms *software engineer* and *software developer* are often used interchangeably, but many professionals see the following distinctions:
   - Engineers are the architects who can design complete software systems.
   - Developers are coders who build what the engineers design (although most engineers are also coders).
-  - Web developers are software developers whose expertise is  focused on web development.
+  - Web developers are software developers whose expertise is focused on web development.
 - Web Developer vs. Web Designer
 
   - Developers focus on functionality.
   - Designers focus on appearance.
   - Both are concerned with UX (User eXperience) and fulfilling user's requirements.
-- What job can you get with an LCC Computer Programming degree?
+- What job can you get with an LCC Software Development degree?
 
-  - Any of the above are possible!
-  - You might start as a web developer and through self-study and OJT (On the Job Training) advance your skills to qualify for a higher position.
+  - Any of the above are possible!  
+    (Except web designer&mdash;unless you have experience or training in this too.)
+  - You might start as a tester or junior web developer and through self-study and OJT (On the Job Training) advance your skills to qualify for a higher position.
 
 ### Distinctives of Web Development
 
