@@ -19,6 +19,7 @@ In this lab, you will be creating a web site that you will continue to build on 
    - Invite your lab partners and your instructor to be collaborators on the repository. You can send a message to each of your lab partners to let them know your GitHub user name and/or email address so they can use it to add you as a collaborator.
 2. Follow the instructions in, [Getting Started with ASP.NET Core MVC](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-10.0&tabs=visual-studio) to create a web site in the working directory of your local Git repository.
 
+   -  Instead of choosing .NET 9.0 as the framework, choose .NET 10.0
    -  Instead of naming the project "MVCMovie", name it something that reflects the purpose of your site, like "AllAboutPigeons".
    - Change the home page so that it has a title and one or two sentences appropriate to the type of site corresponding to the lab assignment group you are in.
 
@@ -47,4 +48,11 @@ This week you will not submit a beta version of your web site or do code reviews
 [.gitignore](https://www.atlassian.com/git/tutorials/saving-changes/gitignore) - Atlassian BitBucket tutorial
 
 [Git Branch](https://www.atlassian.com/git/tutorials/using-branches) - Atlassian BitBucket tutorial
+
+
+
+[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
+ASP.NET Core MVC Course Materials by [Brian Bird](https://profbird.dev), 2018, revised in <time>2026</time>, are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+
+------
 

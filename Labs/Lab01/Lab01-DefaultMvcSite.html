@@ -6,7 +6,7 @@
 .mac-os-11 { --title-bar-height: 28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, "Segoe UI Emoji", "SF Pro", sans-serif; -webkit-font-smoothing: antialiased; }
 h1, h2, h3, h4, h5 { white-space: pre-wrap; }
-body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.428571; overflow-x: hidden; background: inherit; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
@@ -26,14 +26,14 @@ body.typora-export { padding-left: 30px; padding-right: 30px; }
 #write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
 img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
-button, input, select, textarea { color: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-width: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-size-adjust: inherit; font-kerning: inherit; font-variant-alternates: inherit; font-variant-ligatures: inherit; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-variant-position: inherit; font-variant-emoji: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-variation-settings: inherit; }
+button, input, select, textarea { color: inherit; font: inherit; }
 input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
 *, ::after, ::before { box-sizing: border-box; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; position: relative; }
 #write svg h1, #write svg h2, #write svg h3, #write svg h4, #write svg h5, #write svg h6, #write svg p { position: static; }
 .nodeLabel p { padding-right: 2px; padding-left: 2px; }
 .typora-export .nodeLabel p { padding-right: 0px; padding-left: 0px; }
-foreignObject { overflow: visible; }
+foreignobject { overflow: visible; }
 p { line-height: inherit; }
 h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
 p { orphans: 4; }
@@ -57,8 +57,8 @@ thead, tr { break-inside: avoid; break-after: auto; }
 thead { display: table-header-group; }
 table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
 table.md-table td { min-width: 32px; }
-.CodeMirror-gutters { border-right-width: 0px; border-right-style: none; border-right-color: currentcolor; background-color: inherit; }
-.CodeMirror-linenumber { -webkit-user-select: none; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
 .CodeMirror { text-align: left; }
 .CodeMirror-placeholder { opacity: 0.3; }
 .CodeMirror pre { padding: 0px 4px; }
@@ -78,7 +78,7 @@ div.hr:focus { cursor: none; }
 svg { break-inside: avoid; }
 .footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
 .footnotes + .footnotes { margin-top: 0px; }
-.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
 li div { padding-top: 0px; }
 blockquote { margin: 1rem 0px; }
 li .mathjax-block, li p { margin: 0.5rem 0px; }
@@ -91,7 +91,7 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
 @media print {
   body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
   #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
-  .typora-export * { print-color-adjust: exact; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
   .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
   .is-mac table { break-inside: avoid; }
@@ -112,7 +112,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 [contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
 .md-task-list-item { position: relative; list-style-type: none; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
-.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: medium; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
 .math { font-size: 1rem; }
 .md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
 .md-toc-content { position: relative; margin-left: 0px; }
@@ -142,14 +142,14 @@ code, pre, samp, tt { font-family: var(--monospace); }
 kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
 .md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
 code { text-align: left; vertical-align: initial; }
-a.md-print-anchor { white-space: pre !important; border-width: medium !important; border-style: none !important; border-color: currentcolor !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
 .md-diagram-panel > svg { max-width: 100%; }
 [lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
 [lang="mermaid"] .node text { font-size: 1rem; }
-table tr th { border-bottom-width: 0px; border-bottom-style: none; border-bottom-color: currentcolor; }
+table tr th { border-bottom: 0px; }
 video { max-width: 100%; display: block; margin: 0px auto; }
-iframe { max-width: 100%; width: 100%; border: medium; }
+iframe { max-width: 100%; width: 100%; border: none; }
 .highlight td, .highlight tr { border: 0px; }
 mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
@@ -178,7 +178,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
 .outline-content ul { margin-top: 0px; margin-bottom: 0px; }
 .outline-content strong { font-weight: 400; }
-.outline-expander { width: 1rem; height: 1.428571rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
 .outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
 .outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
 .outline-expander:hover::before { content: ""; }
@@ -191,14 +191,14 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
 .outline-label:hover { text-decoration: underline; }
 .outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
-.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
 .outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
 .outline-item-open > .outline-item > .outline-expander::before { content: ""; }
 .outline-children { display: none; }
 .info-panel-tab-wrapper { display: none; }
 .outline-item-open > .outline-children { display: block; }
 .typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
-.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
 .typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
 .typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
 .typora-export-collapse-outline .outline-children { display: none; }
@@ -212,7 +212,7 @@ mjx-container { break-inside: avoid; }
 .md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
 .md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
 .md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
-.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left-width: 0.25em; border-left-style: solid; border-left-color: rgb(0, 0, 0); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left: 0.25em solid rgb(0, 0, 0); }
 .md-alert-text-note { color: rgb(9, 105, 218); }
 .md-alert-text-important { color: rgb(130, 80, 223); }
 .md-alert-text-warning { color: rgb(154, 103, 0); }
@@ -613,12 +613,12 @@ header, .context-menu, .megamenu-content, footer{
 }
 </style>
 <style type='text/css'  id="style-lp">ol, ul {padding-left: 40px}</style>
-<style type='text/css'  id="style-mac-print"> @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}</style>
 
 <title>Lab01-DefaultMvcSite</title>
 </head>
-<body class='typora-export'><div class='typora-export-content'>
+<body class='typora-export os-windows'><div class='typora-export-content'>
 <div id='write'  class=''><h1 id='lab-1-the-visual-studio-default-site'><span>Lab 1: The Visual Studio Default Site</span></h1><p><span>CS295N, Web Development 1: ASP.NET</span></p><p><span>In this lab, you will be creating a web site that you will continue to build on in subsequent lab assignments. The type of site you make will depend on the Moodle lab assignment group to which you have been assigned. These are the types of sites you will create:</span></p><ul><li><p><span>Group A: Community site</span>&mdash;<span>this can be a site for a neighborhood, a club, or any other type of group.</span></p></li><li><p><span>Group B: Fan site</span>&mdash;<span>a site dedicated to a person, book, music group or anything else you might be a fan of.</span></p></li><li><p><span>Group C: Informational site</span>&mdash;<span>this site can contain information on any topic like food, politics, cats, or anything else you are interested in.</span></p></li></ul><h3 id='instructions'><span>Instructions</span></h3><ol start='' ><li><p><span>Create a private repository on </span><a href='https://github.com/'><span>GitHub</span></a><span>. Use your real name in the name of the repository. For example: &quot;BrianBird_CS295N_Labs&quot;. You will put each lab assignment in a different </span><a href='https://www.atlassian.com/git/tutorials/using-branches'><span>branch</span></a><span> in this repository.</span></p><ul><li><p><span>Add a </span><a href='https://www.toptal.com/developers/gitignore/api/aspnetcore'><span>.gitignore file</span></a><span> for ASP.NET Core projects and commit it to the main branch.</span>
-<u><span>Important</span></u><span>: commit the gitignore file before you commit any other code!</span></p></li><li><p><span>Make a branch named lab1, which is derived form the main and put your web project into it.</span></p></li><li><p><span>Invite your lab partners and your instructor to be collaborators on the repository. You can send a message to each of your lab partners to let them know your GitHub user name and/or email address so they can use it to add you as a collaborator.</span></p></li></ul></li><li><p><span>Follow the instructions in, </span><a href='https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-10.0&amp;tabs=visual-studio'><span>Getting Started with ASP.NET Core MVC</span></a><span> to create a web site in the working directory of your local Git repository.</span></p><ul><li><p><span>Instead of naming the project &quot;MVCMovie&quot;, name it something that reflects the purpose of your site, like &quot;AllAboutPigeons&quot;.</span></p></li><li><p><span>Change the home page so that it has a title and one or two sentences appropriate to the type of site corresponding to the lab assignment group you are in.</span></p></li></ul></li></ol><p><strong><span>Note:</span></strong><span> Visual Studio creates an SSL certificate for the project so that when you run the web app on your development machine you can use an </span><em><span>https</span></em><span> connection. You may need to perform some additional steps to get your browser (particularly Firefox) to accept the certificate. </span></p><h3 id='grading-rubric'><span>Grading Rubric</span></h3><p><a href='Lab1Rubric_CS295N.htm'><span>Lab 1 Grading Rubric</span></a></p><h3 id='submission'><span>Submission</span></h3><p><span>This week you will not submit a beta version of your web site or do code reviews.</span></p><ol start='' ><li><p><span>Take a screen-shot of the home page of your app. </span></p><p><span>Include the address bar of the browser in the screen-shot.</span></p></li><li><p><span>Upload the screen-shot to Moodle.</span></p></li><li><p><span>Enter the URL of the lab1 branch of your Git repository in the Moodle online text.</span></p></li></ol><p>&nbsp;</p><h3 id='references'><span>References</span></h3><p><a href='https://www.atlassian.com/git/tutorials/saving-changes/gitignore'><span>.gitignore</span></a><span> - Atlassian BitBucket tutorial</span></p><p><a href='https://www.atlassian.com/git/tutorials/using-branches'><span>Git Branch</span></a><span> - Atlassian BitBucket tutorial</span></p><p>&nbsp;</p></div></div>
+<u><span>Important</span></u><span>: commit the gitignore file before you commit any other code!</span></p></li><li><p><span>Make a branch named lab1, which is derived form the main and put your web project into it.</span></p></li><li><p><span>Invite your lab partners and your instructor to be collaborators on the repository. You can send a message to each of your lab partners to let them know your GitHub user name and/or email address so they can use it to add you as a collaborator.</span></p></li></ul></li><li><p><span>Follow the instructions in, </span><a href='https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-10.0&amp;tabs=visual-studio'><span>Getting Started with ASP.NET Core MVC</span></a><span> to create a web site in the working directory of your local Git repository.</span></p><ul><li><p><span>Instead of choosing .NET 9.0 as the framework, choose .NET 10.0</span></p></li><li><p><span>Instead of naming the project &quot;MVCMovie&quot;, name it something that reflects the purpose of your site, like &quot;AllAboutPigeons&quot;.</span></p></li><li><p><span>Change the home page so that it has a title and one or two sentences appropriate to the type of site corresponding to the lab assignment group you are in.</span></p></li></ul></li></ol><p><strong><span>Note:</span></strong><span> Visual Studio creates an SSL certificate for the project so that when you run the web app on your development machine you can use an </span><em><span>https</span></em><span> connection. You may need to perform some additional steps to get your browser (particularly Firefox) to accept the certificate. </span></p><h3 id='grading-rubric'><span>Grading Rubric</span></h3><p><a href='Lab1Rubric_CS295N.htm'><span>Lab 1 Grading Rubric</span></a></p><h3 id='submission'><span>Submission</span></h3><p><span>This week you will not submit a beta version of your web site or do code reviews.</span></p><ol start='' ><li><p><span>Take a screen-shot of the home page of your app. </span></p><p><span>Include the address bar of the browser in the screen-shot.</span></p></li><li><p><span>Upload the screen-shot to Moodle.</span></p></li><li><p><span>Enter the URL of the lab1 branch of your Git repository in the Moodle online text.</span></p></li></ol><p>&nbsp;</p><h3 id='references'><span>References</span></h3><p><a href='https://www.atlassian.com/git/tutorials/saving-changes/gitignore'><span>.gitignore</span></a><span> - Atlassian BitBucket tutorial</span></p><p><a href='https://www.atlassian.com/git/tutorials/using-branches'><span>Git Branch</span></a><span> - Atlassian BitBucket tutorial</span></p><p>&nbsp;</p><p><a href='http://creativecommons.org/licenses/by/4.0/'><img src="https://i.creativecommons.org/l/by/4.0/88x31.png" alt="Creative Commons License"></a>
+<span>ASP.NET Core MVC Course Materials by </span><a href='https://profbird.dev'><span>Brian Bird</span></a><span>, 2018, revised in </span><time><span>2026</span></time><span>, are licensed under a </span><a href='http://creativecommons.org/licenses/by/4.0/'><span>Creative Commons Attribution 4.0 International License</span></a><span>. </span></p><hr /><p>&nbsp;</p></div></div>
 </body>
 </html>
