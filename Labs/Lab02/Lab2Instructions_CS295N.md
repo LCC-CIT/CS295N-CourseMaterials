@@ -5,10 +5,10 @@
 
 [TOC]
 
-## Part 1: Textbook Tutorial Exercise
+## Part 1: Microsoft Tutorials
 
-Complete Exercise 1-1 in *Murach's ASP.NET Core MVC*
-(Use Visual Studio to run the Guitar Shop app.)
+- [Add a controller](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/adding-controller?view=aspnetcore-10.0&tabs=visual-studio)
+- [Add a view](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/adding-view?view=aspnetcore-10.0&tabs=visual-studio)
 
 ## Part 2: Skeletal Web Site
 
@@ -117,9 +117,9 @@ No models are needed yet. You will add those in a future lab assignment.
 
    On Moodle, in the "online text" field of the Code Review assignment, enter the URL of the pull request with the code review <u>you gave</u>.
 
-### Final Submission to Moodle
+### Final Submission to Moodle and Azure
 
-1.  Upload a screen-shot of the textbook exercise.
+1.  Upload one screen-shot of each completed tutorial for part 1.
 2.  Publish your web site from part 2 to Azure.
 3.  In the "online text" for the Moodle assignment:
     - Paste a link to the branch of your GitHub repository for this lab.

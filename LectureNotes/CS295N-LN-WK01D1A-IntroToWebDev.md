@@ -1,16 +1,8 @@
 **[CS295N Web Development 1: ASP.NET](http://lcc-cit.github.io/CS295N-CourseMaterials/)**
 
-# Intro to Web Dev
+<h1>Intro to Web Dev</h1>
 
-| Weekly Topics                             |                                               |
-| ----------------------------------------- | --------------------------------------------- |
-| <mark>1. Intro to Web Dev</mark>          | 6. Entity Framework / Deploying a DB to Azure |
-| 2. Intro to MVC / Deploying to Azure      | 7. Debugging / *Veteran's Day holiday*        |
-| 3. MVC Architectural patterns             | 8. Controllers                                |
-| 4. Bootstrap                              | 9. Razor Views / *Thanksgiving holiday*       |
-| 5. Midterm Quiz / Unit testing with xUnit | 10. Razor Views (continued)                   |
-
-## Contents
+<h2>Contents</h2>
 
 [TOC]
 
@@ -26,13 +18,26 @@
 
 ### Job Prospects for Developers
 
-U.S. News [The 100 Best Jobs](https://money.usnews.com/careers/best-jobs/rankings/the-100-best-jobs) for 2024
+U.S. News [The 100 Best Jobs](https://money.usnews.com/careers/best-jobs/rankings/the-100-best-jobs) for 2025
 
-- [#3: Software Developer](https://money.usnews.com/careers/best-jobs/software-developer)
+- The overall metrics U.S. News used to calculate the 2025 Best Jobs rankings are:
+
+  - Future prospects for employment growth (30%)
+  - Wage potential (25%) 
+  - Employment vs. unemployment rates (20%) 
+  - Job safety (health care, working conditions, injuries) and stability (15%) 
+  - Work-life balance (10%) 
+
+  The data U.S. News gathered for each metric comes from the U.S. Bureau of Labor Statistics.
+
+- [#5: Software Developer](https://money.usnews.com/careers/best-jobs/software-developer)
 
   > A software developer is a professional who is responsible for designing and building computer programs. Some may build underlying operating systems, while others may focus only on developing new mobile and desktop applications. They also develop computer games and other digital architecture.&mdash;Indeed.com
-  - #1 in Best Technology Jobs
-  - Median Salary: $127,260
+  - ##2 in Best Technology Jobs
+  
+    - Median Salary: $132,270
+    - Unemployment rate: 2.4%
+    - Number of jobs in the U.S.: 303,700
 
 ### Meaning of Different Job Titles
 
@@ -40,16 +45,17 @@ U.S. News [The 100 Best Jobs](https://money.usnews.com/careers/best-jobs/ranking
   The terms *software engineer* and *software developer* are often used interchangeably, but many professionals see the following distinctions:
   - Engineers are the architects who can design complete software systems.
   - Developers are coders who build what the engineers design (although most engineers are also coders).
-  - Web developers are software developers whose expertise is  focused on web development.
+  - Web developers are software developers whose expertise is focused on web development.
 - Web Developer vs. Web Designer
 
   - Developers focus on functionality.
   - Designers focus on appearance.
   - Both are concerned with UX (User eXperience) and fulfilling user's requirements.
-- What job can you get with an LCC Computer Programming degree?
+- What job can you get with an LCC Software Development degree?
 
-  - Any of the above are possible!
-  - You might start as a web developer and through self-study and OJT (On the Job Training) advance your skills to qualify for a higher position.
+  - Any of the above are possible!  
+    (Except web designer&mdash;unless you have experience or training in this too.)
+  - You might start as a tester or junior web developer and through self-study and OJT (On the Job Training) advance your skills to qualify for a higher position.
 
 ### Distinctives of Web Development
 
@@ -116,12 +122,13 @@ U.S. News [The 100 Best Jobs](https://money.usnews.com/careers/best-jobs/ranking
 
 ## References
 
-- [Software Engineer vs. Software Developer—What’s the Difference?](https://www.fullstackacademy.com/blog/software-engineer-vs-software-developer)  Fullstack Academy, 2023.
+- [Software Engineer vs. Software Developer—What’s the Difference?](https://www.fullstackacademy.com/blog/software-engineer-vs-software-developer)&mdash;Fullstack Academy, 2023.
+- [Overview of ASP.NET Core MVC](https://learn.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-10.0#mvc-pattern)&mdash;Microsoft, Steve Smith, 2025.
 
 ------
 
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
-ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), <time>2024</time>, are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), 2024, revised in <time>2026</time>, are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
 
 ------
 

@@ -4,27 +4,9 @@
 
 
 
-| Weekly Topics                                   |                                                |
-| ----------------------------------------------- | ---------------------------------------------- |
-| 1. Intro to Web Dev and MVC                     | 6. Entity Framework \| Deploying a DB to Azure |
-| 2. <mark>More on MVC \| Azure \| Git PRs</mark> | 7. Debugging \| *Veteran's Day holiday*        |
-| 3. MVC Architectural patterns                   | 8. Controllers                                 |
-| 4. Bootstrap                                    | 9. Razor Views \| *Thanksgiving holiday*       |
-| 5. Midterm Quiz \| Unit testing with xUnit      | 10. Razor Views (continued)                    |
-
 <h2>Contents</h2>
 
 [TOC]
-## Announcements for Fall 2024
-
-### Due this week
-
-- Lab 1 code review: Tuesday, 10/8
-  We'll talk about PRs and code reviews today.
-- Quiz over Ch. 1 in Murach: Wednesday, 10/9
-- Lab 1 production version: Thursday, 10/10
-- Lab 2 beta version/PR: Sunday, 10/13
-
 ## Overview
 
 **Microsoft Azure** is a [cloud computing](https://en.wikipedia.org/wiki/Cloud_computing) service created by [Microsoft](https://en.wikipedia.org/wiki/Microsoft) for building, testing, deploying, and managing applications and services through Microsoft-managed [data centers](https://en.wikipedia.org/wiki/Data_center). It provides [software as a service (SaaS)](https://en.wikipedia.org/wiki/Software_as_a_service), [platform as a service (PaaS)](https://en.wikipedia.org/wiki/Platform_as_a_service) and [infrastructure as a service (IaaS)](https://en.wikipedia.org/wiki/Infrastructure_as_a_service) and supports many different [programming languages](https://en.wikipedia.org/wiki/Programming_language), tools and frameworks, including both Microsoft-specific and third-party software and systems. - [Wikipedia](https://en.wikipedia.org/wiki/Microsoft_Azure)
@@ -117,13 +99,13 @@ If you are having problems with your web app on Azure there are a couple things 
 
 - [Microsoft Azure Sponsorships](https://www.microsoftazuresponsorships.com/)&mdash;Check your Azure credit billing
 
-- [Publish a Web App to Azure App Service using Visual Studio](https://docs.microsoft.com/en-US/visualstudio/deployment/quickstart-deploy-to-azure?view=vs-2019)&mdash;Microsoft Visual Studio Docs
+- [Publish a Web App to Azure App Service using Visual Studio](https://learn.microsoft.com/en-us/visualstudio/deployment/quickstart-deploy-aspnet-web-app?view=visualstudio)&mdash;Microsoft Visual Studio Docs
 
   
 
 ------
 
-[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), 2020, revised 2024, are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
+[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), 2020, revised <time>2026</time>, are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
 
 ------
 

@@ -14,11 +14,12 @@ The purpose of the presentation is to show off the web site you made to tell us 
   - In person: you will give a live presentation to the class. 
   - On Zoom: You will share your screen and the instructor will project that for the class to see.
   - Online: You can make a screen-cast and post a link to it in the presentation forum on Moodle. If you are making a screen-cast you can use any screen capture software that both records the screen and audio narration such as:
-    - [Screencast-O-Matic](https://screencast-o-matic.com/)
-    - [ScreenRec](https://screenrec.com/)&mdash;recommended!
+    - [ScreenPal (formerly Screencast-O-Matic)](https://screenpal.com)&mdash;free for 15 minute or shorter recordings.
+    - [ScreenRec](https://screenrec.com/)&mdash;free!
+    - [Zoom](https://www.zoom.com)&mdash;Meet with your team on Zoom, use webcams and/or mics, share your screen and record the meeting.
 
 
-  
+
 
 ****
 

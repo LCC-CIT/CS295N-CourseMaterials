@@ -256,6 +256,28 @@ The LCC main campus is located at 4000 East 30th Ave. Eugene, Oregon 97405.
 
 View [academic calendars](https://www.lanecc.edu/calendars/academic-calendar) on the LCC web site.
 
+### Weekly Learning Activities
+
+This cycle starts on the second week
+
+- Sunday
+
+    Finish the beta version of last week's lab.
+    Send a PR to your lab partner.
+    Start the assigned reading
+
+- Tuesday
+
+    Do a code review of last week's lab for your lab partner.
+
+- Wednesday
+
+    Take the reading quiz.
+
+- Thursday
+
+    Submit the production version of last week's lab.
+
 ### Tentative Course Schedule
 
 (May be subject to change)
@@ -265,10 +287,10 @@ View [academic calendars](https://www.lanecc.edu/calendars/academic-calendar) on
 | **1**<br />1/5   | Intro to Web Dev<br />*Class starts Tuesday*                 | Lab 1<br />Create an empty MVC site                          |
 | **2**<br />1/12  | Intro to MVC                                                 | Lab 2<br />Add pages and links to a site                     |
 | **3**<br />1/19  | Working with Data                                            | Lab 3<br />Add models and data entry and publish to Azure    |
-| **4**<br />1/26  | Bootstrap                                                    | Lab 4<br />Add Bootstrap to your site                        |
+| **4**<br />1/26  | Entity Framework<br />Database Migrations<br />Deploying a DB to Azure | Lab 4<br />Add a DB to your site                             |
 | **5**<br />2/2   | Midterm quiz                                                 | Term project proposal<br>Midterm quiz:<br />In the classroom on 2/4<br />In the testing center 2/4 through 2/6 (tentative dates) |
 | **6**<br />2/9   | Unit testing with xUnit                                      | Lab 5<br />Add a quiz and unit tests to your site.           |
-| 7<br />2/16      | Entity Framework<br />Database Migrations<br />Deploying a DB to Azure<br /><br /> | Lab 6<br />Add a DB to your site<br />                       |
+| 7<br />2/16      | Input Validation                                             | Lab 6<br />Add validation to your web site                   |
 | **8**<br />2/23  | Repository Pattern<br />More Unit Testing                    | Lab 7                                                        |
 | **9**<br />3/2   | Linq and Seed Data                                           | Lab 8                                                        |
 | **10**<br />3/9  | Debugging<br />Final quiz                                    | Lab 9 (Extra Credit)<br />- Debugging practice<br />Final in classroom 3/11<br />Final in testing center 3/11&ndash;3/13 (tentative dates) |
