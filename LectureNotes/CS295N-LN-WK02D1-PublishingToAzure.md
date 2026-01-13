@@ -99,13 +99,13 @@ If you are having problems with your web app on Azure there are a couple things 
 
 - [Microsoft Azure Sponsorships](https://www.microsoftazuresponsorships.com/)&mdash;Check your Azure credit billing
 
-- [Publish a Web App to Azure App Service using Visual Studio](https://docs.microsoft.com/en-US/visualstudio/deployment/quickstart-deploy-to-azure?view=vs-2019)&mdash;Microsoft Visual Studio Docs
+- [Publish a Web App to Azure App Service using Visual Studio](https://learn.microsoft.com/en-us/visualstudio/deployment/quickstart-deploy-aspnet-web-app?view=visualstudio)&mdash;Microsoft Visual Studio Docs
 
   
 
 ------
 
-[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), 2020, revised 2024, are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
+[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), 2020, revised <time>2026</time>, are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
 
 ------
 
