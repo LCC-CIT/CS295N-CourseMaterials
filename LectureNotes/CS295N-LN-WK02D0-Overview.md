@@ -1,4 +1,4 @@
-## Week 1 Overview for Winter 2026
+## Week 2 Overview for Winter 2026
 
 **CS 295N, Web Dev 1: ASP.NET**
 
@@ -13,15 +13,15 @@
 
 ### Overview
 
-This week you will get an overview of web development with ASP.NET Core and publish a web site to the Azure cloud
+This week you will learn how to add empty views (pages) and the controllers to support them to create the skeleton of your web site. You will publish your web site to Azure.
 
 ### Learning Outcomes
 
 **By the end of this week, students will be able to:**
 
-1. Describe what a web developer does.
-2. Describe the ASP.NET Core MVC framework.
-3. Use Visual Studio to create an ASP.NET Core MVC Web site using the default template.
+1. Add controllers to a web site project.
+2. Add views.
+3. Add links between views
 4. Set up an account on the Azure cloud.
 
 ## Due Dates for this Week's Learning Activities
