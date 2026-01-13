@@ -256,6 +256,28 @@ The LCC main campus is located at 4000 East 30th Ave. Eugene, Oregon 97405.
 
 View [academic calendars](https://www.lanecc.edu/calendars/academic-calendar) on the LCC web site.
 
+### Weekly Learning Activities
+
+This cycle starts on the second week
+
+- Sunday
+
+    Finish the beta version of last week's lab.
+    Send a PR to your lab partner.
+    Start the assigned reading
+
+- Tuesday
+
+    Do a code review of last week's lab for your lab partner.
+
+- Wednesday
+
+    Take the reading quiz.
+
+- Thursday
+
+    Submit the production version of last week's lab.
+
 ### Tentative Course Schedule
 
 (May be subject to change)
