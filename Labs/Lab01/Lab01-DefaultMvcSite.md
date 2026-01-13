@@ -1,6 +1,8 @@
-# Lab 1: The Visual Studio Default Site
+<h1>Lab 1: The Visual Studio Default Site</h1>
 
 CS295N, Web Development 1: ASP.NET
+
+[TOC]
 
 In this lab, you will be creating a web site that you will continue to build on in subsequent lab assignments. The type of site you make will depend on the Moodle lab assignment group to which you have been assigned. These are the types of sites you will create:
 
@@ -8,7 +10,7 @@ In this lab, you will be creating a web site that you will continue to build on 
 - Group B: Fan site&mdash;a site dedicated to a person, book, music group or anything else you might be a fan of.
 - Group C: Informational site&mdash;this site can contain information on any topic like food, politics, cats, or anything else you are interested in.
 
-### Instructions
+## Instructions
 
 1. Create a private repository on [GitHub](https://github.com/). Use your real name in the name of the repository. For example: "BrianBird_CS295N_Labs".
 
@@ -31,9 +33,16 @@ In this lab, you will be creating a web site that you will continue to build on 
 
 [Lab 1 Grading Rubric](Lab1Rubric_CS295N.htm)
 
-### Submission
+## Submission
 
-This week you will not submit a beta version of your web site or do code reviews.
+### Code Review
+
+1. Send your lab partner a PR requesting a code review of your beta version.
+2. Your lab partner should send you a PR as well.
+3. Clone your lab partner's web site and pull the latest code for the lab 1 branch.
+4. Check the web site (there's not much to check this time) and enter your review in the comment on the PR from your lab partner. (It might be as simple as "everything looks good".)
+
+### Production Version
 
 1. Take a screen-shot of the home page of your app. 
 

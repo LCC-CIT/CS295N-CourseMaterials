@@ -248,7 +248,7 @@ The LCC main campus is located at 4000 East 30th Ave. Eugene, Oregon 97405.
 | **Winter Term 2026**                        |              |
 | ------------------------------------------- | ------------ |
 | Term begins                                 | 1/5, Monday  |
-| Last day to drop and receive a refund       | 1/11, Sunday |
+| Last day to drop and receive a refund       | 1/12, Monday |
 | Martin Luther King Jr. Day (college closed) | 1/19, Monday |
 | Presidents' Day (college closed)            | 2/16, Monday |
 | Last day for schedule changes               | 2/27, Friday |
