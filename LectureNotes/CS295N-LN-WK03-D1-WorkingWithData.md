@@ -4,7 +4,7 @@
 | ----------------------------------------- | --------------------------------------------- |
 | 1. Intro to Web Dev                       | 6. Entity Framework / Deploying a DB to Azure |
 | 2. Intro to MVC / Deploying to Azure      | 7. Debugging / *Veteran's Day holiday*        |
-| 3. **Working with data**                  | 8. Controllers                                |
+| <mark>3. Working with data</mark>         | 8. Controllers                                |
 | 4. Bootstrap                              | 9. Razor Views / *Thanksgiving holiday*       |
 | 5. Midterm Quiz / Unit testing with xUnit | 10. Validation                                |
 
@@ -20,11 +20,11 @@
 
 ## What's Due
 
-- Lab 2 beta version PR was due last Sunday
+- Lab 2 beta version PR was due Sunday
 - Lab 2 code review: Tuesday
 - Quiz 3: Wednesday
 - Lab 2 production version: Thursday
-  - Part 2 (your web site) should be published to Azure.
+  - Part 2 (your web site) should be published to Azure again.
 
 - Lab 3 beta version PR: Sunday
 
@@ -303,14 +303,14 @@ This version uses the `asp-for` tag helper in the labels and input elements.
 
 ## Reference
 
-Ch. 2, "How to code a single-page MVC web app", *Murach’s ASP.NET Core MVC*, 2st Edition, by Mary Delamater and Joel Murach, Murach Books, 2022.
+Ch. 2, "How to code a single-page MVC web app", *Murach’s ASP.NET Core MVC*, 2nd Edition, by Mary Delamater and Joel Murach, Murach Books, 2022.
 
-[Overview of ASP.NET Core MVC](https://learn.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-6.0), Microsoft Tutorial, 2024
+[Overview of ASP.NET Core MVC](https://learn.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-10.0), Microsoft Tutorial, 2024
 
 
 ------
 
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
-ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), revised <time>2024</time>, are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), revised <time>2026</time>, are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
 
 ------
