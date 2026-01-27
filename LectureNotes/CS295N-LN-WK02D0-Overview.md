@@ -4,11 +4,11 @@
 
 | Weekly Topics                                     |                               |
 | ------------------------------------------------- | ----------------------------- |
-| 1. Intro to Web Dev                               | 6. Input Validation           |
-| <mark>2. Intro to MVC / Deploying to Azure</mark> | 7. Debugging                  |
-| 3. MVC Architectural patterns                     | 8. Controllers                |
-| 4. Entity Framework / Deploying a DB to Azure     | 9. Razor Views                |
-| 5. Midterm Quiz / Unit testing with xUnit         | 10. Term Project Presentation |
+| 1. Intro to Web Dev                               | 6. EF and Database            |
+| <mark>2. Intro to MVC / Deploying to Azure</mark> | 7. Input Validation           |
+| 3. Managing data: forms and models                | 8. Controllers                |
+| 4. Unit Testing                                   | 9. Razor Views                |
+| 5. Midterm Quiz / Start project                   | 10. Term Project Presentation |
 |                                                   | 11. Final                     |
 
 [TOC]
