@@ -11,27 +11,11 @@ author: Brian Bird
 
 <h1>Unit Testing</h1>
 
-| Weekly Topics                           |                                          |
-| --------------------------------------- | ---------------------------------------- |
-| 1. Intro to Web Dev                     | 6. <mark>Unit Testing</mark>             |
-| 2. Intro to MVC & Deploying to Azure    | 7. Database & Entity Framework           |
-| 3. Working with Data                    | 8. Unit Testing & the Repository Pattern |
-| 4. Bootstrap                            | 9. Linq and Seed Data                    |
-| 5. Midterm Quiz & Term Project Proposal | 10. Debugging                            |
-
 <h2>Contents</h2>
 
 [TOC]
 
-# Introduction
-
-- Answer questions about the midterm.
-- Answer questions about term project, proposal is due Sunday.
-- Describe where we're going: unit testing, databases, unit testing with databases.
-
-
-
-# Unit Testing Overview 
+# Unit Testing Intro
 
 We'll cover more details of unit testing later, but here are some basic concepts:
 
@@ -200,14 +184,6 @@ public void Review_PostTest()
 # Example
 
 [Test project in the Book Review web site example](https://github.com/LCC-CIT/CS295N-Example-BookReviews/tree/5-UnitTests)
-
-
-
-# Wrap-up
-
-- Look at the lab assignment.
-- Look at the term project requirements.
-- Look at due dates on Moodle.
 
 
 
