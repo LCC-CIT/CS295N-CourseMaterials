@@ -214,10 +214,13 @@ public void Review_PostTest()
 # Reference
 
 - Official web page: [xUnit Documentation](https://xunit.net/#documentation)
+  - Most recent (Ver. 3.2.2) [API documentation](https://api.xunit.net/v3/3.2.2/)
+    This lists the xUnit classes and methods. The one you use the most will be [Assert](https://api.xunit.net/v3/3.2.2/Xunit.Assert.html).
+
 - Using xUnit with Visual Studio: [Getting Started with xUnit.net](https://xunit.net/docs/getting-started/netfx/visual-studio)
 - Microsoft Tutorial: [Testing Controller Logic in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/testing)
 
 ------
 
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) ASP.NET Core MVC Lecture Notes by [Brian Bird](https://birdsbits.blog), 2018, revised 2023, are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), 2018, revised <time>2026</time>, are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
 
