@@ -15,13 +15,13 @@ author: Brian Bird
 
 [TOC]
 
-# Unit Testing Intro
+## Unit Testing Intro
 
 We'll cover more details of unit testing later, but here are some basic concepts:
 
 - MVC facilitates unit testing - this is one of the reasons to use MVC
 
-## What to test?
+### What to test?
 
 - Business logic (in models, or in separate classes)
   - If Models just contain simple C# properties, they don't really need tests
@@ -40,7 +40,7 @@ We'll cover more details of unit testing later, but here are some basic concepts
 
   - Solution - test against a "fake" repository.
 
-## Test Driven Development (TDD)
+### Test Driven Development (TDD)
 
 - *Test first* is one of the key concept in [TDD](https://en.wikipedia.org/wiki/Test-driven_development). Writing unit tests before writing the methods they test gives you a clear idea of what the method should do and speeds up development by letting you test easily and often.
 - Test after bug fixes.
@@ -49,7 +49,7 @@ We'll cover more details of unit testing later, but here are some basic concepts
 
 One of the major early proponants of TDD was [Kent Beck](https://en.wikipedia.org/wiki/Kent_Beck), who is a graduate of the U of O.
 
-## xUnit
+### xUnit
 
 Used by the .NET Core team to test their own code ("dog fooding"). Written by the original developer of NUnit.
 
@@ -60,13 +60,13 @@ Alternative unit testing frameworks are:
 - NUnit
 - MSUnit
 
-# How to Add Unit Tests to a VS Solution
+## How to Add Unit Tests to a VS Solution
 
 1. Add a unit test project for C# to the Visual Studio Solution. 
 2. Add a reference to the web app project to the test project. 
 3. Now you can start writing tests.
 
-## Parts of a Unit Test
+### Parts of a Unit Test
 
 - Arrange  
   Create objects, initialize variables or constants and get everything ready so you can call the method that you are testing.
@@ -75,7 +75,7 @@ Alternative unit testing frameworks are:
 - Assert  
   Check the return value and/or any other object affected by the method call.
 
-## Asserts
+### Asserts
 
 Use Intellisense in Visual Studio to get a list of asserts.
 
@@ -83,9 +83,9 @@ Note: When comparing for equality, remember that if you use == to compare two ob
 
 The `Assert.Equal` test method uses the base class `Equal` method of C# objects for comparison. Primitive .NET types and many classes in the .NET library have fully implemented this method. You only need to write a Compare class (as shown in the textbook) if you are using a class that doesn't already have a comparator implemented for the `Equals` method.
 
-## Example Tests
+### Example Tests
 
-### A Business Logic Test
+#### A Business Logic Test
 
 The unit test will be for the method below, from a class named AuthorQuiz, used to implement a quiz about authors:
 
@@ -140,7 +140,7 @@ public void CheckAnswerTest()
 }
 ```
 
-### A Controller Test
+#### A Controller Test
 
 Assume we have the controller method below which gets information from a view containing an user entry form. This method then sends the info to the Index view as route values which become query parameters on an HTTP GET request. This is a simplified version of the corresponding method in the Book Review example.
 
@@ -181,13 +181,13 @@ public void Review_PostTest()
 
 
 
-# Example
+## Example
 
 [Test project in the Book Review web site example](https://github.com/LCC-CIT/CS295N-Example-BookReviews/tree/5-UnitTests)
 
 
 
-# Reference
+## Reference
 
 - Official web page: [xUnit Documentation](https://xunit.net/#documentation)
   - Most recent (Ver. 3.2.2) [API documentation](https://api.xunit.net/v3/3.2.2/)
