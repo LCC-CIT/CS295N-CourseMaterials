@@ -1,25 +1,19 @@
 <!doctype html>
-<html style='font-size:20px !important'>
+<html>
 <head>
-<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<meta name="title" content="">
-<meta name="description" content="">
-<meta name="keywords" content="">
-<meta name="material" content="">
-<meta name="author" content="">
-<meta name="generator" content="">
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'><style type='text/css'>html {overflow-x: initial !important;}</style>
+<style type='text/css'  id="style-base">:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
 .mac-os-11 { --title-bar-height: 28px; }
-html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, "Segoe UI Emoji", "SF Pro", sans-serif; -webkit-font-smoothing: antialiased; }
 h1, h2, h3, h4, h5 { white-space: pre-wrap; }
-body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
 #write.first-line-indent p { text-indent: 2em; }
-#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li p, #write.first-line-indent p *, #write.first-line-indent svg * { text-indent: 0px; }
 #write.first-line-indent li { margin-left: 2em; }
 .for-image #write { padding-left: 8px; padding-right: 8px; }
 body.typora-export { padding-left: 30px; padding-right: 30px; }
@@ -32,14 +26,18 @@ body.typora-export { padding-left: 30px; padding-right: 30px; }
 #write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
 img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
-button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+button, input, select, textarea { color: inherit; font: inherit; }
 input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
 *, ::after, ::before { box-sizing: border-box; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; position: relative; }
+#write svg h1, #write svg h2, #write svg h3, #write svg h4, #write svg h5, #write svg h6, #write svg p { position: static; }
+.nodeLabel p { padding-right: 2px; padding-left: 2px; }
+.typora-export .nodeLabel p { padding-right: 0px; padding-left: 0px; }
+foreignobject { overflow: visible; }
 p { line-height: inherit; }
 h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
 p { orphans: 4; }
+li p { orphans: 1; }
 h1 { font-size: 2rem; }
 h2 { font-size: 1.8rem; }
 h3 { font-size: 1.6rem; }
@@ -59,8 +57,8 @@ thead, tr { break-inside: avoid; break-after: auto; }
 thead { display: table-header-group; }
 table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
 table.md-table td { min-width: 32px; }
-.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
-.CodeMirror-linenumber { -webkit-user-select: none; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
 .CodeMirror { text-align: left; }
 .CodeMirror-placeholder { opacity: 0.3; }
 .CodeMirror pre { padding: 0px 4px; }
@@ -70,7 +68,7 @@ div.hr:focus { cursor: none; }
 #write.fences-no-line-wrapping pre { white-space: pre; }
 #write pre.ty-contain-cm { white-space: normal; }
 .CodeMirror-gutters { margin-right: 4px; }
-.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit; background-repeat: inherit; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
 .md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
 #write .md-fences.mock-cm { white-space: pre-wrap; }
 .md-fences.md-fences-with-lineno { padding-left: 0px; }
@@ -80,7 +78,7 @@ div.hr:focus { cursor: none; }
 svg { break-inside: avoid; }
 .footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
 .footnotes + .footnotes { margin-top: 0px; }
-.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
 li div { padding-top: 0px; }
 blockquote { margin: 1rem 0px; }
 li .mathjax-block, li p { margin: 0.5rem 0px; }
@@ -93,7 +91,7 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
 @media print {
   body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
   #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
-  .typora-export * { print-color-adjust: exact; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
   .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
   .is-mac table { break-inside: avoid; }
@@ -103,7 +101,7 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
-pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
 p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
 #write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
 p > .md-image:only-child { display: inline-block; width: 100%; }
@@ -141,19 +139,19 @@ a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; 
 .md-attr { display: none; }
 .md-fn-count::after { content: "."; }
 code, pre, samp, tt { font-family: var(--monospace); }
-kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
 .md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
-code { text-align: left; }
-a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
 .md-diagram-panel > svg { max-width: 100%; }
 [lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
 [lang="mermaid"] .node text { font-size: 1rem; }
-table tr th { border-bottom-width: 0px; }
+table tr th { border-bottom: 0px; }
 video { max-width: 100%; display: block; margin: 0px auto; }
 iframe { max-width: 100%; width: 100%; border: none; }
 .highlight td, .highlight tr { border: 0px; }
-mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
 .md-expand mark .md-meta { opacity: 0.3 !important; }
 mark .md-meta { color: rgb(0, 0, 0); }
@@ -165,7 +163,8 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
 .md-fences.md-fences-math { font-size: 1em; }
 .md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
-.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.mermaid-svg { margin: auto; }
 .typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
 .typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
 .typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
@@ -179,7 +178,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
 .outline-content ul { margin-top: 0px; margin-bottom: 0px; }
 .outline-content strong { font-weight: 400; }
-.outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
 .outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
 .outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
 .outline-expander:hover::before { content: ""; }
@@ -192,14 +191,14 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
 .outline-label:hover { text-decoration: underline; }
 .outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
-.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
 .outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
 .outline-item-open > .outline-item > .outline-expander::before { content: ""; }
 .outline-children { display: none; }
 .info-panel-tab-wrapper { display: none; }
 .outline-item-open > .outline-children { display: block; }
 .typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
-.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
 .typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
 .typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
 .typora-export-collapse-outline .outline-children { display: none; }
@@ -213,7 +212,7 @@ mjx-container { break-inside: avoid; }
 .md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
 .md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
 .md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
-.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left-width: 0.25em; border-left-style: solid; border-left-color: rgb(0, 0, 0); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left: 0.25em solid rgb(0, 0, 0); }
 .md-alert-text-note { color: rgb(9, 105, 218); }
 .md-alert-text-important { color: rgb(130, 80, 223); }
 .md-alert-text-warning { color: rgb(154, 103, 0); }
@@ -223,8 +222,9 @@ mjx-container { break-inside: avoid; }
 .md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
 .md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
 
-
-:root {
+</style>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&amp;subset=latin,latin-ext' type='text/css' />
+<style type='text/css'  id="style-theme_css">:root {
     --side-bar-bg-color: #fafafa;
     --control-text-color: #777;
 }
@@ -241,7 +241,7 @@ mjx-container { break-inside: avoid; }
 }
 
 body {
-    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', 'SF Pro', sans-serif;
     color: rgb(51, 51, 51);
     line-height: 1.6;
 }
@@ -611,12 +611,12 @@ header, .context-menu, .megamenu-content, footer{
     background-color: #f5f8fa;
     background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
 }
+</style>
+<style type='text/css'  id="style-lp">ol, ul {padding-left: 40px}</style>
 
-
- @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}} .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} h1,h2,h3,h4,h5 {white-space:pre-line}
-</style><title>Lab5Instructions_CS295N</title>
+<title>Lab5Instructions_CS295N</title>
 </head>
-<body class='typora-export'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='lab-5-unit-testing-with-xunit'><span>Lab 5: Unit Testing with xUnit </span></h1><p><span> CS295N, Web Development 1: ASP.NET</span></p><p><strong><span>Contents</span></strong></p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" style="" href="#lab-5-unit-testing-with-xunit">Lab 5: Unit Testing with xUnit </a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n5"><a class="md-toc-inner" style="" href="#unit-testing-a-quiz-page">Unit Testing a Quiz Page</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n8"><a class="md-toc-inner" style="" href="#quiz-class">Quiz Class</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n91"><a class="md-toc-inner" style="" href="#unit-tests">Unit Tests</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n56"><a class="md-toc-inner" style="" href="#view-model">View Model</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n31"><a class="md-toc-inner" style="" href="#controller-methods">Controller methods</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n33"><a class="md-toc-inner" style="" href="#view">View</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n36"><a class="md-toc-inner" style="" href="#review-and-submission">Review and Submission</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n37"><a class="md-toc-inner" style="" href="#prs-and-code-reviews">PRs and Code Reviews</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n45"><a class="md-toc-inner" style="" href="#final-submission-to-moodle">Final Submission to Moodle</a></span></p></div><h2 id='unit-testing-a-quiz-page'><span>Unit Testing a Quiz Page</span></h2><p><span>You will add a quiz page to your web site using </span><em><span>test driven development</span></em><span>.</span></p><p><span>Below, are the steps to add a quiz to your site.</span></p><h2 id='quiz-class'><span>Quiz Class</span></h2><p><span>Write a class that provides:</span></p><ul><li><p><span>Provision for managing and storing questions and answers</span></p></li><li><p><span>A mehtod to check user&#39;s answers to see if they are correct.</span><br/><span>Initially this will just be a stub method.</span></p></li></ul><h3 id='unit-tests'><span>Unit Tests</span></h3><ol><li><p><span>Create two unit tests for the stub check method above:</span></p><ul><li><p><span>A test that verifies that wrong answers are identified.</span></p></li><li><p><span>A test that verifies that right answers are identified.</span></p></li></ul></li><li><p><span>Write the body of the check method in the quiz class</span>&mdash;<span>using the unit tests to verify it as you add code.</span></p></li></ol><h3 id='view-model'><span>View Model</span></h3><p><span>Create a </span><em><span>view model</span></em><span> class that can contain:</span></p><ul><li><p><span>Properties for:</span></p><ul><li><p><span>A list of questions</span></p></li><li><p><span>Users&#39; answers.</span></p></li><li><p><span>Responses showing whether answers are right or wrong.</span></p></li></ul></li></ul><h3 id='controller-methods'><span>Controller methods</span></h3><p><span>Write HTTP Get and HTTP Post controller methods for your quiz.</span></p><h2 id='view'><span>View</span></h2><p><span>Write a view for the quiz and test it by hand.</span></p><p>&nbsp;</p><h2 id='review-and-submission'><span>Review and Submission</span></h2><h3 id='prs-and-code-reviews'><span>PRs and Code Reviews</span></h3><ol start='' ><li><p><span>Send a PR (Pull Request) to your lab partner asking them to review your code. </span></p><p><span>After you have gotten a code review and revised your code as needed, you can merge it into the main branch, but keep the lab branch, don&#39;t delete it.</span></p></li><li><p><span>You should receive a PR from your lab partner and review their code using this </span><a href='../CodeReviewGuide.html'><span>Code Review Guide</span></a><span>.</span></p><p><span>On Moodle, in the &quot;online text&quot; field of the Code Review assignment, enter the URL of the pull request with the code review </span><u><span>you gave</span></u><span>.</span></p></li></ol><h3 id='final-submission-to-moodle'><span>Final Submission to Moodle</span></h3><ol start='2' ><li><p><span>Publish your web site to Azure.</span></p></li><li><p><span>In the &quot;online text&quot; for the Moodle assignment:</span></p><ul><li><p><span>Paste a link to the branch of your GitHub repository for this lab.</span></p></li><li><p><span>Paste a link to your web site running on Azure.</span></p></li></ul></li></ol></div></div>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='lab-4-unit-testing-with-xunit'><span>Lab 4: Unit Testing with xUnit </span></h1><p><span> CS295N, Web Development 1: ASP.NET</span></p><p><strong><span>Contents</span></strong></p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#lab-4-unit-testing-with-xunit">Lab 4: Unit Testing with xUnit </a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n5"><a class="md-toc-inner" href="#unit-testing-a-quiz-page">Unit Testing a Quiz Page</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n8"><a class="md-toc-inner" href="#quiz-class">Quiz Class</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n15"><a class="md-toc-inner" href="#unit-tests">Unit Tests</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n26"><a class="md-toc-inner" href="#model">Model</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n38"><a class="md-toc-inner" href="#controller-methods">Controller methods</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n40"><a class="md-toc-inner" href="#view">View</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n43"><a class="md-toc-inner" href="#review-and-submission">Review and Submission</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n44"><a class="md-toc-inner" href="#prs-and-code-reviews">PRs and Code Reviews</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n52"><a class="md-toc-inner" href="#final-submission-to-moodle">Final Submission to Moodle</a></span></p></div><h2 id='unit-testing-a-quiz-page'><span>Unit Testing a Quiz Page</span></h2><p><span>You will add a quiz page to your web site using </span><em><span>test driven development</span></em><span>.</span></p><p><span>Below, are the steps to add a quiz to your site.</span></p><h2 id='quiz-class'><span>Quiz Class</span></h2><p><span>Write a class that provides:</span></p><ul><li><p><span>Provision for managing and storing questions and answers</span></p></li><li><p><span>A method to check user&#39;s answers to see if they are correct.</span><br/><span>Initially this will just be a stub method.</span></p></li></ul><h3 id='unit-tests'><span>Unit Tests</span></h3><ol start='' ><li><p><span>Create two unit tests for the stub check method above:</span></p><ul><li><p><span>A test that verifies that wrong answers are identified.</span></p></li><li><p><span>A test that verifies that right answers are identified.</span></p></li></ul></li><li><p><span>Write the body of the check method in the quiz class</span>&mdash;<span>using the unit tests to verify it as you add code.</span></p></li></ol><h3 id='model'><span>Model</span></h3><p><span>Note: This is technically what is called a </span><em><span>view model</span></em><span>, but we won&#39;t talk about the distinction between </span><em><span>domain models</span></em><span> (models that are associated with a database) and view models (models that just move data from controller to view or vice-versa) until after you have added a database to your web app.</span></p><p><span>Create a </span><em><span>model</span></em><span> class that can contain:</span></p><ul><li><p><span>Properties for:</span></p><ul><li><p><span>A list of questions</span></p></li><li><p><span>Users&#39; answers.</span></p></li><li><p><span>Responses showing whether answers are right or wrong.</span></p></li></ul></li></ul><h3 id='controller-methods'><span>Controller methods</span></h3><p><span>Write HTTP Get and HTTP Post controller methods for your quiz.</span></p><h2 id='view'><span>View</span></h2><p><span>Write a view for the quiz and test it by hand.</span></p><p>&nbsp;</p><h2 id='review-and-submission'><span>Review and Submission</span></h2><h3 id='prs-and-code-reviews'><span>PRs and Code Reviews</span></h3><ol start='' ><li><p><span>Send a PR (Pull Request) to your lab partner asking them to review your code. </span></p><p><span>After you have gotten a code review and revised your code as needed, you can merge it into the main branch, but keep the lab branch, don&#39;t delete it.</span></p></li><li><p><span>You should receive a PR from your lab partner and review their code using this </span><a href='../CodeReviewGuide.html'><span>Code Review Guide</span></a><span>.</span></p><p><span>On Moodle, in the &quot;online text&quot; field of the Code Review assignment, enter the URL of the pull request with the code review </span><u><span>you gave</span></u><span>.</span></p></li></ol><h3 id='final-submission-to-moodle'><span>Final Submission to Moodle</span></h3><ol start='2' ><li><p><span>Publish your web site to Azure.</span></p></li><li><p><span>In the &quot;online text&quot; for the Moodle assignment:</span></p><ul><li><p><span>Paste a link to the branch of your GitHub repository for this lab.</span></p></li><li><p><span>Paste a link to your web site running on Azure.</span></p></li></ul></li></ol></div></div>
 </body>
 </html>
