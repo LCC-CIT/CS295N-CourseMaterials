@@ -1,4 +1,4 @@
-# Lab 5: Unit Testing with xUnit 
+# Lab 4: Unit Testing with xUnit 
  CS295N, Web Development 1: ASP.NET
 
 **Contents**
@@ -16,7 +16,7 @@ Below, are the steps to add a quiz to your site.
 Write a class that provides:
 
 - Provision for managing and storing questions and answers
-- A mehtod to check user's answers to see if they are correct.  
+- A method to check user's answers to see if they are correct.  
   Initially this will just be a stub method.
 
 ### Unit Tests
@@ -27,9 +27,11 @@ Write a class that provides:
 
 2. Write the body of the check method in the quiz class&mdash;using the unit tests to verify it as you add code.
 
-### View Model
+### Model
 
-Create a *view model* class that can contain:
+Note: This is technically what is called a *view model*, but we won't talk about the distinction between *domain models* (models that are associated with a database) and view models (models that just move data from controller to view or vice-versa) until after you have added a database to your web app.
+
+Create a *model* class that can contain:
 
 - Properties for:
   - A list of questions
