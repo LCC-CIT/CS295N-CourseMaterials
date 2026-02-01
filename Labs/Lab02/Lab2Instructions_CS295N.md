@@ -1,5 +1,6 @@
-# Lab 2 – Creating Web Site Structure
- CS295N, Web Development 1: ASP.NET
+<h1>Lab 2 – Creating Web Site Structure</h1>
+
+ **CS295N, Web Development 1: ASP.NET**
 
 **Contents**
 
