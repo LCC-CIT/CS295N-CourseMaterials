@@ -1,17 +1,17 @@
 <!doctype html>
-<html>
+<html style='font-size:20px !important'>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'><style type='text/css'>html {overflow-x: initial !important;}</style>
 <style type='text/css'  id="style-base">:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
 .mac-os-11 { --title-bar-height: 28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, "Segoe UI Emoji", "SF Pro", sans-serif; -webkit-font-smoothing: antialiased; }
 h1, h2, h3, h4, h5 { white-space: pre-wrap; }
-body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
 #write.first-line-indent p { text-indent: 2em; }
 #write.first-line-indent li p, #write.first-line-indent p *, #write.first-line-indent svg * { text-indent: 0px; }
 #write.first-line-indent li { margin-left: 2em; }
@@ -26,14 +26,15 @@ body.typora-export { padding-left: 30px; padding-right: 30px; }
 #write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
 img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
-button, input, select, textarea { color: inherit; font: inherit; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
 input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
 *, ::after, ::before { box-sizing: border-box; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; position: relative; }
 #write svg h1, #write svg h2, #write svg h3, #write svg h4, #write svg h5, #write svg h6, #write svg p { position: static; }
+svg sub, svg sup { position: static; }
 .nodeLabel p { padding-right: 2px; padding-left: 2px; }
 .typora-export .nodeLabel p { padding-right: 0px; padding-left: 0px; }
-foreignobject { overflow: visible; }
+foreignObject { overflow: visible; }
 p { line-height: inherit; }
 h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
 p { orphans: 4; }
@@ -57,8 +58,8 @@ thead, tr { break-inside: avoid; break-after: auto; }
 thead { display: table-header-group; }
 table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
 table.md-table td { min-width: 32px; }
-.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
-.CodeMirror-linenumber { user-select: none; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { -webkit-user-select: none; }
 .CodeMirror { text-align: left; }
 .CodeMirror-placeholder { opacity: 0.3; }
 .CodeMirror pre { padding: 0px 4px; }
@@ -68,7 +69,7 @@ div.hr:focus { cursor: none; }
 #write.fences-no-line-wrapping pre { white-space: pre; }
 #write pre.ty-contain-cm { white-space: normal; }
 .CodeMirror-gutters { margin-right: 4px; }
-.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit; background-repeat: inherit; }
 .md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
 #write .md-fences.mock-cm { white-space: pre-wrap; }
 .md-fences.md-fences-with-lineno { padding-left: 0px; }
@@ -78,7 +79,7 @@ div.hr:focus { cursor: none; }
 svg { break-inside: avoid; }
 .footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
 .footnotes + .footnotes { margin-top: 0px; }
-.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; }
 li div { padding-top: 0px; }
 blockquote { margin: 1rem 0px; }
 li .mathjax-block, li p { margin: 0.5rem 0px; }
@@ -91,7 +92,7 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
 @media print {
   body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
   #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
-  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export * { print-color-adjust: exact; }
   .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
   .is-mac table { break-inside: avoid; }
@@ -101,7 +102,7 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
-pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; }
 p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
 #write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
 p > .md-image:only-child { display: inline-block; width: 100%; }
@@ -139,19 +140,19 @@ a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; 
 .md-attr { display: none; }
 .md-fn-count::after { content: "."; }
 code, pre, samp, tt { font-family: var(--monospace); }
-kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
 .md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
-code { text-align: left; vertical-align: initial; }
-a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
 .md-diagram-panel > svg { max-width: 100%; }
 [lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
 [lang="mermaid"] .node text { font-size: 1rem; }
-table tr th { border-bottom: 0px; }
+table tr th { border-bottom-width: 0px; }
 video { max-width: 100%; display: block; margin: 0px auto; }
 iframe { max-width: 100%; width: 100%; border: none; }
 .highlight td, .highlight tr { border: 0px; }
-mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
 .md-expand mark .md-meta { opacity: 0.3 !important; }
 mark .md-meta { color: rgb(0, 0, 0); }
@@ -163,7 +164,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
 .md-fences.md-fences-math { font-size: 1em; }
 .md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
-.md-fences-advanced:not(.md-focus) { background: inherit; }
+.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
 .mermaid-svg { margin: auto; }
 .typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
 .typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
@@ -178,7 +179,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
 .outline-content ul { margin-top: 0px; margin-bottom: 0px; }
 .outline-content strong { font-weight: 400; }
-.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
 .outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
 .outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
 .outline-expander:hover::before { content: ""; }
@@ -191,14 +192,14 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
 .outline-label:hover { text-decoration: underline; }
 .outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
-.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
 .outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
 .outline-item-open > .outline-item > .outline-expander::before { content: ""; }
 .outline-children { display: none; }
 .info-panel-tab-wrapper { display: none; }
 .outline-item-open > .outline-children { display: block; }
 .typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
-.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
 .typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
 .typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
 .typora-export-collapse-outline .outline-children { display: none; }
@@ -212,7 +213,7 @@ mjx-container { break-inside: avoid; }
 .md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
 .md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
 .md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
-.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left: 0.25em solid rgb(0, 0, 0); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left-width: 0.25em; border-left-style: solid; border-left-color: rgb(0, 0, 0); }
 .md-alert-text-note { color: rgb(9, 105, 218); }
 .md-alert-text-important { color: rgb(130, 80, 223); }
 .md-alert-text-warning { color: rgb(154, 103, 0); }
@@ -613,10 +614,17 @@ header, .context-menu, .megamenu-content, footer{
 }
 </style>
 <style type='text/css'  id="style-lp">ol, ul {padding-left: 40px}</style>
-
+<style type='text/css'  id="style-mac-print"> @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}</style>
+<style type='text/css'  id="style-preLinebreakOnExport"> .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} h1,h2,h3,h4,h5 {white-space:pre-line}</style>
+<meta name="title" content="">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="material" content="">
+<meta name="author" content="">
+<meta name="generator" content="">
 <title>CS295N-LN-WK04D0-Overview</title>
 </head>
-<body class='typora-export os-windows'><div class='typora-export-content'>
-<div id='write'  class=''><h1>Week 2 Overview for Winter 2026</h1><p><strong><span>CS 295N, Web Dev 1: ASP.NET</span></strong></p><figure class='table-figure'><table><thead><tr><th><span>Weekly Topics</span></th><th>&nbsp;</th></tr></thead><tbody><tr><td><span>1. Intro to Web Dev</span></td><td><span>6. EF and Database</span></td></tr><tr><td><span>2. Intro to MVC / Deploying to Azure</span></td><td><span>7. Input Validation</span></td></tr><tr><td><span>3. Managing data: forms and models</span></td><td><span>8. Controllers</span></td></tr><tr><td><mark><span>4. Unit Testing</span></mark></td><td><span>9. Razor Views</span></td></tr><tr><td><span>5. Midterm Quiz / Start term project</span></td><td><span>10. Term Project Presentation</span></td></tr><tr><td>&nbsp;</td><td><span>11. Final</span></td></tr></tbody></table></figure><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n26"><a class="md-toc-inner" href="#announcements">Announcements</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n40"><a class="md-toc-inner" href="#overview">Overview</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n53"><a class="md-toc-inner" href="#due-dates">Due Dates</a></span></p></div><h2 id='announcements'><span>Announcements</span></h2><ul><li><p><strong><span>Global Game Jam!</span></strong><span> </span><img src="Images/GlobalGameJamLogo.svg" alt="GlobalGameJamLogo" style="zoom:67%;" /><span></span><br/><em><span>Get together and create games in one weekend with devs in over 800 locations worldwide.</span></em><span></span><br/><span>LCC building 19, room 135 (CIT lab).  Food provided!</span></p><ul><li><p><span>Friday 1/30, 2:00pm to 9:00pm</span></p></li><li><p><span>Saturday 1/31, 9:00am to 9:00pm</span></p></li><li><p><span>Sunday 2/1, 9:00am to 7:00pm</span></p></li></ul><p><a href='https://globalgamejam.org/user/login'><span>Register here</span></a><span>.</span></p></li><li><p><span>Midterm quiz Thursday of next week, 2/5</span></p><ul><li><p><span>Take it in the classroom at the normal class time (noon).</span></p></li><li><p><span>Or, take it in </span><a href='https://www.lanecc.edu/get-support/academic-support/instructional-testing-services'><span>Instructional Testing Services</span></a><span> Thursday, Friday or Saturday. See the ITS web site for the location, hours they are open and instructions for using the testing center.</span></p></li></ul></li></ul><h2 id='overview'><span>Overview</span></h2><p><span>This week you will learn:</span></p><ul><li><p><span>What unit testing is and why we do it.</span></p></li><li><p><span>Why Test Driven Development (TDD) is a better approach to development.</span></p></li><li><p><span>How to use xUnit to automate testing of methods.</span></p></li></ul><p>&nbsp;</p><h2 id='due-dates'><span>Due Dates</span></h2><ul><li><p><span>Reading quiz: Thursday, 1/29 (I&#39;m giving you an extra day since the closing date was originally last year.)</span></p></li><li><p><span>Lab 4 beta version, PR to lab partner: Sunday, 1/31</span></p></li><li><p><span>Lab 4 code review: Tuesday, 2/3</span></p></li><li><p><span>Lab 4 production version: Thursday, 2/5</span></p></li></ul><p>&nbsp;</p></div></div>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><h1>Week 4 Overview for Winter 2026</h1><p><strong><span>CS 295N, Web Dev 1: ASP.NET</span></strong></p><figure class='table-figure'><table><thead><tr><th><span>Weekly Topics</span></th><th>&nbsp;</th></tr></thead><tbody><tr><td><span>1. Intro to Web Dev</span></td><td><span>6. EF and Database</span></td></tr><tr><td><span>2. Intro to MVC / Deploying to Azure</span></td><td><span>7. Input Validation</span></td></tr><tr><td><span>3. Managing data: forms and models</span></td><td><span>8. Controllers</span></td></tr><tr><td><mark><span>4. Unit Testing</span></mark></td><td><span>9. Razor Views</span></td></tr><tr><td><span>5. Midterm Quiz / Start term project</span></td><td><span>10. Term Project Presentation</span></td></tr><tr><td>&nbsp;</td><td><span>11. Final</span></td></tr></tbody></table></figure><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n26"><a class="md-toc-inner" style="" href="#announcements">Announcements</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n46"><a class="md-toc-inner" style="" href="#overview">Overview</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n56"><a class="md-toc-inner" style="" href="#due-dates">Due Dates</a></span></p></div><h2 id='announcements'><span>Announcements</span></h2><ul><li><p><strong><span>Global Game Jam!</span></strong><span> </span><img src="Images/GlobalGameJamLogo.svg" alt="GlobalGameJamLogo" style="zoom:67%;" /><span></span><br/><em><span>Get together and create games in one weekend with devs in over 800 locations worldwide.</span></em><span></span><br/><span>LCC building 19, room 135 (CIT lab).  Food provided!</span></p><ul><li><p><span>Friday 1/30, 2:00pm to 9:00pm</span></p></li><li><p><span>Saturday 1/31, 9:00am to 9:00pm</span></p></li><li><p><span>Sunday 2/1, 9:00am to 7:00pm</span></p></li></ul><p><a href='https://globalgamejam.org/user/login'><span>Register here</span></a><span>.</span></p></li><li><p><span>Midterm quiz Thursday of next week, 2/5</span></p><ul><li><p><span>Take it in the classroom at the normal class time (noon).</span></p></li><li><p><span>Or, take it in </span><a href='https://www.lanecc.edu/get-support/academic-support/instructional-testing-services'><span>Instructional Testing Services</span></a><span> Thursday, Friday or Saturday. See the ITS web site for the location, hours they are open and instructions for using the testing center.</span></p></li></ul></li></ul><h2 id='overview'><span>Overview</span></h2><p><span>This week you will learn:</span></p><ul><li><p><span>What unit testing is and why we do it.</span></p></li><li><p><span>Why Test Driven Development (TDD) is a better approach to development.</span></p></li><li><p><span>How to use xUnit to automate testing of methods.</span></p></li></ul><p>&nbsp;</p><h2 id='due-dates'><span>Due Dates</span></h2><ul><li><p><span>Reading quiz: Thursday, 1/29 (I&#39;m giving you an extra day since the closing date was originally last year.)</span></p></li><li><p><span>Lab 4 beta version, PR to lab partner: Sunday, 1/31</span></p></li><li><p><span>Lab 4 code review: Tuesday, 2/3</span></p></li><li><p><span>Lab 4 production version: Thursday, 2/5</span></p></li></ul><p>&nbsp;</p></div></div>
 </body>
 </html>
