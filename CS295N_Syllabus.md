@@ -7,7 +7,7 @@
 | **Course Number** | CS 295N                                                      |      | Instructor        | Brian Bird                                                   |
 | **CRN**           | Hybrid (on campus) 32934<br />Online 32933                   |      | Email<br />Mobile | [birdb@lanecc.edu](mailto:birdb@lanecc.edu)<br />[‪(541) 525-0213‬](tel:5415250213) |
 | Day, Time | T, Th, 10:00&ndash;11:50                                     |      | Office            | Building 19, Room 152<br /> or [Zoom meeting](https://lanecc.zoom.us/j/8982554800) |
-| **Classroom**     | Building 19, Room 126<br />[Zoom meeting](https://lanecc.zoom.us/j/97321830534) |      | Office Hours | M, W 4:00–4:50<br />Tu, Th 2:00–2:50|
+| **Classroom**     | Building 19, Room 126<br />[Zoom meeting](https://lanecc.zoom.us/j/97321830534) |      | Office Hours | M, W 1:00–1:50<br />Tu, Th 2:00–2:50 |
 
 
 
