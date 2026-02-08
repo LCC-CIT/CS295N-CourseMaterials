@@ -1,4 +1,4 @@
-<h1>Lab 6: Database and Entity Framework</h1>
+<h1>Lab 5: Database and Entity Framework</h1>
 
  CS295N, Web Development 1: ASP.NET
 
@@ -6,15 +6,9 @@
 
 [TOC]
 
-## Part A: Textbook Tutorial Exercise
+## Part A: Tutorial Exercise
 
-In *Murach's ASP.NET Core MVC*, complete exercise 4-1, "Create the Movie List app". 
-
-Note: If you are using MySQL or SQLite rather than SQL Server, a few of the steps will be different:
-
-- Step 3: you will need to install the correct NuGet package for the database provider for your database type.
-- Step 10: Use the correct connection string for your database type.
-- Steps 14 and 15: Use a database management program that works with your database, such as  MySQL Workbench or DB Browser for SQLite.
+Follow the instructions in the tutorial for the two tutorials for the MVC Movie app.
 
 Take a screen-shot of the app running in your web browser at the end of the exercise. Put the screen-shot in a Word document and in that document, report one of the following:
 
