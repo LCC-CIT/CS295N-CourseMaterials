@@ -12,7 +12,10 @@ Download the [community version here](https://dev.mysql.com/downloads/workbench/
 - Choose version 8.0.44 of MySQL Server.
 - Accept all the default configuration settings in the install dialogs.
 
-Note: The latest LTS version of the Community Edition of MySQL Server is 8.4.8, but it is not fully compatible with the Community Edition of MySQL Workbench.
+**Notes:** 
+
+- The latest LTS version of the Community Edition of MySQL Server is 8.4.8, but it is not fully compatible with the Community Edition of MySQL Workbench.
+- These instructions were tested on Windows 11, but should also work on Windows 10 and with minor changes on MacOS.
 
 
 
@@ -49,7 +52,8 @@ Note: The latest LTS version of the Community Edition of MySQL Server is 8.4.8, 
 2. Select **Import from Self-Contained Archive** and browse for the database file (if you have one) or **Import from Dump**.
 3. Follow the prompts to create a new database.
 
-### 5. Determine the ADO.NET Connection String
+## Determine the ADO.NET Connection String
+
 1. The ADO.NET connection string typically looks like this:
    ```plaintext
    Server=myServerAddress;Database=myDataBase;Uid=myUsername;Pwd=myPassword;
@@ -66,6 +70,6 @@ Note: The latest LTS version of the Community Edition of MySQL Server is 8.4.8, 
 
 ---
 
-These instructions were written by Brian Bird in fall <time>2024</time> using Microsoft Copilot with GPT-4 for the first draft.
+These instructions were written by Brian Bird in fall 2024 using Microsoft Copilot with GPT-4 for the first draft, revised in winter <time>2026</time>. 
 
 ---
