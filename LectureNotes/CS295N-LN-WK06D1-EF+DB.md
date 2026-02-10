@@ -11,35 +11,17 @@ author: Brian Bird
 
 <h1>Data base and Entity Framework</h1>
 
-| Weekly Topics                           |                                             |
-| --------------------------------------- | ------------------------------------------- |
-| 1. Intro to Web Dev                     | 6. Unit Testing                             |
-| 2. Intro to MVC & Deploying to Azure    | 7. <mark>Database & Entity Framework</mark> |
-| 3. Working with Data                    | 8. Unit Testing & The Repository Pattern    |
-| 4. Bootstrap                            | 9. Linq & Seed Data                         |
-| 5. Midterm Quiz & Term Project Proposal | 10. Debugging                               |
-
 <h2>Contents</h2>
 
 [TOC]
 
-# Announcements and Discussion
-
-Due this week
-
-- Lab 5 code review: Tuesday
-
-- Lab 5 production version: Thursday
-
-Any Questions on lab 5?
-
-# Introduction
+## Introduction
 
 This week we will learn how to add a database to our web app. We will use a SQL database, but we won't be writing code to interact directly with the database, we'll use *Entity Framework* (EF) to simplify our database code.
 
 We'll put the new code that does database operations in our controller methods.This will be a bit problematic for unit testing, so next week we'll refactor our database code to use something called the *Repository Pattern* which will facilitate unit tests for controller methods that access a database.
 
-## Object Relational Mapping and EF Core 
+### Object Relational Mapping and EF Core 
 
 One of the main functions of Entity Framework is to do [Object Relational Mapping](https://en.wikipedia.org/wiki/Object-relational_mapping). The purpose of an Object Relational Mapper (ORM) is to serve as a bridge between the world of our object oriented code and the world of the relational database. An ORM maps a domain model to a database schema and allows developers to just focus on writing OO code while the ORM takes care of database operations.
 
@@ -64,7 +46,7 @@ Entity Framework Core has [database providers](https://docs.microsoft.com/en-us/
 
 
 
-# Adding Entity Framework to a Web App
+## Adding Entity Framework to a Web App
 
 There are two major approaches to software development with EF:
 - Code first (Model first) -- we are using this approach
@@ -73,7 +55,7 @@ There are two major approaches to software development with EF:
 
 In order to use Entity Framework in your web app, you need to modify your code in the ways shown below.
 
-## NuGet Packages
+### NuGet Packages
 
 Use the NuGet Package Manager in Visual Studio to add the following packages to your project:
 Note: select a pacakge version that matches your .NET version.
@@ -87,7 +69,7 @@ Note: select a pacakge version that matches your .NET version.
 
 
 
-## Models
+### Models
 
 
 Ideally, we would like our models to be designed solely with object oriented design in mind&mdash;without thinking about databases. But in reality we do need to consider how Entity Framework will generate a database schema based on our models. There are two main things to consider:
@@ -127,7 +109,7 @@ Ideally, we would like our models to be designed solely with object oriented des
 - Many-to-many relationships are supported in .NET 5.0 and later, but you often don't need that complexity.  
 TODO: Provide an example of a search that might look like it requires a many-to-many relationship, but doesn't.
 
-## DbContext Class
+### DbContext Class
 
 This class provides your web app with an entry point to access Entity Framework Core which provides access to the database. 
 
@@ -149,7 +131,7 @@ This class provides your web app with an entry point to access Entity Framework 
 
 - This class is often put in a folder named `Data` which will alter hold other database related classes.
 
-## Connection String in appsettings.json 
+### Connection String in appsettings.json 
 
 - A connection string specifies the location and name of the database and provides configuration settings.  
   Note: it is best practice to not store login credentials in your Git repository.
@@ -175,7 +157,7 @@ This class provides your web app with an entry point to access Entity Framework 
   ```
 
 
-## Program.cs
+### Program.cs
 
 
 This serves as the `main` for the application and is not a class. This is the first code to run when the application starts.
@@ -196,13 +178,13 @@ This serves as the `main` for the application and is not a class. This is the fi
 
 
 
-# Creating a Database
+## Creating a Database
 
 Before you can run your app, you need to create a database on the host system. This might be your development machine, or a production server like Azure.  These instructions assume you have already installed and set up your database management software (such as SQL Server or MySQL).
 
 Before you can create a database using EF, you will need to add a *database migration*. You can read about that in the Migrations section below. But, first you need to set up the EF tools you will use for that.
 
-## dotnet CLI Tools
+### dotnet CLI Tools
 
 In order to do operations on our database, we will be using CLI (Command Line Interface) commands. (Not the commands for the Package Manager Console) You can check to see if you have the CLI tools for Entity Framework installed by entering the command:
  `dotnet ef`
@@ -247,11 +229,11 @@ You can also update the tools using this command:
 
 Again, `x` is a placeholder for an actual number.
 
-## Migrations
+### Migrations
 
 *Migrations* are a means of solving the problem of how to update the database when the models change. After changing any model, you will need to "add a migration" which puts code in the Migrations folder of the project that will be used by EF to update the Db schema as well as migrate the data from the old schema to the new schema.
 
-### Creating a Migration
+#### Creating a Migration
 
 Use the CLI command: 
 `dotnet ef migrations add Initial`
@@ -274,7 +256,7 @@ Running this command will cause the following to take place:
 9. Create new migration file in the Migrations folder
 10. Update the sanpshot file in the Migrations folder 
 
-### Applying a Migration and creating (or updating) the database 
+#### Applying a Migration and creating (or updating) the database 
 
 Use the CLI command:
  `dotnet ef database update`
@@ -292,7 +274,7 @@ Note: if you want to drop the database so you can run update again, use this CLI
 
 `dotnet ef database drop`
 
-### Managing Development and Production Databases
+#### Managing Development and Production Databases
 
 - Remove the ConnectionStrings object from the appsettings.json file.
 
@@ -330,7 +312,7 @@ Note: if you want to drop the database so you can run update again, use this CLI
 
   - When publishing to a web server (or Azure) from Visual Studio for Windows, you will choose the production connection string in the publish dialog.
 
-## Viewing Your Database
+### Viewing Your Database
 
 
 After EF has created a database, you can use *SQL Server Object Explorer* in Visual Studio to view it.
@@ -346,14 +328,14 @@ After EF has created a database, you can use *SQL Server Object Explorer* in Vis
 
 
 
-# Running Unit Tests 
+## Running Unit Tests 
 
 
 Adding EF should not have broken any of your Quiz unit tests. But it's still good practice to run the tests on the quiz before pushing your code to GitHub. 
 
 
 
-# Examples
+## Examples
 
 [Book Reviews Example, 6-Database branch](https://github.com/LCC-CIT/CS295N-Example-BookReviews/tree/6-Database)
 
@@ -363,7 +345,7 @@ Adding EF should not have broken any of your Quiz unit tests. But it's still goo
 
 ------
 
-# References
+## References
 
 ## Text Book
 
@@ -373,7 +355,7 @@ Adding EF should not have broken any of your Quiz unit tests. But it's still goo
 
 ## Online
 
-- Microsoft Tutorial: [Get started with ASP.NET Core MVC and Entity Framework Core using Visual Studio](https://learn.microsoft.com/en-us/aspnet/core/data/ef-mvc/?view=aspnetcore-6.0)
+- Microsoft Tutorial: [Get started with ASP.NET Core MVC and Entity Framework Core using Visual Studio](https://learn.microsoft.com/en-us/aspnet/core/data/ef-mvc/?view=aspnetcore-10.0)
 - Microsoft Reference: [Entity Framework Core tools reference - .NET CLI](https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/dotnet)
 - Microsoft Reference: [SQL Server Express LocalDB](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/sql-server-express-localdb)
   SQL Server Express LocalDB is automatically installed with Visual Studio. This article explains what it is, how it works, how to use it, troubleshooting, and how to install it independently from Visual Studio.
@@ -389,5 +371,5 @@ Adding EF should not have broken any of your Quiz unit tests. But it's still goo
 
 ------
 
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) These ASP.NET Core MVC Lecture Notes written by [Brian Bird](https://profbird.dev) in 2018 and revised in 2024,  are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) These ASP.NET Core MVC Lecture Notes written by [Brian Bird](https://profbird.dev) in 2018 and revised in <time>2026</time>,  are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
 

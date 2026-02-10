@@ -9,13 +9,23 @@
 | 3. Managing data: forms and models   | 8. Controllers                  |
 | 4. Unit Testing                      | 9. Razor Views                  |
 | 5. Midterm Quiz / Start term project | 10. Term Project Presentation   |
-|                                      | 11. Final                       |
+| 11. Final                            |                                 |
+
+
+
+<h2>Contents</h2>
 
 [TOC]
 
 ## Announcements
 
-- None yet.
+- Most of you did pretty well on the midterm. The average score was 85% !
+
+- I caught up on grading Saturday; so you can check your overall grade for this class so far. 
+
+  - Note that if there are assignments you hadn't submitted yet, you can still submit them.
+
+  
 
 ## Review of Unit Testing
 
@@ -31,11 +41,23 @@
 - What should unit tests be testing?
 
   - Functionality (logic) of an individual method.
-
   - Not the data (in this case the hard-coded questions).  
     Look at some examples.
 
-    
+
+
+## Due Dates
+
+- Term project proposal: Thursday, 2/12
+- Lab 5 beta version PR: Sunday, 2/15
+
+
+
+## Discussion
+
+- Any questions on the term project?
+- Any questions on lab 5?
+
 
 
 ## Overview of Week 6
@@ -47,8 +69,9 @@ This week you will:
 
 
 
-## Due Dates
+---
 
-- Term project proposal: Thursday, 2/12
-- Lab 5 beta version PR: Sunday, 2/15
+[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) These ASP.NET Core MVC course materials written by [Brian Bird](https://profbird.dev) in <time>2026</time>  are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+
+---
 
