@@ -1,15 +1,15 @@
 ---
-title: DB & EF
-description: How to add a database to a web app using Entity Framework
-keywords: ORM, EF, DbContext, Migration, SQL Server, Local DB, MySQL
+title: User Secrets in VS 2026
+description: How to manage user secrets in VS 2026, in particular how to store the user name and password for a connection string in user secrets so they don't get committed to source control.
+keywords: User Secrets, User name, password, appsettings.json, connection string, EF, SQL Server, DB, MySQL
 material: Lecture Notes
-generator: PanWriter
+generator: Typora
 author: Brian Bird
 ---
 
 **CS295N Web Development 1: ASP.NET**
 
-<h1>Managing User Secrets</h1>
+<h1>Managing <i>User Secrets</i> in Visual Studio</h1>
 
 <h2>Contents</h2>
 
@@ -17,8 +17,8 @@ author: Brian Bird
 
 ## Keep Secrets Out of *appsettings.json*
 
-Storing sensitive information—like database usernames and passwords—directly in `appsettings.json` is risky and can easily lead to accidental leaks, especially when using GitHub or shared classroom machines.
- ASP.NET Core provides a built‑in, secure, development‑only feature called **User Secrets** that solves this problem elegantly.
+Storing sensitive information—like database usernames and passwords or other credentials directly in `appsettings.json` is risky and can easily lead to accidental leaks, especially when using Git or shared computers (in a lab or classroom).
+ ASP.NET Core provides a built‑in, secure, development‑only feature called ***User Secrets*** that solves this problem elegantly.
 
 This tutorial, based on Visual Studio 2026, walks you through configuring User Secrets to keep credentials out of your connection string while still allowing your application to build a complete connection string at runtime.
 
@@ -26,17 +26,17 @@ This tutorial, based on Visual Studio 2026, walks you through configuring User S
 
 ### Why Use User Secrets?
 
-User Secrets are ideal for **local development** because:
+The Visual Studio User Secrets feature is ideal for storing secrets (credentials) during local development because:
 
-- They store sensitive values **outside** your project folder
-- They are **never committed** to Git
-- They are **per‑user** and **per‑project**
-- ASP.NET Core loads them **automatically in Development**
-- They work perfectly on Windows 11 classroom PCs without admin rights
+- They store sensitive values **outside** your project folder.
+- They are **never committed** to Git.
+- They are **per‑user** and **per‑project**.
+- ASP.NET Core loads them **automatically during Development**.
+- They work perfectly on Windows 11 classroom PCs without admin rights.
 
-For production, you would use environment variables or a secret store like Azure Key Vault—but for development, User Secrets are the cleanest option.
+For production, you would use other strategies, such as *environment variables* or *Azure Key Vault*.
 
-## How to Use User Secrets
+## How to Use VS User Secrets
 
 ------
 
@@ -158,19 +158,18 @@ This opens the JSON file in your default editor.
 
 Using User Secrets allows you to:
 
-- Keep `appsettings.json` clean and safe
-- Avoid leaking credentials into GitHub
-- Let each developer maintain their own secure configuration
-- Build connection strings dynamically at runtime
-- Maintain a reproducible, friction‑free classroom environment
+- Keep `appsettings.json` clean and safe.
+- Avoid leaking credentials into a Git repository.
+- Let each developer maintain their own secure configuration.
+- Build connection strings dynamically at runtime.
 
-It’s the recommended development‑time approach for ASP.NET Core projects.
+This is the  development‑time approach recommended by Microsoft for .NET projects.
 
 
 
 ## Examples
 
-[Book Reviews Example, 6-Database branch](https://github.com/LCC-CIT/CS295N-Example-BookReviews/tree/6-Database)
+[Code Reviews Example, Lab 5&mdash;Database branch](https://github.com/ProfBird/BrianBird_CS295N_Labs_W26/tree/Lab5)
 
 
 
