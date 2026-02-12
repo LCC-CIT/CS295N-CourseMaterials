@@ -62,7 +62,7 @@ Refactor your code so that the comments entered by the user on the Home/Forum pa
 
 - Publish the site to Azure.
   - Set up <s>either an *Azure SQL Database* (compatible with SQL Server), or</s> *Azure Database for MySQL* server on Azure.
-    - For Azure SQL, you <u>only get one free database</u> with your Azure for Students account, and only the <u>Standard S0</u> service tier is free. **Only getting one free database is the reason I we are not using SQL Server!**
+    - For Azure SQL, you <u>only get one free database</u> with your Azure for Students account, and only the <u>Standard S0</u> service tier is free. **Only getting one free database is the main reason we are not using SQL Server**
     
     - With Azure Database for MySQL, you can set up <u>one free server</u> but you are <u>allowed to create multiple free databases</u> on it. For the databases to be free you must choose these settings on the server:
       - Workload type: *For development or hobby projects.*
