@@ -1,4 +1,4 @@
-# MariaDB Installation and Setup
+<h1>MariaDB Installation and Setup</h1>
 
 MariaDB documentation: https://mariadb.org
 
