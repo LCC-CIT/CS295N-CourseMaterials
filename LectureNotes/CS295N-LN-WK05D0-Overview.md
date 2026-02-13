@@ -2,14 +2,16 @@
 
 **CS 295N, Web Dev 1: ASP.NET**
 
-| Weekly Topics                                     |                               |
-| ------------------------------------------------- | ----------------------------- |
-| 1. Intro to Web Dev                               | 6. EF and Database            |
-| 2. Intro to MVC / Deploying to Azure              | 7. Input Validation           |
-| 3. Managing data: forms and models                | 8. Controllers                |
-| 4. Unit Testing                                   | 9. Razor Views                |
-| <mark>5. Midterm Quiz / Start term project</mark> | 10. Term Project Presentation |
-|                                                   | 11. Final                     |
+| Weekly Topics                                    |                                                   |
+| ------------------------------------------------ | ------------------------------------------------- |
+| 1. Intro to web dev                              | 6. EF and database                                |
+| 2. Intro to MVC, deploying to Azure              | 7. Input validation                               |
+| 3. Managing data: forms and models               | 8. Authentication & Authorization                 |
+| 4. Unit testing                                  | 9. LINQ, seed data                                |
+| <mark>5. Midterm quiz, start term project</mark> | 10. Debugging, term Project, project presentation |
+| 11. Final quiz                                   |                                                   |
+
+<h2>Contents</h2>
 
 [TOC]
 
