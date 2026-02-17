@@ -2,14 +2,14 @@
 
 **CS 295N, Web Dev 1: ASP.NET**
 
-| Weekly Topics                        |                                 |
-| ------------------------------------ | ------------------------------- |
-| 1. Intro to Web Dev                  | <mark>6. EF and Database</mark> |
-| 2. Intro to MVC / Deploying to Azure | 7. Input Validation             |
-| 3. Managing data: forms and models   | 8. Controllers                  |
-| 4. Unit Testing                      | 9. Razor Views                  |
-| 5. Midterm Quiz / Start term project | 10. Term Project Presentation   |
-| 11. Final                            |                                 |
+| Weekly Topics                       |                                                   |
+| ----------------------------------- | ------------------------------------------------- |
+| 1. Intro to web dev                 | <mark>6. EF and database</mark>                   |
+| 2. Intro to MVC, deploying to Azure | 7. Input validation                               |
+| 3. Managing data: forms and models  | 8. Authentication & Authorization                 |
+| 4. Unit testing                     | 9. LINQ, seed data                                |
+| 5. Midterm quiz, start term project | 10. Debugging, term Project, project presentation |
+| 11. Final quiz                      |                                                   |
 
 
 
@@ -55,8 +55,9 @@
 
 ## Discussion
 
-- Any questions on the term project?
-- Any questions on lab 5?
+- Any questions on the term project proposal?
+- Any questions on lab 4 (quiz feature and unit testing)?  
+  (This was due last week, but a few people are still working on it.)
 
 
 
@@ -64,8 +65,8 @@
 
 This week you will:
 
-- Add a database to your project
 - Finish a proposal for your term project.
+- Add a database to your lab project.
 
 
 

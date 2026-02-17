@@ -58,7 +58,8 @@ In order to use Entity Framework in your web app, you need to modify your code i
 ### NuGet Packages
 
 Use the NuGet Package Manager in Visual Studio to add the following packages to your project:
-Note: select a pacakge version that matches your .NET version.
+**Note**: select a pacakge version that **matches your .NET version**.  
+**OR** if you are using the <u>Pomelo.EntityFrameworkCore.MySql</u> databse provider package, choose versions of the other two packages that **match the Pomelo** version's main number (eg. 9.x.x).
 
 - Microsoft.EntityFrameworkCore
 - Microsoft.EntityFrameworkCore.Design
@@ -152,7 +153,7 @@ This class provides your web app with an entry point to access Entity Framework 
   "ConnectionStrings": {
    "SQLServerConnection":"Server=(localdb)\\MSSQLLocalDB;Database=BookReviews; Trusted_Connection=True;MultipleActiveResultSets=true",
    "SQLiteConnection":"DataSource=Data/BookReviews.db", 
-   "MySqlConnection":"server=localhost;userid=birdb;password=Secret!123;database=BookReviews;"
+  "MySqlConnection":"server=localhost;userid=birdb;password=Secret!123;database=BookReviews;"
   }
   ```
 
@@ -160,23 +161,23 @@ This class provides your web app with an entry point to access Entity Framework 
 ### Program.cs
 
 
-This serves as the `main` for the application and is not a class. This is the first code to run when the application starts.
-
-- [AddDbContext](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.entityframeworkservicecollectionextensions.adddbcontext?view=efcore-2.1) will read the connection string and configure your DbContext object to connect to your database. 
+This acts like the `main` for the application and is not a class. This is the first code to run when the application starts.
 
 - This where you will later add more calls to `builder.services` methods to set up *dependency injection* to inject your DbContext object into any of your classes (like your controller classes) that the framework instantiates and where you have your DbContext class as a parameter in the constructor.
 
-- The options argument specifies that this is a Microsoft SQL Server database, but you could also use another database, like SQLite.
-
-- Example:
+- The code to read your connection string and create an instance of DbContenxt goes in Program.cs after Example:
 
   ```C#
   var connectionString = builder.Configuration.GetConnectionString("MySqlConnection");
   builder.Services.AddDbContext<ApplicationDbContext>(options =>
       options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
   ```
-
-
+  
+  - [AddDbContext](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.entityframeworkservicecollectionextensions.adddbcontext?view=efcore-2.1) will read the connection string and configure your DbContext object to connect to your database. 
+  
+  - The `options` argument specifies that this is a MySQL Server database, but you could alternatively use another database, like SQLite.
+  
+    
 
 ## Creating a Database
 

@@ -2,23 +2,9 @@
 
 <h1>More EF, LINQ and Publishing to Azure </h1>
 
-| Weekly Topics                           |                                             |
-| --------------------------------------- | ------------------------------------------- |
-| 1. Intro to Web Dev                     | 6. Unit Testing                             |
-| 2. Intro to MVC & Deploying to Azure    | 7. <mark>Database & Entity Framework</mark> |
-| 3. Working with Data                    | 8. Unit Testing & The Repository Pattern    |
-| 4. Bootstrap                            | 9. Linq & Seed Data                         |
-| 5. Midterm Quiz & Term Project Proposal | 10. Debugging                               |
-
 <h2>Contents</h2>
 
 [TOC]
-
-## Q and A
-
-- Announcements.
-- Discuss questions about the previous lab.
-- Review lab due dates on Moodle.
 
 ## Introduction
 

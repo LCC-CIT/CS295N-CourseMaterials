@@ -2,27 +2,9 @@ CS295N Web Development 1: ASP.NET
 
 <h1>Repositories and Unit Testing</h1>
 
-| Weekly Topics                           |                                                       |
-| --------------------------------------- | ----------------------------------------------------- |
-| 1. Intro to Web Dev                     | 6. Unit Testing                                       |
-| 2. Intro to MVC & Deploying to Azure    | 7. Database & Entity Framework                        |
-| 3. Working with Data                    | <mark>8. Unit Testing & The Repository Pattern</mark> |
-| 4. Bootstrap                            | 9. Linq & Seed Data                                   |
-| 5. Midterm Quiz & Term Project Proposal | 10. Debugging                                         |
-
 <h2>Contents</h2>
 
 [TOC]               
-
-## Q and A
-
-- Upcoming due dates:
-  - This week's quiz closes Thursday.
-  - Lab 6 is due Thursday.
-  - This is the last week to change grade options.
-
-
-- Answer questions.
 
 ## Overview
 
@@ -223,7 +205,7 @@ Why some people use the Unit of Work pattern:
 
 ------
 
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), written 2018, updated <time>2024</time>, is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/) ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), written 2018, updated <time>2026</time>, is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
 
 ------
 

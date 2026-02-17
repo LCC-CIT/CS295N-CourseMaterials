@@ -74,7 +74,7 @@ Refactor your code so that the comments entered by the user on the Home/Forum pa
     - Running `dotnet ef database update` using the connection string for your database server on Azure.
     - Modifying your Visual Studio publish profile so that it applies the migrations when you publish the web app. (This only works on Visual Studio for Windows.)
     
-  - Publish your web app to Azure.
+  - <s>Publish your web app to Azure.</s>
 
 
 
@@ -96,4 +96,4 @@ Refactor your code so that the comments entered by the user on the Home/Forum pa
 2.  Publish your web site to Azure.
 3.  In the "online text" for the Moodle assignment:
     - Paste a link to the branch of your GitHub repository for this lab.
-    - Paste a link to your web site running on Azure.
+    - <s>Paste a link to your web site running on Azure.</s>
