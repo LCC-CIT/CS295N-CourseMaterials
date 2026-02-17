@@ -19,12 +19,6 @@ author: Brian Bird
 
 We will finish up last week's topic of adding a database to your web app by looking at how to add seed data to a database and publish it to Azure.
 
-## Review
-
-Last week we added Entity Framework to our project and used it to create a database.
-
-I created a new branch, Lab06-Mac, for the students doing development on a Mac. The only difference is that this version uses SQLite instead of SQL Server as a database engine.
-
 ## Deploying a Web Site with a Database to Azure
 
 These instructions assume you have already set up a [free student Azure account](https://azure.microsoft.com/en-us/free/students/) and have already deployed a version of your web app that doesn't have a database to Azure.
