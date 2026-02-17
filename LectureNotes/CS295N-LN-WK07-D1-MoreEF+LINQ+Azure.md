@@ -6,12 +6,6 @@
 
 [TOC]
 
-## Q and A
-
-- Announcements.
-- Discuss questions about the previous lab.
-- Review lab due dates on Moodle.
-
 ## Introduction
 
 We will finish up last week's topic of adding a database to your web app by looking at how to add seed data to a database and publish it to Azure.

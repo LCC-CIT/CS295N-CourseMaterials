@@ -1,4 +1,4 @@
-# Lab 8: Seed Data and LINQ
+# Lab 6: Seed Data and LINQ
 
 ## Objectives
 
