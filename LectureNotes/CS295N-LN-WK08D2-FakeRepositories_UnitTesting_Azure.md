@@ -2,14 +2,6 @@ CS295N Web Development 1: ASP.NET
 
 <h1>Repositories and Unit Testing</h1>
 
-| Weekly Topics                           |                                                       |
-| --------------------------------------- | ----------------------------------------------------- |
-| 1. Intro to Web Dev                     | 6. Unit Testing                                       |
-| 2. Intro to MVC & Deploying to Azure    | 7. Database & Entity Framework                        |
-| 3. Working with Data                    | <mark>8. Unit Testing & The Repository Pattern</mark> |
-| 4. Bootstrap                            | 9. Linq & Seed Data                                   |
-| 5. Midterm Quiz & Term Project Proposal | 10. Debugging                                         |
-
 <h2>Contents</h2>
 
 [TOC]               
