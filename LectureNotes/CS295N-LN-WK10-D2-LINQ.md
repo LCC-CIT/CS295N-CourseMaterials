@@ -1,16 +1,6 @@
 **CS295N Web Development 1: ASP.NET** 
 
-# Searching and filtering with LINQ
-
-
-
-| Weekly Topics                           |                                          |
-| --------------------------------------- | ---------------------------------------- |
-| 1. Intro to Web Dev                     | 6. Unit Testing                          |
-| 2. Intro to MVC & Deploying to Azure    | 7. Database & Entity Framework           |
-| 3. Working with Data                    | 8. Unit Testing & The Repository Pattern |
-| 4. Bootstrap                            | 9. <mark>Linq & Seed Data</mark>         |
-| 5. Midterm Quiz & Term Project Proposal | 10. Debugging                            |
+<h1>Searching and filtering with LINQ</h1>
 
 
 

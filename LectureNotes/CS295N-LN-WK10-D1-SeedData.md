@@ -4,50 +4,9 @@
 
 
 
-| Weekly Topics                           |                                          |
-| --------------------------------------- | ---------------------------------------- |
-| 1. Intro to Web Dev                     | 6. Unit Testing                          |
-| 2. Intro to MVC & Deploying to Azure    | 7. Database & Entity Framework           |
-| 3. Working with Data                    | 8. Unit Testing & The Repository Pattern |
-| 4. Bootstrap                            | <mark>9. Linq & Seed Data</mark>         |
-| 5. Midterm Quiz & Term Project Proposal | 10. Debugging                            |
-
-
-
  **Contents**
 
 [TOC]
-
-## Announcements  
-
-
-- Upcoming due dates for fall 2024:
-  - Labs
-    
-    - Lab 7 code review: Tuesday, 11/26
-    
-    - Lab 7 production version: Sunday, 12/1
-      (Due date is later due to the holiday)
-    
-    - Lab 8 beta version: Sunday 12/1
-    
-  - Term project  
-    The dates for the beta version and code review are flexible, but make arrangements with your lab partners if you want to change these dates.
-    - Next week (week 10)
-      - Send a PR for the beta version: Tuesday, 12/3
-  
-      - Submit a link to a code review on a PR: Thursday, 12/5
-  
-    - Finals week:
-      - Term project presentation to the class: Monday, 12/9
-    
-      - Submit links for the production version: Monday, 12/9
-  - Final Quiz: Monday 12/9 through Wednesday 12/11
-    - In the testing center Monday through Wednesday.
-    - In class on Wednesday.
-- Questions?
-
-
 
 ## Introduction
 
@@ -148,6 +107,6 @@ The `Seed` method will get called when you run your web app.
 ------
 
 [![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
-ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), revised <time>2024</time>, is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
+ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), written 2020, revised <time>2026</time>, is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
 
 ------

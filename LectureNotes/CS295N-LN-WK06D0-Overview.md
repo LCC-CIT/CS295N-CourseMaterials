@@ -5,9 +5,9 @@
 | Weekly Topics                       |                                                   |
 | ----------------------------------- | ------------------------------------------------- |
 | 1. Intro to web dev                 | <mark>6. EF and database</mark>                   |
-| 2. Intro to MVC, deploying to Azure | 7. Input validation                               |
-| 3. Managing data: forms and models  | 8. Authentication & Authorization                 |
-| 4. Unit testing                     | 9. LINQ, seed data                                |
+| 2. Intro to MVC, deploying to Azure | 7. LINQ, seed data                                |
+| 3. Managing data: forms and models  | 8. Input validation                               |
+| 4. Unit testing                     | 9. Authentication & Authorization                 |
 | 5. Midterm quiz, start term project | 10. Debugging, term Project, project presentation |
 | 11. Final quiz                      |                                                   |
 

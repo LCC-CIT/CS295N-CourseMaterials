@@ -1,3 +1,12 @@
+---
+title: EF, LINQ, Publish to Azure
+description: How to add seed data to your web app, use LINQ for search and publish your web site with a database to Azure.
+keywords: EF, LINQ, Azure
+material: Lecture Notes
+generator: Typora
+author: Brian Bird
+---
+
 **CS295N Web Development 1: ASP.NET** 
 
 <h1>More EF, LINQ and Publishing to Azure </h1>
@@ -195,6 +204,6 @@ These instructions assume you have already set up a [free student Azure account]
 ------
 
 [![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
-ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev) is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
+ASP.NET Core MVC Lecture Notes by [Brian Bird](https://profbird.dev), written 2019, revised <time>2026</time>, is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). 
 
 ------
