@@ -59,7 +59,15 @@ Objects you create from the [.NET DateTime struct](https://learn.microsoft.com/e
 
 ### Code review
 
-There is no code review required for this assignment.
+### PRs and Code Reviews
+
+1. Send a PR (Pull Request) to your lab partner asking them to review your code. 
+
+   After you have gotten a code review and revised your code as needed, you can merge it into the main branch, but keep the lab branch, don't delete it.
+
+2. You should receive a PR from your lab partner and review their code using this [Code Review Guide](../CodeReviewGuide.html).
+
+   On Moodle, in the "online text" field of the Code Review assignment, enter the URL of the pull request with the code review <u>you gave</u>.
 
 ### Publish to Azure and submit links to Moodle
 
@@ -69,10 +77,12 @@ There is no code review required for this assignment.
 - Paste a link to the branch of your GitHub repository for this lab.
 - Paste a link to your web site running on Azure.
 
+
+
 ****
 
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
-These ASP.NET Core MVC lab instructions were written by [Brian Bird](https://birdsbits.blog), fall 2020 and are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
+These ASP.NET Core MVC lab instructions were written by [Brian Bird](https://profbird.dev), fall 2020 and revised winter <time>2026</time> are licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). 
 
 ------
 
