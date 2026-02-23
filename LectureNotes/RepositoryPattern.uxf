@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="14.3.0">
+<diagram program="umlet" version="15.0.0">
   <zoom_level>15</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>495</x>
+      <x>450</x>
       <y>45</y>
       <w>270</w>
       <h>180</h>
@@ -21,7 +21,7 @@ IReviewRepository
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>450</x>
+      <x>405</x>
       <y>210</y>
       <w>195</w>
       <h>195</h>
@@ -32,7 +32,7 @@ IReviewRepository
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>375</x>
+      <x>330</x>
       <y>375</y>
       <w>225</w>
       <h>90</h>
@@ -44,7 +44,7 @@ IReviewRepository
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>630</x>
+      <x>585</x>
       <y>375</y>
       <w>255</w>
       <h>90</h>
@@ -56,7 +56,7 @@ IReviewRepository
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>600</x>
+      <x>555</x>
       <y>210</y>
       <w>195</w>
       <h>195</h>
@@ -67,32 +67,32 @@ IReviewRepository
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>255</x>
+      <x>210</x>
       <y>390</y>
       <w>150</w>
       <h>75</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
-DI
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+
 </panel_attributes>
-    <additional_attributes>10.0;20.0;80.0;20.0</additional_attributes>
+    <additional_attributes>80.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>45</x>
+      <x>0</x>
       <y>375</y>
       <w>225</w>
       <h>90</h>
     </coordinates>
-    <panel_attributes>BookReviewContext
+    <panel_attributes>ReviewDbContext
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>45</x>
+      <x>0</x>
       <y>195</y>
       <w>150</w>
       <h>90</h>
@@ -104,7 +104,7 @@ DI
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>120</x>
+      <x>75</x>
       <y>270</y>
       <w>45</w>
       <h>135</h>
@@ -115,7 +115,7 @@ DI
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>45</x>
+      <x>0</x>
       <y>30</y>
       <w>150</w>
       <h>120</h>
@@ -126,7 +126,7 @@ DI
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>105</x>
+      <x>60</x>
       <y>135</y>
       <w>45</w>
       <h>90</h>
@@ -137,12 +137,12 @@ DI
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>930</x>
+      <x>885</x>
       <y>210</y>
       <w>195</w>
       <h>90</h>
     </coordinates>
-    <panel_attributes>BookController
+    <panel_attributes>ReviewController
 
 </panel_attributes>
     <additional_attributes/>
@@ -150,13 +150,13 @@ DI
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>750</x>
+      <x>705</x>
       <y>135</y>
       <w>315</w>
       <h>105</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
-DI</panel_attributes>
+</panel_attributes>
     <additional_attributes>10.0;20.0;190.0;20.0;190.0;50.0</additional_attributes>
   </element>
   <element>
@@ -164,7 +164,7 @@ DI</panel_attributes>
     <coordinates>
       <x>930</x>
       <y>375</y>
-      <w>195</w>
+      <w>150</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>UnitTest
@@ -175,7 +175,7 @@ DI</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1020</x>
+      <x>975</x>
       <y>285</y>
       <w>45</w>
       <h>120</h>
@@ -186,9 +186,9 @@ DI</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>1170</x>
+      <x>1125</x>
       <y>345</y>
-      <w>210</w>
+      <w>195</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>MVC App</panel_attributes>
@@ -197,7 +197,7 @@ DI</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1110</x>
+      <x>1065</x>
       <y>240</y>
       <w>240</w>
       <h>165</h>
@@ -208,37 +208,52 @@ DI</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>900</x>
-      <y>510</y>
-      <w>225</w>
-      <h>75</h>
-    </coordinates>
-    <panel_attributes>Unit tests use the
-FakeReviewRepisotiry</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>1170</x>
-      <y>510</y>
-      <w>225</w>
-      <h>75</h>
-    </coordinates>
-    <panel_attributes>The MVC app uses
-the ReviewRepisotiry</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>150</x>
+      <x>855</x>
       <y>495</y>
-      <w>405</w>
+      <w>315</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Unit tests inject a
+FakeReviewRepsiotory
+object into a ReveiwController</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1035</x>
+      <y>75</y>
+      <w>270</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>The MVC app injects
+a ReviewRepisotiry object
+into a ReviewController</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>825</x>
+      <y>390</y>
+      <w>135</w>
       <h>75</h>
     </coordinates>
-    <panel_attributes>The MVC framework injects the 
-BookReviewContext into the reopository</panel_attributes>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+
+</panel_attributes>
+    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>120</x>
+      <y>480</y>
+      <w>330</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>a ReivewDbContext object
+is a part of the ReviewRepository</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
