@@ -6,16 +6,6 @@ CS295N Web Development 1: ASP.NET
 
 [TOC]               
 
-## Overview
-
-This week we will:
-
-- Refactor our controller code to use *repositories* instead of directly using a dBContext object to work with data via EF.
-- Create a *fake* repository to facilitate unit testing.
-- Add unit tests for controller methods that work with data.
-- Create a database server on Azure and publish our sites to Azure.  
-  Be sure to check your Azure credit. One student already lost thier account!
-
 ## Repositories: Real and Fake
 
 One way of managing data in our web app is to use the [Repository Pattern](https://www.c-sharpcorner.com/article/repository-pattern-in-asp-net-core/). Rather than accessing data directly through Entity Framework, the data will be accessed through a repository.
