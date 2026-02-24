@@ -37,6 +37,7 @@
 - Lab 6 beta version PR: Sunday, 2/2
 - Lab 6 code review: Tuesday, 2/24
 - Lab 6 production version: Thursday, 2/26
+- Validation Quiz: Friday, 2/27
 - Lab 7 beta version PR: Sunday, 3/1
 
 
