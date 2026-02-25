@@ -71,7 +71,7 @@ Note that Azure will fail to deploy your server if it isn't in certain regions. 
 
 - Verify that your schema (tables) were added to the database by connection MySQL Workbench to the DB on Azure.
 
-## 4. Prepare your App Service an Publish to Azure
+## 4. Prepare your App Service and Publish to Azure
 
 - Using the Azure Portal web page, Go to your App Service. In the menu on the left select Settings and then Environment Variables. Use the interface provided to add environment variables for the DB username and password. Use the same *names* and *values* you used on your dev machine.
 - Now you can publish your web app like you have done previously and it should work with the database you just set up on Azure.
