@@ -9,7 +9,7 @@ author: Brian Bird
 
 **CS295N Web Development 1: ASP.NET**
 
-<h1>Data base and Entity Framework</h1>
+<h1>Finish Setting Up a Database on Azure</h1>
 
 <h2>Contents</h2>
 
