@@ -1,4 +1,4 @@
-# Lab 8: Validation of User Input
+# Lab 7: Validation of User Input
 
 **CS 295N, Web Development 1: ASP.NET**
 
