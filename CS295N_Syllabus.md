@@ -280,7 +280,7 @@ This cycle starts on the second week
 
 ### Tentative Course Schedule
 
-(May be subject to change)
+(May be subject to change, dates shown are Mondays)
 
 | Week             | Topics                                                       | Lab Assignment                                               |
 | ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -290,9 +290,9 @@ This cycle starts on the second week
 | **4**<br />1/26  | Entity Framework<br />Database Migrations<br />Deploying a DB to Azure | Lab 4<br />Add a DB to your site                             |
 | **5**<br />2/2   | Midterm quiz                                                 | Term project proposal<br>Midterm quiz:<br />In the classroom on 2/4<br />In the testing center 2/4 through 2/6 (tentative dates) |
 | **6**<br />2/9   | Unit testing with xUnit                                      | Lab 5<br />Add a quiz and unit tests to your site.           |
-| 7<br />2/16      | Input Validation                                             | Lab 6<br />Add validation to your web site                   |
-| **8**<br />2/23  | Repository Pattern<br />More Unit Testing                    | Lab 7                                                        |
-| **9**<br />3/2   | Linq and Seed Data                                           | Lab 8                                                        |
+| 7<br />2/16      | Linq and Seed Data                                           | Lab 6<br />                                                  |
+| **8**<br />2/23  | Input Validation                                             | Lab 7                                                        |
+| **9**<br />3/2   | Authentication & Authorization                               | Lab 8                                                        |
 | **10**<br />3/9  | Debugging<br />Final quiz                                    | Lab 9 (Extra Credit)<br />- Debugging practice<br />Final in classroom 3/11<br />Final in testing center 3/11&ndash;3/13 (tentative dates) |
 | **11**<br />3/16 | Project presentations                                        | Term project                                                 |
 

@@ -43,7 +43,7 @@ These instructions assume you have already set up a [free student Azure account]
 
 - Copy the ADO.NET connection string for your database. You will need to add it to the publish profile in Visual Studio.
 
-- Example connection string:
+- Example SQL Server connection string:
 
   `Server=tcp: practiceserver.database.windows.net,1433; Initial Catalog=Movie; Persist Security Info=False; User ID={your_username}; Password={your_password}; MultipleActiveResultSets=False; Encrypt=True; TrustServerCertificate=False; Connection Timeout=30;`
 
