@@ -14,7 +14,7 @@ To make the validation useful, in addition to adding validation annotations to m
 
 - Add a new migration and update your database
 - Add at least a validation summary tag helper to the views where data entry is done.
-- Add code to check ModelState in the controller methods that the data entry forms post to.
+- Add code to check `ModelState` in the controller methods that the data entry forms post to.
 
 
 
