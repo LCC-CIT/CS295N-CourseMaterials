@@ -35,7 +35,7 @@
   - Lab 7 production version: Thursday, 3/5
 
 - Quiz on Authentication and Authorization, Friday, 3/6  
-  (I'm giving you extra time since the quiz isn't ready yet, but will be by Tuesday)
+  (I'm giving you extra time since there is more reading than usual.)
 - This week's lab on Authentication and Authorization
   - Lab 8 beta version PR: Sunday, 3/8
   - Lab 8 code review: Tuesday, 3/10
