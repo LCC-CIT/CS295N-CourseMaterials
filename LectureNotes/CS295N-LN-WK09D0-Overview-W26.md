@@ -59,8 +59,8 @@ This week your will learn how to use ASP.NET Core *Identity* for *authentication
 - A page for registering users
 - A login page for authentication
 - User roles
-- Based on roles, authorize users to only access certain
-- A user manager page for use by administrators
+  - Based on roles, authorize users to only access certain
+  - A user manager page for use by administrators
 
 
 
