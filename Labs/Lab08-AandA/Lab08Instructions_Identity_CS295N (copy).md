@@ -1,6 +1,6 @@
 **CS 295N Web Development 1: ASP.NET**
 
-<h1>Lab 8: Authentication with Identity</h1>
+<h1>Lab 8: Authentication & Authorization with Identity</h1>
 
 <h2>Contents</h2>
 
@@ -9,7 +9,7 @@
 ## Objectives
 
 - Learn how to authenticate a user.
-- Modify existing code to work with a `UserManager` object.
+- Learn how to authorize user access to different sections of a web app based on user roles.
 
 ## Instructions
 
@@ -22,8 +22,27 @@ Add Authentication code to your lab web site for each of these features:
 - Registration
 - Login
 - Logout
-- Modify `SeedData` to create user objects using the `UserManager`.
 - Use the currently logged in user in any place where a user previously needed to enter their name.
+
+### Authorization
+
+Add Authorization code to your lab web site for each of these features:
+
+- Add the code needed to support authorization (inject `UserManager` and `RoleManager` objects into the appropriate controllers, etc.)
+- Add a page for user and role management. 
+  The page will have these features at a minimum:
+  - Delete user
+  - Add to Admin
+  - Remove from Admin
+  - Delete role
+- Restrict some parts of the web site:
+  - Only logged in users can do operations that store information in the database.
+  - Only admin users can access the admin pages.
+
+- Seed the database with a user who is in the Admin. In addition, be sure to add or change the appropriate code in the `Startup` and `Program` classes.
+
+
+- Add a link for the admin page to the navigation menu that only appears when a user in the Admin role is logged in.
 
 
 
