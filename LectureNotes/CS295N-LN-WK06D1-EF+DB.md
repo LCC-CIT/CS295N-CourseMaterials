@@ -222,7 +222,7 @@ If you get a message like this:
 
 **Note:** Replace `x` with the patch level that matches the version of EF Core you are using, for example: 6.0.24.
 
-Note that this will install the tools globally, if you only want to install them for the current project, then leave off the --global switch. And, if you are using a version of ASP.NET Core other than 6.0 (which we are using this term in class), then change the version number. If you omit the --version switch, it will install the latest version.
+Note that this will install the tools globally, if you only want to install them for the current project, then leave off the --global switch. And, if you are using a version of ASP.NET Core other than 6.0 (which we used the year this was written), then change the version number. If you omit the --version switch, it will install the latest version.
 
 You can also update the tools using this command:
 
