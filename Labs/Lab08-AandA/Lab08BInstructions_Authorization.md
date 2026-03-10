@@ -1,6 +1,6 @@
 **CS 295N Web Development 1: ASP.NET**
 
-<h1>Lab 8: Authentication & Authorization with Identity</h1>
+<h1>Lab 8B: Authorization with Identity</h1>
 
 <h2>Contents</h2>
 
@@ -8,21 +8,11 @@
 
 ## Objectives
 
-- Learn how to authenticate a user.
-- Learn how to authorize user access to different sections of a web app based on user roles.
+Learn how to authorize user access to different sections of a web app based on user roles.
 
 ## Instructions
 
 You will add all the same features to your web site that your instructor added to the example web site.
-
-### Authentication
-
-Add Authentication code to your lab web site for each of these features:
-
-- Registration
-- Login
-- Logout
-- Use the currently logged in user in any place where a user previously needed to enter their name.
 
 ### Authorization
 
