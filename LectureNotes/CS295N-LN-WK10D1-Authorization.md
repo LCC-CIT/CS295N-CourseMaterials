@@ -59,7 +59,7 @@ In order to work with roles, we need a way to create roles and assign roles to u
 
 2. Add user roles in seed data.  
    ```C#
-     var roleManager = provider.GetRequiredService<RoleManager<IdentityRole>>();
+   var roleManager = provider.GetRequiredService<RoleManager<IdentityRole>>();
    
      // Define roles
      string[] roleNames = { "Admin", "Instructor", "Student" };
@@ -101,12 +101,13 @@ In order to work with roles, we need a way to create roles and assign roles to u
         throw new InvalidOperationException("Admin cerdentials not configured in user secrets.");
    ```
 
-6. Add the credentials to user secrets by using the "Manage User Secrets" option on the project menu in the VS Solution Explorer, or using a CLI command like this:  
+6. Add the credentials to user secrets by using the "Manage User Secrets" option on the project menu in the VS Solution Explorer, or using a CLI command like the one below. 
+   Note: Identity uses the email address as a userName by default  
    `dotnet user-secrets set "SeedData:adminPassword" "YourSecurePassword"`
-
+   
 7. Create the default admin user  
    ```C#
-   var adminUser = new AppUser {Name = adminUserName, UserName = adminUserName, Email = "admin@example.com"}
+   var adminUser = new AppUser {Name = "The Admin", UserName = adminUserName, Email = adminUserName, EmailConfirmed = true}
    var result = userManager.CreateAsync(adminUser, adminPassword).Result;
    if (!result.Succeeded)
    {
