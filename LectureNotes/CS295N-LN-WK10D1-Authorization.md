@@ -51,7 +51,7 @@ It is a class library for:
 
 In this section we will not actually restrict any parts of the web site. We'll just set up user roles and role management. We'll add restrictions to parts of our web site based on roles in the next session.
 
-### Managing Users and Roles
+### Seed Data for Users and Roles
 
 In order to work with roles, we need a way to create roles and assign roles to users. 
 
